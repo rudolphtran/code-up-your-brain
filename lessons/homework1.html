@@ -1,0 +1,449 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title data-lang-key="homework-page-title">Homework - Lesson 1: Getting Started with Programming</title>
+    <meta name="description" data-lang-key="homework-page-desc" content="15 practice exercises for Python programming fundamentals">
+    <link rel="stylesheet" href="../assets/css/styles.css">
+    <link rel="stylesheet" href="../assets/css/lesson.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <style>
+        .homework-page {
+            background: linear-gradient(135deg, #f8f9fa 0%, #e9ecef 100%);
+            min-height: 100vh;
+        }
+        
+        .homework-header {
+            background: linear-gradient(135deg, var(--primary-color), var(--primary-dark));
+            color: white;
+            padding: 5rem 0 3rem 0;
+            text-align: center;
+            margin-top: 80px;
+        }
+        
+        .homework-header h1 {
+            font-size: 2.5rem;
+            margin-bottom: 1rem;
+            font-weight: 700;
+        }
+        
+        .homework-header p {
+            font-size: 1.2rem;
+            opacity: 0.9;
+            max-width: 600px;
+            margin: 0 auto;
+        }
+        
+        .exercise-grid {
+            display: grid;
+            gap: 2rem;
+            margin: 2rem 0;
+        }
+        
+        .exercise-category {
+            background: white;
+            border-radius: var(--border-radius);
+            padding: 2rem;
+            box-shadow: var(--shadow);
+            border-left: 4px solid var(--primary-color);
+        }
+        
+        .category-header {
+            display: flex;
+            align-items: center;
+            gap: 1rem;
+            margin-bottom: 1.5rem;
+        }
+        
+        .category-icon {
+            width: 40px;
+            height: 40px;
+            background: var(--primary-color);
+            color: white;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 1.2rem;
+        }
+        
+        .category-title {
+            font-size: 1.5rem;
+            font-weight: 600;
+            color: var(--text-color);
+        }
+        
+        .exercise-item {
+            background: #f8f9fa;
+            border-radius: var(--border-radius);
+            padding: 1.5rem;
+            margin-bottom: 1.5rem;
+            border-left: 3px solid var(--primary-color);
+            transition: var(--transition);
+        }
+        
+        .exercise-item:hover {
+            transform: translateY(-2px);
+            box-shadow: var(--shadow);
+        }
+        
+        .exercise-title {
+            font-size: 1.2rem;
+            font-weight: 600;
+            color: var(--primary-color);
+            margin-bottom: 1rem;
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+        }
+        
+        .exercise-content {
+            color: var(--text-color);
+            line-height: 1.6;
+        }
+        
+        .exercise-content h4 {
+            margin: 1rem 0 0.5rem 0;
+            color: var(--text-color);
+            font-weight: 600;
+        }
+        
+        .exercise-content ul {
+            margin: 0.5rem 0;
+            padding-left: 1.5rem;
+        }
+        
+        .exercise-content li {
+            margin-bottom: 0.25rem;
+        }
+        
+        .code-format {
+            background: #2d3748;
+            color: #e2e8f0;
+            padding: 1rem;
+            border-radius: var(--border-radius);
+            font-family: 'Courier New', monospace;
+            margin: 0.5rem 0;
+            white-space: pre-line;
+        }
+        
+        .instructions-section {
+            background: linear-gradient(135deg, #e3f2fd, #bbdefb);
+            border-radius: var(--border-radius);
+            padding: 2rem;
+            margin: 2rem 0;
+            border-left: 4px solid #2196f3;
+        }
+        
+        .instructions-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 2rem;
+            margin-top: 1rem;
+        }
+        
+        .instruction-lang {
+            background: white;
+            padding: 1.5rem;
+            border-radius: var(--border-radius);
+            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+        }
+        
+        .lang-flag {
+            font-size: 1.5rem;
+            margin-right: 0.5rem;
+        }
+        
+        .notes-section {
+            background: linear-gradient(135deg, #fff3e0, #ffe0b2);
+            border-radius: var(--border-radius);
+            padding: 2rem;
+            margin: 2rem 0;
+            border-left: 4px solid #ff9800;
+        }
+        
+        .goals-section {
+            background: linear-gradient(135deg, #e8f5e8, #c8e6c9);
+            border-radius: var(--border-radius);
+            padding: 2rem;
+            margin: 2rem 0;
+            border-left: 4px solid #4caf50;
+        }
+        
+        @media (max-width: 768px) {
+            .homework-header h1 {
+                font-size: 2rem;
+            }
+            
+            .instructions-grid {
+                grid-template-columns: 1fr;
+            }
+            
+            .category-header {
+                flex-direction: column;
+                text-align: center;
+            }
+        }
+    </style>
+</head>
+<body class="homework-page">
+    <!-- Header -->
+    <header class="header">
+        <div class="container">
+            <div class="header-content">
+                <div class="logo">
+                    <a href="../index.html">
+                        <i class="fas fa-code"></i>
+                        <span data-lang-key="logo-text">Code Up Your Brain</span>
+                    </a>
+                </div>
+                <div class="innomind-header-logo">
+                    <a href="../index.html">
+                        <img src="../assets/images/logo.png" alt="InnoMind Logo" />
+                    </a>
+                </div>
+                <nav class="nav">
+                    <a href="../index.html" data-lang-key="nav-home">Home</a>
+                    <a href="../index.html#about" data-lang-key="nav-about">About</a>
+                    <a href="../index.html#course" data-lang-key="nav-course">Course</a>
+                    <a href="../index.html#instructor" data-lang-key="nav-instructor">Instructor</a>
+                    <a href="#contact" data-lang-key="nav-contact">Contact</a>
+                </nav>
+                <div class="header-actions">
+                    <button class="lang-toggle" id="langToggle">
+                        <i class="fas fa-globe"></i>
+                        <span id="currentLang">EN</span>
+                    </button>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!-- Homework Header -->
+    <div class="homework-header">
+        <div class="container">
+            <h1 data-lang-key="homework-main-title">Bài Tập Về Nhà - Lesson 1</h1>
+            <p data-lang-key="homework-main-desc">15 bài tập thực hành từ cơ bản đến nâng cao để củng cố kiến thức lập trình Python</p>
+        </div>
+    </div>
+
+    <!-- Main Content -->
+    <main class="lesson-content">
+        <div class="container">
+            <!-- Breadcrumb -->
+            <nav class="breadcrumb">
+                <a href="../index.html" data-lang-key="breadcrumb-home">Home</a>
+                <span class="separator">/</span>
+                <a href="lesson1.html" data-lang-key="breadcrumb-lesson1">Lesson 1</a>
+                <span class="separator">/</span>
+                <span data-lang-key="breadcrumb-homework">Homework</span>
+            </nav>
+
+            <!-- Instructions -->
+            <div class="instructions-section">
+                <h2><i class="fas fa-info-circle"></i> <span data-lang-key="instructions-title">Instructions</span></h2>
+                <ul>
+                    <li data-lang-key="instruction-1">Create a new Python file for each exercise (e.g., exercise1.py, exercise2.py)</li>
+                    <li data-lang-key="instruction-2">Run the code to check your results</li>
+                    <li data-lang-key="instruction-3">No need to submit, just practice</li>
+                    <li data-lang-key="instruction-4">If you encounter difficulties, review the theory in Lesson 1</li>
+                </ul>
+            </div>
+
+            <!-- Basic Exercises -->
+            <div class="exercise-category">
+                <div class="category-header">
+                    <div class="category-icon">🔥</div>
+                    <h2 class="category-title" data-lang-key="basic-title">Bài Tập Cơ Bản (1-5)</h2>
+                </div>
+                
+                <!-- Exercise 1 -->
+                <div class="exercise-item">
+                    <h3 class="exercise-title" data-lang-key="ex1-title">Exercise 1: Personal Information</h3>
+                    <div class="exercise-content">
+                        <p data-lang-key="ex1-desc">Write a program that asks the user to input: Full name, Age, City</p>
+                        <p data-lang-key="ex1-format">Then print to screen in format:</p>
+                        <div class="code-format">Hello [Name], you are [Age] years old, from [City]</div>
+                    </div>
+                </div>
+
+                <!-- Exercise 2 -->
+                <div class="exercise-item">
+                    <h3 class="exercise-title" data-lang-key="ex2-title">Exercise 2: Rectangle Perimeter and Area</h3>
+                    <div class="exercise-content">
+                        <p data-lang-key="ex2-desc">Input length and width of a rectangle. Calculate and print: Perimeter, Area</p>
+                    </div>
+                </div>
+
+                <!-- Exercise 3 -->
+                <div class="exercise-item">
+                    <h3 class="exercise-title" data-lang-key="ex3-title">Exercise 3: Convert Celsius to Fahrenheit</h3>
+                    <div class="exercise-content">
+                        <p data-lang-key="ex3-desc">Input temperature in Celsius, convert to Fahrenheit and print result.</p>
+                        <p data-lang-key="ex3-formula">Formula: F = C * 9/5 + 32</p>
+                    </div>
+                </div>
+
+                <!-- Exercise 4 -->
+                <div class="exercise-item">
+                    <h3 class="exercise-title" data-lang-key="ex4-title">Exercise 4: Calculate Tip</h3>
+                    <div class="exercise-content">
+                        <p data-lang-key="ex4-desc">Input bill amount and tip percentage. Calculate and print: Tip amount, Total amount to pay</p>
+                    </div>
+                </div>
+
+                <!-- Exercise 5 -->
+                <div class="exercise-item">
+                    <h3 class="exercise-title" data-lang-key="ex5-title">Exercise 5: Calculate BMI</h3>
+                    <div class="exercise-content">
+                        <p data-lang-key="ex5-desc">Input weight (kg) and height (m). Calculate BMI using formula: BMI = weight / (height^2)</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Intermediate Exercises -->
+            <div class="exercise-category">
+                <div class="category-header">
+                    <div class="category-icon">💪</div>
+                    <h2 class="category-title" data-lang-key="intermediate-title">Intermediate Exercises (6-10)</h2>
+                </div>
+                
+                <!-- Exercise 6 -->
+                <div class="exercise-item">
+                    <h3 class="exercise-title" data-lang-key="ex6-title">Exercise 6: Simple Calculator</h3>
+                    <div class="exercise-content">
+                        <p data-lang-key="ex6-desc">Input 2 numbers and 1 operator (+, -, *, /, %, **). Print the result of that calculation.</p>
+                    </div>
+                </div>
+
+                <!-- Exercise 7 -->
+                <div class="exercise-item">
+                    <h3 class="exercise-title" data-lang-key="ex7-title">Exercise 7: Time Conversion</h3>
+                    <div class="exercise-content">
+                        <p data-lang-key="ex7-desc">Input number of seconds, convert and print in format: [hours] hours [minutes] minutes [seconds] seconds</p>
+                    </div>
+                </div>
+
+                <!-- Exercise 8 -->
+                <div class="exercise-item">
+                    <h3 class="exercise-title" data-lang-key="ex8-title">Exercise 8: Calculate Salary</h3>
+                    <div class="exercise-content">
+                        <p data-lang-key="ex8-desc">Input: Hours worked, Hourly wage. Calculate total salary (if > 40 hours, calculate overtime x1.5)</p>
+                    </div>
+                </div>
+
+                <!-- Exercise 9 -->
+                <div class="exercise-item">
+                    <h3 class="exercise-title" data-lang-key="ex9-title">Exercise 9: Divide Candy</h3>
+                    <div class="exercise-content">
+                        <p data-lang-key="ex9-desc">Have N candies, divide equally among M people. Calculate: How many candies each person gets, How many candies are left over</p>
+                    </div>
+                </div>
+
+                <!-- Exercise 10 -->
+                <div class="exercise-item">
+                    <h3 class="exercise-title" data-lang-key="ex10-title">Exercise 10: Calculate Exact Age</h3>
+                    <div class="exercise-content">
+                        <p data-lang-key="ex10-desc">Input birth year, calculate and print: Current age, Number of days lived (approximate)</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Advanced Exercises -->
+            <div class="exercise-category">
+                <div class="category-header">
+                    <div class="category-icon">🚀</div>
+                    <h2 class="category-title" data-lang-key="advanced-title">Advanced Exercises (11-15)</h2>
+                </div>
+                
+                <!-- Exercise 11 -->
+                <div class="exercise-item">
+                    <h3 class="exercise-title" data-lang-key="ex11-title">Exercise 11: Swap Values</h3>
+                    <div class="exercise-content">
+                        <p data-lang-key="ex11-desc">Input 2 numbers a and b. Print values after swapping WITHOUT using a third variable.</p>
+                    </div>
+                </div>
+
+                <!-- Exercise 12 -->
+                <div class="exercise-item">
+                    <h3 class="exercise-title" data-lang-key="ex12-title">Exercise 12: Calculate Taxi Fare</h3>
+                    <div class="exercise-content">
+                        <p data-lang-key="ex12-desc">Input taxi distance in km. Rules: First 2km: 15,000₫/km, From 3rd km onwards: 12,000₫/km</p>
+                    </div>
+                </div>
+
+                <!-- Exercise 13 -->
+                <div class="exercise-item">
+                    <h3 class="exercise-title" data-lang-key="ex13-title">Exercise 13: Money Breakdown</h3>
+                    <div class="exercise-content">
+                        <p data-lang-key="ex13-desc">Input an amount of money (e.g., 234,500₫). Break down into banknotes: 500,000₫, 200,000₫, 100,000₫, 50,000₫, etc.</p>
+                    </div>
+                </div>
+
+                <!-- Exercise 14 -->
+                <div class="exercise-item">
+                    <h3 class="exercise-title" data-lang-key="ex14-title">Exercise 14: Calculate Bank Interest</h3>
+                    <div class="exercise-content">
+                        <p data-lang-key="ex14-desc">Input: Initial deposit amount, Interest rate (%/year), Number of months deposited. Calculate amount received after deposit (interest calculated monthly).</p>
+                    </div>
+                </div>
+
+                <!-- Exercise 15 -->
+                <div class="exercise-item">
+                    <h3 class="exercise-title" data-lang-key="ex15-title">Exercise 15: Final Challenge</h3>
+                    <div class="exercise-content">
+                        <p data-lang-key="ex15-desc">Write a store calculation program. Input: Product name, Original price, Discount percentage, VAT tax (%). Print: Price after discount, Tax to pay, Final price customer pays, Store profit (assume original price = 70% of selling price)</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Important Notes -->
+            <div class="notes-section">
+                <h2><i class="fas fa-exclamation-triangle"></i> <span data-lang-key="notes-title">Important Notes</span></h2>
+                <ol>
+                    <li data-lang-key="note-1">Use meaningful variable names: length instead of a</li>
+                    <li data-lang-key="note-2">Comment your code: Explain what you're doing</li>
+                    <li data-lang-key="note-3">Test multiple cases: Try with negative numbers, zero, decimals</li>
+                    <li data-lang-key="note-4">Format output nicely: Use f-strings for readable results</li>
+                    <li data-lang-key="note-5">Basic error handling: Check for valid input</li>
+                </ol>
+            </div>
+
+            <!-- Goals -->
+            <div class="goals-section">
+                <h2><i class="fas fa-bullseye"></i> <span data-lang-key="goals-title">Goals</span></h2>
+                <p data-lang-key="goals-intro">After completing these 15 exercises, you will:</p>
+                <ul>
+                    <li data-lang-key="goal-1">Master basic Python syntax</li>
+                    <li data-lang-key="goal-2">Understand variables and operators clearly</li>
+                    <li data-lang-key="goal-3">Know how to work with input/output</li>
+                    <li data-lang-key="goal-4">Have a solid foundation for Lesson 2</li>
+                </ul>
+                <div style="text-align: center; margin-top: 2rem; font-size: 1.2rem; font-weight: 600;">
+                    <span data-lang-key="good-luck">Happy learning! 💪</span>
+                </div>
+            </div>
+
+            <!-- Navigation -->
+            <div class="lesson-navigation">
+                <a href="lesson1.html" class="nav-button prev">
+                    <i class="fas fa-arrow-left"></i>
+                    <span data-lang-key="nav-back-lesson">Back to Lesson 1</span>
+                </a>
+                <a href="../index.html#course" class="nav-button next">
+                    <span data-lang-key="nav-course">Back to Course</span>
+                    <i class="fas fa-arrow-right"></i>
+                </a>
+            </div>
+        </div>
+    </main>
+
+    <!-- Scripts -->
+    <script src="../assets/js/translations.js"></script>
+    <script src="../assets/js/script.js"></script>
+</body>
+</html>

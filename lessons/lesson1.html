@@ -1,0 +1,468 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title data-lang-key="lesson1-title">Lesson 1: Getting Started with Programming - Code Up Your Brain</title>
+    <meta name="description" data-lang-key="lesson1-meta" content="Learn programming fundamentals, setup VS Code, and write your first Python program">
+    <link rel="stylesheet" href="../assets/css/styles.css">
+    <link rel="stylesheet" href="../assets/css/lesson.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/themes/prism-tomorrow.min.css">
+</head>
+<body>
+    <!-- Header -->
+    <header class="header">
+        <div class="container">
+            <div class="header-content">
+                <div class="logo">
+                    <a href="../index.html">
+                        <i class="fas fa-code"></i>
+                        <span data-lang-key="logo-text">Code Up Your Brain</span>
+                    </a>
+                </div>
+                <div class="innomind-header-logo">
+                    <a href="../index.html">
+                        <img src="../assets/images/logo.png" alt="InnoMind Logo" />
+                    </a>
+                </div>
+                <nav class="nav">
+                    <a href="../index.html" data-lang-key="nav-home">Home</a>
+                    <a href="../index.html#about" data-lang-key="nav-about">About</a>
+                    <a href="../index.html#course" data-lang-key="nav-course">Course</a>
+                    <a href="../index.html#instructor" data-lang-key="nav-instructor">Instructor</a>
+                    <a href="#contact" data-lang-key="nav-contact">Contact</a>
+                </nav>
+                <div class="header-actions">
+                    <button class="lang-toggle" id="langToggle">
+                        <i class="fas fa-globe"></i>
+                        <span id="currentLang">EN</span>
+                    </button>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!-- Lesson Content -->
+    <main class="lesson-content">
+        <div class="container">
+            <!-- Breadcrumb -->
+            <nav class="breadcrumb">
+                <a href="../index.html" data-lang-key="breadcrumb-home">Home</a>
+                <span class="separator">/</span>
+                <a href="../index.html#course" data-lang-key="breadcrumb-course">Course</a>
+                <span class="separator">/</span>
+                <span data-lang-key="breadcrumb-lesson1">Lesson 1</span>
+            </nav>
+
+            <!-- Lesson Header -->
+            <div class="lesson-header">
+                <div class="lesson-number">
+                    <span data-lang-key="lesson-label">Lesson</span> 1
+                </div>
+                <h1 data-lang-key="lesson1-main-title">Getting Started with Programming</h1>
+                <p class="lesson-subtitle" data-lang-key="lesson1-subtitle">
+                    Learn effective study methods, set up your development environment, and write your first Python program
+                </p>
+            </div>
+
+            <!-- Table of Contents -->
+            <div class="table-of-contents">
+                <h3 data-lang-key="toc-title">Table of Contents</h3>
+                <ul>
+                    <li><a href="#study-methods" data-lang-key="toc-study">1. How to Study</a></li>
+                    <li><a href="#vscode-setup" data-lang-key="toc-vscode">2. Setting up Visual Studio Code</a></li>
+                    <li><a href="#first-program" data-lang-key="toc-first">3. Your First Program</a></li>
+                    <li><a href="#variables" data-lang-key="toc-variables">4. Variables</a></li>
+                    <li><a href="#operators" data-lang-key="toc-operators">5. Operators</a></li>
+                    <li><a href="#exercises" data-lang-key="toc-exercises">6. Practice Exercises</a></li>
+                </ul>
+            </div>
+
+            <!-- Section 1: Study Methods -->
+            <section id="study-methods" class="lesson-section">
+                <div class="section-icon">📘</div>
+                <h2 data-lang-key="section1-title">1. How to Study</h2>
+                
+                <div class="objective-box">
+                    <h3 data-lang-key="objective-title">💡 Objective:</h3>
+                    <p data-lang-key="section1-objective">
+                        Understand the most effective way to study throughout the Code Up Your Brain course.
+                    </p>
+                </div>
+
+                <h3 data-lang-key="study-principles">Study Principles:</h3>
+                
+                <div class="principle-card">
+                    <div class="principle-header">
+                        <i class="fas fa-globe-americas"></i>
+                        <span data-lang-key="principle1-title">Content is publicly available on the website</span>
+                    </div>
+                    <ul>
+                        <li data-lang-key="principle1-point1">→ You can review all theory, examples, and exercises anytime.</li>
+                        <li data-lang-key="principle1-point2">→ Don't worry about "missing out" when absent.</li>
+                    </ul>
+                </div>
+
+                <div class="principle-card">
+                    <div class="principle-header">
+                        <i class="fas fa-redo"></i>
+                        <span data-lang-key="principle2-title">Review theory and complete exercises after each session</span>
+                    </div>
+                    <ul>
+                        <li data-lang-key="principle2-point1">→ Programming is practice. Every line of code you write is progress.</li>
+                    </ul>
+                </div>
+
+                <div class="principle-card">
+                    <div class="principle-header">
+                        <i class="fas fa-keyboard"></i>
+                        <span data-lang-key="principle3-title">Code along with the instructor</span>
+                    </div>
+                    <ul>
+                        <li data-lang-key="principle3-point1">→ Don't just watch, open Visual Studio and type along.</li>
+                        <li data-lang-key="principle3-point2">→ When you type by hand, your brain truly learns.</li>
+                    </ul>
+                </div>
+
+                <div class="quote-box">
+                    <i class="fas fa-quote-left"></i>
+                    <p data-lang-key="programming-quote">Programming is not about memorizing, but understanding and doing.</p>
+                </div>
+            </section>
+
+            <!-- Section 2: VS Code Setup -->
+            <section id="vscode-setup" class="lesson-section">
+                <div class="section-icon">💻</div>
+                <h2 data-lang-key="section2-title">2. Setting up Visual Studio Code (VS Code)</h2>
+                
+                <div class="step-container">
+                    <h3 data-lang-key="step1-title">⚙️ Step 1: Download and Install</h3>
+                    <ol>
+                        <li data-lang-key="step1-point1">Visit: <a href="https://code.visualstudio.com" target="_blank">https://code.visualstudio.com</a></li>
+                        <li data-lang-key="step1-point2">Choose the version suitable for your operating system (Windows / macOS / Linux).</li>
+                        <li data-lang-key="step1-point3">Install with default settings (Next → Next → Finish).</li>
+                    </ol>
+                </div>
+
+                <div class="step-container">
+                    <h3 data-lang-key="step2-title">⚙️ Step 2: Install Python Extension</h3>
+                    <ol>
+                        <li data-lang-key="step2-point1">Open VS Code</li>
+                        <li data-lang-key="step2-point2">Press <kbd>Ctrl + Shift + X</kbd> to open Extensions tab</li>
+                        <li data-lang-key="step2-point3">Search "Python" → select Python (by Microsoft) → Install</li>
+                    </ol>
+                </div>
+
+                <div class="step-container">
+                    <h3 data-lang-key="step3-title">⚙️ Step 3: Verify Installation</h3>
+                    <ol>
+                        <li data-lang-key="step3-point1">Open Terminal in VS Code (<kbd>Ctrl + ~</kbd>)</li>
+                        <li data-lang-key="step3-point2">Type:</li>
+                    </ol>
+                    <div class="code-block">
+                        <pre><code class="language-bash">python --version</code></pre>
+                    </div>
+                    <p data-lang-key="step3-result">If you see something like:</p>
+                    <div class="code-block">
+                        <pre><code class="language-bash">Python 3.12.2</code></pre>
+                    </div>
+                    <p data-lang-key="step3-success">→ You're ready to program! 🎉</p>
+                </div>
+            </section>
+
+            <!-- Section 3: First Program -->
+            <section id="first-program" class="lesson-section">
+                <div class="section-icon">🧩</div>
+                <h2 data-lang-key="section3-title">3. Your First Program</h2>
+                
+                <div class="objective-box">
+                    <h3 data-lang-key="objective-title">🎯 Objective:</h3>
+                    <p data-lang-key="section3-objective">
+                        Run your first line of code and understand the "run program" process.
+                    </p>
+                </div>
+
+                <div class="step-container">
+                    <h3 data-lang-key="first-step1">Step 1: Create new file</h3>
+                    <ul>
+                        <li data-lang-key="first-step1-point1">Go to File → New File</li>
+                        <li data-lang-key="first-step1-point2">Save as <code>hello.py</code></li>
+                    </ul>
+                </div>
+
+                <div class="step-container">
+                    <h3 data-lang-key="first-step2">Step 2: Write the code:</h3>
+                    <div class="code-block">
+                        <pre><code class="language-python">print("Hello, Code up your brain!")</code></pre>
+                    </div>
+                </div>
+
+                <div class="step-container">
+                    <h3 data-lang-key="first-step3">Step 3: Press <kbd>Ctrl + F5</kbd> to run</h3>
+                    <p data-lang-key="first-result">Result:</p>
+                    <div class="output-block">
+                        <pre>Hello, Code up your brain!</pre>
+                    </div>
+                </div>
+
+                <div class="congratulations-box">
+                    <i class="fas fa-trophy"></i>
+                    <p data-lang-key="congratulations">Congratulations! You just wrote your first Python program.</p>
+                </div>
+            </section>
+
+            <!-- Section 4: Variables -->
+            <section id="variables" class="lesson-section">
+                <div class="section-icon">🔠</div>
+                <h2 data-lang-key="section4-title">4. Variables</h2>
+                
+                <div class="concept-box">
+                    <h3 data-lang-key="concept-title">💡 Concept:</h3>
+                    <p data-lang-key="variables-concept">
+                        Variables are "containers" that store data in memory.
+                        Each variable has:
+                    </p>
+                    <ul>
+                        <li data-lang-key="var-name">Name</li>
+                        <li data-lang-key="var-value">Value</li>
+                    </ul>
+                </div>
+
+                <h3 data-lang-key="var-example">Example:</h3>
+                <div class="code-block">
+                    <pre><code class="language-python">name = "Minh"
+age = 12
+print("My name is", name)
+print("I am", age, "years old")</code></pre>
+                </div>
+
+                <h3 data-lang-key="naming-rules">⚙️ Variable Naming Rules:</h3>
+                <ul class="rules-list">
+                    <li data-lang-key="rule1">Only contains letters, numbers, and underscore _</li>
+                    <li data-lang-key="rule2">Cannot start with a number</li>
+                    <li data-lang-key="rule3">Case sensitive</li>
+                </ul>
+
+                <div class="example-grid">
+                    <div class="example-card valid">
+                        <h4 data-lang-key="valid-examples">✅ Valid examples:</h4>
+                        <div class="code-block">
+                            <pre><code class="language-python">student_name = "An"
+age2 = 13</code></pre>
+                        </div>
+                    </div>
+                    <div class="example-card invalid">
+                        <h4 data-lang-key="invalid-examples">❌ Invalid examples:</h4>
+                        <div class="code-block">
+                            <pre><code class="language-python">2name = "An"      # Error: starts with number
+student-name = 12 # Error: contains dash</code></pre>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Section 5: Operators -->
+            <section id="operators" class="lesson-section">
+                <div class="section-icon">➗</div>
+                <h2 data-lang-key="section5-title">5. Operators</h2>
+                
+                <h3 data-lang-key="arithmetic-operators">📘 Arithmetic Operators:</h3>
+                <div class="table-container">
+                    <table class="operators-table">
+                        <thead>
+                            <tr>
+                                <th data-lang-key="table-operator">Operator</th>
+                                <th data-lang-key="table-meaning">Meaning</th>
+                                <th data-lang-key="table-example">Example</th>
+                                <th data-lang-key="table-result">Result</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr><td>+</td><td data-lang-key="op-add">Addition</td><td>5 + 3</td><td>8</td></tr>
+                            <tr><td>-</td><td data-lang-key="op-sub">Subtraction</td><td>5 - 3</td><td>2</td></tr>
+                            <tr><td>*</td><td data-lang-key="op-mul">Multiplication</td><td>5 * 3</td><td>15</td></tr>
+                            <tr><td>/</td><td data-lang-key="op-div">Division</td><td>5 / 2</td><td>2.5</td></tr>
+                            <tr><td>//</td><td data-lang-key="op-floor">Floor division</td><td>5 // 2</td><td>2</td></tr>
+                            <tr><td>%</td><td data-lang-key="op-mod">Modulus</td><td>5 % 2</td><td>1</td></tr>
+                            <tr><td>**</td><td data-lang-key="op-pow">Power</td><td>2 ** 3</td><td>8</td></tr>
+                        </tbody>
+                    </table>
+                </div>
+
+                <h3 data-lang-key="comparison-operators">📘 Comparison Operators:</h3>
+                <div class="table-container">
+                    <table class="operators-table">
+                        <thead>
+                            <tr>
+                                <th data-lang-key="table-operator">Operator</th>
+                                <th data-lang-key="table-meaning">Meaning</th>
+                                <th data-lang-key="table-example">Example</th>
+                                <th data-lang-key="table-result">Result</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr><td>==</td><td data-lang-key="op-equal">Equal</td><td>5 == 5</td><td>True</td></tr>
+                            <tr><td>!=</td><td data-lang-key="op-not-equal">Not equal</td><td>5 != 3</td><td>True</td></tr>
+                            <tr><td>></td><td data-lang-key="op-greater">Greater than</td><td>7 > 2</td><td>True</td></tr>
+                            <tr><td><</td><td data-lang-key="op-less">Less than</td><td>2 < 5</td><td>True</td></tr>
+                            <tr><td>>=</td><td data-lang-key="op-gte">Greater than or equal</td><td>3 >= 3</td><td>True</td></tr>
+                            <tr><td><=</td><td data-lang-key="op-lte">Less than or equal</td><td>2 <= 4</td><td>True</td></tr>
+                        </tbody>
+                    </table>
+                </div>
+            </section>
+
+            <!-- Section 6: Exercises -->
+            <section id="exercises" class="lesson-section">
+                <div class="section-icon">🧠</div>
+                <h2 data-lang-key="section6-title">6. Practice Exercises</h2>
+                
+                <div class="exercise-card">
+                    <h3 data-lang-key="exercise1-title">🧩 Exercise 1 – Greet the User</h3>
+                    <p data-lang-key="exercise1-desc">Write a program:</p>
+                    <div class="code-block">
+                        <pre><code class="language-python">name = input("What's your name? ")
+print("Hello,", name, "!")</code></pre>
+                    </div>
+                </div>
+
+                <div class="exercise-card">
+                    <h3 data-lang-key="exercise2-title">🧩 Exercise 2 – Calculate Age</h3>
+                    <div class="code-block">
+                        <pre><code class="language-python">year = int(input("Your birth year: "))
+age = 2025 - year
+print("You are", age, "years old this year.")</code></pre>
+                    </div>
+                </div>
+
+                <div class="exercise-card">
+                    <h3 data-lang-key="exercise3-title">🧩 Exercise 3 – Simple Calculator</h3>
+                    <p data-lang-key="exercise3-desc">Write a program that inputs two numbers and prints the results of addition, subtraction, multiplication, and division.</p>
+                    <div class="code-block">
+                        <pre><code class="language-python">a = int(input("Enter first number: "))
+b = int(input("Enter second number: "))
+
+print("Sum:", a + b)
+print("Difference:", a - b)
+print("Product:", a * b)
+print("Quotient:", a / b)</code></pre>
+                    </div>
+                </div>
+
+                <div class="exercise-card challenge">
+                    <h3 data-lang-key="exercise4-title">🧩 Exercise 4 – Small Challenge</h3>
+                    <p data-lang-key="exercise4-desc">Write a program that asks for name and age, then prints:</p>
+                    <p class="challenge-text">"Hello [Name], you have [100 - age] years left until you turn 100!"</p>
+                </div>
+            </section>
+
+            <!-- Summary -->
+            <section class="lesson-summary">
+                <h2 data-lang-key="summary-title">✅ Lesson 1 Summary</h2>
+                <div class="checklist">
+                    <div class="checklist-item">
+                        <i class="fas fa-check-circle"></i>
+                        <span data-lang-key="summary1">Install and open VS Code</span>
+                    </div>
+                    <div class="checklist-item">
+                        <i class="fas fa-check-circle"></i>
+                        <span data-lang-key="summary2">Write your first Python program</span>
+                    </div>
+                    <div class="checklist-item">
+                        <i class="fas fa-check-circle"></i>
+                        <span data-lang-key="summary3">Understand variables & operators</span>
+                    </div>
+                    <div class="checklist-item">
+                        <i class="fas fa-check-circle"></i>
+                        <span data-lang-key="summary4">Run programs and complete exercises</span>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Homework Section -->
+            <section class="lesson-section">
+                <h2>📚 <span data-lang-key="homework-title">Homework</span></h2>
+                <div class="homework-card">
+                    <div class="homework-content">
+                        <h3 data-lang-key="homework-subtitle">15 Practice Exercises</h3>
+                        <p data-lang-key="homework-desc">Complete these exercises to reinforce your understanding of variables, operators, and basic programming concepts.</p>
+                        <div class="homework-stats">
+                            <div class="homework-stat">
+                                <span class="stat-number">5</span>
+                                <span class="stat-label" data-lang-key="homework-basic">Basic</span>
+                            </div>
+                            <div class="homework-stat">
+                                <span class="stat-number">5</span>
+                                <span class="stat-label" data-lang-key="homework-intermediate">Intermediate</span>
+                            </div>
+                            <div class="homework-stat">
+                                <span class="stat-number">5</span>
+                                <span class="stat-label" data-lang-key="homework-advanced">Advanced</span>
+                            </div>
+                        </div>
+                        <a href="homework1.html" class="homework-button">
+                            <i class="fas fa-external-link-alt"></i>
+                            <span data-lang-key="homework-download">Làm Bài Tập</span>
+                        </a>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Navigation -->
+            <div class="lesson-navigation">
+                <a href="../index.html#course" class="nav-button prev">
+                    <i class="fas fa-arrow-left"></i>
+                    <span data-lang-key="nav-back">Back to Course</span>
+                </a>
+                <a href="lesson2.html" class="nav-button next">
+                    <span data-lang-key="nav-next">Next: Conditional Statements</span>
+                    <i class="fas fa-arrow-right"></i>
+                </a>
+            </div>
+        </div>
+    </main>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <div class="footer-logo">
+                        <i class="fas fa-code"></i>
+                        <span data-lang-key="logo-text">Code Up Your Brain</span>
+                    </div>
+                    <p data-lang-key="footer-desc">
+                        Level up your programming mindset with high-quality Python and Algorithm courses.
+                    </p>
+                </div>
+                <div class="footer-section">
+                    <h4 data-lang-key="footer-contact-title">Contact</h4>
+                    <div class="contact-info">
+                        <div class="contact-item">
+                            <i class="fas fa-envelope"></i>
+                            <span>hello@codeupyourbrain.com</span>
+                        </div>
+                        <div class="contact-item">
+                            <i class="fas fa-map-marker-alt"></i>
+                            <span data-lang-key="footer-address">Da Nang, Vietnam</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p data-lang-key="footer-copyright">&copy; 2025 Code Up Your Brain. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Scripts -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/components/prism-core.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/plugins/autoloader/prism-autoloader.min.js"></script>
+    <script src="../assets/js/translations.js"></script>
+    <script src="../assets/js/script.js"></script>
+</body>
+</html>
