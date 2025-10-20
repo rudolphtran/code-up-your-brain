@@ -61,17 +61,7 @@ function loadLanguage(lang) {
         return;
     }
 
-    const elements = document.querySelectorAll('[data-lang-key]');
-    elements.forEach(element => {
-        const key = element.getAttribute('data-lang-key');
-        if (translations[lang] && translations[lang][key]) {
-            if (element.tagName === 'INPUT' || element.tagName === 'TEXTAREA') {
-                element.placeholder = translations[lang][key];
-            } else {
-                element.innerHTML = translations[lang][key];
-            }
-        }
-    });
+    applyTranslations(lang);
 
     // Update document language
     document.documentElement.lang = lang;
@@ -84,6 +74,26 @@ function loadLanguage(lang) {
 
     // Save language preference
     localStorage.setItem('preferredLanguage', lang);
+}
+
+// Apply translations to all elements with data-lang-key
+function applyTranslations(lang = currentLanguage) {
+    if (typeof translations === 'undefined') {
+        console.warn('Translations not loaded yet');
+        return;
+    }
+
+    const elements = document.querySelectorAll('[data-lang-key]');
+    elements.forEach(element => {
+        const key = element.getAttribute('data-lang-key');
+        if (translations[lang] && translations[lang][key]) {
+            if (element.tagName === 'INPUT' || element.tagName === 'TEXTAREA') {
+                element.placeholder = translations[lang][key];
+            } else {
+                element.innerHTML = translations[lang][key];
+            }
+        }
+    });
 }
 
 function updateLanguageToggle() {
@@ -128,6 +138,9 @@ function toggleMoreModules() {
         curriculumList.insertAdjacentHTML('beforeend', getAdditionalModulesHTML());
         button.textContent = translations[currentLanguage]['show-less'] || 'Collapse';
         button.classList.add('showing-more');
+        
+        // Apply translations to new modules
+        applyTranslations();
         
         // Animate new modules
         const newModules = curriculumList.querySelectorAll('.module-item:nth-child(n+7)');

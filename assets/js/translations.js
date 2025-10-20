@@ -377,6 +377,16 @@ const translations = {
         'nav-back-lesson': 'Về Bài 1',
         'nav-course': 'Về Khóa Học',
         
+        // Authentication
+        'auth-title': '🔐 Truy Cập Khóa Học',
+        'auth-subtitle': 'Nhập mật khẩu để xem nội dung khóa học',
+        'auth-password-label': 'Mật khẩu:',
+        'auth-password-placeholder': 'Nhập mật khẩu khóa học',
+        'auth-submit': 'Truy Cập Khóa Học',
+        'auth-contact': 'Liên hệ giảng viên để được cấp mật khẩu',
+        'auth-success': 'Truy cập thành công! Chào mừng bạn đến với khóa học.',
+        'auth-error': 'Mật khẩu không đúng. Vui lòng thử lại.',
+        
         // Navigation
         'nav-back': 'Về trang khóa học',
         'nav-next': 'Tiếp: Câu lệnh điều kiện'
@@ -758,6 +768,16 @@ const translations = {
         'breadcrumb-homework': 'Homework',
         'nav-back-lesson': 'Back to Lesson 1',
         'nav-course': 'Back to Course',
+        
+        // Authentication
+        'auth-title': '🔐 Course Access',
+        'auth-subtitle': 'Enter password to access course content',
+        'auth-password-label': 'Password:',
+        'auth-password-placeholder': 'Enter course password',
+        'auth-submit': 'Access Course',
+        'auth-contact': 'Contact instructor for password access',
+        'auth-success': 'Access granted! Welcome to the course.',
+        'auth-error': 'Incorrect password. Please try again.',
         
         // Navigation
         'homework-title': 'Bài Tập Về Nhà',

@@ -1,0 +1,268 @@
+/* Mobile-First Optimizations */
+
+/* Prevent text size adjust on orientation change */
+html {
+    -webkit-text-size-adjust: 100%;
+    -ms-text-size-adjust: 100%;
+}
+
+/* Improve tap targets */
+button, 
+a, 
+input, 
+select, 
+textarea {
+    -webkit-tap-highlight-color: rgba(255, 0, 0, 0.2);
+    tap-highlight-color: rgba(255, 0, 0, 0.2);
+}
+
+/* Smooth scrolling for iOS */
+body {
+    -webkit-overflow-scrolling: touch;
+}
+
+/* Fix iOS zoom on input focus */
+@media screen and (max-width: 767px) {
+    input[type="text"], 
+    input[type="email"], 
+    input[type="password"], 
+    input[type="number"], 
+    select, 
+    textarea {
+        font-size: 16px !important;
+    }
+}
+
+/* Optimize images for mobile */
+img {
+    max-width: 100%;
+    height: auto;
+    display: block;
+}
+
+/* Performance optimizations */
+.hero-content,
+.features-grid,
+.curriculum-list,
+.instructor-content {
+    will-change: transform;
+}
+
+/* Reduce motion for users who prefer it */
+@media (prefers-reduced-motion: reduce) {
+    *,
+    *::before,
+    *::after {
+        animation-duration: 0.01ms !important;
+        animation-iteration-count: 1 !important;
+        transition-duration: 0.01ms !important;
+    }
+    
+    html {
+        scroll-behavior: auto !important;
+    }
+}
+
+/* High contrast mode support */
+@media (prefers-contrast: high) {
+    :root {
+        --shadow: 0 4px 6px rgba(0, 0, 0, 0.3);
+        --shadow-large: 0 10px 25px rgba(0, 0, 0, 0.4);
+    }
+    
+    .btn-outline {
+        border-width: 2px;
+    }
+    
+    .feature-card,
+    .module-item,
+    .principle-card {
+        border: 2px solid var(--gray-300);
+    }
+}
+
+/* Dark mode improvements */
+@media (prefers-color-scheme: dark) {
+    :root {
+        --background-color: #1a1a1a;
+        --text-color: #e0e0e0;
+        --text-light: #a0a0a0;
+        --gray-100: #2d2d2d;
+        --gray-200: #404040;
+        --gray-300: #525252;
+        --shadow: 0 4px 6px rgba(0, 0, 0, 0.3);
+        --shadow-large: 0 10px 25px rgba(0, 0, 0, 0.4);
+    }
+    
+    .header {
+        background: rgba(26, 26, 26, 0.95);
+        border-bottom-color: var(--gray-300);
+    }
+    
+    .footer {
+        background: #0f0f0f;
+    }
+    
+    .code-animation {
+        background: #2d2d2d;
+        border-color: #404040;
+    }
+}
+
+/* Orientation change handling */
+@media (orientation: landscape) and (max-height: 500px) {
+    .hero {
+        padding: 60px 0 40px;
+    }
+    
+    .hero-text h1 {
+        font-size: 2rem;
+    }
+    
+    section {
+        padding: 40px 0;
+    }
+}
+
+/* Print optimizations */
+@media print {
+    .header,
+    .nav,
+    .language-toggle,
+    .cta,
+    .footer {
+        display: none !important;
+    }
+    
+    .hero {
+        padding-top: 0 !important;
+    }
+    
+    .container {
+        max-width: none !important;
+        padding: 0 !important;
+    }
+    
+    * {
+        box-shadow: none !important;
+        text-shadow: none !important;
+    }
+    
+    a {
+        text-decoration: underline !important;
+    }
+}
+
+/* Loading performance improvements */
+.lazy-load {
+    opacity: 0;
+    transition: opacity 0.3s;
+}
+
+.lazy-load.loaded {
+    opacity: 1;
+}
+
+/* Intersection Observer fallback */
+.no-js .lazy-load {
+    opacity: 1;
+}
+
+/* Focus improvements for keyboard navigation */
+.skip-link {
+    position: absolute;
+    top: -40px;
+    left: 6px;
+    background: var(--primary-color);
+    color: white;
+    padding: 8px;
+    z-index: 10000;
+    text-decoration: none;
+    border-radius: 4px;
+}
+
+.skip-link:focus {
+    top: 6px;
+}
+
+/* Better focus indicators */
+a:focus,
+button:focus,
+input:focus,
+select:focus,
+textarea:focus {
+    outline: 2px solid var(--primary-color);
+    outline-offset: 2px;
+    box-shadow: 0 0 0 4px rgba(255, 0, 0, 0.1);
+}
+
+/* Sticky header improvements for mobile */
+@media (max-width: 768px) {
+    .header {
+        position: -webkit-sticky;
+        position: sticky;
+    }
+    
+    /* Prevent layout shift */
+    .hero {
+        margin-top: 0;
+    }
+}
+
+/* Text selection improvements */
+::selection {
+    background-color: rgba(255, 0, 0, 0.2);
+    color: var(--text-color);
+}
+
+::-moz-selection {
+    background-color: rgba(255, 0, 0, 0.2);
+    color: var(--text-color);
+}
+
+/* Scroll snap for better mobile experience */
+@media (max-width: 768px) {
+    .features-grid,
+    .curriculum-list {
+        scroll-snap-type: x mandatory;
+        -webkit-overflow-scrolling: touch;
+    }
+    
+    .feature-card,
+    .module-item {
+        scroll-snap-align: start;
+    }
+}
+
+/* iOS specific improvements */
+@supports (-webkit-touch-callout: none) {
+    /* iOS Safari specific styles */
+    .header {
+        -webkit-backdrop-filter: blur(10px);
+    }
+    
+    .auth-modal {
+        -webkit-overflow-scrolling: touch;
+    }
+}
+
+/* Android specific improvements */
+@media screen and (-webkit-min-device-pixel-ratio: 2) and (max-width: 767px) {
+    /* High DPI Android devices */
+    .btn,
+    .nav a {
+        touch-action: manipulation;
+    }
+}
+
+/* Emergency accessibility mode */
+@media (forced-colors: active) {
+    .btn {
+        border: 2px solid;
+    }
+    
+    .feature-card,
+    .module-item {
+        border: 1px solid;
+    }
+}

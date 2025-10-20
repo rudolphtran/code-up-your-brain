@@ -576,79 +576,458 @@ kbd {
 }
 
 /* Responsive Design */
+@media (max-width: 1024px) {
+    .lesson-content {
+        padding-top: 110px;
+    }
+    
+    .table-of-contents {
+        padding: 2rem;
+    }
+    
+    .example-grid {
+        gap: 1.5rem;
+    }
+    
+    .operators-table {
+        font-size: 0.95rem;
+    }
+}
+
 @media (max-width: 768px) {
     .lesson-content {
         padding-top: 100px;
+        padding-bottom: 40px;
+    }
+    
+    .container {
+        padding: 0 15px;
+    }
+    
+    /* Lesson Header Mobile */
+    .lesson-header {
+        margin-bottom: 2rem;
     }
     
     .lesson-header h1 {
-        font-size: 2rem;
+        font-size: 2.2rem;
+        line-height: 1.2;
+    }
+    
+    .lesson-subtitle {
+        font-size: 1.1rem;
+        margin-bottom: 1.5rem;
     }
     
     .lesson-meta {
         gap: 1rem;
+        flex-wrap: wrap;
+        justify-content: center;
     }
     
+    .meta-item {
+        font-size: 0.9rem;
+    }
+    
+    /* Table of Contents Mobile */
+    .table-of-contents {
+        padding: 1.5rem;
+        margin-bottom: 2rem;
+    }
+    
+    .toc-title {
+        font-size: 1.2rem;
+    }
+    
+    .toc-list {
+        gap: 0.5rem;
+    }
+    
+    .toc-list a {
+        font-size: 0.9rem;
+        padding: 0.5rem 0;
+    }
+    
+    /* Learning Principles Mobile */
+    .principles-grid {
+        grid-template-columns: 1fr;
+        gap: 1.5rem;
+    }
+    
+    .principle-card {
+        padding: 1.5rem;
+    }
+    
+    .principle-icon {
+        font-size: 2rem;
+        width: 60px;
+        height: 60px;
+    }
+    
+    /* Section Content Mobile */
+    .lesson-section {
+        margin-bottom: 2.5rem;
+    }
+    
+    .lesson-section h2 {
+        font-size: 2rem;
+        margin-bottom: 1.5rem;
+    }
+    
+    .section-icon {
+        font-size: 2rem;
+        margin-right: 0.8rem;
+    }
+    
+    /* Code Blocks Mobile */
+    .code-block,
+    .output-block {
+        padding: 1.2rem;
+        font-size: 0.85rem;
+        border-radius: 8px;
+        overflow-x: auto;
+    }
+    
+    .code-block pre {
+        white-space: pre;
+        overflow-x: auto;
+        -webkit-overflow-scrolling: touch;
+    }
+    
+    /* Tables Mobile */
+    .operators-table {
+        font-size: 0.85rem;
+        overflow-x: auto;
+        display: block;
+        white-space: nowrap;
+    }
+    
+    .operators-table thead,
+    .operators-table tbody,
+    .operators-table tr {
+        display: table;
+        width: 100%;
+        table-layout: fixed;
+    }
+    
+    .operators-table th,
+    .operators-table td {
+        padding: 0.6rem 0.4rem;
+    }
+    
+    /* Steps and Exercises Mobile */
+    .step-container,
+    .exercise-card {
+        padding: 1.5rem;
+        margin-bottom: 1.5rem;
+    }
+    
+    .exercise-card h3 {
+        font-size: 1.2rem;
+    }
+    
+    .exercise-card.challenge {
+        padding: 1.8rem;
+    }
+    
+    /* Examples Grid Mobile */
     .example-grid {
         grid-template-columns: 1fr;
+        gap: 1.5rem;
     }
     
+    .example-item {
+        padding: 1.5rem;
+    }
+    
+    /* Concept Boxes Mobile */
+    .concept-box {
+        padding: 1.5rem;
+        margin-bottom: 1.5rem;
+    }
+    
+    .congratulations-box {
+        padding: 1.5rem;
+        text-align: center;
+    }
+    
+    /* Rules List Mobile */
+    .rules-list {
+        padding-left: 1rem;
+    }
+    
+    .rules-list li {
+        font-size: 0.9rem;
+        margin-bottom: 0.5rem;
+    }
+    
+    /* Summary Mobile */
+    .lesson-summary {
+        padding: 2rem 1.5rem;
+    }
+    
+    .checklist {
+        grid-template-columns: 1fr;
+        gap: 1rem;
+    }
+    
+    .checklist-item {
+        padding: 0.8rem;
+    }
+    
+    /* Homework Section Mobile */
+    .homework-card {
+        padding: 2rem 1.5rem;
+    }
+    
+    .homework-stats {
+        flex-direction: column;
+        gap: 1rem;
+        align-items: center;
+    }
+    
+    .homework-stat {
+        min-width: 120px;
+    }
+    
+    .homework-button {
+        width: 100%;
+        justify-content: center;
+        padding: 1rem 2rem;
+        font-size: 1rem;
+    }
+    
+    /* Navigation Mobile */
     .lesson-navigation {
         flex-direction: column;
+        gap: 1rem;
+        padding: 1.5rem 0;
+    }
+    
+    .nav-button {
+        width: 100%;
+        text-align: center;
+        padding: 1rem 1.5rem;
     }
     
     .nav-button.next {
         margin-left: 0;
     }
     
-    .checklist {
-        grid-template-columns: 1fr;
-    }
-    
-    .table-of-contents {
-        padding: 1.5rem;
-    }
-    
-    .step-container,
-    .exercise-card {
-        padding: 1.5rem;
+    .nav-button i {
+        margin: 0 0.5rem;
     }
 }
 
 @media (max-width: 480px) {
+    .lesson-content {
+        padding-top: 90px;
+        padding-bottom: 30px;
+    }
+    
+    .container {
+        padding: 0 10px;
+    }
+    
+    /* Header Extra Small */
+    .lesson-header {
+        margin-bottom: 1.5rem;
+    }
+    
+    .lesson-number {
+        padding: 0.4rem 1rem;
+        font-size: 0.8rem;
+    }
+    
     .lesson-header h1 {
         font-size: 1.8rem;
     }
     
     .lesson-subtitle {
         font-size: 1rem;
+        margin-bottom: 1rem;
     }
     
+    .lesson-meta {
+        flex-direction: column;
+        gap: 0.5rem;
+    }
+    
+    /* Table of Contents Extra Small */
+    .table-of-contents {
+        padding: 1.2rem;
+    }
+    
+    .toc-title {
+        font-size: 1.1rem;
+    }
+    
+    .toc-list a {
+        font-size: 0.85rem;
+    }
+    
+    /* Section Headers Extra Small */
     .lesson-section h2 {
-        font-size: 1.8rem;
+        font-size: 1.6rem;
         flex-direction: column;
         gap: 0.5rem;
         text-align: center;
+        line-height: 1.3;
     }
     
+    .section-icon {
+        font-size: 1.8rem;
+        margin-right: 0;
+        margin-bottom: 0.5rem;
+    }
+    
+    /* Code Blocks Extra Small */
     .code-block,
     .output-block {
         padding: 1rem;
+        font-size: 0.8rem;
+        margin: 1rem 0;
+    }
+    
+    /* Boxes and Cards Extra Small */
+    .concept-box,
+    .step-container,
+    .exercise-card {
+        padding: 1.2rem;
+        margin-bottom: 1.2rem;
+    }
+    
+    .exercise-card h3 {
+        font-size: 1.1rem;
+        line-height: 1.3;
+    }
+    
+    .exercise-card.challenge {
+        padding: 1.5rem;
+    }
+    
+    /* Tables Extra Small */
+    .operators-table {
+        font-size: 0.75rem;
     }
     
     .operators-table th,
     .operators-table td {
-        padding: 0.5rem;
+        padding: 0.4rem 0.2rem;
+    }
+    
+    /* Principle Cards Extra Small */
+    .principle-card {
+        padding: 1.2rem;
+    }
+    
+    .principle-icon {
+        font-size: 1.8rem;
+        width: 50px;
+        height: 50px;
+    }
+    
+    .principle-title {
+        font-size: 1rem;
+    }
+    
+    /* Summary Extra Small */
+    .lesson-summary {
+        padding: 1.5rem 1rem;
+    }
+    
+    .checklist-item {
+        padding: 0.6rem;
         font-size: 0.9rem;
     }
     
+    /* Homework Extra Small */
+    .homework-card {
+        padding: 1.5rem 1rem;
+    }
+    
     .homework-stats {
-        flex-direction: column;
-        gap: 1rem;
+        gap: 0.8rem;
+    }
+    
+    .homework-stat {
+        min-width: 100px;
+        padding: 0.8rem;
     }
     
     .homework-stat .stat-number {
-        font-size: 1.5rem;
+        font-size: 1.3rem;
+    }
+    
+    .homework-stat .stat-label {
+        font-size: 0.8rem;
+    }
+    
+    .homework-button {
+        padding: 0.8rem 1.5rem;
+        font-size: 0.9rem;
+    }
+    
+    /* Navigation Extra Small */
+    .nav-button {
+        padding: 0.8rem 1rem;
+        font-size: 0.9rem;
+    }
+    
+    /* General Text Extra Small */
+    p {
+        font-size: 0.9rem;
+        line-height: 1.6;
+    }
+    
+    h3 {
+        font-size: 1.2rem;
+    }
+    
+    .rules-list li {
+        font-size: 0.85rem;
+    }
+}
+
+/* Touch-friendly improvements for lesson page */
+@media (hover: none) and (pointer: coarse) {
+    .toc-list a {
+        min-height: 44px;
+        display: flex;
+        align-items: center;
+        padding: 0.8rem 0;
+    }
+    
+    .nav-button {
+        min-height: 48px;
+        padding: 1rem 1.5rem;
+    }
+    
+    .homework-button {
+        min-height: 48px;
+    }
+    
+    .code-block {
+        -webkit-overflow-scrolling: touch;
+    }
+    
+    .operators-table {
+        -webkit-overflow-scrolling: touch;
+    }
+}
+
+/* Landscape orientation for lesson content */
+@media (max-width: 768px) and (orientation: landscape) {
+    .lesson-content {
+        padding-top: 80px;
+    }
+    
+    .lesson-header h1 {
+        font-size: 2rem;
+    }
+    
+    .lesson-section h2 {
+        font-size: 1.8rem;
     }
 }
 
