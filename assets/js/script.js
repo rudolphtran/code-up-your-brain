@@ -13,6 +13,31 @@ function initializeApp() {
     setupScrollEffects();
     setupAnimations();
     loadLanguage(currentLanguage);
+    
+    // Force hide logo on mobile devices
+    hideLogoOnMobile();
+}
+
+// Force hide logo on mobile devices
+function hideLogoOnMobile() {
+    if (window.innerWidth <= 768) {
+        const logos = document.querySelectorAll('.logo, .innomind-header-logo');
+        logos.forEach(logo => {
+            logo.style.display = 'none';
+            logo.style.visibility = 'hidden';
+            logo.style.opacity = '0';
+            logo.style.width = '0';
+            logo.style.height = '0';
+            logo.style.margin = '0';
+            logo.style.padding = '0';
+        });
+        
+        // Center header content
+        const headerContent = document.querySelector('.header-content');
+        if (headerContent) {
+            headerContent.style.justifyContent = 'center';
+        }
+    }
 }
 
 // Setup event listeners
@@ -43,6 +68,11 @@ function setupEventListeners() {
 
     // Header scroll effect
     window.addEventListener('scroll', handleScroll);
+    
+    // Re-check logo hiding on window resize
+    window.addEventListener('resize', () => {
+        hideLogoOnMobile();
+    });
 
     // Resize handler
     window.addEventListener('resize', handleResize);

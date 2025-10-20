@@ -1,0 +1,203 @@
+/* Ultra Compact Mobile Header */
+
+/* Thêm CSS để header siêu mỏng trên mobile */
+@media (max-width: 768px) {
+    /* Header border mỏng hơn */
+    .header {
+        border-bottom-width: 0.5px;
+        box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+    }
+    
+    /* Logo ẩn hoàn toàn trên mobile */
+    .logo {
+        display: none !important; /* Ẩn hoàn toàn logo */
+    }
+    
+    /* Navigation centered và có thêm space */
+    .nav {
+        margin: 0 auto; /* Center navigation */
+        position: relative;
+    }
+    
+    /* Header content centered */
+    .header-content {
+        justify-content: center !important;
+    }
+    
+    /* Navigation scroll indicators */
+    .nav::before,
+    .nav::after {
+        content: '';
+        position: absolute;
+        top: 0;
+        bottom: 0;
+        width: 10px;
+        pointer-events: none;
+        z-index: 1;
+    }
+    
+    .nav::before {
+        left: 0;
+        background: linear-gradient(to right, rgba(255,255,255,0.8), transparent);
+    }
+    
+    .nav::after {
+        right: 0;
+        background: linear-gradient(to left, rgba(255,255,255,0.8), transparent);
+    }
+    
+    /* Hover states tối ưu cho touch */
+    .nav a:active {
+        background-color: rgba(255, 0, 0, 0.15);
+        transform: scale(0.95);
+    }
+    
+    .language-toggle:active {
+        background-color: rgba(255, 0, 0, 0.15);
+        transform: scale(0.9);
+    }
+}
+
+@media (max-width: 480px) {
+    /* Logo ẩn hoàn toàn */
+    .logo {
+        display: none !important; /* Đảm bảo ẩn hoàn toàn */
+    }
+    
+    /* Navigation centered và tối ưu */
+    .nav {
+        margin: 0 auto;
+        max-width: 80%; /* Tăng space cho nav */
+    }
+    
+    /* Header content centered */
+    .header-content {
+        justify-content: center !important;
+    }
+    
+    /* Compact navigation cho màn hình rất nhỏ */
+    .nav {
+        position: relative;
+        overflow-x: scroll;
+        -webkit-overflow-scrolling: touch;
+        scroll-behavior: smooth;
+    }
+    
+    /* Ẩn scrollbar nhưng vẫn cho phép scroll */
+    .nav::-webkit-scrollbar {
+        height: 0;
+        background: transparent;
+    }
+    
+    /* Optimized touch targets */
+    .nav a,
+    .language-toggle {
+        min-height: 28px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+}
+
+/* Orientation specific optimizations */
+@media (max-width: 768px) and (orientation: landscape) {
+    .header {
+        min-height: 32px;
+    }
+    
+    .header-content {
+        min-height: 32px;
+        padding: 0.1rem 0;
+    }
+    
+    .logo {
+        font-size: 0.75rem;
+    }
+    
+    .nav a {
+        font-size: 0.6rem;
+        padding: 0.1rem 0.3rem;
+    }
+    
+    .language-toggle {
+        font-size: 0.6rem;
+        padding: 0.1rem 0.25rem;
+    }
+}
+
+/* Ultra compact mode for very small screens */
+@media (max-width: 360px) {
+    .header-content {
+        padding: 0.1rem 0;
+        height: 28px;
+        justify-content: center !important;
+    }
+    
+    .logo {
+        display: none !important; /* Chắc chắn ẩn */
+    }
+    
+    .nav {
+        margin: 0 auto;
+        max-width: 85%;
+    }
+    
+    .nav a {
+        font-size: 0.65rem;
+        padding: 0.15rem 0.3rem;
+    }
+    
+    .language-toggle {
+        font-size: 0.65rem;
+        padding: 0.15rem 0.25rem;
+        min-width: 24px;
+    }
+    
+    /* Có thể ẩn một số nav items */
+    .nav a:nth-child(n+4) {
+        display: none;
+    }
+}
+
+/* Performance optimizations */
+@media (max-width: 768px) {
+    .header {
+        transform: translateZ(0);
+        -webkit-transform: translateZ(0);
+        will-change: transform;
+    }
+    
+    .header-content * {
+        backface-visibility: hidden;
+        -webkit-backface-visibility: hidden;
+    }
+}
+
+/* Accessibility improvements */
+@media (max-width: 768px) {
+    .nav a:focus,
+    .language-toggle:focus {
+        outline: 2px solid var(--primary-color);
+        outline-offset: 1px;
+        background-color: rgba(255, 0, 0, 0.1);
+    }
+    
+    /* Ensure minimum touch target size */
+    .nav a,
+    .language-toggle {
+        min-width: 28px;
+        position: relative;
+    }
+    
+    /* Expand touch area without affecting visual layout */
+    .nav a::before,
+    .language-toggle::before {
+        content: '';
+        position: absolute;
+        top: -5px;
+        left: -2px;
+        right: -2px;
+        bottom: -5px;
+        z-index: -1;
+    }
+}

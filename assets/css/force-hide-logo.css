@@ -1,0 +1,139 @@
+/* Force Hide Logo on Mobile - Maximum Specificity */
+
+/* Ultra high specificity CSS to force hide logo */
+@media screen and (max-width: 768px) {
+    body .header .header-content .logo,
+    html body .header .header-content .logo,
+    .header-content .logo,
+    .header .logo,
+    header .logo,
+    .logo,
+    body .header .header-content .innomind-header-logo,
+    html body .header .header-content .innomind-header-logo,
+    .header-content .innomind-header-logo,
+    .header .innomind-header-logo,
+    header .innomind-header-logo,
+    .innomind-header-logo {
+        display: none !important;
+        visibility: hidden !important;
+        opacity: 0 !important;
+        width: 0 !important;
+        height: 0 !important;
+        margin: 0 !important;
+        padding: 0 !important;
+        position: absolute !important;
+        left: -9999px !important;
+        overflow: hidden !important;
+        clip: rect(0,0,0,0) !important;
+    }
+    
+    /* Force center navigation */
+    body .header .header-content,
+    html body .header .header-content,
+    .header-content {
+        justify-content: center !important;
+        align-items: center !important;
+    }
+    
+    /* Ensure navigation takes full space */
+    body .header .header-content .nav,
+    html body .header .header-content .nav,
+    .header-content .nav,
+    .nav {
+        margin: 0 auto !important;
+        flex: none !important;
+        max-width: 75% !important;
+    }
+}
+
+/* Smaller mobile devices */
+@media screen and (max-width: 480px) {
+    body .header .header-content .logo,
+    html body .header .header-content .logo,
+    .header-content .logo,
+    .header .logo,
+    header .logo,
+    .logo,
+    body .header .header-content .innomind-header-logo,
+    html body .header .header-content .innomind-header-logo,
+    .header-content .innomind-header-logo,
+    .header .innomind-header-logo,
+    header .innomind-header-logo,
+    .innomind-header-logo {
+        display: none !important;
+        visibility: hidden !important;
+        opacity: 0 !important;
+        width: 0 !important;
+        height: 0 !important;
+    }
+    
+    .nav {
+        max-width: 80% !important;
+    }
+}
+
+/* Extra small devices */
+@media screen and (max-width: 360px) {
+    body .header .header-content .logo,
+    html body .header .header-content .logo,
+    .header-content .logo,
+    .header .logo,
+    header .logo,
+    .logo,
+    body .header .header-content .innomind-header-logo,
+    html body .header .header-content .innomind-header-logo,
+    .header-content .innomind-header-logo,
+    .header .innomind-header-logo,
+    header .innomind-header-logo,
+    .innomind-header-logo {
+        display: none !important;
+        visibility: hidden !important;
+    }
+    
+    .nav {
+        max-width: 85% !important;
+    }
+}
+
+/* iPhone specific media queries */
+@media only screen and (max-device-width: 428px) {
+    .logo,
+    .innomind-header-logo {
+        display: none !important;
+        visibility: hidden !important;
+        opacity: 0 !important;
+    }
+}
+
+/* Touch devices */
+@media (hover: none) and (pointer: coarse) {
+    .logo,
+    .innomind-header-logo {
+        display: none !important;
+        visibility: hidden !important;
+    }
+    
+    .header-content {
+        justify-content: center !important;
+    }
+}
+
+/* Landscape mobile */
+@media screen and (max-height: 500px) and (orientation: landscape) {
+    .logo,
+    .innomind-header-logo {
+        display: none !important;
+        visibility: hidden !important;
+    }
+}
+
+/* Force hide with JavaScript backup */
+@media screen and (max-width: 768px) {
+    .logo[style*="display"],
+    .logo[style*="visibility"],
+    .innomind-header-logo[style*="display"],
+    .innomind-header-logo[style*="visibility"] {
+        display: none !important;
+        visibility: hidden !important;
+    }
+}
