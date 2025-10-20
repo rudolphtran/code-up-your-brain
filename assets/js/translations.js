@@ -160,6 +160,13 @@ const translations = {
         'footer-address': 'Đà Nẵng, Việt Nam',
         'footer-copyright': '© 2025 Code Up Your Brain. All rights reserved.',
         
+        // Contact Popup
+        'contact-popup-title': 'Thông tin liên hệ',
+        'contact-address-label': 'Địa chỉ:',
+        'contact-address': '136 Nguyễn Mậu Tài, Hòa Xuân, Cẩm Lệ, Đà Nẵng',
+        'contact-phone-label': 'Số điện thoại:',
+        'contact-email-label': 'Email:',
+        
         // Notifications
         'notification-enrollment': 'Đang chuyển hướng đến trang đăng ký...',
         'notification-preview': 'Đang tải video demo...',
@@ -551,6 +558,13 @@ const translations = {
         'footer-contact-title': 'Contact',
         'footer-address': 'Da Nang, Vietnam',
         'footer-copyright': '© 2025 Code Up Your Brain. All rights reserved.',
+        
+        // Contact Popup
+        'contact-popup-title': 'Contact Information',
+        'contact-address-label': 'Address:',
+        'contact-address': '136 Nguyen Mau Tai, Hoa Xuan, Cam Le, Da Nang',
+        'contact-phone-label': 'Phone:',
+        'contact-email-label': 'Email:',
         
         // Notifications
         'notification-enrollment': 'Redirecting to enrollment page...',

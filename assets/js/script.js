@@ -40,6 +40,23 @@ function hideLogoOnMobile() {
     }
 }
 
+// Contact Popup Functions
+function openContactPopup() {
+    const contactPopup = document.getElementById('contactPopup');
+    if (contactPopup) {
+        contactPopup.classList.add('active');
+        document.body.style.overflow = 'hidden'; // Prevent background scrolling
+    }
+}
+
+function closeContactPopupFunc() {
+    const contactPopup = document.getElementById('contactPopup');
+    if (contactPopup) {
+        contactPopup.classList.remove('active');
+        document.body.style.overflow = ''; // Restore scrolling
+    }
+}
+
 // Setup event listeners
 function setupEventListeners() {
     // Language toggle
@@ -54,10 +71,43 @@ function setupEventListeners() {
         showMoreBtn.addEventListener('click', toggleMoreModules);
     }
 
+    // Contact popup functionality
+    const contactLink = document.querySelector('a[href="#contact"]');
+    const contactPopup = document.getElementById('contactPopup');
+    const closeContactPopup = document.getElementById('closeContactPopup');
+
+    if (contactLink && contactPopup) {
+        contactLink.addEventListener('click', function(e) {
+            e.preventDefault();
+            openContactPopup();
+        });
+    }
+
+    if (closeContactPopup && contactPopup) {
+        closeContactPopup.addEventListener('click', closeContactPopupFunc);
+        
+        // Close popup when clicking overlay
+        contactPopup.addEventListener('click', function(e) {
+            if (e.target === contactPopup) {
+                closeContactPopupFunc();
+            }
+        });
+    }
+
+    // Close popup with Escape key
+    document.addEventListener('keydown', function(e) {
+        if (e.key === 'Escape' && contactPopup && contactPopup.classList.contains('active')) {
+            closeContactPopupFunc();
+        }
+    });
+
     // Smooth scroll for navigation links
     const navLinks = document.querySelectorAll('a[href^="#"]');
     navLinks.forEach(link => {
-        link.addEventListener('click', smoothScroll);
+        // Skip contact link as it opens popup
+        if (!link.getAttribute('href').includes('#contact')) {
+            link.addEventListener('click', smoothScroll);
+        }
     });
 
     // CTA buttons
