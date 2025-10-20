@@ -596,7 +596,7 @@ kbd {
 
 @media (max-width: 768px) {
     .lesson-content {
-        padding-top: 100px;
+        padding-top: 70px;
         padding-bottom: 40px;
     }
     
@@ -821,7 +821,7 @@ kbd {
 
 @media (max-width: 480px) {
     .lesson-content {
-        padding-top: 90px;
+        padding-top: 60px;
         padding-bottom: 30px;
     }
     

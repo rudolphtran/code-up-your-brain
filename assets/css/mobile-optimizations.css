@@ -1,5 +1,67 @@
 /* Mobile-First Optimizations */
 
+/* Compact header for mobile */
+@media (max-width: 768px) {
+    .header {
+        min-height: 50px;
+    }
+    
+    .header-content {
+        min-height: 50px;
+    }
+    
+    .logo i {
+        font-size: 1rem;
+        margin-right: 0.3rem;
+    }
+    
+    /* Compact navigation */
+    .nav {
+        display: flex;
+        align-items: center;
+        max-width: 60%;
+    }
+    
+    .nav a {
+        border-radius: 4px;
+        transition: background-color 0.2s ease;
+    }
+    
+    .nav a:hover {
+        background-color: rgba(255, 0, 0, 0.1);
+    }
+    
+    .language-toggle {
+        border-radius: 4px;
+        min-width: 35px;
+        text-align: center;
+    }
+}
+
+@media (max-width: 480px) {
+    .header {
+        min-height: 45px;
+    }
+    
+    .header-content {
+        min-height: 45px;
+    }
+    
+    .logo i {
+        font-size: 0.9rem;
+        margin-right: 0.25rem;
+    }
+    
+    .nav {
+        max-width: 55%;
+    }
+    
+    .language-toggle {
+        min-width: 30px;
+        padding: 0.25rem 0.4rem;
+    }
+}
+
 /* Prevent text size adjust on orientation change */
 html {
     -webkit-text-size-adjust: 100%;
