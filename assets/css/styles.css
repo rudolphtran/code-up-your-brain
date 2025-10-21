@@ -1431,3 +1431,31 @@ a:focus {
         align-self: flex-start;
     }
 }
+
+/* Force Light Mode Only */
+:root {
+    color-scheme: light only;
+}
+
+* {
+    color-scheme: light only;
+}
+
+/* Override any browser dark mode attempts */
+@media (prefers-color-scheme: dark) {
+    :root {
+        color-scheme: light only !important;
+    }
+    
+    * {
+        color-scheme: light only !important;
+    }
+    
+    /* Ensure all elements stay in light mode */
+    body,
+    html,
+    * {
+        background-color: inherit !important;
+        color: inherit !important;
+    }
+}

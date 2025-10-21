@@ -1050,3 +1050,27 @@ kbd {
         border: 1px solid #ddd;
     }
 }
+
+/* Force Light Mode for Lesson Pages */
+:root {
+    color-scheme: light only;
+}
+
+@media (prefers-color-scheme: dark) {
+    :root {
+        color-scheme: light only !important;
+    }
+    
+    body,
+    html,
+    * {
+        background-color: inherit !important;
+        color: inherit !important;
+    }
+    
+    /* Ensure lesson content stays light */
+    .lesson-content {
+        background: #ffffff !important;
+        color: #333333 !important;
+    }
+}
