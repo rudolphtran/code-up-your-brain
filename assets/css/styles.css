@@ -1366,6 +1366,8 @@ a:focus {
 /* Hidden content for more modules */
 .hidden-modules {
     display: none;
+    max-width: 800px;
+    margin: 0 auto;
 }
 
 .hidden-modules.show {

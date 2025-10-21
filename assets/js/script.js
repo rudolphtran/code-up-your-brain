@@ -170,7 +170,17 @@ function applyTranslations(lang = currentLanguage) {
             if (element.tagName === 'INPUT' || element.tagName === 'TEXTAREA') {
                 element.placeholder = translations[lang][key];
             } else {
-                element.innerHTML = translations[lang][key];
+                // Special handling for show more/less button
+                if (element.id === 'showMoreModules') {
+                    const isShowing = element.classList.contains('showing-more');
+                    if (isShowing) {
+                        element.textContent = translations[lang]['show-less'] || 'Thu gọn';
+                    } else {
+                        element.textContent = translations[lang]['show-more'] || 'Xem thêm 7 modules';
+                    }
+                } else {
+                    element.innerHTML = translations[lang][key];
+                }
             }
         }
     });
@@ -199,113 +209,48 @@ function loadSavedLanguage() {
 // Show/hide additional modules
 function toggleMoreModules() {
     const button = document.getElementById('showMoreModules');
-    const curriculumList = document.querySelector('.curriculum-list');
+    const hiddenModulesContainer = document.getElementById('hiddenModules');
     
-    if (!button || !curriculumList) return;
+    if (!button || !hiddenModulesContainer) return;
 
-    const hiddenModules = getHiddenModules();
     const isShowing = button.classList.contains('showing-more');
 
     if (isShowing) {
         // Hide modules
-        hiddenModules.forEach(module => {
-            module.style.display = 'none';
-        });
-        button.textContent = translations[currentLanguage]['show-more'] || 'Show 6 more modules';
+        hiddenModulesContainer.style.display = 'none';
+        
+        // Update button text using translation system
+        const showMoreText = translations[currentLanguage]['show-more'] || 'Xem thêm 7 modules';
+        button.textContent = showMoreText;
         button.classList.remove('showing-more');
     } else {
         // Show modules
-        curriculumList.insertAdjacentHTML('beforeend', getAdditionalModulesHTML());
-        button.textContent = translations[currentLanguage]['show-less'] || 'Collapse';
+        hiddenModulesContainer.style.display = 'block';
+        
+        // Update button text using translation system
+        const showLessText = translations[currentLanguage]['show-less'] || 'Thu gọn';
+        button.textContent = showLessText;
         button.classList.add('showing-more');
         
-        // Apply translations to new modules
+        // Apply translations to modules
         applyTranslations();
         
-        // Animate new modules
-        const newModules = curriculumList.querySelectorAll('.module-item:nth-child(n+7)');
-        newModules.forEach((module, index) => {
+        // Animate modules with stagger effect
+        const modules = hiddenModulesContainer.querySelectorAll('.module-item');
+        modules.forEach((module, index) => {
+            module.style.opacity = '0';
+            module.style.transform = 'translateY(20px)';
+            
             setTimeout(() => {
-                module.classList.add('animate-fade-in-up');
+                module.style.transition = 'all 0.6s ease';
+                module.style.opacity = '1';
+                module.style.transform = 'translateY(0)';
             }, index * 100);
         });
     }
 }
 
-function getHiddenModules() {
-    return document.querySelectorAll('.module-item:nth-child(n+7)');
-}
 
-function getAdditionalModulesHTML() {
-    return `
-        <div class="module-item">
-            <div class="module-number">07</div>
-            <div class="module-content">
-                <h3 data-lang-key="module7-title">String</h3>
-                <p data-lang-key="module7-desc">Chuỗi và kiểu kí tự, bảng mã ASCII và kỹ thuật lập trình với chuỗi.</p>
-                <div class="module-topics">
-                    <span class="topic" data-lang-key="module7-topic1">Chuẩn hóa tên</span>
-                    <span class="topic" data-lang-key="module7-topic2">Đếm kí tự phân biệt</span>
-                </div>
-            </div>
-        </div>
-        <div class="module-item">
-            <div class="module-number">08</div>
-            <div class="module-content">
-                <h3 data-lang-key="module8-title">Recursion</h3>
-                <p data-lang-key="module8-desc">Kỹ thuật lập trình đệ quy cơ bản và cấu trúc dữ liệu Stack.</p>
-                <div class="module-topics">
-                    <span class="topic" data-lang-key="module8-topic1">Số Fibonacci</span>
-                    <span class="topic" data-lang-key="module8-topic2">Chuyển đổi hệ số</span>
-                </div>
-            </div>
-        </div>
-        <div class="module-item">
-            <div class="module-number">09</div>
-            <div class="module-content">
-                <h3 data-lang-key="module9-title">Data Abstraction</h3>
-                <p data-lang-key="module9-desc">Struct/Class và getters/setters để tạo kiểu dữ liệu mới.</p>
-                <div class="module-topics">
-                    <span class="topic" data-lang-key="module9-topic1">Thông tin học sinh</span>
-                    <span class="topic" data-lang-key="module9-topic2">Tọa độ 2D</span>
-                </div>
-            </div>
-        </div>
-        <div class="module-item">
-            <div class="module-number">10</div>
-            <div class="module-content">
-                <h3 data-lang-key="module10-title">Sorting Algorithms</h3>
-                <p data-lang-key="module10-desc">Các thuật toán sắp xếp kinh điển và độ phức tạp thuật toán.</p>
-                <div class="module-topics">
-                    <span class="topic" data-lang-key="module10-topic1">Sắp xếp sinh viên</span>
-                    <span class="topic" data-lang-key="module10-topic2">Xây dựng tháp</span>
-                </div>
-            </div>
-        </div>
-        <div class="module-item">
-            <div class="module-number">11</div>
-            <div class="module-content">
-                <h3 data-lang-key="module11-title">Singly Linked List</h3>
-                <p data-lang-key="module11-desc">Danh sách liên kết đơn FIFO/LIFO và các thao tác cơ bản.</p>
-                <div class="module-topics">
-                    <span class="topic" data-lang-key="module11-topic1">Phòng khách sạn</span>
-                    <span class="topic" data-lang-key="module11-topic2">Reversed list</span>
-                </div>
-            </div>
-        </div>
-        <div class="module-item">
-            <div class="module-number">12</div>
-            <div class="module-content">
-                <h3 data-lang-key="module12-title">Trees</h3>
-                <p data-lang-key="module12-desc">Cấu trúc dữ liệu cây và Binary Search Tree.</p>
-                <div class="module-topics">
-                    <span class="topic" data-lang-key="module12-topic1">Điểm cao nhất</span>
-                    <span class="topic" data-lang-key="module12-topic2">Level order traversal</span>
-                </div>
-            </div>
-        </div>
-    `;
-}
 
 // Smooth scroll functionality
 function smoothScroll(e) {
