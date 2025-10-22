@@ -8,10 +8,12 @@ class CourseAuth {
     }
 
     init() {
+        // Authentication temporarily disabled
         // Check if user is already authenticated
-        if (!this.isAuthenticated()) {
-            this.showLoginModal();
-        }
+        // if (!this.isAuthenticated()) {
+        //     this.showLoginModal();
+        // }
+        console.log('Authentication disabled - full access granted');
     }
 
     isAuthenticated() {
@@ -235,13 +237,16 @@ class CourseAuth {
 
 // Initialize authentication when DOM is loaded
 document.addEventListener('DOMContentLoaded', () => {
+    // Authentication temporarily disabled
     // Only initialize auth on lesson and homework pages, not on homepage
-    const isProtectedPage = window.location.pathname.includes('lesson') || 
-                           window.location.pathname.includes('homework');
+    // const isProtectedPage = window.location.pathname.includes('lesson') || 
+    //                        window.location.pathname.includes('homework');
     
-    if (isProtectedPage) {
-        window.courseAuth = new CourseAuth();
-    }
+    // if (isProtectedPage) {
+    //     window.courseAuth = new CourseAuth();
+    // }
+    
+    console.log('Course authentication system disabled - all pages accessible');
 });
 
 // Export for use in other scripts
