@@ -1,0 +1,1014 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="color-scheme" content="light only">
+    <title data-lang-key="lesson2-title">Lesson 2: Conditional Statements - Code Up Your Brain</title>
+    <meta name="description" data-lang-key="lesson2-meta" content="Learn if-else statements, conditional logic, and decision making in Python programming">
+    <link rel="stylesheet" href="../assets/css/styles.css">
+    <link rel="stylesheet" href="../assets/css/lesson.css">
+    <link rel="stylesheet" href="../assets/css/auth.css">
+    <link rel="stylesheet" href="../assets/css/mobile-optimizations.css">
+    <link rel="stylesheet" href="../assets/css/ultra-compact-header.css">
+    <link rel="stylesheet" href="../assets/css/force-hide-logo.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/themes/prism-tomorrow.min.css">
+</head>
+<body>
+    <!-- Header -->
+    <header class="header">
+        <div class="container">
+            <div class="header-content">
+                <div class="logo">
+                    <a href="../index.html">
+                        <i class="fas fa-code"></i>
+                        <span data-lang-key="logo-text">Code Up Your Brain</span>
+                    </a>
+                </div>
+                <div class="innomind-header-logo">
+                    <a href="../index.html">
+                        <img src="../assets/images/logo.png" alt="InnoMind Logo" />
+                    </a>
+                </div>
+                <nav class="nav">
+                    <a href="../index.html" data-lang-key="nav-home">Home</a>
+                    <a href="../index.html#about" data-lang-key="nav-about">About</a>
+                    <a href="../index.html#course" data-lang-key="nav-course">Course</a>
+                    <a href="../index.html#instructor" data-lang-key="nav-instructor">Instructor</a>
+                    <a href="#contact" data-lang-key="nav-contact">Contact</a>
+                </nav>
+                <div class="header-actions">
+                    <button class="lang-toggle" id="langToggle">
+                        <i class="fas fa-globe"></i>
+                        <span id="currentLang">EN</span>
+                    </button>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!-- Lesson Content -->
+    <main class="lesson-content">
+        <div class="container">
+            <!-- Breadcrumb -->
+            <nav class="breadcrumb">
+                <a href="../index.html" data-lang-key="breadcrumb-home">Home</a>
+                <span class="separator">/</span>
+                <a href="../index.html#course" data-lang-key="breadcrumb-course">Course</a>
+                <span class="separator">/</span>
+                <span data-lang-key="breadcrumb-lesson2">Lesson 2</span>
+            </nav>
+
+            <!-- Lesson Header -->
+            <div class="lesson-header">
+                <div class="lesson-number">
+                    <span data-lang-key="lesson-label">Lesson</span> 2
+                </div>
+                <h1 data-lang-key="lesson2-main-title">Conditional Statements</h1>
+                <p class="lesson-subtitle" data-lang-key="lesson2-subtitle">
+                    Master if-else statements, comparison operators, and logical decision making in Python
+                </p>
+            </div>
+
+            <!-- Table of Contents -->
+            <div class="table-of-contents">
+                <h3 data-lang-key="toc-title">Table of Contents</h3>
+                <ul>
+                    <li><a href="#intro-conditionals" data-lang-key="toc-intro">1. Introduction to Conditionals</a></li>
+                    <li><a href="#comparison-operators" data-lang-key="toc-comparison">2. Comparison Operators</a></li>
+                    <li><a href="#if-statement" data-lang-key="toc-if">3. Basic if Statements</a></li>
+                    <li><a href="#if-else-elif" data-lang-key="toc-if-else-elif">4. if-else and elif</a></li>
+                    <li><a href="#logical-operators" data-lang-key="toc-logical">5. Logical Operators</a></li>
+                    <li><a href="#leap-year" data-lang-key="toc-leap-year">6. Project: Leap Year Checker</a></li>
+                    <li><a href="#electricity-bill" data-lang-key="toc-electricity">7. Project: Electricity Bill Calculator</a></li>
+                </ul>
+            </div>
+
+            <!-- Section 1: Introduction to Conditionals -->
+            <section id="intro-conditionals" class="lesson-section">
+                <div class="section-icon">🤔</div>
+                <h2 data-lang-key="section1-title-lesson2">1. Introduction to Conditionals</h2>
+                
+                <div class="objective-box">
+                    <h3 data-lang-key="objective-title">🎯 Learning Objectives:</h3>
+                    <ul data-lang-key="section1-objectives">
+                        <li>Understand what conditional statements are and their importance</li>
+                        <li>Learn to think logically about program flow</li>
+                        <li>Recognize real-world scenarios that require decision-making</li>
+                        <li>Prepare for writing your first conditional code</li>
+                    </ul>
+                </div>
+
+                <div class="content-block">
+                    <h3 data-lang-key="what-are-conditionals">🧠 What are Conditional Statements?</h3>
+                    <p data-lang-key="conditionals-explanation">
+                        Conditional statements are the "decision-makers" of programming. They allow your code to 
+                        choose different paths based on specific conditions, just like how you make decisions in real life.
+                    </p>
+
+                    <div class="info-box">
+                        <h4 data-lang-key="everyday-examples">🏠 Real-Life Examples:</h4>
+                        <ul>
+                            <li><strong>Weather:</strong> "If it's raining, take an umbrella"</li>
+                            <li><strong>Traffic:</strong> "If the light is red, stop the car"</li>
+                            <li><strong>Shopping:</strong> "If I have enough money, buy the item"</li>
+                            <li><strong>Study:</strong> "If I finish homework, I can play games"</li>
+                        </ul>
+                    </div>
+
+                    <div class="concept-visual">
+                        <h4 data-lang-key="programming-thinking">💻 Programming Thinking:</h4>
+                        <div class="thinking-process">
+                            <div class="think-step">
+                                <span class="step-number">1</span>
+                                <div class="step-content">
+                                    <h5>Identify the Condition</h5>
+                                    <p>"What needs to be checked?"</p>
+                                </div>
+                            </div>
+                            <div class="think-step">
+                                <span class="step-number">2</span>
+                                <div class="step-content">
+                                    <h5>Define the Actions</h5>
+                                    <p>"What happens if true? What happens if false?"</p>
+                                </div>
+                            </div>
+                            <div class="think-step">
+                                <span class="step-number">3</span>
+                                <div class="step-content">
+                                    <h5>Write the Logic</h5>
+                                    <p>"Translate the decision into code"</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="code-preview">
+                        <h4 data-lang-key="first-look">👀 Your First Look at Conditional Code:</h4>
+                        <pre><code class="language-python"># Simple decision making
+age = 18
+
+if age >= 18:
+    print("You can vote!")
+else:
+    print("You cannot vote yet.")
+</code></pre>
+                        <div class="output">
+                            <strong>Output:</strong>
+                            <pre>You can vote!</pre>
+                        </div>
+                        <p class="code-explanation">
+                            Don't worry if this looks confusing now - we'll learn each part step by step!
+                        </p>
+                    </div>
+
+                    <div class="why-important">
+                        <h4 data-lang-key="why-important">🌟 Why are Conditionals Important?</h4>
+                        <div class="importance-grid">
+                            <div class="importance-item">
+                                <div class="importance-icon">🎮</div>
+                                <h5>Interactive Programs</h5>
+                                <p>Games that respond to player choices</p>
+                            </div>
+                            <div class="importance-item">
+                                <div class="importance-icon">🏦</div>
+                                <h5>Business Logic</h5>
+                                <p>Banking apps that check account balances</p>
+                            </div>
+                            <div class="importance-item">
+                                <div class="importance-icon">🌐</div>
+                                <h5>Web Applications</h5>
+                                <p>Websites that show different content to different users</p>
+                            </div>
+                            <div class="importance-item">
+                                <div class="importance-icon">🤖</div>
+                                <h5>AI & Automation</h5>
+                                <p>Smart systems that make autonomous decisions</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Section 2: Comparison Operators -->
+            <section id="comparison-operators" class="lesson-section">
+                <div class="section-icon">⚖️</div>
+                <h2 data-lang-key="section2-title-lesson2">2. Comparison Operators</h2>
+                
+                <div class="objective-box">
+                    <h3 data-lang-key="objective-title">🎯 Learning Objectives:</h3>
+                    <ul>
+                        <li>Master all 6 comparison operators in Python</li>
+                        <li>Understand the difference between = and ==</li>
+                        <li>Practice writing comparison expressions</li>
+                        <li>Learn common mistakes and how to avoid them</li>
+                    </ul>
+                </div>
+
+                <div class="content-block">
+                    <h3 data-lang-key="what-are-operators">🔍 What are Comparison Operators?</h3>
+                    <p data-lang-key="operators-explanation">
+                        Comparison operators are the tools we use to compare values. They always return either 
+                        <code>True</code> or <code>False</code> - these are called <strong>Boolean values</strong>.
+                    </p>
+
+                    <div class="operators-table-container">
+                        <h4 data-lang-key="operators-table-title">📊 Complete Comparison Operators Table:</h4>
+                        <table class="operators-table">
+                            <thead>
+                                <tr>
+                                    <th>Operator</th>
+                                    <th>Name</th>
+                                    <th>Example</th>
+                                    <th>Result</th>
+                                    <th>Explanation</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr class="operator-row">
+                                    <td><code>==</code></td>
+                                    <td>Equal to</td>
+                                    <td><code>5 == 5</code></td>
+                                    <td><span class="true-value">True</span></td>
+                                    <td>Checks if two values are exactly the same</td>
+                                </tr>
+                                <tr class="operator-row">
+                                    <td><code>!=</code></td>
+                                    <td>Not equal to</td>
+                                    <td><code>5 != 3</code></td>
+                                    <td><span class="true-value">True</span></td>
+                                    <td>Checks if two values are different</td>
+                                </tr>
+                                <tr class="operator-row">
+                                    <td><code>&gt;</code></td>
+                                    <td>Greater than</td>
+                                    <td><code>8 &gt; 3</code></td>
+                                    <td><span class="true-value">True</span></td>
+                                    <td>Left value is larger than right value</td>
+                                </tr>
+                                <tr class="operator-row">
+                                    <td><code>&lt;</code></td>
+                                    <td>Less than</td>
+                                    <td><code>2 &lt; 7</code></td>
+                                    <td><span class="true-value">True</span></td>
+                                    <td>Left value is smaller than right value</td>
+                                </tr>
+                                <tr class="operator-row">
+                                    <td><code>&gt;=</code></td>
+                                    <td>Greater than or equal</td>
+                                    <td><code>5 &gt;= 5</code></td>
+                                    <td><span class="true-value">True</span></td>
+                                    <td>Left value is larger than or equal to right value</td>
+                                </tr>
+                                <tr class="operator-row">
+                                    <td><code>&lt;=</code></td>
+                                    <td>Less than or equal</td>
+                                    <td><code>3 &lt;= 10</code></td>
+                                    <td><span class="true-value">True</span></td>
+                                    <td>Left value is smaller than or equal to right value</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+
+                    <div class="important-note">
+                        <h4 data-lang-key="important-distinction">⚠️ Critical Distinction:</h4>
+                        <div class="distinction-comparison">
+                            <div class="distinction-item assignment">
+                                <h5><code>=</code> (Assignment)</h5>
+                                <p>Stores a value in a variable</p>
+                                <pre><code>age = 25  # Storing 25 in age variable</code></pre>
+                            </div>
+                            <div class="vs-divider">VS</div>
+                            <div class="distinction-item comparison">
+                                <h5><code>==</code> (Comparison)</h5>
+                                <p>Checks if two values are equal</p>
+                                <pre><code>age == 25  # Returns True or False</code></pre>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="interactive-examples">
+                        <h4 data-lang-key="try-it-yourself">🧪 Interactive Examples:</h4>
+                        
+                        <div class="example-set">
+                            <h5>Example 1: Numeric Comparisons</h5>
+                            <pre><code class="language-python"># Let's test some numbers
+a = 10
+b = 20
+c = 10
+
+print(f"a = {a}, b = {b}, c = {c}")
+print(f"a == c: {a == c}")      # True (same value)
+print(f"a != b: {a != b}")      # True (different values)
+print(f"b > a: {b > a}")        # True (20 > 10)
+print(f"a < b: {a < b}")        # True (10 < 20)
+print(f"a >= c: {a >= c}")      # True (10 >= 10)
+print(f"a <= b: {a <= b}")      # True (10 <= 20)
+</code></pre>
+                            <div class="output">
+                                <strong>Output:</strong>
+                                <pre>a = 10, b = 20, c = 10
+a == c: True
+a != b: True
+b > a: True
+a < b: True
+a >= c: True
+a <= b: True</pre>
+                            </div>
+                        </div>
+
+                        <div class="example-set">
+                            <h5>Example 2: String Comparisons</h5>
+                            <pre><code class="language-python"># Strings can also be compared
+name1 = "Alice"
+name2 = "Bob"
+name3 = "Alice"
+
+print(f"name1 == name3: {name1 == name3}")  # True
+print(f"name1 != name2: {name1 != name2}")  # True
+print(f"name1 > name2: {name1 > name2}")    # False (alphabetical order)
+print(f"name2 > name1: {name2 > name1}")    # True
+</code></pre>
+                            <div class="output">
+                                <strong>Output:</strong>
+                                <pre>name1 == name3: True
+name1 != name2: True
+name1 > name2: False
+name2 > name1: True</pre>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="practice-section">
+                        <h4 data-lang-key="quick-practice">🏃‍♂️ Quick Practice:</h4>
+                        <p>Try to predict the output of these expressions:</p>
+                        <div class="practice-questions">
+                            <div class="practice-question">
+                                <code>10 >= 10</code>
+                                <details>
+                                    <summary>Show Answer</summary>
+                                    <p><strong>True</strong> - 10 is equal to 10</p>
+                                </details>
+                            </div>
+                            <div class="practice-question">
+                                <code>"python" == "Python"</code>
+                                <details>
+                                    <summary>Show Answer</summary>
+                                    <p><strong>False</strong> - String comparison is case-sensitive</p>
+                                </details>
+                            </div>
+                            <div class="practice-question">
+                                <code>5 != 3 + 2</code>
+                                <details>
+                                    <summary>Show Answer</summary>
+                                    <p><strong>False</strong> - 5 equals 3 + 2 (which is 5)</p>
+                                </details>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Section 3: Basic if Statements -->
+            <section id="if-statement" class="lesson-section">
+                <div class="section-icon">🚦</div>
+                <h2 data-lang-key="section3-title-lesson2">3. Basic if Statements</h2>
+                
+                <div class="content-block">
+                    <p data-lang-key="if-intro">
+                        The <code>if</code> statement is the most basic conditional statement. It executes code only when a condition is true.
+                    </p>
+
+                    <div class="syntax-box">
+                        <h4 data-lang-key="syntax-title">📝 Syntax:</h4>
+                        <pre><code class="language-python">if condition:
+    # Code to execute if condition is True
+    statement1
+    statement2
+</code></pre>
+                    </div>
+
+                    <div class="important-note">
+                        <h4 data-lang-key="important-title">⚠️ Important:</h4>
+                        <ul>
+                            <li data-lang-key="colon-note">Don't forget the colon (:) after the condition</li>
+                            <li data-lang-key="indent-note">Indent the code inside the if block (4 spaces or 1 tab)</li>
+                        </ul>
+                    </div>
+
+                    <div class="code-example">
+                        <h4 data-lang-key="example-title">Example:</h4>
+                        <pre><code class="language-python"># Simple if statement
+temperature = 30
+
+if temperature > 25:
+    print("It's hot today!")
+    print("Consider wearing light clothes.")
+
+print("Have a nice day!")  # This always runs
+</code></pre>
+                        <div class="output">
+                            <strong data-lang-key="output-title">Output:</strong>
+                            <pre>It's hot today!
+Consider wearing light clothes.
+Have a nice day!</pre>
+                        </div>
+                    </div>
+
+                    <div class="practice-exercise">
+                        <h4 data-lang-key="quick-practice">🏃‍♂️ Quick Practice:</h4>
+                        <p data-lang-key="practice-task">Write an if statement to check if a student passed (score >= 60).</p>
+                        <details>
+                            <summary data-lang-key="show-solution">Show Solution</summary>
+                            <pre><code class="language-python">score = 75
+
+if score >= 60:
+    print("Congratulations! You passed!")
+</code></pre>
+                        </details>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Section 4: if-else and elif -->
+            <section id="if-else-elif" class="lesson-section">
+                <div class="section-icon">⚡</div>
+                <h2 data-lang-key="section4-title-lesson2">4. if-else and elif Statements</h2>
+                
+                <div class="content-block">
+                    <h3 data-lang-key="if-else-title">if-else Statements</h3>
+                    <p data-lang-key="if-else-intro">
+                        When you want to do something different if the condition is false, use <code>else</code>.
+                    </p>
+
+                    <div class="syntax-box">
+                        <h4 data-lang-key="syntax-title">📝 Syntax:</h4>
+                        <pre><code class="language-python">if condition:
+    # Code when condition is True
+else:
+    # Code when condition is False
+</code></pre>
+                    </div>
+
+                    <div class="code-example">
+                        <h4 data-lang-key="example-title">Example:</h4>
+                        <pre><code class="language-python"># Check if a number is positive or negative
+number = -5
+
+if number > 0:
+    print(f"{number} is positive")
+else:
+    print(f"{number} is negative or zero")
+</code></pre>
+                        <div class="output">
+                            <strong data-lang-key="output-title">Output:</strong>
+                            <pre>-5 is negative or zero</pre>
+                        </div>
+                    </div>
+
+                    <h3 data-lang-key="elif-title">elif Statements</h3>
+                    <p data-lang-key="elif-intro">
+                        When you have multiple conditions to check, use <code>elif</code> (else if).
+                    </p>
+
+                    <div class="syntax-box">
+                        <h4 data-lang-key="syntax-title">📝 Syntax:</h4>
+                        <pre><code class="language-python">if condition1:
+    # Code for condition1
+elif condition2:
+    # Code for condition2
+elif condition3:
+    # Code for condition3
+else:
+    # Code when all conditions are False
+</code></pre>
+                    </div>
+
+                    <div class="code-example">
+                        <h4 data-lang-key="example-title">Example - Grade Calculator:</h4>
+                        <pre><code class="language-python"># Grade calculator
+score = 85
+
+if score >= 90:
+    grade = "A"
+elif score >= 80:
+    grade = "B"
+elif score >= 70:
+    grade = "C"
+elif score >= 60:
+    grade = "D"
+else:
+    grade = "F"
+
+print(f"Your grade is: {grade}")
+</code></pre>
+                        <div class="output">
+                            <strong data-lang-key="output-title">Output:</strong>
+                            <pre>Your grade is: B</pre>
+                        </div>
+                    </div>
+
+                    <div class="tip-box">
+                        <h4 data-lang-key="tip-title">💡 Tip:</h4>
+                        <p data-lang-key="elif-tip">
+                            Python checks conditions from top to bottom and stops at the first true condition.
+                        </p>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Section 5: Logical Operators -->
+            <section id="logical-operators" class="lesson-section">
+                <div class="section-icon">🧠</div>
+                <h2 data-lang-key="section5-title-lesson2">5. Logical Operators</h2>
+                
+                <div class="content-block">
+                    <p data-lang-key="logical-intro">
+                        Logical operators allow you to combine multiple conditions.
+                    </p>
+
+                    <div class="operators-table">
+                        <table>
+                            <thead>
+                                <tr>
+                                    <th data-lang-key="operator-header">Operator</th>
+                                    <th data-lang-key="meaning-header">Meaning</th>
+                                    <th data-lang-key="example-header">Example</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td><code>and</code></td>
+                                    <td data-lang-key="and-meaning">Both conditions must be true</td>
+                                    <td><code>age >= 18 and age <= 65</code></td>
+                                </tr>
+                                <tr>
+                                    <td><code>or</code></td>
+                                    <td data-lang-key="or-meaning">At least one condition must be true</td>
+                                    <td><code>day == "Saturday" or day == "Sunday"</code></td>
+                                </tr>
+                                <tr>
+                                    <td><code>not</code></td>
+                                    <td data-lang-key="not-meaning">Reverses the condition</td>
+                                    <td><code>not is_raining</code></td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+
+                    <div class="code-example">
+                        <h4 data-lang-key="example-title">Example - Voting Eligibility:</h4>
+                        <pre><code class="language-python"># Check voting eligibility
+age = 20
+is_citizen = True
+
+if age >= 18 and is_citizen:
+    print("You can vote!")
+elif age >= 18 and not is_citizen:
+    print("You must be a citizen to vote.")
+else:
+    print("You must be 18 or older to vote.")
+</code></pre>
+                        <div class="output">
+                            <strong data-lang-key="output-title">Output:</strong>
+                            <pre>You can vote!</pre>
+                        </div>
+                    </div>
+
+                    <div class="practice-exercise">
+                        <h4 data-lang-key="quick-practice">🏃‍♂️ Quick Practice:</h4>
+                        <p data-lang-key="practice-task2">Check if it's a weekend (Saturday or Sunday) and if it's sunny.</p>
+                        <details>
+                            <summary data-lang-key="show-solution">Show Solution</summary>
+                            <pre><code class="language-python">day = "Saturday"
+is_sunny = True
+
+if (day == "Saturday" or day == "Sunday") and is_sunny:
+    print("Perfect day for outdoor activities!")
+elif day == "Saturday" or day == "Sunday":
+    print("It's weekend but not sunny.")
+else:
+    print("It's a weekday.")</code></pre>
+                        </details>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Section 6: Project - Leap Year Checker -->
+            <section id="leap-year" class="lesson-section">
+                <div class="section-icon">📅</div>
+                <h2 data-lang-key="section6-title-lesson2">6. Project: Leap Year Checker</h2>
+                
+                <div class="objective-box">
+                    <h3 data-lang-key="objective-title">💡 Project Goal:</h3>
+                    <p data-lang-key="leap-year-objective">
+                        Create a program that determines if a given year is a leap year using conditional statements.
+                    </p>
+                </div>
+
+                <div class="content-block">
+                    <h3 data-lang-key="leap-year-rules">📋 Leap Year Rules:</h3>
+                    <div class="rules-list">
+                        <div class="rule-item">
+                            <span class="rule-number">1</span>
+                            <p data-lang-key="rule1-desc">If a year is divisible by 4, it might be a leap year</p>
+                        </div>
+                        <div class="rule-item">
+                            <span class="rule-number">2</span>
+                            <p data-lang-key="rule2-desc">If it's also divisible by 100, it's NOT a leap year</p>
+                        </div>
+                        <div class="rule-item">
+                            <span class="rule-number">3</span>
+                            <p data-lang-key="rule3-desc">UNLESS it's also divisible by 400, then it IS a leap year</p>
+                        </div>
+                    </div>
+
+                    <div class="example-years">
+                        <h4 data-lang-key="examples-title">✅ Examples:</h4>
+                        <div class="examples-grid">
+                            <div class="example-item leap">
+                                <strong>2024</strong>
+                                <p>✅ Leap year</p>
+                                <small>Divisible by 4, not by 100</small>
+                            </div>
+                            <div class="example-item not-leap">
+                                <strong>1900</strong>
+                                <p>❌ Not leap year</p>
+                                <small>Divisible by 4 and 100, but not 400</small>
+                            </div>
+                            <div class="example-item leap">
+                                <strong>2000</strong>
+                                <p>✅ Leap year</p>
+                                <small>Divisible by 4, 100, and 400</small>
+                            </div>
+                            <div class="example-item not-leap">
+                                <strong>2023</strong>
+                                <p>❌ Not leap year</p>
+                                <small>Not divisible by 4</small>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="code-solution">
+                        <h4 data-lang-key="step-by-step">🔨 Step-by-step Solution:</h4>
+                        
+                        <div class="step-box">
+                            <h5 data-lang-key="step1-title">Step 1: Basic Structure</h5>
+                            <pre><code class="language-python"># Get input from user
+year = int(input("Enter a year: "))
+
+# We'll add the logic here
+print(f"Checking if {year} is a leap year...")
+</code></pre>
+                        </div>
+
+                        <div class="step-box">
+                            <h5 data-lang-key="step2-title">Step 2: Apply the Rules (Nested Approach)</h5>
+                            <pre><code class="language-python"># Leap year checker - nested approach
+year = int(input("Enter a year: "))
+
+if year % 4 == 0:
+    if year % 100 == 0:
+        if year % 400 == 0:
+            print(f"{year} is a leap year")
+        else:
+            print(f"{year} is not a leap year")
+    else:
+        print(f"{year} is a leap year")
+else:
+    print(f"{year} is not a leap year")
+</code></pre>
+                        </div>
+
+                        <div class="step-box">
+                            <h5 data-lang-key="step3-title">Step 3: Optimized Version (Logical Operators)</h5>
+                            <pre><code class="language-python"># More concise leap year checker
+year = int(input("Enter a year: "))
+
+if (year % 4 == 0 and year % 100 != 0) or (year % 400 == 0):
+    print(f"{year} is a leap year! 🎉")
+    print("February will have 29 days this year.")
+else:
+    print(f"{year} is not a leap year.")
+    print("February will have 28 days this year.")
+</code></pre>
+                        </div>
+                    </div>
+
+                    <div class="practice-exercise">
+                        <h4 data-lang-key="test-program">🧪 Test Your Program:</h4>
+                        <p data-lang-key="test-years">Try these years: 2024, 1900, 2000, 2023, 2028</p>
+                        <div class="expected-results">
+                            <strong data-lang-key="expected-title">Expected Results:</strong>
+                            <ul>
+                                <li>2024: Leap year ✅</li>
+                                <li>1900: Not leap year ❌</li>
+                                <li>2000: Leap year ✅</li>
+                                <li>2023: Not leap year ❌</li>
+                                <li>2028: Leap year ✅</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Section 7: Project - Electricity Bill Calculator -->
+            <section id="electricity-bill" class="lesson-section">
+                <div class="section-icon">⚡</div>
+                <h2 data-lang-key="section7-title-lesson2">7. Project: Electricity Bill Calculator</h2>
+                
+                <div class="objective-box">
+                    <h3 data-lang-key="objective-title">💡 Project Goal:</h3>
+                    <p data-lang-key="electricity-objective">
+                        Create a tiered electricity billing system based on usage levels.
+                    </p>
+                </div>
+
+                <div class="content-block">
+                    <h3 data-lang-key="pricing-structure">💰 Pricing Structure:</h3>
+                    <div class="pricing-table">
+                        <table>
+                            <thead>
+                                <tr>
+                                    <th data-lang-key="usage-range">Usage Range (kWh)</th>
+                                    <th data-lang-key="price-per-unit">Price per Unit</th>
+                                    <th data-lang-key="description-header">Description</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr class="tier-1">
+                                    <td>0 - 100</td>
+                                    <td>$0.10</td>
+                                    <td data-lang-key="tier1-desc">Basic tier - lowest rate</td>
+                                </tr>
+                                <tr class="tier-2">
+                                    <td>101 - 200</td>
+                                    <td>$0.15</td>
+                                    <td data-lang-key="tier2-desc">Standard tier - medium rate</td>
+                                </tr>
+                                <tr class="tier-3">
+                                    <td>201+</td>
+                                    <td>$0.20</td>
+                                    <td data-lang-key="tier3-desc">Premium tier - highest rate</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+
+                    <div class="calculation-example">
+                        <h4 data-lang-key="example-calculation">📊 Example Calculation:</h4>
+                        <div class="example-box">
+                            <p><strong data-lang-key="usage-example">Usage: 250 kWh</strong></p>
+                            <div class="calculation-steps">
+                                <div class="calc-step">
+                                    <span class="step-label">Tier 1:</span>
+                                    <span class="step-calc">100 kWh × $0.10 = $10.00</span>
+                                </div>
+                                <div class="calc-step">
+                                    <span class="step-label">Tier 2:</span>
+                                    <span class="step-calc">100 kWh × $0.15 = $15.00</span>
+                                </div>
+                                <div class="calc-step">
+                                    <span class="step-label">Tier 3:</span>
+                                    <span class="step-calc">50 kWh × $0.20 = $10.00</span>
+                                </div>
+                                <div class="calc-total">
+                                    <strong>Total Bill: $35.00</strong>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="code-solution">
+                        <h4 data-lang-key="step-by-step">🔨 Step-by-step Solution:</h4>
+                        
+                        <div class="step-box">
+                            <h5 data-lang-key="step1-title">Step 1: Get Input and Validate</h5>
+                            <pre><code class="language-python"># Get electricity usage from user
+units = float(input("Enter electricity usage (kWh): "))
+
+# Validate input
+if units < 0:
+    print("❌ Invalid input! Usage cannot be negative.")
+else:
+    print(f"Calculating bill for {units} kWh...")
+</code></pre>
+                        </div>
+
+                        <div class="step-box">
+                            <h5 data-lang-key="step2-title">Step 2: Calculate Using Conditions</h5>
+                            <pre><code class="language-python"># Electricity bill calculator
+units = float(input("Enter electricity usage (kWh): "))
+
+if units < 0:
+    print("❌ Invalid input! Usage cannot be negative.")
+else:
+    bill = 0
+    
+    if units <= 100:
+        # All units in first tier
+        bill = units * 0.10
+    elif units <= 200:
+        # First 100 units at tier 1, rest at tier 2
+        bill = (100 * 0.10) + ((units - 100) * 0.15)
+    else:
+        # All three tiers
+        bill = (100 * 0.10) + (100 * 0.15) + ((units - 200) * 0.20)
+    
+    print(f"💡 Your electricity bill: ${bill:.2f}")
+</code></pre>
+                        </div>
+
+                        <div class="step-box">
+                            <h5 data-lang-key="step3-title">Step 3: Enhanced Version with Breakdown</h5>
+                            <pre><code class="language-python"># Enhanced electricity bill calculator with detailed breakdown
+units = float(input("Enter electricity usage (kWh): "))
+
+if units < 0:
+    print("❌ Invalid input! Usage cannot be negative.")
+else:
+    bill = 0
+    print(f"\n📊 Bill Breakdown for {units} kWh:")
+    print("-" * 40)
+    
+    if units <= 100:
+        bill = units * 0.10
+        print(f"Tier 1 ({units:.1f} kWh @ $0.10): ${bill:.2f}")
+    elif units <= 200:
+        tier1 = 100 * 0.10
+        tier2 = (units - 100) * 0.15
+        bill = tier1 + tier2
+        print(f"Tier 1 (100.0 kWh @ $0.10): ${tier1:.2f}")
+        print(f"Tier 2 ({units - 100:.1f} kWh @ $0.15): ${tier2:.2f}")
+    else:
+        tier1 = 100 * 0.10
+        tier2 = 100 * 0.15
+        tier3 = (units - 200) * 0.20
+        bill = tier1 + tier2 + tier3
+        print(f"Tier 1 (100.0 kWh @ $0.10): ${tier1:.2f}")
+        print(f"Tier 2 (100.0 kWh @ $0.15): ${tier2:.2f}")
+        print(f"Tier 3 ({units - 200:.1f} kWh @ $0.20): ${tier3:.2f}")
+    
+    print("-" * 40)
+    print(f"💡 Total Bill: ${bill:.2f}")
+    
+    # Add usage tip
+    if units > 200:
+        print("💡 Tip: Consider reducing usage to save money!")
+    elif units > 100:
+        print("💡 Good usage level!")
+    else:
+        print("💡 Excellent! You're using energy efficiently!")
+</code></pre>
+                        </div>
+                    </div>
+
+                    <div class="practice-exercise">
+                        <h4 data-lang-key="test-program">🧪 Test Your Program:</h4>
+                        <p data-lang-key="test-usage">Try these usage amounts: 50, 150, 300 kWh</p>
+                        <div class="expected-results">
+                            <strong data-lang-key="expected-title">Expected Results:</strong>
+                            <ul>
+                                <li>50 kWh: $5.00 (all tier 1)</li>
+                                <li>150 kWh: $17.50 (tier 1 + tier 2)</li>
+                                <li>300 kWh: $45.00 (all three tiers)</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Homework Card -->
+            <div class="homework-card">
+                <div class="homework-content">
+                    <h3 data-lang-key="homework-title">🎯 Ready for Practice?</h3>
+                    <p data-lang-key="homework-description">
+                        Test your conditional statements knowledge with 15 carefully crafted exercises. 
+                        From basic if-else to complex logical decisions - perfect your skills step by step!
+                    </p>
+                    <div class="homework-stats">
+                        <div class="homework-stat">
+                            <span class="stat-number">5</span>
+                            <span class="stat-label" data-lang-key="easy-exercises">Easy</span>
+                        </div>
+                        <div class="homework-stat">
+                            <span class="stat-number">5</span>
+                            <span class="stat-label" data-lang-key="medium-exercises">Medium</span>
+                        </div>
+                        <div class="homework-stat">
+                            <span class="stat-number">5</span>
+                            <span class="stat-label" data-lang-key="hard-exercises">Hard</span>
+                        </div>
+                    </div>
+                    <a href="homework2.html" class="homework-button">
+                        <i class="fas fa-code"></i>
+                        <span data-lang-key="start-homework">Start Homework Exercises</span>
+                    </a>
+                </div>
+            </div>
+
+            <!-- Navigation -->
+            <div class="lesson-navigation">
+                <a href="lesson1.html" class="nav-button prev">
+                    <i class="fas fa-arrow-left"></i>
+                    <span data-lang-key="prev-lesson">Previous: Introduction</span>
+                </a>
+                <a href="../index.html#course" class="nav-button course">
+                    <i class="fas fa-list"></i>
+                    <span data-lang-key="back-course">Course Overview</span>
+                </a>
+                <a href="lesson3.html" class="nav-button next">
+                    <span data-lang-key="next-lesson">Go to Lesson 3: Loops</span>
+                    <i class="fas fa-arrow-right"></i>
+                </a>
+            </div>
+        </div>
+    </main>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <div class="footer-logo">
+                        <i class="fas fa-code"></i>
+                        <span data-lang-key="logo-text">Code Up Your Brain</span>
+                    </div>
+                    <p data-lang-key="footer-desc">
+                        Level up your programming mindset with high-quality Python and Algorithm courses.
+                    </p>
+                </div>
+                <div class="footer-section">
+                    <h4 data-lang-key="footer-contact-title">Contact</h4>
+                    <div class="contact-info">
+                        <div class="contact-item">
+                            <i class="fas fa-envelope"></i>
+                            <span>innomindskills@gmail.com</span>
+                        </div>
+                        <div class="contact-item">
+                            <i class="fas fa-map-marker-alt"></i>
+                            <span data-lang-key="footer-address">Da Nang, Vietnam</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p data-lang-key="footer-copyright">&copy; 2025 Code Up Your Brain. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Contact Popup -->
+    <div id="contactPopup" class="contact-popup">
+        <div class="popup-content">
+            <div class="popup-header">
+                <h3 data-lang-key="contact-title">Contact Information</h3>
+                <button id="closeContactPopup" class="close-btn">
+                    <i class="fas fa-times"></i>
+                </button>
+            </div>
+            <div class="popup-body">
+                <div class="contact-item-popup">
+                    <i class="fas fa-envelope"></i>
+                    <div class="contact-details">
+                        <strong data-lang-key="email-label">Email</strong>
+                        <span>instructor@innomind.edu.vn</span>
+                    </div>
+                </div>
+                <div class="contact-item-popup">
+                    <i class="fas fa-phone"></i>
+                    <div class="contact-details">
+                        <strong data-lang-key="phone-label">Phone</strong>
+                        <span>+84 123 456 789</span>
+                    </div>
+                </div>
+                <div class="contact-item-popup">
+                    <i class="fas fa-map-marker-alt"></i>
+                    <div class="contact-details">
+                        <strong data-lang-key="address-label">Address</strong>
+                        <span data-lang-key="address-full">123 Tech Street, Innovation District, Da Nang, Vietnam</span>
+                    </div>
+                </div>
+                <div class="contact-item-popup">
+                    <i class="fas fa-clock"></i>
+                    <div class="contact-details">
+                        <strong data-lang-key="hours-label">Office Hours</strong>
+                        <span data-lang-key="office-hours">Monday - Friday: 9:00 AM - 6:00 PM</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- JavaScript -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/prism.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/components/prism-python.min.js"></script>
+    <script src="../assets/js/translations.js"></script>
+    <script src="../assets/js/script.js"></script>
+</body>
+</html>

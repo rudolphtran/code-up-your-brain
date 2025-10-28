@@ -20,6 +20,8 @@ const translations = {
         'hero-description': 'Khóa học chất lượng cao giúp bạn làm chủ lập trình Python và thuật toán từ cơ bản đến nâng cao. Được giảng dạy bởi Senior Technical Leader với hơn 8 năm kinh nghiệm tại Zalo.',
         'hero-start': 'Bắt đầu học ngay',
         'hero-preview': 'Xem trước khóa học',
+        'start-course': 'Bắt đầu học ngay',
+        'jump-lesson1': 'Nhảy đến Bài 1',
         'stat-modules': 'Modules',
         'stat-exercises': 'Bài tập',
         'stat-practical': 'Thực hành',
@@ -394,6 +396,310 @@ const translations = {
         'auth-success': 'Truy cập thành công! Chào mừng bạn đến với khóa học.',
         'auth-error': 'Mật khẩu không đúng. Vui lòng thử lại.',
         
+        // Lesson 2 Translations
+        'lesson2-title': 'Bài 2: Câu lệnh điều kiện - Code Up Your Brain',
+        'lesson2-meta': 'Học câu lệnh if-else, toán tử so sánh, và logic ra quyết định trong lập trình Python',
+        'lesson2-main-title': 'Câu lệnh điều kiện',
+        'lesson2-subtitle': 'Làm chủ câu lệnh if-else, toán tử so sánh, và logic ra quyết định trong Python',
+        'breadcrumb-lesson2': 'Bài 2',
+        
+        // Table of Contents - Lesson 2
+        'toc-intro': '1. Giới thiệu về điều kiện',
+        'toc-comparison': '2. Toán tử so sánh',
+        'toc-if': '3. Câu lệnh if cơ bản',
+        'toc-if-else-elif': '4. if-else và elif',
+        'toc-logical': '5. Toán tử logic',
+        'toc-leap-year': '6. Dự án: Kiểm tra năm nhuận',
+        'toc-electricity': '7. Dự án: Tính tiền điện',
+        'toc-exercises': '8. Bài tập thực hành',
+        
+        // Lesson 2 Content
+        'section1-title-lesson2': '1. Giới thiệu về câu lệnh điều kiện',
+        'section2-title-lesson2': '2. Toán tử so sánh',
+        'section3-title-lesson2': '3. Câu lệnh if cơ bản',
+        'section4-title-lesson2': '4. if-else và elif',
+        'section5-title-lesson2': '5. Toán tử logic',
+        'section6-title-lesson2': '6. Dự án: Kiểm tra năm nhuận',
+        'section7-title-lesson2': '7. Dự án: Tính tiền điện',
+        'section8-title-lesson2': '8. Bài tập thực hành & Bài tập về nhà',
+        
+        'what-are-conditionals': 'Câu lệnh điều kiện là gì?',
+        'conditionals-explanation': 'Câu lệnh điều kiện cho phép chương trình ra quyết định dựa trên các tình huống khác nhau. Chúng giống như việc đặt câu hỏi "Nếu thế thì sao?" trong code của bạn.',
+        'everyday-example': '🏠 Ví dụ hàng ngày:',
+        'umbrella-example': '"Nếu trời mưa, tôi sẽ mang ô. Nếu không, tôi sẽ không mang."',
+        'flowchart-title': 'Luồng quyết định:',
+        'flow-start': 'Bắt đầu',
+        'flow-condition': 'Điều kiện có đúng?',
+        'flow-yes': 'Có',
+        'flow-no': 'Không',
+        'flow-action1': 'Làm việc này',
+        'flow-action2': 'Làm việc kia',
+        
+        // Section 2
+        'comparison-intro': 'Trước khi có thể ra quyết định, chúng ta cần so sánh các giá trị. Python cung cấp một số toán tử so sánh:',
+        'operator-header': 'Toán tử',
+        'meaning-header': 'Ý nghĩa',
+        'example-header': 'Ví dụ',
+        'result-header': 'Kết quả',
+        'equal-to': 'Bằng',
+        'not-equal': 'Không bằng',
+        'greater-than': 'Lớn hơn',
+        'less-than': 'Nhỏ hơn',
+        'greater-equal': 'Lớn hơn hoặc bằng',
+        'less-equal': 'Nhỏ hơn hoặc bằng',
+        'try-it': '✏️ Thử nghiệm:',
+        
+        // Section 3
+        'if-intro': 'Câu lệnh <code>if</code> là câu lệnh điều kiện cơ bản nhất. Nó thực thi code chỉ khi điều kiện là đúng.',
+        'syntax-title': '📝 Cú pháp:',
+        'important-title': '⚠️ Quan trọng:',
+        'colon-note': 'Đừng quên dấu hai chấm (:) sau điều kiện',
+        'indent-note': 'Thụt lề code bên trong khối if (4 dấu cách hoặc 1 tab)',
+        'example-title': 'Ví dụ:',
+        'output-title': 'Kết quả:',
+        
+        // Section 4-8 Content
+        'if-else-title': 'Câu lệnh if-else',
+        'elif-title': 'Câu lệnh elif',
+        'section6-title': '6. Dự án: Kiểm tra năm nhuận',
+        'leap-year-objective': 'Tạo chương trình xác định năm nhập vào có phải năm nhuận hay không sử dụng câu lệnh điều kiện.',
+        'leap-year-rules': '📋 Quy tắc năm nhuận:',
+        'rule1-desc': 'Nếu năm chia hết cho 4, có thể là năm nhuận',
+        'rule2-desc': 'Nếu cũng chia hết cho 100, thì KHÔNG phải năm nhuận',
+        'rule3-desc': 'TRỪ KHI cũng chia hết cho 400, thì VẪN LÀ năm nhuận',
+        'examples-title': '✅ Ví dụ:',
+        'step-by-step': '🔨 Giải pháp từng bước:',
+        'step1-title': 'Bước 1: Cấu trúc cơ bản',
+        'step2-title': 'Bước 2: Áp dụng quy tắc',
+        'step3-title': 'Bước 3: Phiên bản tối ưu',
+        'test-program': '🧪 Kiểm tra chương trình:',
+        'test-years': 'Thử với các năm: 2024, 1900, 2000, 2023, 2028',
+        'expected-title': 'Kết quả mong đợi:',
+        
+        'section7-title': '7. Dự án: Tính tiền điện',
+        'electricity-objective': 'Tạo hệ thống tính tiền điện theo bậc thang dựa trên mức sử dụng.',
+        'pricing-structure': '💰 Cơ cấu giá:',
+        'usage-range': 'Mức sử dụng (kWh)',
+        'price-per-unit': 'Giá mỗi đơn vị',
+        'description-header': 'Mô tả',
+        'tier1-desc': 'Bậc cơ bản - giá thấp nhất',
+        'tier2-desc': 'Bậc tiêu chuẩn - giá trung bình',
+        'tier3-desc': 'Bậc cao cấp - giá cao nhất',
+        'example-calculation': '� Ví dụ tính toán:',
+        'usage-example': 'Sử dụng: 250 kWh',
+        
+        'section8-title': '8. Bài tập thực hành',
+        'exercise2-desc': 'Tạo chương trình chuyển đổi điểm số thành điểm chữ có dấu cộng/trừ.',
+        'exercise3-desc': 'Tạo máy tính thuế lũy tiến với nhiều khung thuế.',
+        'homework2-subtitle': 'Thực hành logic điều kiện',
+        'homework2-desc': 'Luyện tập câu lệnh điều kiện với các tình huống thực tế bao gồm dự án kiểm tra năm nhuận và tính tiền điện.',
+        'hints-title': 'Gợi ý:',
+        'hint1': 'BMI = cân nặng (kg) / chiều cao (m)²',
+        'hint2': 'Thiếu cân: BMI < 18.5',
+        'hint3': 'Bình thường: 18.5 ≤ BMI < 25',
+        'hint4': 'Thừa cân: 25 ≤ BMI < 30',
+        'hint5': 'Béo phì: BMI ≥ 30',
+        'tier1': '0-100 đơn vị: $0.10 mỗi đơn vị',
+        'tier2': '101-200 đơn vị: $0.15 mỗi đơn vị',
+        'tier3': '201+ đơn vị: $0.20 mỗi đơn vị',
+        'rule1': 'Búa thắng Kéo',
+        'rule2': 'Kéo thắng Bao',
+        'rule3': 'Bao thắng Búa',
+        'next-title': '🎯 Tiếp theo là gì?',
+        'next-desc': 'Trong bài học tiếp theo, chúng ta sẽ học về vòng lặp - cách lặp lại code một cách hiệu quả!',
+        'next-lesson': 'Đi tới Bài 3: Vòng lặp',
+        'prev-lesson': 'Trước: Giới thiệu',
+        'back-course': 'Tổng quan khóa học',
+        'homework2': 'Bài tập về nhà 2',
+        
+        // Homework Card in Lesson 2
+        'homework-title': '🎯 Sẵn sàng luyện tập?',
+        'homework-description': 'Kiểm tra kiến thức câu lệnh điều kiện với 15 bài tập được thiết kế kỹ lưỡng. Từ if-else cơ bản đến logic quyết định phức tạp - hoàn thiện kỹ năng từng bước!',
+        'easy-exercises': 'Dễ',
+        'medium-exercises': 'Trung bình',
+        'hard-exercises': 'Khó',
+        'start-homework': 'Bắt đầu bài tập về nhà',
+        
+        // Homework 2 Page Translations
+        'homework2-title': 'Bài tập về nhà 2: Thực hành câu lệnh điều kiện - Code Up Your Brain',
+        'homework2-meta': 'Thực hành câu lệnh điều kiện với 15 bài tập thực tế từ cơ bản đến nâng cao',
+        'homework2-main-title': 'Thực hành câu lệnh điều kiện',
+        'homework2-subtitle': '15 bài tập thực tế để thành thạo câu lệnh if-else, toán tử so sánh và logic ra quyết định',
+        'homework-label': 'Bài tập về nhà',
+        'breadcrumb-homework': 'Bài tập về nhà',
+        
+        // Instructions
+        'instructions-title': '📋 Hướng dẫn',
+        'instruction1-title': 'Lập trình bằng Python',
+        'instruction1-desc': 'Viết tất cả giải pháp bằng Python 3.x với cú pháp và thụt lề chính xác',
+        'instruction2-title': 'Kiểm tra code của bạn',
+        'instruction2-desc': 'Kiểm tra từng chương trình với nhiều đầu vào để đảm bảo hoạt động đúng',
+        'instruction3-title': 'Thêm comment',
+        'instruction3-desc': 'Bao gồm comment giải thích logic và cách tiếp cận của bạn',
+        'instruction4-title': 'Quản lý thời gian',
+        'instruction4-desc': 'Dễ: 15-20 phút, Trung bình: 25-35 phút, Khó: 40-60 phút mỗi bài',
+        
+        // Progress
+        'progress-title': '📊 Tiến độ của bạn',
+        'easy-title': 'Bài tập dễ (1-5)',
+        'easy-desc': 'Xây dựng nền tảng với câu lệnh điều kiện cơ bản',
+        'medium-title': 'Bài tập trung bình (6-10)',
+        'medium-desc': 'Thử thách bản thân với logic điều kiện phức tạp',
+        'hard-title': 'Bài tập khó (11-15)',
+        'hard-desc': 'Thành thạo logic điều kiện nâng cao và các tình huống phức tạp',
+        
+        // Summary
+        'summary-title': '🎯 Tóm tắt & Bước tiếp theo',
+        
+        // Navigation
+        'back-lesson': 'Về Bài 2',
+        'back-course': 'Tổng quan khóa học',
+        'next-lesson': 'Đến Bài 3: Vòng lặp',
+        
+        // Contact
+        'contact-title': 'Thông tin liên hệ',
+        'email-label': 'Email',
+        'phone-label': 'Điện thoại',
+        'address-label': 'Địa chỉ',
+        'address-full': '123 Đường Công nghệ, Khu Đổi mới, Đà Nẵng, Việt Nam',
+        'hours-label': 'Giờ làm việc',
+        'office-hours': 'Thứ Hai - Thứ Sáu: 9:00 AM - 6:00 PM',
+        
+        // Exercise common labels
+        'difficulty-easy': 'Dễ',
+        'difficulty-medium': 'Trung bình',
+        'difficulty-hard': 'Khó',
+        'mark-complete': 'Đánh dấu hoàn thành',
+        'problem-label': 'Bài toán:',
+        'requirements-label': 'Yêu cầu:',
+        'sample-io-label': 'Ví dụ Input/Output:',
+        'hints-label': 'Gợi ý:',
+        'solution-label': 'Giải pháp:',
+        
+        // Exercise 1: Age Category
+        'exercise1-title': 'Phân loại độ tuổi',
+        'exercise1-problem': 'Viết chương trình phân loại độ tuổi của một người thành các nhóm: Trẻ em (0-12), Thiếu niên (13-19), Người lớn (20-64), hoặc Cao tuổi (65+).',
+        'exercise1-req1': 'Hỏi người dùng về độ tuổi của họ',
+        'exercise1-req2': 'Kiểm tra độ tuổi không được âm',
+        'exercise1-req3': 'Hiển thị nhóm tuổi phù hợp',
+        'exercise1-req4': 'Thêm tin nhắn cá nhân hóa cho mỗi nhóm',
+        'exercise1-sample': 'Input: 25\nOutput: Bạn là Người lớn. Độ tuổi tuyệt vời để xây dựng sự nghiệp!',
+        
+        // Exercise 2: Grade Letter
+        'exercise2-title': 'Máy tính điểm chữ',
+        'exercise2-problem': 'Chuyển đổi điểm số (0-100) thành điểm chữ (A, B, C, D, F) với trạng thái đậu/rớt.',
+        'exercise2-req1': 'A: 90-100, B: 80-89, C: 70-79, D: 60-69, F: 0-59',
+        'exercise2-req2': 'Hiển thị điểm chữ và trạng thái đậu/rớt',
+        'exercise2-req3': 'Kiểm tra điểm trong khoảng 0-100',
+        'exercise2-req4': 'Thêm tin nhắn khuyến khích/động viên',
+        
+        // Exercise 3: Temperature Converter
+        'exercise3-title': 'Chuyển đổi nhiệt độ',
+        'exercise3-problem': 'Tạo chương trình chuyển đổi nhiệt độ giữa Celsius, Fahrenheit và Kelvin.',
+        'exercise3-req1': 'Hỏi người dùng về giá trị nhiệt độ và đơn vị nguồn',
+        'exercise3-req2': 'Chuyển đổi sang đơn vị đích sử dụng công thức phù hợp',
+        'exercise3-req3': 'Kiểm tra đầu vào nhiệt độ (ví dụ: Kelvin không thể âm)',
+        'exercise3-req4': 'Hiển thị kết quả với định dạng thích hợp',
+        
+        // Exercise 4: Simple Calculator  
+        'exercise4-title': 'Máy tính đơn giản',
+        'exercise4-problem': 'Tạo máy tính đơn giản thực hiện các phép tính số học cơ bản (+, -, *, /) dựa trên lựa chọn của người dùng.',
+        'exercise4-req1': 'Hỏi hai số và một phép tính',
+        'exercise4-req2': 'Hỗ trợ các phép tính +, -, *, /',
+        'exercise4-req3': 'Xử lý chia cho không',
+        'exercise4-req4': 'Hiển thị phép tính và kết quả rõ ràng',
+        
+        // Exercise 5: Day of Week Activities
+        'exercise5-title': 'Hoạt động theo ngày trong tuần',
+        'exercise5-problem': 'Dựa trên ngày trong tuần, đề xuất các hoạt động khác nhau (ngày làm việc vs cuối tuần).',
+        'exercise5-req1': 'Chấp nhận tên ngày (Thứ Hai, Thứ Ba, v.v.)',
+        'exercise5-req2': 'Phân loại thành ngày trong tuần hoặc cuối tuần',
+        'exercise5-req3': 'Đề xuất các hoạt động phù hợp',
+        'exercise5-req4': 'Xử lý đầu vào không phân biệt chữ hoa/thường',
+        
+        // Exercise 6: BMI Calculator
+        'exercise6-title': 'Máy tính BMI & Sức khỏe',
+        'exercise6-problem': 'Tạo máy tính BMI toàn diện với khuyến nghị sức khỏe và đánh giá rủi ro.',
+        'exercise6-req1': 'Tính BMI = cân nặng(kg) / chiều cao²(m²)',
+        'exercise6-req2': 'Phân loại: Thiếu cân (<18.5), Bình thường (18.5-24.9), Thừa cân (25-29.9), Béo phì (≥30)',
+        'exercise6-req3': 'Cung cấp khuyến nghị sức khỏe cho mỗi nhóm',
+        'exercise6-req4': 'Hỗ trợ cả đơn vị metric và imperial',
+        'exercise6-req5': 'Bao gồm tin nhắn đánh giá rủi ro',
+        
+        // Exercise 7: Triangle Analyzer
+        'exercise7-title': 'Phân tích tam giác',
+        'exercise7-problem': 'Xác định ba cạnh có thể tạo thành tam giác không, và nếu có, phân loại theo cạnh và góc.',
+        'exercise7-req1': 'Kiểm tra bất đẳng thức tam giác: tổng hai cạnh bất kỳ > cạnh thứ ba',
+        'exercise7-req2': 'Phân loại theo cạnh: Đều, Cân, Thường',
+        'exercise7-req3': 'Phân loại theo góc: Vuông, Nhọn, Tù (sử dụng định lý Pythagoras)',
+        'exercise7-req4': 'Tính chu vi và diện tích',
+        'exercise7-req5': 'Xử lý đầu vào không hợp lệ một cách khéo léo',
+        
+        // Exercise 8: Password Strength
+        'exercise8-title': 'Kiểm tra độ mạnh mật khẩu',
+        'exercise8-problem': 'Tạo công cụ kiểm tra độ mạnh mật khẩu đánh giá mật khẩu dựa trên nhiều tiêu chí.',
+        'exercise8-req1': 'Kiểm tra độ dài (tối thiểu 8 ký tự)',
+        'exercise8-req2': 'Yêu cầu chữ hoa, chữ thường, số và ký tự đặc biệt',
+        'exercise8-req3': 'Kiểm tra các mẫu phổ biến và từ từ điển',
+        'exercise8-req4': 'Cung cấp điểm số và đề xuất cải thiện',
+        'exercise8-req5': 'Phân loại: Yếu, Trung bình, Mạnh, Rất mạnh',
+        
+        // Exercise 9: Tax Calculator
+        'exercise9-title': 'Máy tính thuế',
+        'exercise9-problem': 'Tạo máy tính thuế thông minh với khung thuế lũy tiến và các khoản khấu trừ.',
+        'exercise9-req1': 'Khung thuế lũy tiến nhiều bậc',
+        'exercise9-req2': 'Khấu trừ gia cảnh và người phụ thuộc',
+        'exercise9-req3': 'Khấu trừ bảo hiểm và đóng góp từ thiện',
+        'exercise9-req4': 'Tạo báo cáo thuế chi tiết',
+        
+        // Exercise 10: Rock Paper Scissors
+        'exercise10-title': 'Búa Bao Kéo',
+        'exercise10-problem': 'Tạo trò chơi Búa-Bao-Kéo với AI thông minh và theo dõi thống kê.',
+        'exercise10-req1': 'Trò chơi người vs máy với AI thích ứng',
+        'exercise10-req2': 'Theo dõi thống kê và lịch sử',
+        'exercise10-req3': 'Nhiều chế độ chơi khác nhau',
+        'exercise10-req4': 'Phân tích mẫu người chơi',
+        
+        // Exercise 11: Smart Banking System
+        'exercise11-title': 'Hệ thống ngân hàng thông minh',
+        'exercise11-problem': 'Mô phỏng hệ thống ngân hàng với quản lý tài khoản và giao dịch nâng cao.',
+        'exercise11-req1': 'Tạo và quản lý nhiều loại tài khoản',
+        'exercise11-req2': 'Xử lý giao dịch với xác thực bảo mật',
+        'exercise11-req3': 'Tính lãi suất và phí dịch vụ',
+        'exercise11-req4': 'Báo cáo tài chính chi tiết',
+        
+        // Exercise 12: Date Validator
+        'exercise12-title': 'Xác thực ngày tháng',
+        'exercise12-problem': 'Tạo hệ thống xác thực ngày tháng toàn diện với múi giờ và lịch.',
+        'exercise12-req1': 'Xác thực định dạng ngày đa dạng',
+        'exercise12-req2': 'Xử lý năm nhuận và múi giờ',
+        'exercise12-req3': 'Tính toán khoảng cách ngày',
+        'exercise12-req4': 'Hỗ trợ nhiều định dạng lịch',
+        
+        // Exercise 13: Loan Eligibility
+        'exercise13-title': 'Đánh giá điều kiện vay',
+        'exercise13-problem': 'Phân tích điều kiện vay dựa trên thu nhập, tín dụng và rủi ro.',
+        'exercise13-req1': 'Đánh giá điểm tín dụng và lịch sử',
+        'exercise13-req2': 'Tính tỷ lệ thu nhập trên nợ',
+        'exercise13-req3': 'Phân tích rủi ro và đảm bảo',
+        'exercise13-req4': 'Đề xuất gói vay phù hợp',
+        
+        // Exercise 14: Insurance Premium
+        'exercise14-title': 'Tính phí bảo hiểm',
+        'exercise14-problem': 'Tính phí bảo hiểm dựa trên hồ sơ rủi ro và các yếu tố cá nhân.',
+        'exercise14-req1': 'Đánh giá yếu tố rủi ro cá nhân',
+        'exercise14-req2': 'Tính phí theo độ tuổi và sức khỏe',
+        'exercise14-req3': 'Áp dụng giảm giá và ưu đãi',
+        'exercise14-req4': 'So sánh các gói bảo hiểm',
+        
+        // Exercise 15: Grade Management
+        'exercise15-title': 'Quản lý điểm số',
+        'exercise15-problem': 'Hệ thống quản lý điểm số toàn diện cho học sinh và giáo viên.',
+        'exercise15-req1': 'Quản lý điểm theo môn học và kỳ',
+        'exercise15-req2': 'Tính GPA và xếp hạng lớp',
+        'exercise15-req3': 'Tạo báo cáo tiến độ học tập',
+        'exercise15-req4': 'Cảnh báo học lực yếu và khuyến nghị',
+        
         // Navigation
         'nav-back': 'Về trang khóa học',
         'nav-next': 'Tiếp: Câu lệnh điều kiện'
@@ -419,6 +725,8 @@ const translations = {
         'hero-description': 'High-quality course that helps you master Python programming and algorithms from basic to advanced. Taught by Senior Technical Leader with 8+ years of experience at Zalo.',
         'hero-start': 'Start Learning Now',
         'hero-preview': 'Course Preview',
+        'start-course': 'Start Learning Now',
+        'jump-lesson1': 'Jump to Lesson 1',
         'stat-modules': 'Modules',
         'stat-exercises': 'Exercises',
         'stat-practical': 'Hands-on',
@@ -801,6 +1109,309 @@ const translations = {
         'homework-intermediate': 'Trung bình',  
         'homework-advanced': 'Nâng cao',
         'homework-download': 'Tải Bài Tập',
+        
+        // Lesson 2 Translations
+        'lesson2-title': 'Lesson 2: Conditional Statements - Code Up Your Brain',
+        'lesson2-meta': 'Learn if-else statements, comparison operators, and logical decision making in Python programming',
+        'lesson2-main-title': 'Conditional Statements',
+        'lesson2-subtitle': 'Master if-else statements, comparison operators, and logical decision making in Python',
+        'breadcrumb-lesson2': 'Lesson 2',
+        
+        // Table of Contents - Lesson 2
+        'toc-intro': '1. Introduction to Conditionals',
+        'toc-comparison': '2. Comparison Operators',
+        'toc-if': '3. Basic if Statements',
+        'toc-if-else-elif': '4. if-else and elif',
+        'toc-logical': '5. Logical Operators',
+        'toc-leap-year': '6. Project: Leap Year Checker',
+        'toc-electricity': '7. Project: Electricity Bill Calculator',
+        'toc-examples': '8. Real-world Examples',
+        
+        // Lesson 2 Content
+        'section1-title-lesson2': '1. Introduction to Conditionals',
+        'section2-title-lesson2': '2. Comparison Operators',
+        'section3-title-lesson2': '3. Basic if Statements',
+        'section4-title-lesson2': '4. if-else and elif',
+        'section5-title-lesson2': '5. Logical Operators',
+        'section6-title-lesson2': '6. Project: Leap Year Checker',
+        'section7-title-lesson2': '7. Project: Electricity Bill Calculator',
+        'section8-title-lesson2': '8. Practice Exercises & Homework',
+        
+        'what-are-conditionals': 'What are Conditional Statements?',
+        'conditionals-explanation': 'Conditional statements allow programs to make decisions based on different situations. They\'re like asking "What if?" questions in your code.',
+        'everyday-example': '🏠 Everyday Example:',
+        'umbrella-example': '"If it\'s raining, I\'ll bring an umbrella. Otherwise, I won\'t."',
+        'flowchart-title': 'Decision Flow:',
+        'flow-start': 'Start',
+        'flow-condition': 'Is condition true?',
+        'flow-yes': 'Yes',
+        'flow-no': 'No',
+        'flow-action1': 'Do this',
+        'flow-action2': 'Do that',
+        
+        // Section 2
+        'comparison-intro': 'Before we can make decisions, we need to compare values. Python provides several comparison operators:',
+        'operator-header': 'Operator',
+        'meaning-header': 'Meaning',
+        'example-header': 'Example',
+        'result-header': 'Result',
+        'equal-to': 'Equal to',
+        'not-equal': 'Not equal to',
+        'greater-than': 'Greater than',
+        'less-than': 'Less than',
+        'greater-equal': 'Greater than or equal',
+        'less-equal': 'Less than or equal',
+        'try-it': '✏️ Try it yourself:',
+        
+        // Section 3
+        'if-intro': 'The <code>if</code> statement is the most basic conditional statement. It executes code only when a condition is true.',
+        'syntax-title': '📝 Syntax:',
+        'important-title': '⚠️ Important:',
+        'colon-note': 'Don\'t forget the colon (:) after the condition',
+        'indent-note': 'Indent the code inside the if block (4 spaces or 1 tab)',
+        'example-title': 'Example:',
+        'output-title': 'Output:',
+        
+        // Section 4-8 Content
+        'if-else-title': 'if-else Statements',
+        'elif-title': 'elif Statements',
+        'section6-title': '6. Project: Leap Year Checker',
+        'leap-year-objective': 'Create a program that determines if a given year is a leap year using conditional statements.',
+        'leap-year-rules': '📋 Leap Year Rules:',
+        'rule1-desc': 'If a year is divisible by 4, it might be a leap year',
+        'rule2-desc': 'If it\'s also divisible by 100, it\'s NOT a leap year',
+        'rule3-desc': 'UNLESS it\'s also divisible by 400, then it IS a leap year',
+        'examples-title': '✅ Examples:',
+        'step-by-step': '🔨 Step-by-step Solution:',
+        'step1-title': 'Step 1: Basic Structure',
+        'step2-title': 'Step 2: Apply the Rules',
+        'step3-title': 'Step 3: Optimized Version',
+        'test-program': '🧪 Test Your Program:',
+        'test-years': 'Try these years: 2024, 1900, 2000, 2023, 2028',
+        'expected-title': 'Expected Results:',
+        
+        'section7-title': '7. Project: Electricity Bill Calculator',
+        'electricity-objective': 'Create a tiered electricity billing system based on usage levels.',
+        'pricing-structure': '💰 Pricing Structure:',
+        'usage-range': 'Usage Range (kWh)',
+        'price-per-unit': 'Price per Unit',
+        'description-header': 'Description',
+        'tier1-desc': 'Basic tier - lowest rate',
+        'tier2-desc': 'Standard tier - medium rate',
+        'tier3-desc': 'Premium tier - highest rate',
+        'example-calculation': '� Example Calculation:',
+        'usage-example': 'Usage: 250 kWh',
+        
+        'section8-title': '8. Practice Exercises',
+        'exercise2-desc': 'Create a program that converts numerical scores to letter grades with plus/minus.',
+        'exercise3-desc': 'Create a progressive tax calculator with multiple tax brackets.',
+        'homework2-subtitle': 'Conditional Logic Practice',
+        'homework2-desc': 'Practice conditional statements with real-world scenarios including the leap year and electricity bill projects.',
+        'hints-title': 'Hints:',
+        'hint1': 'BMI = weight (kg) / height (m)²',
+        'hint2': 'Underweight: BMI < 18.5',
+        'hint3': 'Normal: 18.5 ≤ BMI < 25',
+        'hint4': 'Overweight: 25 ≤ BMI < 30',
+        'hint5': 'Obese: BMI ≥ 30',
+        'tier1': '0-100 units: $0.10 per unit',
+        'tier2': '101-200 units: $0.15 per unit',
+        'tier3': '201+ units: $0.20 per unit',
+        'rule1': 'Rock beats Scissors',
+        'rule2': 'Scissors beats Paper',
+        'rule3': 'Paper beats Rock',
+        'next-title': '🎯 What\'s Next?',
+        'next-desc': 'In the next lesson, we\'ll learn about loops - how to repeat code efficiently!',
+        'next-lesson': 'Go to Lesson 3: Loops',
+        'prev-lesson': 'Previous: Introduction',
+        'back-course': 'Course Overview',
+        'homework2': 'Homework 2',
+        
+        // Homework Card in Lesson 2
+        'homework-title': '🎯 Ready for Practice?',
+        'homework-description': 'Test your conditional statements knowledge with 15 carefully crafted exercises. From basic if-else to complex logical decisions - perfect your skills step by step!',
+        'easy-exercises': 'Easy',
+        'medium-exercises': 'Medium',
+        'hard-exercises': 'Hard',
+        'start-homework': 'Start Homework Exercises',
+        
+        // Homework 2 Page Translations  
+        'homework2-title': 'Homework 2: Conditional Statements Practice - Code Up Your Brain',
+        'homework2-meta': 'Practice conditional statements with 15 hands-on exercises from basic to advanced level',
+        'homework2-main-title': 'Conditional Statements Practice',
+        'homework2-subtitle': '15 hands-on exercises to master if-else statements, comparison operators, and logical decision making',
+        'homework-label': 'Homework',
+        'breadcrumb-homework': 'Homework',
+        
+        // Instructions
+        'instructions-title': '📋 Instructions',
+        'instruction1-title': 'Code in Python',
+        'instruction1-desc': 'Write all solutions in Python 3.x using proper syntax and indentation',
+        'instruction2-title': 'Test Your Code',
+        'instruction2-desc': 'Test each program with multiple inputs to ensure it works correctly',
+        'instruction3-title': 'Add Comments',
+        'instruction3-desc': 'Include comments explaining your logic and approach',
+        'instruction4-title': 'Time Management',
+        'instruction4-desc': 'Easy: 15-20 min, Medium: 25-35 min, Hard: 40-60 min per exercise',
+        
+        // Progress
+        'progress-title': '📊 Your Progress',
+        'easy-title': 'Easy Exercises (1-5)',
+        'easy-desc': 'Build your foundation with basic conditional statements',
+        'medium-title': 'Medium Exercises (6-10)',
+        'medium-desc': 'Challenge yourself with complex conditional logic',
+        'hard-title': 'Hard Exercises (11-15)',
+        'hard-desc': 'Master advanced conditional logic and complex scenarios',
+        
+        // Summary
+        'summary-title': '🎯 Summary & Next Steps',
+        
+        // Navigation
+        'back-lesson': 'Back to Lesson 2',
+        'next-lesson': 'Go to Lesson 3: Loops',
+        
+        // Contact
+        'contact-title': 'Contact Information',
+        'email-label': 'Email',
+        'phone-label': 'Phone',
+        'address-label': 'Address',
+        'address-full': '123 Tech Street, Innovation District, Da Nang, Vietnam',
+        'hours-label': 'Office Hours',
+        'office-hours': 'Monday - Friday: 9:00 AM - 6:00 PM',
+        
+        // Exercise common labels
+        'difficulty-easy': 'Easy',
+        'difficulty-medium': 'Medium',
+        'difficulty-hard': 'Hard',
+        'mark-complete': 'Mark Complete',
+        'problem-label': 'Problem:',
+        'requirements-label': 'Requirements:',
+        'sample-io-label': 'Sample Input/Output:',
+        'hints-label': 'Hints:',
+        'solution-label': 'Solution:',
+        
+        // Exercise 1: Age Category
+        'exercise1-title': 'Age Category Classifier',
+        'exercise1-problem': 'Write a program that classifies a person\'s age into categories: Child (0-12), Teen (13-19), Adult (20-64), or Senior (65+).',
+        'exercise1-req1': 'Ask user for their age',
+        'exercise1-req2': 'Validate that age is not negative',
+        'exercise1-req3': 'Display the appropriate category',
+        'exercise1-req4': 'Add a personalized message for each category',
+        'exercise1-sample': 'Input: 25\nOutput: You are an Adult. Great age for building your career!',
+        
+        // Exercise 2: Grade Letter
+        'exercise2-title': 'Grade Letter Calculator',
+        'exercise2-problem': 'Convert numeric scores (0-100) to letter grades (A, B, C, D, F) with pass/fail status.',
+        'exercise2-req1': 'A: 90-100, B: 80-89, C: 70-79, D: 60-69, F: 0-59',
+        'exercise2-req2': 'Show letter grade and pass/fail status',
+        'exercise2-req3': 'Validate score is between 0-100',
+        'exercise2-req4': 'Add encouraging/motivational messages',
+        
+        // Exercise 3: Temperature Converter
+        'exercise3-title': 'Temperature Converter',
+        'exercise3-problem': 'Create a temperature converter that converts between Celsius, Fahrenheit, and Kelvin.',
+        'exercise3-req1': 'Ask user for temperature value and source unit',
+        'exercise3-req2': 'Convert to the target unit using appropriate formulas',
+        'exercise3-req3': 'Validate temperature inputs (e.g., Kelvin can\'t be negative)',
+        'exercise3-req4': 'Display result with proper formatting',
+        
+        // Exercise 4: Simple Calculator
+        'exercise4-title': 'Simple Calculator',
+        'exercise4-problem': 'Create a simple calculator that performs basic arithmetic operations (+, -, *, /) based on user choice.',
+        'exercise4-req1': 'Ask for two numbers and an operation',
+        'exercise4-req2': 'Support +, -, *, / operations',
+        'exercise4-req3': 'Handle division by zero',
+        'exercise4-req4': 'Show the calculation and result clearly',
+        
+        // Exercise 5: Day of Week Activities
+        'exercise5-title': 'Day of Week Activities',
+        'exercise5-problem': 'Based on the day of the week, suggest different activities (work days vs weekends).',
+        'exercise5-req1': 'Accept day name (Monday, Tuesday, etc.)',
+        'exercise5-req2': 'Categorize as weekday or weekend',
+        'exercise5-req3': 'Suggest appropriate activities',
+        'exercise5-req4': 'Handle case-insensitive input',
+        
+        // Exercise 6: BMI Calculator
+        'exercise6-title': 'BMI Health Calculator',
+        'exercise6-problem': 'Create a comprehensive BMI calculator with health recommendations and risk assessments.',
+        'exercise6-req1': 'Calculate BMI = weight(kg) / height²(m²)',
+        'exercise6-req2': 'Categories: Underweight (<18.5), Normal (18.5-24.9), Overweight (25-29.9), Obese (≥30)',
+        'exercise6-req3': 'Provide health recommendations for each category',
+        'exercise6-req4': 'Support both metric and imperial units',
+        'exercise6-req5': 'Include risk assessment messages',
+        
+        // Exercise 7: Triangle Analyzer
+        'exercise7-title': 'Triangle Type Analyzer',
+        'exercise7-problem': 'Determine if three sides can form a triangle, and if so, classify it by sides and angles.',
+        'exercise7-req1': 'Validate triangle inequality: sum of any two sides > third side',
+        'exercise7-req2': 'Classify by sides: Equilateral, Isosceles, Scalene',
+        'exercise7-req3': 'Classify by angles: Right, Acute, Obtuse (using Pythagorean theorem)',
+        'exercise7-req4': 'Calculate perimeter and area',
+        'exercise7-req5': 'Handle invalid inputs gracefully',
+        
+        // Exercise 8: Password Strength
+        'exercise8-title': 'Password Strength Validator',
+        'exercise8-problem': 'Create a password strength checker that evaluates passwords based on multiple criteria.',
+        'exercise8-req1': 'Check length (minimum 8 characters)',
+        'exercise8-req2': 'Require uppercase, lowercase, numbers and special characters',
+        'exercise8-req3': 'Check for common patterns and dictionary words',
+        'exercise8-req4': 'Provide score and improvement suggestions',
+        'exercise8-req5': 'Categorize: Weak, Fair, Strong, Very Strong',
+        
+        // Exercise 9: Tax Calculator
+        'exercise9-title': 'Tax Calculator',
+        'exercise9-problem': 'Create an intelligent tax calculator with progressive tax brackets and deductions.',
+        'exercise9-req1': 'Progressive multi-tier tax brackets',
+        'exercise9-req2': 'Personal and dependent deductions',
+        'exercise9-req3': 'Insurance and charitable contribution deductions',
+        'exercise9-req4': 'Generate detailed tax report',
+        
+        // Exercise 10: Rock Paper Scissors
+        'exercise10-title': 'Rock Paper Scissors',
+        'exercise10-problem': 'Create a Rock-Paper-Scissors game with intelligent AI and statistics tracking.',
+        'exercise10-req1': 'Human vs AI game with adaptive AI',
+        'exercise10-req2': 'Track statistics and history',
+        'exercise10-req3': 'Multiple game modes',
+        'exercise10-req4': 'Analyze player patterns',
+        
+        // Exercise 11: Smart Banking System
+        'exercise11-title': 'Smart Banking System',
+        'exercise11-problem': 'Simulate a banking system with advanced account management and transactions.',
+        'exercise11-req1': 'Create and manage multiple account types',
+        'exercise11-req2': 'Process transactions with security validation',
+        'exercise11-req3': 'Calculate interest rates and service fees',
+        'exercise11-req4': 'Generate detailed financial reports',
+        
+        // Exercise 12: Date Validator
+        'exercise12-title': 'Date Validator',
+        'exercise12-problem': 'Create a comprehensive date validation system with timezone and calendar support.',
+        'exercise12-req1': 'Validate various date formats',
+        'exercise12-req2': 'Handle leap years and timezones',
+        'exercise12-req3': 'Calculate date differences',
+        'exercise12-req4': 'Support multiple calendar formats',
+        
+        // Exercise 13: Loan Eligibility
+        'exercise13-title': 'Loan Eligibility',
+        'exercise13-problem': 'Analyze loan eligibility based on income, credit, and risk assessment.',
+        'exercise13-req1': 'Evaluate credit score and history',
+        'exercise13-req2': 'Calculate debt-to-income ratio',
+        'exercise13-req3': 'Analyze risk factors and collateral',
+        'exercise13-req4': 'Recommend suitable loan packages',
+        
+        // Exercise 14: Insurance Premium
+        'exercise14-title': 'Insurance Premium',
+        'exercise14-problem': 'Calculate insurance premiums based on risk profile and personal factors.',
+        'exercise14-req1': 'Assess personal risk factors',
+        'exercise14-req2': 'Calculate premiums by age and health',
+        'exercise14-req3': 'Apply discounts and benefits',
+        'exercise14-req4': 'Compare insurance packages',
+        
+        // Exercise 15: Grade Management
+        'exercise15-title': 'Grade Management',
+        'exercise15-problem': 'Comprehensive grade management system for students and teachers.',
+        'exercise15-req1': 'Manage grades by subject and semester',
+        'exercise15-req2': 'Calculate GPA and class ranking',
+        'exercise15-req3': 'Generate academic progress reports',
+        'exercise15-req4': 'Alert for poor performance and recommendations',
         
         // Navigation
         'nav-back': 'Back to Course',

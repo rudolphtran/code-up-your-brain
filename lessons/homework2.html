@@ -1,0 +1,925 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="color-scheme" content="light only">
+    <title data-lang-key="homework2-title">Homework 2: Conditional Statements Practice - Code Up Your Brain</title>
+    <meta name="description" data-lang-key="homework2-meta" content="Practice conditional statements with 15 hands-on exercises from basic to advanced level">
+    <link rel="stylesheet" href="../assets/css/styles.css">
+    <link rel="stylesheet" href="../assets/css/lesson.css">
+    <link rel="stylesheet" href="../assets/css/auth.css">
+    <link rel="stylesheet" href="../assets/css/mobile-optimizations.css">
+    <link rel="stylesheet" href="../assets/css/ultra-compact-header.css">
+    <link rel="stylesheet" href="../assets/css/force-hide-logo.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/themes/prism-tomorrow.min.css">
+</head>
+<body>
+    <!-- Header -->
+    <header class="header">
+        <div class="container">
+            <div class="header-content">
+                <div class="logo">
+                    <a href="../index.html">
+                        <i class="fas fa-code"></i>
+                        <span data-lang-key="logo-text">Code Up Your Brain</span>
+                    </a>
+                </div>
+                <div class="innomind-header-logo">
+                    <a href="../index.html">
+                        <img src="../assets/images/logo.png" alt="InnoMind Logo" />
+                    </a>
+                </div>
+                <nav class="nav">
+                    <a href="../index.html" data-lang-key="nav-home">Home</a>
+                    <a href="../index.html#about" data-lang-key="nav-about">About</a>
+                    <a href="../index.html#course" data-lang-key="nav-course">Course</a>
+                    <a href="../index.html#instructor" data-lang-key="nav-instructor">Instructor</a>
+                    <a href="#contact" data-lang-key="nav-contact">Contact</a>
+                </nav>
+                <div class="header-actions">
+                    <button class="lang-toggle" id="langToggle">
+                        <i class="fas fa-globe"></i>
+                        <span id="currentLang">EN</span>
+                    </button>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!-- Homework Content -->
+    <main class="lesson-content">
+        <div class="container">
+            <!-- Breadcrumb -->
+            <nav class="breadcrumb">
+                <a href="../index.html" data-lang-key="breadcrumb-home">Home</a>
+                <span class="separator">/</span>
+                <a href="../index.html#course" data-lang-key="breadcrumb-course">Course</a>
+                <span class="separator">/</span>
+                <a href="lesson2.html" data-lang-key="breadcrumb-lesson2">Lesson 2</a>
+                <span class="separator">/</span>
+                <span data-lang-key="breadcrumb-homework">Homework</span>
+            </nav>
+
+            <!-- Homework Header -->
+            <div class="lesson-header">
+                <div class="lesson-number">
+                    <span data-lang-key="homework-label">Homework</span> 2
+                </div>
+                <h1 data-lang-key="homework2-main-title">Conditional Statements Practice</h1>
+                <p class="lesson-subtitle" data-lang-key="homework2-subtitle">
+                    15 hands-on exercises to master if-else statements, comparison operators, and logical decision making
+                </p>
+            </div>
+
+            <!-- Instructions -->
+            <div class="homework-instructions">
+                <h2 data-lang-key="instructions-title">📋 Instructions</h2>
+                <div class="instructions-grid">
+                    <div class="instruction-item">
+                        <div class="instruction-icon">💻</div>
+                        <h3 data-lang-key="instruction1-title">Code in Python</h3>
+                        <p data-lang-key="instruction1-desc">Write all solutions in Python 3.x using proper syntax and indentation</p>
+                    </div>
+                    <div class="instruction-item">
+                        <div class="instruction-icon">🧪</div>
+                        <h3 data-lang-key="instruction2-title">Test Your Code</h3>
+                        <p data-lang-key="instruction2-desc">Test each program with multiple inputs to ensure it works correctly</p>
+                    </div>
+                    <div class="instruction-item">
+                        <div class="instruction-icon">📝</div>
+                        <h3 data-lang-key="instruction3-title">Add Comments</h3>
+                        <p data-lang-key="instruction3-desc">Include comments explaining your logic and approach</p>
+                    </div>
+                    <div class="instruction-item">
+                        <div class="instruction-icon">⏱️</div>
+                        <h3 data-lang-key="instruction4-title">Time Management</h3>
+                        <p data-lang-key="instruction4-desc">Easy: 15-20 min, Medium: 25-35 min, Hard: 40-60 min per exercise</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Progress Tracker -->
+            <div class="progress-tracker">
+                <h3 data-lang-key="progress-title">📊 Your Progress</h3>
+                <div class="progress-stats">
+                    <div class="progress-stat">
+                        <span class="stat-number" id="easyCompleted">0</span>
+                        <span class="stat-label">Easy (5)</span>
+                    </div>
+                    <div class="progress-stat">
+                        <span class="stat-number" id="mediumCompleted">0</span>
+                        <span class="stat-label">Medium (5)</span>
+                    </div>
+                    <div class="progress-stat">
+                        <span class="stat-number" id="hardCompleted">0</span>
+                        <span class="stat-label">Hard (5)</span>
+                    </div>
+                    <div class="progress-stat total">
+                        <span class="stat-number" id="totalCompleted">0</span>
+                        <span class="stat-label">Total (15)</span>
+                    </div>
+                </div>
+                <div class="progress-bar">
+                    <div class="progress-fill" id="progressFill"></div>
+                </div>
+            </div>
+
+            <!-- Easy Exercises (1-5) -->
+            <section class="difficulty-section">
+                <div class="section-header easy">
+                    <div class="difficulty-badge">🟢 EASY</div>
+                    <h2 data-lang-key="easy-title">Easy Exercises (1-5)</h2>
+                    <p data-lang-key="easy-desc">Build your foundation with basic conditional statements</p>
+                </div>
+
+                <!-- Exercise 1: Age Category -->
+                <div class="exercise-card easy" data-exercise="1">
+                    <div class="exercise-header">
+                        <h3><span class="exercise-number">1.</span> <span data-lang-key="exercise1-title">Age Category Classifier</span></h3>
+                        <div class="exercise-meta">
+                            <span class="difficulty" data-lang-key="difficulty-easy">Easy</span>
+                            <span class="time">⏱️ 15-20 min</span>
+                            <button class="complete-btn" onclick="toggleComplete(1)">
+                                <i class="fas fa-check"></i> <span data-lang-key="mark-complete">Mark Complete</span>
+                            </button>
+                        </div>
+                    </div>
+                    <div class="exercise-content">
+                        <div class="problem-statement">
+                            <h4 data-lang-key="problem-label">Problem:</h4>
+                            <p data-lang-key="exercise1-problem">Write a program that classifies a person's age into categories: Child (0-12), Teen (13-19), Adult (20-64), or Senior (65+).</p>
+                        </div>
+                        <div class="requirements">
+                            <h4 data-lang-key="requirements-label">Requirements:</h4>
+                            <ul>
+                                <li data-lang-key="exercise1-req1">Ask user for their age</li>
+                                <li data-lang-key="exercise1-req2">Validate that age is not negative</li>
+                                <li data-lang-key="exercise1-req3">Display the appropriate category</li>
+                                <li data-lang-key="exercise1-req4">Add a personalized message for each category</li>
+                            </ul>
+                        </div>
+                        <div class="sample-io">
+                            <h4 data-lang-key="sample-io-label">Sample Input/Output:</h4>
+                            <pre><code data-lang-key="exercise1-sample">Input: 25
+Output: You are an Adult. Great age for building your career!</code></pre>
+                        </div>
+                        <div class="solution-section">
+                            <details>
+                                <summary>💡 Hint</summary>
+                                <p>Use if-elif-else statements with age ranges. Don't forget to handle negative ages!</p>
+                            </details>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Exercise 2: Grade Letter -->
+                <div class="exercise-card easy" data-exercise="2">
+                    <div class="exercise-header">
+                        <h3><span class="exercise-number">2.</span> <span data-lang-key="exercise2-title">Grade Letter Calculator</span></h3>
+                        <div class="exercise-meta">
+                            <span class="difficulty" data-lang-key="difficulty-easy">Easy</span>
+                            <span class="time">⏱️ 15-20 min</span>
+                            <button class="complete-btn" onclick="toggleComplete(2)">
+                                <i class="fas fa-check"></i> <span data-lang-key="mark-complete">Mark Complete</span>
+                            </button>
+                        </div>
+                    </div>
+                    <div class="exercise-content">
+                        <div class="problem-statement">
+                            <h4 data-lang-key="problem-label">Problem:</h4>
+                            <p data-lang-key="exercise2-problem">Convert numeric scores (0-100) to letter grades (A, B, C, D, F) with pass/fail status.</p>
+                        </div>
+                        <div class="requirements">
+                            <h4 data-lang-key="requirements-label">Requirements:</h4>
+                            <ul>
+                                <li data-lang-key="exercise2-req1">A: 90-100, B: 80-89, C: 70-79, D: 60-69, F: 0-59</li>
+                                <li data-lang-key="exercise2-req2">Show letter grade and pass/fail status</li>
+                                <li data-lang-key="exercise2-req3">Validate score is between 0-100</li>
+                                <li data-lang-key="exercise2-req4">Add encouraging/motivational messages</li>
+                            </ul>
+                        </div>
+                        <div class="sample-io">
+                            <h4>Sample Input/Output:</h4>
+                            <pre><code>Input: 85
+Output: Grade: B (Pass) - Good work! Keep it up!</code></pre>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Exercise 3: Temperature Converter -->
+                <div class="exercise-card easy" data-exercise="3">
+                    <div class="exercise-header">
+                        <h3><span class="exercise-number">3.</span> <span data-lang-key="exercise3-title">Temperature Converter</span></h3>
+                        <div class="exercise-meta">
+                            <span class="difficulty" data-lang-key="difficulty-easy">Easy</span>
+                            <span class="time">⏱️ 15-20 min</span>
+                            <button class="complete-btn" onclick="toggleComplete(3)">
+                                <i class="fas fa-check"></i> <span data-lang-key="mark-complete">Mark Complete</span>
+                            </button>
+                        </div>
+                    </div>
+                    <div class="exercise-content">
+                        <div class="problem-statement">
+                            <h4 data-lang-key="problem-label">Problem:</h4>
+                            <p data-lang-key="exercise3-problem">Create a temperature converter that converts between Celsius, Fahrenheit, and Kelvin.</p>
+                        </div>
+                        <div class="requirements">
+                            <h4 data-lang-key="requirements-label">Requirements:</h4>
+                            <ul>
+                                <li data-lang-key="exercise3-req1">Ask user for temperature value and source unit</li>
+                                <li data-lang-key="exercise3-req2">Convert to the target unit using appropriate formulas</li>
+                                <li data-lang-key="exercise3-req3">Validate temperature inputs (e.g., Kelvin can't be negative)</li>
+                                <li data-lang-key="exercise3-req4">Display result with proper formatting</li>
+                            </ul>
+                        </div>
+                        <div class="sample-io">
+                            <h4 data-lang-key="sample-io-label">Sample Input/Output:</h4>
+                            <pre><code>Input: 25°C to Fahrenheit
+Output: 25°C = 77°F</code></pre>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Exercise 4: Simple Calculator -->
+                <div class="exercise-card easy" data-exercise="4">
+                    <div class="exercise-header">
+                        <h3><span class="exercise-number">4.</span> <span data-lang-key="exercise4-title">Simple Calculator</span></h3>
+                        <div class="exercise-meta">
+                            <span class="difficulty" data-lang-key="difficulty-easy">Easy</span>
+                            <span class="time">⏱️ 15-20 min</span>
+                            <button class="complete-btn" onclick="toggleComplete(4)">
+                                <i class="fas fa-check"></i> <span data-lang-key="mark-complete">Mark Complete</span>
+                            </button>
+                        </div>
+                    </div>
+                    <div class="exercise-content">
+                        <div class="problem-statement">
+                            <h4 data-lang-key="problem-label">Problem:</h4>
+                            <p data-lang-key="exercise4-problem">Create a simple calculator that performs basic arithmetic operations (+, -, *, /) based on user choice.</p>
+                        </div>
+                        <div class="requirements">
+                            <h4 data-lang-key="requirements-label">Requirements:</h4>
+                            <ul>
+                                <li data-lang-key="exercise4-req1">Ask for two numbers and an operation</li>
+                                <li data-lang-key="exercise4-req2">Support +, -, *, / operations</li>
+                                <li data-lang-key="exercise4-req3">Handle division by zero</li>
+                                <li data-lang-key="exercise4-req4">Show the calculation and result clearly</li>
+                            </ul>
+                        </div>
+                        <div class="sample-io">
+                            <h4>Sample Input/Output:</h4>
+                            <pre><code>Input: 10, 3, /
+Output: 10 ÷ 3 = 3.33</code></pre>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Exercise 5: Day of Week -->
+                <div class="exercise-card easy" data-exercise="5">
+                    <div class="exercise-header">
+                        <h3><span class="exercise-number">5.</span> <span data-lang-key="exercise5-title">Day of Week Activities</span></h3>
+                        <div class="exercise-meta">
+                            <span class="difficulty" data-lang-key="difficulty-easy">Easy</span>
+                            <span class="time">⏱️ 15-20 min</span>
+                            <button class="complete-btn" onclick="toggleComplete(5)">
+                                <i class="fas fa-check"></i> <span data-lang-key="mark-complete">Mark Complete</span>
+                            </button>
+                        </div>
+                    </div>
+                    <div class="exercise-content">
+                        <div class="problem-statement">
+                            <h4 data-lang-key="problem-label">Problem:</h4>
+                            <p data-lang-key="exercise5-problem">Based on the day of the week, suggest different activities (work days vs weekends).</p>
+                        </div>
+                        <div class="requirements">
+                            <h4 data-lang-key="requirements-label">Requirements:</h4>
+                            <ul>
+                                <li data-lang-key="exercise5-req1">Accept day name (Monday, Tuesday, etc.)</li>
+                                <li data-lang-key="exercise5-req2">Categorize as weekday or weekend</li>
+                                <li data-lang-key="exercise5-req3">Suggest appropriate activities</li>
+                                <li data-lang-key="exercise5-req4">Handle case-insensitive input</li>
+                            </ul>
+                        </div>
+                        <div class="sample-io">
+                            <h4>Sample Input/Output:</h4>
+                            <pre><code>Input: Saturday
+Output: Weekend! Time to relax, spend time with family, or pursue hobbies.</code></pre>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Medium Exercises (6-10) -->
+            <section class="difficulty-section">
+                <div class="section-header medium">
+                    <div class="difficulty-badge">🟡 MEDIUM</div>
+                    <h2 data-lang-key="medium-title">Medium Exercises (6-10)</h2>
+                    <p data-lang-key="medium-desc">Challenge yourself with complex conditional logic</p>
+                </div>
+
+                <!-- Exercise 6: BMI Calculator -->
+                <div class="exercise-card medium" data-exercise="6">
+                    <div class="exercise-header">
+                        <h3><span class="exercise-number">6.</span> <span data-lang-key="exercise6-title">BMI Health Calculator</span></h3>
+                        <div class="exercise-meta">
+                            <span class="difficulty" data-lang-key="difficulty-medium">Medium</span>
+                            <span class="time">⏱️ 25-30 min</span>
+                            <button class="complete-btn" onclick="toggleComplete(6)">
+                                <i class="fas fa-check"></i> <span data-lang-key="mark-complete">Mark Complete</span>
+                            </button>
+                        </div>
+                    </div>
+                    <div class="exercise-content">
+                        <div class="problem-statement">
+                            <h4 data-lang-key="problem-label">Problem:</h4>
+                            <p data-lang-key="exercise6-problem">Create a comprehensive BMI calculator with health recommendations and risk assessments.</p>
+                        </div>
+                        <div class="requirements">
+                            <h4 data-lang-key="requirements-label">Requirements:</h4>
+                            <ul>
+                                <li data-lang-key="exercise6-req1">Calculate BMI = weight(kg) / height²(m²)</li>
+                                <li data-lang-key="exercise6-req2">Categories: Underweight (<18.5), Normal (18.5-24.9), Overweight (25-29.9), Obese (≥30)</li>
+                                <li data-lang-key="exercise6-req3">Provide health recommendations for each category</li>
+                                <li data-lang-key="exercise6-req4">Support both metric and imperial units</li>
+                                <li data-lang-key="exercise6-req5">Include risk assessment messages</li>
+                            </ul>
+                        </div>
+                        <div class="sample-io">
+                            <h4 data-lang-key="sample-io-label">Sample Input/Output:</h4>
+                            <pre><code>Input: Weight: 70kg, Height: 1.75m
+Output: BMI: 22.86 (Normal Weight)
+Recommendation: Maintain your healthy lifestyle!</code></pre>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Exercise 7: Triangle Validator -->
+                <div class="exercise-card medium" data-exercise="7">
+                    <div class="exercise-header">
+                        <h3><span class="exercise-number">7.</span> <span data-lang-key="exercise7-title">Triangle Type Analyzer</span></h3>
+                        <div class="exercise-meta">
+                            <span class="difficulty" data-lang-key="difficulty-medium">Medium</span>
+                            <span class="time">⏱️ 25-30 min</span>
+                            <button class="complete-btn" onclick="toggleComplete(7)">
+                                <i class="fas fa-check"></i> <span data-lang-key="mark-complete">Mark Complete</span>
+                            </button>
+                        </div>
+                    </div>
+                    <div class="exercise-content">
+                        <div class="problem-statement">
+                            <h4 data-lang-key="problem-label">Problem:</h4>
+                            <p data-lang-key="exercise7-problem">Determine if three sides can form a triangle, and if so, classify it by sides and angles.</p>
+                        </div>
+                        <div class="requirements">
+                            <h4 data-lang-key="requirements-label">Requirements:</h4>
+                            <ul>
+                                <li data-lang-key="exercise7-req1">Validate triangle inequality: sum of any two sides > third side</li>
+                                <li data-lang-key="exercise7-req2">Classify by sides: Equilateral, Isosceles, Scalene</li>
+                                <li data-lang-key="exercise7-req3">Classify by angles: Right, Acute, Obtuse (using Pythagorean theorem)</li>
+                                <li data-lang-key="exercise7-req4">Calculate perimeter and area</li>
+                                <li data-lang-key="exercise7-req5">Handle invalid inputs gracefully</li>
+                            </ul>
+                        </div>
+                        <div class="sample-io">
+                            <h4>Sample Input/Output:</h4>
+                            <pre><code>Input: 3, 4, 5
+Output: Valid triangle! Type: Scalene Right Triangle
+Perimeter: 12, Area: 6.00</code></pre>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Exercise 8: Password Strength -->
+                <div class="exercise-card medium" data-exercise="8">
+                    <div class="exercise-header">
+                        <h3><span class="exercise-number">8.</span> <span data-lang-key="exercise8-title">Password Strength Validator</span></h3>
+                        <div class="exercise-meta">
+                            <span class="difficulty" data-lang-key="difficulty-medium">Medium</span>
+                            <span class="time">⏱️ 30-35 min</span>
+                            <button class="complete-btn" onclick="toggleComplete(8)">
+                                <i class="fas fa-check"></i> <span data-lang-key="mark-complete">Mark Complete</span>
+                            </button>
+                        </div>
+                    </div>
+                    <div class="exercise-content">
+                        <div class="problem-statement">
+                            <h4 data-lang-key="problem-label">Problem:</h4>
+                            <p data-lang-key="exercise8-problem">Create a password strength checker that evaluates passwords based on multiple criteria.</p>
+                        </div>
+                        <div class="requirements">
+                            <h4 data-lang-key="requirements-label">Requirements:</h4>
+                            <ul>
+                                <li data-lang-key="exercise8-req1">Check length (minimum 8 characters)</li>
+                                <li data-lang-key="exercise8-req2">Require uppercase, lowercase, numbers and special characters</li>
+                                <li data-lang-key="exercise8-req3">Check for common patterns and dictionary words</li>
+                                <li data-lang-key="exercise8-req4">Provide score and improvement suggestions</li>
+                                <li data-lang-key="exercise8-req5">Categorize: Weak, Fair, Strong, Very Strong</li>
+                            </ul>
+                        </div>
+                        <div class="sample-io">
+                            <h4 data-lang-key="sample-io-label">Sample Input/Output:</h4>
+                            <pre><code>Input: MyP@ssw0rd
+Output: Password Strength: Strong
+✓ Length, ✓ Uppercase, ✓ Lowercase, ✓ Digit, ✓ Special char</code></pre>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Exercise 9: Tax Calculator -->
+                <div class="exercise-card medium" data-exercise="9">
+                    <div class="exercise-header">
+                        <h3><span class="exercise-number">9.</span> <span data-lang-key="exercise9-title">Tax Calculator</span></h3>
+                        <div class="exercise-meta">
+                            <span class="difficulty" data-lang-key="difficulty-medium">Medium</span>
+                            <span class="time">⏱️ 30-35 min</span>
+                            <button class="complete-btn" onclick="toggleComplete(9)">
+                                <i class="fas fa-check"></i> <span data-lang-key="mark-complete">Mark Complete</span>
+                            </button>
+                        </div>
+                    </div>
+                    <div class="exercise-content">
+                        <div class="problem-statement">
+                            <h4 data-lang-key="problem-label">Problem:</h4>
+                            <p data-lang-key="exercise9-problem">Create an intelligent tax calculator with progressive tax brackets and deductions.</p>
+                        </div>
+                        <div class="requirements">
+                            <h4 data-lang-key="requirements-label">Requirements:</h4>
+                            <ul>
+                                <li data-lang-key="exercise9-req1">Progressive multi-tier tax brackets</li>
+                                <li data-lang-key="exercise9-req2">Personal and dependent deductions</li>
+                                <li data-lang-key="exercise9-req3">Insurance and charitable contribution deductions</li>
+                                <li data-lang-key="exercise9-req4">Generate detailed tax report</li>
+                            </ul>
+                        </div>
+                        <div class="sample-io">
+                            <h4>Sample Input/Output:</h4>
+                            <pre><code>Input: $50,000
+Output: Tax Breakdown:
+$0-10k: $0 (0%)
+$10k-40k: $3,000 (10%)
+$40k-50k: $2,200 (22%)
+Total Tax: $5,200 | Net Income: $44,800</code></pre>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Exercise 10: Rock Paper Scissors -->
+                <div class="exercise-card medium" data-exercise="10">
+                    <div class="exercise-header">
+                        <h3><span class="exercise-number">10.</span> <span data-lang-key="exercise10-title">Rock Paper Scissors</span></h3>
+                        <div class="exercise-meta">
+                            <span class="difficulty" data-lang-key="difficulty-medium">Medium</span>
+                            <span class="time">⏱️ 25-30 min</span>
+                            <button class="complete-btn" onclick="toggleComplete(10)">
+                                <i class="fas fa-check"></i> <span data-lang-key="mark-complete">Mark Complete</span>
+                            </button>
+                        </div>
+                    </div>
+                    <div class="exercise-content">
+                        <div class="problem-statement">
+                            <h4 data-lang-key="problem-label">Problem:</h4>
+                            <p data-lang-key="exercise10-problem">Create a Rock-Paper-Scissors game with intelligent AI and statistics tracking.</p>
+                        </div>
+                        <div class="requirements">
+                            <h4 data-lang-key="requirements-label">Requirements:</h4>
+                            <ul>
+                                <li data-lang-key="exercise10-req1">Human vs AI game with adaptive AI</li>
+                                <li data-lang-key="exercise10-req2">Track statistics and history</li>
+                                <li data-lang-key="exercise10-req3">Multiple game modes</li>
+                                <li data-lang-key="exercise10-req4">Analyze player patterns</li>
+                            </ul>
+                        </div>
+                        <div class="sample-io">
+                            <h4>Sample Input/Output:</h4>
+                            <pre><code>Input: Rock
+Output: You: Rock | Computer: Scissors
+You Win! Rock crushes Scissors.
+Score: You: 1, Computer: 0, Ties: 0</code></pre>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Hard Exercises (11-15) -->
+            <section class="difficulty-section">
+                <div class="section-header hard">
+                    <div class="difficulty-badge">🔴 HARD</div>
+                    <h2 data-lang-key="hard-title">Hard Exercises (11-15)</h2>
+                    <p data-lang-key="hard-desc">Master advanced conditional logic and complex scenarios</p>
+                </div>
+
+                <!-- Exercise 11: Smart Banking System -->
+                <div class="exercise-card hard" data-exercise="11">
+                    <div class="exercise-header">
+                        <h3><span class="exercise-number">11.</span> <span data-lang-key="exercise11-title">Smart Banking System</span></h3>
+                        <div class="exercise-meta">
+                            <span class="difficulty" data-lang-key="difficulty-hard">Hard</span>
+                            <span class="time">⏱️ 45-60 min</span>
+                            <button class="complete-btn" onclick="toggleComplete(11)">
+                                <i class="fas fa-check"></i> <span data-lang-key="mark-complete">Mark Complete</span>
+                            </button>
+                        </div>
+                    </div>
+                    <div class="exercise-content">
+                        <div class="problem-statement">
+                            <h4 data-lang-key="problem-label">Problem:</h4>
+                            <p data-lang-key="exercise11-problem">Simulate a banking system with advanced account management and transactions.</p>
+                        </div>
+                        <div class="requirements">
+                            <h4 data-lang-key="requirements-label">Requirements:</h4>
+                            <ul>
+                                <li data-lang-key="exercise11-req1">Create and manage multiple account types</li>
+                                <li data-lang-key="exercise11-req2">Process transactions with security validation</li>
+                                <li data-lang-key="exercise11-req3">Calculate interest rates and service fees</li>
+                                <li data-lang-key="exercise11-req4">Generate detailed financial reports</li>
+                            </ul>
+                        </div>
+                        <div class="sample-io">
+                            <h4>Sample Input/Output:</h4>
+                            <pre><code>Account: Premium, Balance: $1,000, Transactions: 8
+Monthly Fee: $10
+Interest Earned: $5
+Transaction Fees: $0
+Final Balance: $995</code></pre>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Exercise 12: Date Validator -->
+                <div class="exercise-card hard" data-exercise="12">
+                    <div class="exercise-header">
+                        <h3><span class="exercise-number">12.</span> <span data-lang-key="exercise12-title">Date Validator</span></h3>
+                        <div class="exercise-meta">
+                            <span class="difficulty" data-lang-key="difficulty-hard">Hard</span>
+                            <span class="time">⏱️ 40-50 min</span>
+                            <button class="complete-btn" onclick="toggleComplete(12)">
+                                <i class="fas fa-check"></i> <span data-lang-key="mark-complete">Mark Complete</span>
+                            </button>
+                        </div>
+                    </div>
+                    <div class="exercise-content">
+                        <div class="problem-statement">
+                            <h4 data-lang-key="problem-label">Problem:</h4>
+                            <p data-lang-key="exercise12-problem">Create a comprehensive date validation system with timezone and calendar support.</p>
+                        </div>
+                        <div class="requirements">
+                            <h4 data-lang-key="requirements-label">Requirements:</h4>
+                            <ul>
+                                <li data-lang-key="exercise12-req1">Validate various date formats</li>
+                                <li data-lang-key="exercise12-req2">Handle leap years and timezones</li>
+                                <li data-lang-key="exercise12-req3">Calculate date differences</li>
+                                <li data-lang-key="exercise12-req4">Support multiple calendar formats</li>
+                            </ul>
+                        </div>
+                        <div class="sample-io">
+                            <h4>Sample Input/Output:</h4>
+                            <pre><code>Input: 29/02/2024
+Output: Valid date: February 29, 2024 (Thursday)
+Leap year: Yes
+Age: 0 years old
+Days until next birthday: 365</code></pre>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Exercise 13: Loan Eligibility -->
+                <div class="exercise-card hard" data-exercise="13">
+                    <div class="exercise-header">
+                        <h3><span class="exercise-number">13.</span> Loan Eligibility Analyzer</h3>
+                        <div class="exercise-meta">
+                            <span class="difficulty" data-lang-key="difficulty-hard">Hard</span>
+                            <span class="time">⏱️ 50-60 min</span>
+                            <button class="complete-btn" onclick="toggleComplete(13)">
+                                <i class="fas fa-check"></i> <span data-lang-key="mark-complete">Mark Complete</span>
+                            </button>
+                        </div>
+                    </div>
+                    <div class="exercise-content">
+                        <div class="problem-statement">
+                            <h4 data-lang-key="problem-label">Problem:</h4>
+                            <p data-lang-key="exercise13-problem">Analyze loan eligibility based on income, credit, and risk assessment.</p>
+                        </div>
+                        <div class="requirements">
+                            <h4 data-lang-key="requirements-label">Requirements:</h4>
+                            <ul>
+                                <li data-lang-key="exercise13-req1">Evaluate credit score and history</li>
+                                <li data-lang-key="exercise13-req2">Calculate debt-to-income ratio</li>
+                                <li data-lang-key="exercise13-req3">Analyze risk factors and collateral</li>
+                                <li data-lang-key="exercise13-req4">Recommend suitable loan packages</li>
+                            </ul>
+                        </div>
+                        <div class="sample-io">
+                            <h4>Sample Input/Output:</h4>
+                            <pre><code>Credit Score: 720, Income: $60,000, Debt: $15,000
+Loan Type: Auto, Amount: $25,000
+Result: APPROVED
+Interest Rate: 4.5%
+Reason: Good credit score and acceptable debt ratio</code></pre>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Exercise 14: Insurance Premium -->
+                <div class="exercise-card hard" data-exercise="14">
+                    <div class="exercise-header">
+                        <h3><span class="exercise-number">14.</span> Insurance Premium Calculator</h3>
+                        <div class="exercise-meta">
+                            <span class="difficulty" data-lang-key="difficulty-hard">Hard</span>
+                            <span class="time">⏱️ 45-55 min</span>
+                            <button class="complete-btn" onclick="toggleComplete(14)">
+                                <i class="fas fa-check"></i> <span data-lang-key="mark-complete">Mark Complete</span>
+                            </button>
+                        </div>
+                    </div>
+                    <div class="exercise-content">
+                        <div class="problem-statement">
+                            <h4 data-lang-key="problem-label">Problem:</h4>
+                            <p data-lang-key="exercise14-problem">Calculate insurance premiums based on risk profile and personal factors.</p>
+                        </div>
+                        <div class="requirements">
+                            <h4 data-lang-key="requirements-label">Requirements:</h4>
+                            <ul>
+                                <li data-lang-key="exercise14-req1">Assess personal risk factors</li>
+                                <li data-lang-key="exercise14-req2">Calculate premiums by age and health</li>
+                                <li data-lang-key="exercise14-req3">Apply discounts and benefits</li>
+                                <li data-lang-key="exercise14-req4">Compare insurance packages</li>
+                            </ul>
+                        </div>
+                        <div class="sample-io">
+                            <h4>Sample Input/Output:</h4>
+                            <pre><code>Age: 30, Type: Auto, Smoking: No, Accidents: 0
+Base Premium: $800
+Discounts: -$120 (Good driver, Non-smoker)
+Risk Adjustments: $0
+Final Premium: $680/year</code></pre>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Exercise 15: Grade Management -->
+                <div class="exercise-card hard" data-exercise="15">
+                    <div class="exercise-header">
+                        <h3><span class="exercise-number">15.</span> Student Grade Management System</h3>
+                        <div class="exercise-meta">
+                            <span class="difficulty">Hard</span>
+                            <span class="time">⏱️ 50-60 min</span>
+                            <button class="complete-btn" onclick="toggleComplete(15)">
+                                <i class="fas fa-check"></i> <span data-lang-key="mark-complete">Mark Complete</span>
+                            </button>
+                        </div>
+                    </div>
+                    <div class="exercise-content">
+                        <div class="problem-statement">
+                            <h4 data-lang-key="problem-label">Problem:</h4>
+                            <p data-lang-key="exercise15-problem">Comprehensive grade management system for students and teachers.</p>
+                        </div>
+                        <div class="requirements">
+                            <h4 data-lang-key="requirements-label">Requirements:</h4>
+                            <ul>
+                                <li data-lang-key="exercise15-req1">Manage grades by subject and semester</li>
+                                <li data-lang-key="exercise15-req2">Calculate GPA and class ranking</li>
+                                <li data-lang-key="exercise15-req3">Generate academic progress reports</li>
+                                <li data-lang-key="exercise15-req4">Alert for poor performance and recommendations</li>
+                            </ul>
+                        </div>
+                        <div class="sample-io">
+                            <h4>Sample Input/Output:</h4>
+                            <pre><code>Homework: [85, 90, 78] → 84.33 (20%)
+Quizzes: [88, 92] → 90.00 (20%)
+Midterm: 85 (25%), Final: 88 (35%)
+Weighted Average: 87.17 → Grade: B+
+Academic Status: Good Standing</code></pre>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Summary and Next Steps -->
+            <section class="homework-summary">
+                <h2 data-lang-key="summary-title">🎯 Summary & Next Steps</h2>
+                <div class="summary-content">
+                    <div class="achievement-badges">
+                        <div class="badge" id="easyBadge">
+                            <i class="fas fa-medal"></i>
+                            <span>Foundation Builder</span>
+                            <small>Complete all Easy exercises</small>
+                        </div>
+                        <div class="badge" id="mediumBadge">
+                            <i class="fas fa-trophy"></i>
+                            <span>Logic Master</span>
+                            <small>Complete all Medium exercises</small>
+                        </div>
+                        <div class="badge" id="hardBadge">
+                            <i class="fas fa-crown"></i>
+                            <span>Conditional Expert</span>
+                            <small>Complete all Hard exercises</small>
+                        </div>
+                        <div class="badge" id="completionBadge">
+                            <i class="fas fa-star"></i>
+                            <span>Course Champion</span>
+                            <small>Complete all 15 exercises</small>
+                        </div>
+                    </div>
+
+                    <div class="next-steps">
+                        <h3>What's Next?</h3>
+                        <ul>
+                            <li>Review your solutions and optimize them</li>
+                            <li>Try solving problems with different approaches</li>
+                            <li>Move on to <a href="lesson3.html">Lesson 3: Loops and Iteration</a></li>
+                            <li>Challenge yourself with additional practice problems</li>
+                        </ul>
+                    </div>
+
+                    <div class="study-tips">
+                        <h3>Study Tips:</h3>
+                        <ul>
+                            <li><strong>Debug systematically:</strong> Test with different inputs</li>
+                            <li><strong>Write clean code:</strong> Use meaningful variable names</li>
+                            <li><strong>Comment your logic:</strong> Explain complex conditions</li>
+                            <li><strong>Practice regularly:</strong> Coding is a skill that improves with practice</li>
+                        </ul>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Navigation -->
+            <div class="lesson-navigation">
+                <a href="lesson2.html" class="nav-button prev">
+                    <i class="fas fa-arrow-left"></i>
+                    <span data-lang-key="back-lesson">Back to Lesson 2</span>
+                </a>
+                <a href="../index.html#course" class="nav-button course">
+                    <i class="fas fa-list"></i>
+                    <span data-lang-key="back-course">Course Overview</span>
+                </a>
+                <a href="lesson3.html" class="nav-button next">
+                    <span data-lang-key="next-lesson">Go to Lesson 3: Loops</span>
+                    <i class="fas fa-arrow-right"></i>
+                </a>
+            </div>
+        </div>
+    </main>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <div class="footer-logo">
+                        <i class="fas fa-code"></i>
+                        <span data-lang-key="logo-text">Code Up Your Brain</span>
+                    </div>
+                    <p data-lang-key="footer-desc">
+                        Level up your programming mindset with high-quality Python and Algorithm courses.
+                    </p>
+                </div>
+                <div class="footer-section">
+                    <h4 data-lang-key="footer-contact-title">Contact</h4>
+                    <div class="contact-info">
+                        <div class="contact-item">
+                            <i class="fas fa-envelope"></i>
+                            <span>innomindskills@gmail.com</span>
+                        </div>
+                        <div class="contact-item">
+                            <i class="fas fa-map-marker-alt"></i>
+                            <span data-lang-key="footer-address">Da Nang, Vietnam</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p data-lang-key="footer-copyright">&copy; 2025 Code Up Your Brain. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Contact Popup -->
+    <div id="contactPopup" class="contact-popup">
+        <div class="popup-content">
+            <div class="popup-header">
+                <h3 data-lang-key="contact-title">Contact Information</h3>
+                <button id="closeContactPopup" class="close-btn">
+                    <i class="fas fa-times"></i>
+                </button>
+            </div>
+            <div class="popup-body">
+                <div class="contact-item-popup">
+                    <i class="fas fa-envelope"></i>
+                    <div class="contact-details">
+                        <strong data-lang-key="email-label">Email</strong>
+                        <span>instructor@innomind.edu.vn</span>
+                    </div>
+                </div>
+                <div class="contact-item-popup">
+                    <i class="fas fa-phone"></i>
+                    <div class="contact-details">
+                        <strong data-lang-key="phone-label">Phone</strong>
+                        <span>+84 123 456 789</span>
+                    </div>
+                </div>
+                <div class="contact-item-popup">
+                    <i class="fas fa-map-marker-alt"></i>
+                    <div class="contact-details">
+                        <strong data-lang-key="address-label">Address</strong>
+                        <span data-lang-key="address-full">123 Tech Street, Innovation District, Da Nang, Vietnam</span>
+                    </div>
+                </div>
+                <div class="contact-item-popup">
+                    <i class="fas fa-clock"></i>
+                    <div class="contact-details">
+                        <strong data-lang-key="hours-label">Office Hours</strong>
+                        <span data-lang-key="office-hours">Monday - Friday: 9:00 AM - 6:00 PM</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- JavaScript -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/prism.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/components/prism-python.min.js"></script>
+    <script src="../assets/js/translations.js"></script>
+    <script src="../assets/js/script.js"></script>
+    
+    <script>
+        // Homework progress tracking
+        let completedExercises = new Set();
+        
+        function toggleComplete(exerciseNum) {
+            const button = document.querySelector(`[data-exercise="${exerciseNum}"] .complete-btn`);
+            const card = document.querySelector(`[data-exercise="${exerciseNum}"]`);
+            
+            if (completedExercises.has(exerciseNum)) {
+                completedExercises.delete(exerciseNum);
+                button.innerHTML = '<i class="fas fa-check"></i> Mark Complete';
+                button.classList.remove('completed');
+                card.classList.remove('completed');
+            } else {
+                completedExercises.add(exerciseNum);
+                button.innerHTML = '<i class="fas fa-check-circle"></i> Completed';
+                button.classList.add('completed');
+                card.classList.add('completed');
+            }
+            
+            updateProgress();
+            updateBadges();
+        }
+        
+        function updateProgress() {
+            const easy = Array.from(completedExercises).filter(n => n <= 5).length;
+            const medium = Array.from(completedExercises).filter(n => n > 5 && n <= 10).length;
+            const hard = Array.from(completedExercises).filter(n => n > 10).length;
+            const total = completedExercises.size;
+            
+            document.getElementById('easyCompleted').textContent = easy;
+            document.getElementById('mediumCompleted').textContent = medium;
+            document.getElementById('hardCompleted').textContent = hard;
+            document.getElementById('totalCompleted').textContent = total;
+            
+            const progressPercentage = (total / 15) * 100;
+            document.getElementById('progressFill').style.width = progressPercentage + '%';
+        }
+        
+        function updateBadges() {
+            const easy = Array.from(completedExercises).filter(n => n <= 5).length;
+            const medium = Array.from(completedExercises).filter(n => n > 5 && n <= 10).length;
+            const hard = Array.from(completedExercises).filter(n => n > 10).length;
+            
+            document.getElementById('easyBadge').classList.toggle('earned', easy === 5);
+            document.getElementById('mediumBadge').classList.toggle('earned', medium === 5);
+            document.getElementById('hardBadge').classList.toggle('earned', hard === 5);
+            document.getElementById('completionBadge').classList.toggle('earned', completedExercises.size === 15);
+        }
+        
+        // Load progress from localStorage
+        document.addEventListener('DOMContentLoaded', function() {
+            const saved = localStorage.getItem('homework2Progress');
+            if (saved) {
+                completedExercises = new Set(JSON.parse(saved));
+                completedExercises.forEach(num => {
+                    const button = document.querySelector(`[data-exercise="${num}"] .complete-btn`);
+                    const card = document.querySelector(`[data-exercise="${num}"]`);
+                    if (button && card) {
+                        button.innerHTML = '<i class="fas fa-check-circle"></i> Completed';
+                        button.classList.add('completed');
+                        card.classList.add('completed');
+                    }
+                });
+                updateProgress();
+                updateBadges();
+            }
+        });
+        
+        // Save progress to localStorage
+        window.addEventListener('beforeunload', function() {
+            localStorage.setItem('homework2Progress', JSON.stringify(Array.from(completedExercises)));
+        });
+    </script>
+</body>
+</html>
