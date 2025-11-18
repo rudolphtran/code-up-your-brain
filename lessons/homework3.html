@@ -1,0 +1,930 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="color-scheme" content="light only">
+    <title data-lang-key="homework3-title">Homework 3: Loops and Iterations Practice - Code Up Your Brain</title>
+    <meta name="description" data-lang-key="homework3-meta" content="Practice loops and iterations with 15 hands-on exercises from basic to advanced level">
+    <link rel="stylesheet" href="../assets/css/styles.css">
+    <link rel="stylesheet" href="../assets/css/lesson.css">
+    <link rel="stylesheet" href="../assets/css/auth.css">
+    <link rel="stylesheet" href="../assets/css/mobile-optimizations.css">
+    <link rel="stylesheet" href="../assets/css/ultra-compact-header.css">
+    <link rel="stylesheet" href="../assets/css/force-hide-logo.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/themes/prism-tomorrow.min.css">
+</head>
+<body>
+    <!-- Header -->
+    <header class="header">
+        <div class="container">
+            <div class="header-content">
+                <div class="logo">
+                    <a href="../index.html">
+                        <i class="fas fa-code"></i>
+                        <span data-lang-key="logo-text">Code Up Your Brain</span>
+                    </a>
+                </div>
+                <div class="innomind-header-logo">
+                    <a href="../index.html">
+                        <img src="../assets/images/logo.png" alt="InnoMind Logo" />
+                    </a>
+                </div>
+                <nav class="nav">
+                    <a href="../index.html" data-lang-key="nav-home">Home</a>
+                    <a href="../index.html#about" data-lang-key="nav-about">About</a>
+                    <a href="../index.html#course" data-lang-key="nav-course">Course</a>
+                    <a href="../index.html#instructor" data-lang-key="nav-instructor">Instructor</a>
+                    <a href="#contact" data-lang-key="nav-contact">Contact</a>
+                </nav>
+                <div class="header-actions">
+                    <button class="lang-toggle" id="langToggle">
+                        <i class="fas fa-globe"></i>
+                        <span id="currentLang">EN</span>
+                    </button>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!-- Homework Content -->
+    <main class="lesson-content">
+        <div class="container">
+            <!-- Breadcrumb -->
+            <nav class="breadcrumb">
+                <a href="../index.html" data-lang-key="breadcrumb-home">Home</a>
+                <span class="separator">/</span>
+                <a href="../index.html#course" data-lang-key="breadcrumb-course">Course</a>
+                <span class="separator">/</span>
+                <a href="lesson3.html" data-lang-key="breadcrumb-lesson3">Lesson 3</a>
+                <span class="separator">/</span>
+                <span data-lang-key="breadcrumb-homework">Homework</span>
+            </nav>
+
+            <!-- Homework Header -->
+            <div class="lesson-header">
+                <div class="lesson-number">
+                    <span data-lang-key="homework-label">Homework</span> 3
+                </div>
+                <h1 data-lang-key="homework3-main-title">Loops and Iterations Practice</h1>
+                <p class="lesson-subtitle" data-lang-key="homework3-subtitle">
+                    15 hands-on exercises to master for loops, while loops, and nested iterations
+                </p>
+            </div>
+
+            <!-- Instructions -->
+            <div class="homework-instructions">
+                <h2 data-lang-key="instructions-title">📋 Instructions</h2>
+                <div class="instructions-grid">
+                    <div class="instruction-item">
+                        <div class="instruction-icon">💻</div>
+                        <h3 data-lang-key="instruction1-title">Code in Python</h3>
+                        <p data-lang-key="instruction1-desc">Write all solutions in Python 3.x using proper syntax and indentation</p>
+                    </div>
+                    <div class="instruction-item">
+                        <div class="instruction-icon">🧪</div>
+                        <h3 data-lang-key="instruction2-title">Test Your Code</h3>
+                        <p data-lang-key="instruction2-desc">Test each program with multiple inputs to ensure it works correctly</p>
+                    </div>
+                    <div class="instruction-item">
+                        <div class="instruction-icon">📝</div>
+                        <h3 data-lang-key="instruction3-title">Add Comments</h3>
+                        <p data-lang-key="instruction3-desc">Include comments explaining your logic and approach</p>
+                    </div>
+                    <div class="instruction-item">
+                        <div class="instruction-icon">⏱️</div>
+                        <h3 data-lang-key="instruction4-title">Time Management</h3>
+                        <p data-lang-key="instruction4-desc">Easy: 15-20 min, Medium: 25-35 min, Hard: 40-60 min per exercise</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Progress Tracker -->
+            <div class="progress-tracker">
+                <h3 data-lang-key="progress-title">📊 Your Progress</h3>
+                <div class="progress-stats">
+                    <div class="progress-stat">
+                        <span class="stat-number" id="easyCompleted">0</span>
+                        <span class="stat-label">Easy (5)</span>
+                    </div>
+                    <div class="progress-stat">
+                        <span class="stat-number" id="mediumCompleted">0</span>
+                        <span class="stat-label">Medium (5)</span>
+                    </div>
+                    <div class="progress-stat">
+                        <span class="stat-number" id="hardCompleted">0</span>
+                        <span class="stat-label">Hard (5)</span>
+                    </div>
+                    <div class="progress-stat total">
+                        <span class="stat-number" id="totalCompleted">0</span>
+                        <span class="stat-label">Total (15)</span>
+                    </div>
+                </div>
+                <div class="progress-bar">
+                    <div class="progress-fill" id="progressFill"></div>
+                </div>
+            </div>
+
+            <!-- Easy Exercises (1-5) -->
+            <section class="difficulty-section">
+                <div class="section-header easy">
+                    <div class="difficulty-badge">🟢 EASY</div>
+                    <h2 data-lang-key="easy-title">Easy Exercises (1-5)</h2>
+                    <p data-lang-key="easy-desc">Build your foundation with basic loop structures</p>
+                </div>
+
+                <!-- Exercise 1: Count Vowels -->
+                <div class="exercise-card easy" data-exercise="1">
+                    <div class="exercise-header">
+                                            <h3><span class="exercise-number">1.</span> <span data-lang-key="hw3-ex1-title">Vowel Counter</span></h3>
+                        <div class="exercise-meta">
+                            <span class="difficulty" data-lang-key="difficulty-easy">Easy</span>
+                            <span class="time">⏱️ 15-20 min</span>
+                            <button class="complete-btn" onclick="toggleComplete(1)">
+                                <i class="fas fa-check"></i> <span data-lang-key="mark-complete">Mark Complete</span>
+                            </button>
+                        </div>
+                    </div>
+                    <div class="exercise-content">
+                        <div class="problem-statement">
+                            <h4 data-lang-key="problem-label">Problem:</h4>
+                            <p data-lang-key="hw3-ex1-problem">Write a program that counts the number of vowels (a, e, i, o, u) in a given string. The program should be case-insensitive and display the count for each vowel.</p>
+                        </div>
+                        <div class="requirements">
+                            <h4 data-lang-key="requirements-label">Requirements:</h4>
+                            <ul>
+                                <li data-lang-key="hw3-ex1-req1">Use a for loop to iterate through the string</li>
+                                <li data-lang-key="hw3-ex1-req2">Count both uppercase and lowercase vowels</li>
+                                <li data-lang-key="hw3-ex1-req3">Display individual counts and total vowel count</li>
+                            </ul>
+                        </div>
+                        <div class="sample-io">
+                            <h4 data-lang-key="sample-io-label">Sample Input/Output:</h4>
+                            <pre><code>Input: "Programming is Amazing"
+Output: 
+a: 2, e: 0, i: 3, o: 1, u: 0
+Total vowels: 6</code></pre>
+                        </div>
+                        <div class="solution-section">
+                            <details>
+                                <summary>💡 Hint</summary>
+                                <p>Create a dictionary or counters for each vowel. Use .lower() to make comparison case-insensitive.</p>
+                            </details>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Exercise 2: Number Pyramid -->
+                <div class="exercise-card easy" data-exercise="2">
+                    <div class="exercise-header">
+                        <h3><span class="exercise-number">2.</span> <span data-lang-key="hw3-ex2-title">Number Pyramid</span></h3>
+                        <div class="exercise-meta">
+                            <span class="difficulty" data-lang-key="difficulty-easy">Easy</span>
+                            <span class="time">⏱️ 15-20 min</span>
+                            <button class="complete-btn" onclick="toggleComplete(2)">
+                                <i class="fas fa-check"></i> <span data-lang-key="mark-complete">Mark Complete</span>
+                            </button>
+                        </div>
+                    </div>
+                    <div class="exercise-content">
+                        <div class="problem-statement">
+                            <h4 data-lang-key="problem-label">Problem:</h4>
+                            <p data-lang-key="hw3-ex2-problem">Create a program that prints a number pyramid. The user inputs the height of the pyramid, and your program creates a pyramid with consecutive numbers.</p>
+                        </div>
+                        <div class="requirements">
+                            <h4 data-lang-key="requirements-label">Requirements:</h4>
+                            <ul>
+                                <li data-lang-key="hw3-ex2-req1">Use nested loops for the pattern</li>
+                                <li data-lang-key="hw3-ex2-req2">Each row should have consecutive numbers</li>
+                                <li data-lang-key="hw3-ex2-req3">Numbers should be right-aligned in a pyramid shape</li>
+                            </ul>
+                        </div>
+                        <div class="sample-io">
+                            <h4 data-lang-key="sample-io-label">Sample Input/Output:</h4>
+                            <pre><code>Input: Height = 4
+Output:
+   1
+  2 3
+ 4 5 6
+7 8 9 10</code></pre>
+                        </div>
+                        <div class="solution-section">
+                            <details>
+                                <summary>💡 Hint</summary>
+                                <p>Use nested loops: outer for rows, inner for spaces and numbers. Keep a counter for consecutive numbers.</p>
+                            </details>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Exercise 3: Factorial Calculator -->
+                <div class="exercise-card easy" data-exercise="3">
+                    <div class="exercise-header">
+                        <h3><span class="exercise-number">3.</span> <span data-lang-key="hw3-ex3-title">Factorial Calculator</span></h3>
+                        <div class="exercise-meta">
+                            <span class="difficulty" data-lang-key="difficulty-easy">Easy</span>
+                            <span class="time">⏱️ 15-20 min</span>
+                            <button class="complete-btn" onclick="toggleComplete(3)">
+                                <i class="fas fa-check"></i> <span data-lang-key="mark-complete">Mark Complete</span>
+                            </button>
+                        </div>
+                    </div>
+                    <div class="exercise-content">
+                        <div class="problem-statement">
+                            <h4 data-lang-key="problem-label">Problem:</h4>
+                            <p data-lang-key="hw3-ex3-problem">Write a program that calculates the factorial of a number using a loop. Also display each step of the calculation process.</p>
+                        </div>
+                        <div class="requirements">
+                            <h4 data-lang-key="requirements-label">Requirements:</h4>
+                            <ul>
+                                <li data-lang-key="hw3-ex3-req1">Use a for or while loop (not recursion)</li>
+                                <li data-lang-key="hw3-ex3-req2">Show the calculation process step by step</li>
+                                <li data-lang-key="hw3-ex3-req3">Handle edge cases (0! = 1, negative numbers)</li>
+                            </ul>
+                        </div>
+                        <div class="sample-io">
+                            <h4 data-lang-key="sample-io-label">Sample Input/Output:</h4>
+                            <pre><code>Input: 5
+Output: 5! = 1 × 2 × 3 × 4 × 5 = 120</code></pre>
+                        </div>
+                        <div class="solution-section">
+                            <details>
+                                <summary>💡 Hint</summary>
+                                <p>Start with result = 1, then multiply by each number from 1 to n. Build the equation string as you go.</p>
+                            </details>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Exercise 4: Sum of Even Numbers -->
+                <div class="exercise-card easy" data-exercise="4">
+                    <div class="exercise-header">
+                        <h3><span class="exercise-number">4.</span> <span data-lang-key="hw3-ex4-title">Sum of Even Numbers</span></h3>
+                        <div class="exercise-meta">
+                            <span class="difficulty" data-lang-key="difficulty-easy">Easy</span>
+                            <span class="time">⏱️ 15-20 min</span>
+                            <button class="complete-btn" onclick="toggleComplete(4)">
+                                <i class="fas fa-check"></i> <span data-lang-key="mark-complete">Mark Complete</span>
+                            </button>
+                        </div>
+                    </div>
+                    <div class="exercise-content">
+                        <div class="problem-statement">
+                            <h4 data-lang-key="problem-label">Problem:</h4>
+                            <p data-lang-key="hw3-ex4-problem">Create a program that finds the sum of all even numbers between two given numbers (inclusive). Display the even numbers found and their sum.</p>
+                        </div>
+                        <div class="requirements">
+                            <h4 data-lang-key="requirements-label">Requirements:</h4>
+                            <ul>
+                                <li data-lang-key="hw3-ex4-req1">Take two numbers as input (start and end)</li>
+                                <li data-lang-key="hw3-ex4-req2">Use a loop to find even numbers in the range</li>
+                                <li data-lang-key="hw3-ex4-req3">Display each even number and the final sum</li>
+                            </ul>
+                        </div>
+                        <div class="sample-io">
+                            <h4 data-lang-key="sample-io-label">Sample Input/Output:</h4>
+                            <pre><code>Input: Start = 1, End = 10
+Output: 
+Even numbers: 2, 4, 6, 8, 10
+Sum: 30</code></pre>
+                        </div>
+                        <div class="solution-section">
+                            <details>
+                                <summary>💡 Hint</summary>
+                                <p>Use range(start, end+1) and check if number % 2 == 0. Accumulate the sum.</p>
+                            </details>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Exercise 5: Reverse a String -->
+                <div class="exercise-card easy" data-exercise="5">
+                    <div class="exercise-header">
+                        <h3><span class="exercise-number">5.</span> <span data-lang-key="hw3-ex5-title">Reverse a String</span></h3>
+                        <div class="exercise-meta">
+                            <span class="difficulty" data-lang-key="difficulty-easy">Easy</span>
+                            <span class="time">⏱️ 15-20 min</span>
+                            <button class="complete-btn" onclick="toggleComplete(5)">
+                                <i class="fas fa-check"></i> <span data-lang-key="mark-complete">Mark Complete</span>
+                            </button>
+                        </div>
+                    </div>
+                    <div class="exercise-content">
+                        <div class="problem-statement">
+                            <h4 data-lang-key="problem-label">Problem:</h4>
+                            <p data-lang-key="hw3-ex5-problem">Write a program that reverses a string using a loop (don't use Python's built-in reverse). Also check if the original string is a palindrome.</p>
+                        </div>
+                        <div class="requirements">
+                            <h4 data-lang-key="requirements-label">Requirements:</h4>
+                            <ul>
+                                <li data-lang-key="hw3-ex5-req1">Use a loop to reverse the string character by character</li>
+                                <li data-lang-key="hw3-ex5-req2">Don't use slicing or built-in reverse functions</li>
+                                <li data-lang-key="hw3-ex5-req3">Check and report if it's a palindrome (case-insensitive)</li>
+                            </ul>
+                        </div>
+                        <div class="sample-io">
+                            <h4 data-lang-key="sample-io-label">Sample Input/Output:</h4>
+                            <pre><code>Input: "racecar"
+Output:
+Original: racecar
+Reversed: racecar
+This is a palindrome!</code></pre>
+                        </div>
+                        <div class="solution-section">
+                            <details>
+                                <summary>💡 Hint</summary>
+                                <p>Build reversed string by iterating from end to start. Compare original.lower() with reversed.lower().</p>
+                            </details>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Medium Exercises (6-10) -->
+            <section class="difficulty-section">
+                <div class="section-header medium">
+                    <div class="difficulty-badge">🟡 MEDIUM</div>
+                    <h2 data-lang-key="medium-title">Medium Exercises (6-10)</h2>
+                    <p data-lang-key="medium-desc">Challenge yourself with complex loop patterns and algorithms</p>
+                </div>
+
+                <!-- Exercise 6: Prime Number Generator -->
+                <div class="exercise-card medium" data-exercise="6">
+                    <div class="exercise-header">
+                        <h3><span class="exercise-number">6.</span> <span data-lang-key="hw3-ex6-title">Prime Number Generator</span></h3>
+                        <div class="exercise-meta">
+                            <span class="difficulty" data-lang-key="difficulty-medium">Medium</span>
+                            <span class="time">⏱️ 25-35 min</span>
+                            <button class="complete-btn" onclick="toggleComplete(6)">
+                                <i class="fas fa-check"></i> <span data-lang-key="mark-complete">Mark Complete</span>
+                            </button>
+                        </div>
+                    </div>
+                    <div class="exercise-content">
+                        <div class="problem-statement">
+                            <h4 data-lang-key="problem-label">Problem:</h4>
+                            <p data-lang-key="hw3-ex6-problem">Create a program that generates all prime numbers up to a given limit using the Sieve of Eratosthenes algorithm. Display the primes and count how many were found.</p>
+                        </div>
+                        <div class="requirements">
+                            <h4 data-lang-key="requirements-label">Requirements:</h4>
+                            <ul>
+                                <li data-lang-key="hw3-ex6-req1">Implement the Sieve of Eratosthenes algorithm</li>
+                                <li data-lang-key="hw3-ex6-req2">Use nested loops for the sieve process</li>
+                                <li data-lang-key="hw3-ex6-req3">Display primes in rows of 10 for better formatting</li>
+                            </ul>
+                        </div>
+                        <div class="sample-io">
+                            <h4>Sample Input/Output:</h4>
+                            <pre><code>Input: Limit = 30
+Output:
+Prime numbers up to 30:
+2  3  5  7  11 13 17 19 23 29
+Found 10 prime numbers.</code></pre>
+                        </div>
+                        <div class="solution-section">
+                            <details>
+                                <summary>💡 Hint</summary>
+                                <p>Create a boolean array. Mark non-primes by iterating multiples of each prime starting from 2.</p>
+                            </details>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Exercise 7: Number Guessing Game -->
+                <div class="exercise-card medium" data-exercise="7">
+                    <div class="exercise-header">
+                        <h3><span class="exercise-number">7.</span> <span data-lang-key="hw3-ex7-title">Number Guessing Game</span></h3>
+                        <div class="exercise-meta">
+                            <span class="difficulty" data-lang-key="difficulty-medium">Medium</span>
+                            <span class="time">⏱️ 25-35 min</span>
+                            <button class="complete-btn" onclick="toggleComplete(7)">
+                                <i class="fas fa-check"></i> <span data-lang-key="mark-complete">Mark Complete</span>
+                            </button>
+                        </div>
+                    </div>
+                    <div class="exercise-content">
+                        <div class="problem-statement">
+                            <h4 data-lang-key="problem-label">Problem:</h4>
+                            <p data-lang-key="hw3-ex7-problem">Design a number guessing game where the computer thinks of a random number between 1-100, and the player has to guess it. Provide hints and track the number of attempts.</p>
+                        </div>
+                        <div class="requirements">
+                            <h4 data-lang-key="requirements-label">Requirements:</h4>
+                            <ul>
+                                <li data-lang-key="hw3-ex7-req1">Use while loop for the game logic</li>
+                                <li data-lang-key="hw3-ex7-req2">Provide "too high" or "too low" hints</li>
+                                <li data-lang-key="hw3-ex7-req3">Limit attempts and show performance rating</li>
+                                <li data-lang-key="hw3-ex7-req4">Ask if player wants to play again</li>
+                            </ul>
+                        </div>
+                        <div class="sample-io">
+                            <h4>Sample Game:</h4>
+                            <pre><code>Guess my number (1-100): 50
+Too low! Try again: 75
+Too high! Try again: 62
+Correct! You got it in 3 attempts.
+Rating: Good!</code></pre>
+                        </div>
+                        <div class="solution-section">
+                            <details>
+                                <summary>💡 Hint</summary>
+                                <p>Use random.randint(1, 100). Track attempts with a counter. Use while loop until guess equals target.</p>
+                            </details>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Exercise 8: Multiplication Table Matrix -->
+                <div class="exercise-card medium" data-exercise="8">
+                    <div class="exercise-header">
+                        <h3><span class="exercise-number">8.</span> <span data-lang-key="hw3-ex8-title">Multiplication Table Matrix</span></h3>
+                        <div class="exercise-meta">
+                            <span class="difficulty" data-lang-key="difficulty-medium">Medium</span>
+                            <span class="time">⏱️ 25-35 min</span>
+                            <button class="complete-btn" onclick="toggleComplete(8)">
+                                <i class="fas fa-check"></i> <span data-lang-key="mark-complete">Mark Complete</span>
+                            </button>
+                        </div>
+                    </div>
+                    <div class="exercise-content">
+                        <div class="problem-statement">
+                            <h4 data-lang-key="problem-label">Problem:</h4>
+                            <p data-lang-key="hw3-ex8-problem">Create a program that generates and displays a multiplication table matrix for any given size with proper formatting and column alignment.</p>
+                        </div>
+                        <div class="requirements">
+                            <h4 data-lang-key="requirements-label">Requirements:</h4>
+                            <ul>
+                                <li data-lang-key="hw3-ex8-req1">Use nested loops to generate the table</li>
+                                <li data-lang-key="hw3-ex8-req2">Format numbers with proper alignment</li>
+                                <li data-lang-key="hw3-ex8-req3">Include row and column headers</li>
+                                <li data-lang-key="hw3-ex8-req4">Handle different table sizes (3x3 to 12x12)</li>
+                            </ul>
+                        </div>
+                        <div class="sample-io">
+                            <h4>Sample Input/Output:</h4>
+                            <pre><code>Input: Size = 5
+Output:
+    1   2   3   4   5
+    2   4   6   8  10
+    3   6   9  12  15
+    4   8  12  16  20
+    5  10  15  20  25</code></pre>
+                        </div>
+                        <div class="solution-section">
+                            <details>
+                                <summary>💡 Hint</summary>
+                                <p>Use nested loops: for i in range(1, n+1): for j in range(1, n+1). Use string formatting for alignment.</p>
+                            </details>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Exercise 9: Star Pattern Generator -->
+                <div class="exercise-card medium" data-exercise="9">
+                    <div class="exercise-header">
+                        <h3><span class="exercise-number">9.</span> <span data-lang-key="hw3-ex9-title">Star Pattern Generator</span></h3>
+                        <div class="exercise-meta">
+                            <span class="difficulty" data-lang-key="difficulty-medium">Medium</span>
+                            <span class="time">⏱️ 25-35 min</span>
+                            <button class="complete-btn" onclick="toggleComplete(9)">
+                                <i class="fas fa-check"></i> <span data-lang-key="mark-complete">Mark Complete</span>
+                            </button>
+                        </div>
+                    </div>
+                    <div class="exercise-content">
+                        <div class="problem-statement">
+                            <h4 data-lang-key="problem-label">Problem:</h4>
+                            <p data-lang-key="hw3-ex9-problem">Write a program that can generate different star patterns based on user choice. Include triangle, diamond, hollow square, and pyramid patterns.</p>
+                        </div>
+                        <div class="requirements">
+                            <h4 data-lang-key="requirements-label">Requirements:</h4>
+                            <ul>
+                                <li data-lang-key="hw3-ex9-req1">Implement at least 4 different patterns</li>
+                                <li data-lang-key="hw3-ex9-req2">Use nested loops for pattern generation</li>
+                                <li data-lang-key="hw3-ex9-req3">Allow user to choose pattern and size</li>
+                                <li data-lang-key="hw3-ex9-req4">Handle invalid input gracefully</li>
+                            </ul>
+                        </div>
+                        <div class="sample-io">
+                            <h4>Sample Output:</h4>
+                            <pre><code>Pattern: Diamond, Size: 5
+  *
+ ***
+*****
+ ***
+  *</code></pre>
+                        </div>
+                        <div class="solution-section">
+                            <details>
+                                <summary>💡 Hint</summary>
+                                <p>For each pattern, analyze spaces and stars per row. Diamond is upper triangle + lower triangle.</p>
+                            </details>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Exercise 10: Digital Clock Simulation -->
+                <div class="exercise-card medium" data-exercise="10">
+                    <div class="exercise-header">
+                        <h3><span class="exercise-number">10.</span> <span data-lang-key="hw3-ex10-title">Digital Clock Simulation</span></h3>
+                        <div class="exercise-meta">
+                            <span class="difficulty" data-lang-key="difficulty-medium">Medium</span>
+                            <span class="time">⏱️ 25-35 min</span>
+                            <button class="complete-btn" onclick="toggleComplete(10)">
+                                <i class="fas fa-check"></i> <span data-lang-key="mark-complete">Mark Complete</span>
+                            </button>
+                        </div>
+                    </div>
+                    <div class="exercise-content">
+                        <div class="problem-statement">
+                            <h4 data-lang-key="problem-label">Problem:</h4>
+                            <p data-lang-key="hw3-ex10-problem">Simulate a digital clock that runs for a specified duration. Display time in HH:MM:SS format and update every second (simulate with input or actual time.sleep).</p>
+                        </div>
+                        <div class="requirements">
+                            <h4 data-lang-key="requirements-label">Requirements:</h4>
+                            <ul>
+                                <li data-lang-key="hw3-ex10-req1">Display time in HH:MM:SS format</li>
+                                <li data-lang-key="hw3-ex10-req2">Handle minute and hour rollovers correctly</li>
+                                <li data-lang-key="hw3-ex10-req3">Allow setting start time</li>
+                                <li data-lang-key="hw3-ex10-req4">Run for specified number of seconds</li>
+                            </ul>
+                        </div>
+                        <div class="sample-io">
+                            <h4>Sample Output:</h4>
+                            <pre><code>Start: 23:59:55
+23:59:55
+23:59:56
+23:59:57
+23:59:58
+23:59:59
+00:00:00</code></pre>
+                        </div>
+                        <div class="solution-section">
+                            <details>
+                                <summary>💡 Hint</summary>
+                                <p>Use three variables: hours, minutes, seconds. Increment seconds, handle overflow to minutes, minutes to hours.</p>
+                            </details>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Hard Exercises (11-15) -->
+            <section class="difficulty-section">
+                <div class="section-header hard">
+                    <div class="difficulty-badge">🔴 HARD</div>
+                    <h2 data-lang-key="hard-title">Hard Exercises (11-15)</h2>
+                    <p data-lang-key="hard-desc">Master advanced loop techniques and complex algorithms</p>
+                </div>
+
+                <!-- Exercise 11: Matrix Spiral Traversal -->
+                <div class="exercise-card hard" data-exercise="11">
+                    <div class="exercise-header">
+                        <h3><span class="exercise-number">11.</span> <span data-lang-key="hw3-ex11-title">Matrix Spiral Traversal</span></h3>
+                        <div class="exercise-meta">
+                            <span class="difficulty" data-lang-key="difficulty-hard">Hard</span>
+                            <span class="time">⏱️ 40-60 min</span>
+                            <button class="complete-btn" onclick="toggleComplete(11)">
+                                <i class="fas fa-check"></i> <span data-lang-key="mark-complete">Mark Complete</span>
+                            </button>
+                        </div>
+                    </div>
+                    <div class="exercise-content">
+                        <div class="problem-statement">
+                            <h4 data-lang-key="problem-label">Problem:</h4>
+                            <p data-lang-key="hw3-ex11-problem">Create a program that fills a matrix with numbers in spiral order (clockwise) and then traverses it in spiral order to display the numbers. Handle different matrix sizes.</p>
+                        </div>
+                        <div class="requirements">
+                            <h4 data-lang-key="requirements-label">Requirements:</h4>
+                            <ul>
+                                <li data-lang-key="hw3-ex11-req1">Fill matrix in clockwise spiral order</li>
+                                <li data-lang-key="hw3-ex11-req2">Traverse and display in spiral order</li>
+                                <li data-lang-key="hw3-ex11-req3">Handle both square and rectangular matrices</li>
+                                <li data-lang-key="hw3-ex11-req4">Display the matrix in grid format</li>
+                            </ul>
+                        </div>
+                        <div class="sample-io">
+                            <h4>Sample Output (4x4):</h4>
+                            <pre><code>1  2  3  4
+12 13 14 5
+11 16 15 6
+10 9  8  7
+
+Spiral order: 1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16</code></pre>
+                        </div>
+                        <div class="solution-section">
+                            <details>
+                                <summary>💡 Hint</summary>
+                                <p>Use four variables: top, bottom, left, right. Fill in order: left→right, top→bottom, right→left, bottom→top.</p>
+                            </details>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Exercise 12: Pascal's Triangle -->
+                <div class="exercise-card hard" data-exercise="12">
+                    <div class="exercise-header">
+                        <h3><span class="exercise-number">12.</span> <span data-lang-key="hw3-ex12-title">Pascal's Triangle</span></h3>
+                        <div class="exercise-meta">
+                            <span class="difficulty" data-lang-key="difficulty-hard">Hard</span>
+                            <span class="time">⏱️ 40-60 min</span>
+                            <button class="complete-btn" onclick="toggleComplete(12)">
+                                <i class="fas fa-check"></i> <span data-lang-key="mark-complete">Mark Complete</span>
+                            </button>
+                        </div>
+                    </div>
+                    <div class="exercise-content">
+                        <div class="problem-statement">
+                            <h4 data-lang-key="problem-label">Problem:</h4>
+                            <p data-lang-key="hw3-ex12-problem">Generate Pascal's Triangle up to a given number of rows. Each number is the sum of the two numbers above it. Display with proper spacing and formatting.</p>
+                        </div>
+                        <div class="requirements">
+                            <h4 data-lang-key="requirements-label">Requirements:</h4>
+                            <ul>
+                                <li data-lang-key="hw3-ex12-req1">Generate Pascal's Triangle using loops</li>
+                                <li data-lang-key="hw3-ex12-req2">Calculate each value as sum of two above</li>
+                                <li data-lang-key="hw3-ex12-req3">Center-align the triangle properly</li>
+                                <li data-lang-key="hw3-ex12-req4">Handle at least 10 rows</li>
+                            </ul>
+                        </div>
+                        <div class="sample-io">
+                            <h4>Sample Output (5 rows):</h4>
+                            <pre><code>    1
+   1 1
+  1 2 1
+ 1 3 3 1
+1 4 6 4 1</code></pre>
+                        </div>
+                        <div class="solution-section">
+                            <details>
+                                <summary>💡 Hint</summary>
+                                <p>Use a 2D list or calculate each value using combination formula: C(n,k) = C(n-1,k-1) + C(n-1,k)</p>
+                            </details>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Exercise 13: Text Analysis Engine -->
+                <div class="exercise-card hard" data-exercise="13">
+                    <div class="exercise-header">
+                        <h3><span class="exercise-number">13.</span> <span data-lang-key="hw3-ex13-title">Text Analysis Engine</span></h3>
+                        <div class="exercise-meta">
+                            <span class="difficulty" data-lang-key="difficulty-hard">Hard</span>
+                            <span class="time">⏱️ 40-60 min</span>
+                            <button class="complete-btn" onclick="toggleComplete(13)">
+                                <i class="fas fa-check"></i> <span data-lang-key="mark-complete">Mark Complete</span>
+                            </button>
+                        </div>
+                    </div>
+                    <div class="exercise-content">
+                        <div class="problem-statement">
+                            <h4 data-lang-key="problem-label">Problem:</h4>
+                            <p data-lang-key="hw3-ex13-problem">Build a comprehensive text analysis tool that processes a text file or string input. Count words, sentences, paragraphs, and find the most common words and longest words.</p>
+                        </div>
+                        <div class="requirements">
+                            <h4 data-lang-key="requirements-label">Requirements:</h4>
+                            <ul>
+                                <li data-lang-key="hw3-ex13-req1">Count total characters, words, sentences, paragraphs</li>
+                                <li data-lang-key="hw3-ex13-req2">Find top 5 most common words (case-insensitive)</li>
+                                <li data-lang-key="hw3-ex13-req3">Find longest word and average word length</li>
+                                <li data-lang-key="hw3-ex13-req4">Display results in a formatted report</li>
+                            </ul>
+                        </div>
+                        <div class="sample-io">
+                            <h4>Sample Output:</h4>
+                            <pre><code>Text Analysis Report:
+Characters: 245
+Words: 42
+Sentences: 5
+Most common: the(7), is(4), a(3)
+Longest word: programming(11)</code></pre>
+                        </div>
+                        <div class="solution-section">
+                            <details>
+                                <summary>💡 Hint</summary>
+                                <p>Use dictionary to count word frequency. Split by '.', '!', '?' for sentences. Use max() with key parameter.</p>
+                            </details>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Exercise 14: Maze Generator and Solver -->
+                <div class="exercise-card hard" data-exercise="14">
+                    <div class="exercise-header">
+                        <h3><span class="exercise-number">14.</span> <span data-lang-key="hw3-ex14-title">Maze Generator and Solver</span></h3>
+                        <div class="exercise-meta">
+                            <span class="difficulty" data-lang-key="difficulty-hard">Hard</span>
+                            <span class="time">⏱️ 40-60 min</span>
+                            <button class="complete-btn" onclick="toggleComplete(14)">
+                                <i class="fas fa-check"></i> <span data-lang-key="mark-complete">Mark Complete</span>
+                            </button>
+                        </div>
+                    </div>
+                    <div class="exercise-content">
+                        <div class="problem-statement">
+                            <h4 data-lang-key="problem-label">Problem:</h4>
+                            <p data-lang-key="hw3-ex14-problem">Create a simple maze generator that creates a random maze layout, then implement a path-finding algorithm to solve the maze and display the solution path.</p>
+                        </div>
+                        <div class="requirements">
+                            <h4 data-lang-key="requirements-label">Requirements:</h4>
+                            <ul>
+                                <li data-lang-key="hw3-ex14-req1">Generate a random maze (walls and paths)</li>
+                                <li data-lang-key="hw3-ex14-req2">Implement a path-finding algorithm (BFS or DFS)</li>
+                                <li data-lang-key="hw3-ex14-req3">Display the maze with start and end points</li>
+                                <li data-lang-key="hw3-ex14-req4">Show the solution path through the maze</li>
+                            </ul>
+                        </div>
+                        <div class="sample-io">
+                            <h4>Sample Output:</h4>
+                            <pre><code>Maze (S=start, E=end, #=wall, .=path):
+S . # . .
+# . # . #
+. . . # .
+# # . . E
+
+Solution found in 9 steps!</code></pre>
+                        </div>
+                        <div class="solution-section">
+                            <details>
+                                <summary>💡 Hint</summary>
+                                <p>Use 2D list for maze. For solving, use BFS with queue to find shortest path. Track visited cells.</p>
+                            </details>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Exercise 15: Fractal Pattern Generator -->
+                <div class="exercise-card hard" data-exercise="15">
+                    <div class="exercise-header">
+                        <h3><span class="exercise-number">15.</span> <span data-lang-key="hw3-ex15-title">Fractal Pattern Generator</span></h3>
+                        <div class="exercise-meta">
+                            <span class="difficulty" data-lang-key="difficulty-hard">Hard</span>
+                            <span class="time">⏱️ 40-60 min</span>
+                            <button class="complete-btn" onclick="toggleComplete(15)">
+                                <i class="fas fa-check"></i> <span data-lang-key="mark-complete">Mark Complete</span>
+                            </button>
+                        </div>
+                    </div>
+                    <div class="exercise-content">
+                        <div class="problem-statement">
+                            <h4 data-lang-key="problem-label">Problem:</h4>
+                            <p data-lang-key="hw3-ex15-problem">Create a program that generates fractal patterns like the Sierpinski Triangle or Koch Snowflake using iterative loops. Display the pattern using ASCII characters with different iteration levels.</p>
+                        </div>
+                        <div class="requirements">
+                            <h4 data-lang-key="requirements-label">Requirements:</h4>
+                            <ul>
+                                <li data-lang-key="hw3-ex15-req1">Implement Sierpinski Triangle generation</li>
+                                <li data-lang-key="hw3-ex15-req2">Use iterative approach (not recursion)</li>
+                                <li data-lang-key="hw3-ex15-req3">Allow user to choose iteration level (1-5)</li>
+                                <li data-lang-key="hw3-ex15-req4">Display the fractal using ASCII characters</li>
+                            </ul>
+                        </div>
+                        <div class="sample-io">
+                            <h4>Sample Output (Level 2):</h4>
+                            <pre><code>   *
+  * *
+ *   *
+* * * *</code></pre>
+                        </div>
+                        <div class="solution-section">
+                            <details>
+                                <summary>💡 Hint</summary>
+                                <p>Start with simple triangle. For Sierpinski, use pattern: if row and col positions satisfy certain conditions, place *.</p>
+                            </details>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Navigation -->
+            <div class="lesson-navigation">
+                <div class="nav-item prev">
+                    <a href="lesson3.html" class="nav-link">
+                        <i class="fas fa-arrow-left"></i>
+                        <div class="nav-text">
+                            <span class="nav-label" data-lang-key="back-lesson">Back to Lesson</span>
+                            <span class="nav-title" data-lang-key="lesson3-nav">Loops and Iterations</span>
+                        </div>
+                    </a>
+                </div>
+                <div class="nav-item center">
+                    <a href="../index.html#course" class="nav-link">
+                        <i class="fas fa-th-large"></i>
+                        <span data-lang-key="back-course">Course Overview</span>
+                    </a>
+                </div>
+                <div class="nav-item next disabled">
+                    <div class="nav-link">
+                        <div class="nav-text">
+                            <span class="nav-label" data-lang-key="next-lesson">Next Lesson</span>
+                            <span class="nav-title">Coming Soon</span>
+                        </div>
+                        <i class="fas fa-arrow-right"></i>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-brand">
+                    <div class="brand-icon">
+                        <i class="fas fa-brain"></i>
+                    </div>
+                    <div class="brand-info">
+                        <span data-lang-key="logo-text">Code Up Your Brain</span>
+                    </div>
+                    <p data-lang-key="footer-desc">
+                        Empowering minds through quality programming education
+                    </p>
+                </div>
+                <div class="footer-section">
+                    <h4 data-lang-key="footer-contact-title">Contact</h4>
+                    <div class="contact-info">
+                        <div class="contact-item">
+                            <i class="fas fa-envelope"></i>
+                            <span>innomindskills@gmail.com</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2024 Code Up Your Brain. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- JavaScript -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/prism.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/components/prism-python.min.js"></script>
+    <script src="../assets/js/translations.js"></script>
+    <script src="../assets/js/script.js"></script>
+    <script>
+        // Exercise completion tracking
+        let completedExercises = new Set();
+        
+        function toggleComplete(exerciseNumber) {
+            const button = document.querySelector(`[data-exercise="${exerciseNumber}"] .complete-btn`);
+            const card = document.querySelector(`[data-exercise="${exerciseNumber}"]`);
+            
+            if (completedExercises.has(exerciseNumber)) {
+                completedExercises.delete(exerciseNumber);
+                button.innerHTML = '<i class="fas fa-check"></i> <span data-lang-key="mark-complete">Mark Complete</span>';
+                button.classList.remove('completed');
+                card.classList.remove('completed');
+            } else {
+                completedExercises.add(exerciseNumber);
+                button.innerHTML = '<i class="fas fa-check-circle"></i> Completed';
+                button.classList.add('completed');
+                card.classList.add('completed');
+            }
+            
+            updateProgress();
+        }
+        
+        function updateProgress() {
+            const total = completedExercises.size;
+            const easy = Array.from(completedExercises).filter(n => n <= 5).length;
+            const medium = Array.from(completedExercises).filter(n => n > 5 && n <= 10).length;
+            const hard = Array.from(completedExercises).filter(n => n > 10).length;
+            
+            document.getElementById('easyCompleted').textContent = easy;
+            document.getElementById('mediumCompleted').textContent = medium;
+            document.getElementById('hardCompleted').textContent = hard;
+            document.getElementById('totalCompleted').textContent = total;
+            
+            const percentage = (total / 15) * 100;
+            document.getElementById('progressFill').style.width = percentage + '%';
+        }
+        
+        // Load progress from localStorage
+        document.addEventListener('DOMContentLoaded', function() {
+            const saved = localStorage.getItem('homework3Progress');
+            if (saved) {
+                completedExercises = new Set(JSON.parse(saved));
+                completedExercises.forEach(num => {
+                    const button = document.querySelector(`[data-exercise="${num}"] .complete-btn`);
+                    const card = document.querySelector(`[data-exercise="${num}"]`);
+                    if (button && card) {
+                        button.innerHTML = '<i class="fas fa-check-circle"></i> Completed';
+                        button.classList.add('completed');
+                        card.classList.add('completed');
+                    }
+                });
+                updateProgress();
+            }
+        });
+        
+        // Save progress to localStorage
+        window.addEventListener('beforeunload', function() {
+            localStorage.setItem('homework3Progress', JSON.stringify(Array.from(completedExercises)));
+        });
+    </script>
+</body>
+</html>
