@@ -57,34 +57,40 @@ const translations = {
         'module2-topic2': 'Tính tiền điện',
         
         // Module 3
-        'module3-title': 'Loops',
-        'module3-desc': 'Cấu trúc vòng lặp và các kỹ thuật xử lý với vòng lặp.',
-        'module3-topic1': 'Tính số gạch lát sàn',
-        'module3-topic2': 'Sức chứa tàu điện',
+        'module3-title': 'Flowcharts',
+        'module3-desc': 'Sơ đồ thuật toán và kỹ thuật thiết kế flowchart.',
+        'module3-topic1': 'Ký hiệu flowchart',
+        'module3-topic2': 'Vẽ sơ đồ thuật toán',
         
         // Module 4
-        'module4-title': 'Functions',
-        'module4-desc': 'Chương trình con, biến cục bộ/toàn cục và chia file chương trình.',
-        'module4-topic1': 'Số nguyên tố',
-        'module4-topic2': 'Ước chung lớn nhất',
+        'module4-title': 'Loops',
+        'module4-desc': 'Cấu trúc vòng lặp và các kỹ thuật xử lý với vòng lặp.',
+        'module4-topic1': 'Tính số gạch lát sàn',
+        'module4-topic2': 'Sức chứa tàu điện',
         
         // Module 5
-        'module5-title': 'Arrays',
-        'module5-desc': 'Mảng một chiều và các kỹ thuật xử lý trên mảng.',
-        'module5-topic1': 'Mua hàng siêu thị',
-        'module5-topic2': 'Quản lý nhân viên',
+        'module5-title': 'Functions',
+        'module5-desc': 'Chương trình con, biến cục bộ/toàn cục và chia file chương trình.',
+        'module5-topic1': 'Số nguyên tố',
+        'module5-topic2': 'Ước chung lớn nhất',
         
         // Module 6
-        'module6-title': 'Matrix - 2D Arrays',
-        'module6-desc': 'Mảng hai chiều và các kỹ thuật xử lý trên mảng 2D.',
-        'module6-topic1': 'Chơi cờ vua',
-        'module6-topic2': 'Đếm like album',
+        'module6-title': 'Arrays',
+        'module6-desc': 'Mảng một chiều và các kỹ thuật xử lý trên mảng.',
+        'module6-topic1': 'Mua hàng siêu thị',
+        'module6-topic2': 'Quản lý nhân viên',
         
         // Module 7
-        'module7-title': 'String',
-        'module7-desc': 'Chuỗi và kiểu kí tự, bảng mã ASCII và kỹ thuật lập trình với chuỗi.',
-        'module7-topic1': 'Chuẩn hóa tên',
-        'module7-topic2': 'Đếm kí tự phân biệt',
+        'module7-title': 'Matrix - 2D Arrays',
+        'module7-desc': 'Mảng hai chiều và các kỹ thuật xử lý trên mảng 2D.',
+        'module7-topic1': 'Chơi cờ vua',
+        'module7-topic2': 'Đếm like album',
+        
+        // Module 8
+        'module8-title': 'String',
+        'module8-desc': 'Chuỗi và kiểu kí tự, bảng mã ASCII và kỹ thuật lập trình với chuỗi.',
+        'module8-topic1': 'Chuẩn hóa tên',
+        'module8-topic2': 'Đếm kí tự phân biệt',
         
         // Module 8
         'module8-title': 'Recursion',
@@ -1029,34 +1035,40 @@ const translations = {
         'module2-topic2': 'Electricity bill calculation',
         
         // Module 3
-        'module3-title': 'Loops',
-        'module3-desc': 'Loop structures and processing techniques with loops.',
-        'module3-topic1': 'Floor tile calculation',
-        'module3-topic2': 'Train capacity',
+        'module3-title': 'Flowcharts',
+        'module3-desc': 'Algorithm diagrams and flowchart design techniques.',
+        'module3-topic1': 'Flowchart symbols',
+        'module3-topic2': 'Drawing algorithms',
         
         // Module 4
-        'module4-title': 'Functions',
-        'module4-desc': 'Subroutines, local/global variables and program file division.',
-        'module4-topic1': 'Prime numbers',
-        'module4-topic2': 'Greatest common divisor',
+        'module4-title': 'Loops',
+        'module4-desc': 'Loop structures and processing techniques with loops.',
+        'module4-topic1': 'Floor tile calculation',
+        'module4-topic2': 'Train capacity',
         
         // Module 5
-        'module5-title': 'Arrays',
-        'module5-desc': 'One-dimensional arrays and processing techniques on arrays.',
-        'module5-topic1': 'Supermarket shopping',
-        'module5-topic2': 'Employee management',
+        'module5-title': 'Functions',
+        'module5-desc': 'Subroutines, local/global variables and program file division.',
+        'module5-topic1': 'Prime numbers',
+        'module5-topic2': 'Greatest common divisor',
         
         // Module 6
-        'module6-title': 'Matrix - 2D Arrays',
-        'module6-desc': 'Two-dimensional arrays and processing techniques on 2D arrays.',
-        'module6-topic1': 'Chess game',
-        'module6-topic2': 'Album likes count',
+        'module6-title': 'Arrays',
+        'module6-desc': 'One-dimensional arrays and processing techniques on arrays.',
+        'module6-topic1': 'Supermarket shopping',
+        'module6-topic2': 'Employee management',
         
         // Module 7
-        'module7-title': 'String',
-        'module7-desc': 'Strings and character types, ASCII table and string programming techniques.',
-        'module7-topic1': 'Name normalization',
-        'module7-topic2': 'Distinct character count',
+        'module7-title': 'Matrix - 2D Arrays',
+        'module7-desc': 'Two-dimensional arrays and processing techniques on 2D arrays.',
+        'module7-topic1': 'Chess game',
+        'module7-topic2': 'Album likes count',
+        
+        // Module 8
+        'module8-title': 'String',
+        'module8-desc': 'Strings and character types, ASCII table and string programming techniques.',
+        'module8-topic1': 'Name normalization',
+        'module8-topic2': 'Distinct character count',
         
         // Module 8
         'module8-title': 'Recursion',
