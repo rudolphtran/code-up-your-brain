@@ -1,22 +1,22 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="vi">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title data-lang-key="lesson3-title">Lesson 3: Loops and Iterations - Code Up Your Brain</title>
-    <meta name="description" data-lang-key="lesson3-meta" content="Master loops in Python with for, while, and nested loops. Learn iteration techniques and practical applications.">
-    
+    <meta name="color-scheme" content="light only">
+    <title data-lang-key="lesson3-title">Bài 3: Flowcharts - Sơ đồ thuật toán - Code Up Your Brain</title>
+    <meta name="description" data-lang-key="lesson3-meta" content="Học cách thiết kế và đọc hiểu sơ đồ thuật toán (flowcharts) để lập trình hiệu quả hơn.">
     <link rel="stylesheet" href="../assets/css/styles.css">
     <link rel="stylesheet" href="../assets/css/lesson.css">
+    <link rel="stylesheet" href="../assets/css/auth.css">
     <link rel="stylesheet" href="../assets/css/mobile-optimizations.css">
+    <link rel="stylesheet" href="../assets/css/ultra-compact-header.css">
+    <link rel="stylesheet" href="../assets/css/force-hide-logo.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/themes/prism-tomorrow.min.css">
-    
-    <!-- Favicon -->
-    <link rel="icon" type="image/x-icon" href="../assets/images/favicon.ico">
 </head>
 <body>
     <!-- Header -->
@@ -68,9 +68,9 @@
                 <div class="lesson-number">
                     <span data-lang-key="lesson-label">Lesson</span> 3
                 </div>
-                <h1 data-lang-key="lesson3-main-title">Loops and Iterations</h1>
+                <h1 data-lang-key="lesson3-main-title">Flowcharts - Algorithm Diagrams</h1>
                 <p class="lesson-subtitle" data-lang-key="lesson3-subtitle">
-                    Master the power of repetition in programming with for loops, while loops, and nested iterations
+                    Learn to design and visualize algorithms with diagrams before coding
                 </p>
             </div>
 
@@ -78,651 +78,704 @@
             <div class="table-of-contents">
                 <h3 data-lang-key="toc-title">Table of Contents</h3>
                 <ul>
-                    <li><a href="#intro-loops" data-lang-key="toc-intro-loops">1. Introduction to Loops</a></li>
-                    <li><a href="#for-loops" data-lang-key="toc-for-loops">2. For Loops</a></li>
-                    <li><a href="#while-loops" data-lang-key="toc-while-loops">3. While Loops</a></li>
-                    <li><a href="#loop-control" data-lang-key="toc-loop-control">4. Loop Control Statements</a></li>
-                    <li><a href="#nested-loops" data-lang-key="toc-nested-loops">5. Nested Loops</a></li>
-                    <li><a href="#exercises" data-lang-key="toc-exercises">6. Practice Exercises</a></li>
+                    <li><a href="#intro-flowchart" data-lang-key="toc-intro-flowchart">1. Giới thiệu về Flowcharts</a></li>
+                    <li><a href="#flowchart-symbols" data-lang-key="toc-flowchart-symbols">2. Các ký hiệu trong Flowchart</a></li>
+                    <li><a href="#drawing-rules" data-lang-key="toc-drawing-rules">3. Quy tắc vẽ Flowchart</a></li>
+                    <li><a href="#conditional-flowchart" data-lang-key="toc-conditional-flowchart">4. Flowchart với điều kiện</a></li>
+                    <li><a href="#loop-flowchart" data-lang-key="toc-loop-flowchart">5. Flowchart với vòng lặp</a></li>
+                    <li><a href="#exercises" data-lang-key="toc-exercises">6. Bài tập thực hành</a></li>
                 </ul>
             </div>
 
-            <!-- Section 1: Introduction to Loops -->
-            <section id="intro-loops" class="lesson-section">
-                <div class="section-icon">🔁</div>
-                <h2 data-lang-key="section1-title-lesson3">1. Introduction to Loops</h2>
+            <!-- Section 1: Introduction -->
+            <section id="intro-flowchart" class="lesson-section">
+                <div class="section-icon">📊</div>
+                <h2 data-lang-key="section1-title-lesson3">1. Introduction to Flowcharts</h2>
                 
                 <div class="content-block">
                     <p data-lang-key="section1-intro">
-                        Loops are fundamental programming constructs that allow us to execute code repeatedly. 
-                        Instead of writing the same code multiple times, we use loops to automate repetitive tasks.
+                        Flowchart (sơ đồ thuật toán) là cách biểu diễn trực quan các bước của một thuật toán hoặc quy trình. 
+                        Thay vì viết code ngay, việc vẽ flowchart giúp bạn suy nghĩ về logic và tổ chức ý tưởng rõ ràng hơn.
                     </p>
-                    
-                    <h3 data-lang-key="why-loops-title">🤔 Why Use Loops?</h3>
-                    <div class="comparison-grid">
-                        <div class="comparison-bad">
-                            <h4 data-lang-key="without-loops">❌ Without Loops</h4>
-                            <pre><code class="language-python"># Printing numbers 1 to 5 manually
-print(1)
-print(2)
-print(3)
-print(4)
-print(5)
-# Imagine doing this for 1000 numbers!</code></pre>
+                </div>
+
+                <h3 data-lang-key="why-flowchart-title">🤔 Tại sao cần Flowchart?</h3>
+                <div class="two-column">
+                    <div class="column">
+                        <h4 data-lang-key="benefits-title">✅ Lợi ích</h4>
+                        <ul>
+                            <li data-lang-key="benefit1">Dễ hiểu và trực quan hơn code</li>
+                            <li data-lang-key="benefit2">Giúp tìm lỗi logic trước khi code</li>
+                            <li data-lang-key="benefit3">Dễ dàng communicate với team</li>
+                            <li data-lang-key="benefit4">Document thuật toán rõ ràng</li>
+                        </ul>
+                    </div>
+                    <div class="column">
+                        <h4 data-lang-key="when-use-title">📌 Khi nào dùng?</h4>
+                        <ul>
+                            <li data-lang-key="usecase1">Thiết kế thuật toán mới</li>
+                            <li data-lang-key="usecase2">Giải thích code cho người khác</li>
+                            <li data-lang-key="usecase3">Debug logic phức tạp</li>
+                            <li data-lang-key="usecase4">Document hệ thống</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="example-box">
+                    <h4 data-lang-key="example-title">💡 Ví dụ: Thuật toán pha cà phê</h4>
+                    <pre><code>Bước 1: Bắt đầu
+Bước 2: Đun nước
+Bước 3: Nước sôi chưa?
+    - Nếu chưa: quay lại bước 2
+    - Nếu rồi: tiếp tục bước 4
+Bước 4: Cho cà phê vào phin
+Bước 5: Rót nước sôi vào
+Bước 6: Đợi cà phê chảy hết
+Bước 7: Kết thúc</code></pre>
+                </div>
+            </section>
+
+            <!-- Section 2: Flowchart Symbols -->
+            <section id="flowchart-symbols" class="lesson-section">
+                <div class="section-icon">🔣</div>
+                <h2 data-lang-key="section2-title-lesson3">2. Flowchart Symbols</h2>
+                
+                <p data-lang-key="section2-intro">
+                    Flowchart sử dụng các hình dạng chuẩn để biểu diễn các thao tác khác nhau:
+                </p>
+
+                <div class="symbols-grid">
+                    <div class="symbol-card">
+                        <div class="symbol-shape oval">
+                            <span>Start/End</span>
                         </div>
-                        <div class="comparison-good">
-                            <h4 data-lang-key="with-loops">✅ With Loops</h4>
-                            <pre><code class="language-python"># Printing numbers 1 to 5 with a loop
-for i in range(1, 6):
-    print(i)
-# Easy to change to 1000 numbers!</code></pre>
+                        <h4 data-lang-key="symbol1-name">Oval (Hình bầu dục)</h4>
+                        <p data-lang-key="symbol1-desc">Đánh dấu điểm bắt đầu và kết thúc chương trình</p>
+                        <div class="symbol-example">
+                            <code>Bắt đầu</code> hoặc <code>Kết thúc</code>
                         </div>
                     </div>
 
-                    <h3 data-lang-key="loop-types-title">🔄 Types of Loops in Python</h3>
-                    <div class="info-grid">
-                        <div class="info-card">
-                            <h4 data-lang-key="for-loop-card">For Loop</h4>
-                            <p data-lang-key="for-loop-desc">Used when you know how many times to repeat</p>
-                            <code>for item in sequence:</code>
+                    <div class="symbol-card">
+                        <div class="symbol-shape rectangle">
+                            <span>Process</span>
                         </div>
-                        <div class="info-card">
-                            <h4 data-lang-key="while-loop-card">While Loop</h4>
-                            <p data-lang-key="while-loop-desc">Used when you repeat based on a condition</p>
-                            <code>while condition:</code>
+                        <h4 data-lang-key="symbol2-name">Rectangle (Hình chữ nhật)</h4>
+                        <p data-lang-key="symbol2-desc">Thao tác xử lý, tính toán, gán giá trị</p>
+                        <div class="symbol-example">
+                            <code>x = 5</code><br>
+                            <code>total = a + b</code>
                         </div>
+                    </div>
+
+                    <div class="symbol-card">
+                        <div class="symbol-shape parallelogram">
+                            <span>Input/Output</span>
+                        </div>
+                        <h4 data-lang-key="symbol3-name">Parallelogram (Hình bình hành)</h4>
+                        <p data-lang-key="symbol3-desc">Nhập dữ liệu hoặc xuất kết quả</p>
+                        <div class="symbol-example">
+                            <code>Input: n</code><br>
+                            <code>Output: result</code>
+                        </div>
+                    </div>
+
+                    <div class="symbol-card">
+                        <div class="symbol-shape diamond">
+                            <span>Decision</span>
+                        </div>
+                        <h4 data-lang-key="symbol4-name">Diamond (Hình thoi)</h4>
+                        <p data-lang-key="symbol4-desc">Kiểm tra điều kiện (Yes/No, True/False)</p>
+                        <div class="symbol-example">
+                            <code>x > 0?</code><br>
+                            <code>age >= 18?</code>
+                        </div>
+                    </div>
+
+                    <div class="symbol-card">
+                        <div class="symbol-shape arrow">
+                            <span>→</span>
+                        </div>
+                        <h4 data-lang-key="symbol5-name">Arrow (Mũi tên)</h4>
+                        <p data-lang-key="symbol5-desc">Chỉ hướng thực hiện (flow direction)</p>
+                        <div class="symbol-example">
+                            Nối các bước với nhau
+                        </div>
+                    </div>
+
+                    <div class="symbol-card">
+                        <div class="symbol-shape circle">
+                            <span>A</span>
+                        </div>
+                        <h4 data-lang-key="symbol6-name">Circle (Hình tròn)</h4>
+                        <p data-lang-key="symbol6-desc">Connector - nối các phần của flowchart</p>
+                        <div class="symbol-example">
+                            Dùng khi sơ đồ quá dài
+                        </div>
+                    </div>
+                </div>
+
+                <div class="tip-box">
+                    <i class="fas fa-lightbulb"></i>
+                    <div>
+                        <strong data-lang-key="tip-title">💡 Mẹo hay:</strong>
+                        <p data-lang-key="symbols-tip">
+                            Chỉ cần nhớ 4 ký hiệu chính: Oval (Start/End), Rectangle (Process), 
+                            Parallelogram (I/O), và Diamond (Decision) là đủ để vẽ hầu hết flowchart!
+                        </p>
                     </div>
                 </div>
             </section>
 
-            <!-- Section 2: For Loops -->
-            <section id="for-loops" class="lesson-section">
-                <div class="section-icon">🔄</div>
-                <h2 data-lang-key="section2-title-lesson3">2. For Loops</h2>
+            <!-- Section 3: Drawing Rules -->
+            <section id="drawing-rules" class="lesson-section">
+                <div class="section-icon">📐</div>
+                <h2 data-lang-key="section3-title-lesson3">3. Flowchart Drawing Rules</h2>
                 
-                <div class="content-block">
-                    <p data-lang-key="section2-intro">
-                        For loops are perfect when you want to iterate through a sequence (like a list, string, or range) 
-                        or when you know exactly how many times you want to repeat something.
-                    </p>
+                <p data-lang-key="section3-intro">
+                    Để flowchart dễ đọc và chuẩn, bạn cần tuân theo một số quy tắc:
+                </p>
 
-                    <h3 data-lang-key="range-function-title">📊 The range() Function</h3>
-                    <p data-lang-key="range-intro">The range() function is your best friend for creating number sequences:</p>
-                    
-                    <div class="code-example">
-                        <pre><code class="language-python"># Basic range usage
-for i in range(5):        # 0, 1, 2, 3, 4
-    print(i)
+                <div class="rules-list">
+                    <div class="rule-item">
+                        <div class="rule-number">1</div>
+                        <div class="rule-content">
+                            <h4 data-lang-key="rule1-title">Luôn có Start và End</h4>
+                            <p data-lang-key="rule1-desc">Mọi flowchart phải bắt đầu bằng "Start" và kết thúc bằng "End"</p>
+                        </div>
+                    </div>
 
-for i in range(2, 8):     # 2, 3, 4, 5, 6, 7
-    print(i)
+                    <div class="rule-item">
+                        <div class="rule-number">2</div>
+                        <div class="rule-content">
+                            <h4 data-lang-key="rule2-title">Flow từ trên xuống dưới</h4>
+                            <p data-lang-key="rule2-desc">Hướng chính của sơ đồ là từ trên xuống, trái sang phải</p>
+                        </div>
+                    </div>
 
-for i in range(0, 10, 2): # 0, 2, 4, 6, 8
+                    <div class="rule-item">
+                        <div class="rule-number">3</div>
+                        <div class="rule-content">
+                            <h4 data-lang-key="rule3-title">Mỗi hình chỉ có 1 đầu vào</h4>
+                            <p data-lang-key="rule3-desc">Trừ Diamond (có thể có 2 đầu ra: Yes/No)</p>
+                        </div>
+                    </div>
+
+                    <div class="rule-item">
+                        <div class="rule-number">4</div>
+                        <div class="rule-content">
+                            <h4 data-lang-key="rule4-title">Rõ ràng và đơn giản</h4>
+                            <p data-lang-key="rule4-desc">Mỗi hình chỉ thể hiện 1 hành động, tránh quá phức tạp</p>
+                        </div>
+                    </div>
+
+                    <div class="rule-item">
+                        <div class="rule-number">5</div>
+                        <div class="rule-content">
+                            <h4 data-lang-key="rule5-title">Label rõ ràng</h4>
+                            <p data-lang-key="rule5-desc">Các mũi tên từ Diamond phải ghi rõ Yes/No hoặc True/False</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="example-box">
+                    <h4 data-lang-key="simple-example-title">📝 Ví dụ đơn giản: Tính tổng 2 số</h4>
+                    <div class="flowchart-text">
+                        <pre>
+    ┌─────────┐
+    │  Start  │
+    └────┬────┘
+         │
+         ▼
+    ┌─────────────┐
+    │ Input a, b  │  ← Input
+    └──────┬──────┘
+           │
+           ▼
+    ┌─────────────┐
+    │ sum = a + b │  ← Process
+    └──────┬──────┘
+           │
+           ▼
+    ┌─────────────┐
+    │ Output sum  │  ← Output
+    └──────┬──────┘
+           │
+           ▼
+    ┌─────────┐
+    │   End   │
+    └─────────┘
+                        </pre>
+                    </div>
+                </div>
+
+                <div class="code-comparison">
+                    <div class="comparison-item">
+                        <h4 data-lang-key="flowchart-label">Flowchart</h4>
+                        <p data-lang-key="flowchart-benefit">Trực quan, dễ hiểu</p>
+                    </div>
+                    <div class="comparison-arrow">⟺</div>
+                    <div class="comparison-item">
+                        <h4 data-lang-key="code-label">Python Code</h4>
+                        <pre><code class="language-python">a = int(input())
+b = int(input())
+sum = a + b
+print(sum)</code></pre>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Section 4: Conditional Flowchart -->
+            <section id="conditional-flowchart" class="lesson-section">
+                <div class="section-icon">🔀</div>
+                <h2 data-lang-key="section4-title-lesson3">4. Flowcharts with Conditions</h2>
+                
+                <p data-lang-key="section4-intro">
+                    Khi có cấu trúc if-else, flowchart sử dụng hình thoi (diamond) để biểu diễn điều kiện.
+                </p>
+
+                <div class="example-box">
+                    <h4 data-lang-key="example-if-title">📝 Ví dụ: Kiểm tra số chẵn lẻ</h4>
+                    <div class="flowchart-text">
+                        <pre>
+         ┌─────────┐
+         │  Start  │
+         └────┬────┘
+              │
+              ▼
+         ┌─────────┐
+         │ Input n │
+         └────┬────┘
+              │
+              ▼
+         ◇───────────◇
+        ╱  n % 2 == 0? ╲  ← Decision
+        ╲             ╱
+         ◇───────────◇
+          │           │
+     Yes  │           │  No
+          │           │
+          ▼           ▼
+    ┌──────────┐  ┌──────────┐
+    │Print "Chẵn"│  │Print "Lẻ"│
+    └─────┬────┘  └─────┬────┘
+          │           │
+          └─────┬─────┘
+                │
+                ▼
+          ┌─────────┐
+          │   End   │
+          └─────────┘
+                        </pre>
+                    </div>
+
+                    <div class="code-comparison">
+                        <pre><code class="language-python">n = int(input())
+if n % 2 == 0:
+    print("Chẵn")
+else:
+    print("Lẻ")</code></pre>
+                    </div>
+                </div>
+
+                <h3 data-lang-key="nested-if-title">🔄 If-elif-else trong Flowchart</h3>
+                <div class="example-box">
+                    <h4 data-lang-key="example-grade-title">📝 Ví dụ: Phân loại điểm</h4>
+                    <div class="flowchart-text">
+                        <pre>
+              ┌─────────┐
+              │  Start  │
+              └────┬────┘
+                   │
+                   ▼
+              ┌──────────┐
+              │Input score│
+              └────┬─────┘
+                   │
+                   ▼
+              ◇──────────◇
+             ╱ score >= 90? ╲
+             ╲              ╱
+              ◇──────────◇
+               │        │
+          Yes  │        │ No
+               │        │
+               ▼        ▼
+          ┌────────┐   ◇──────────◇
+          │Print "A"│  ╱ score >= 80? ╲
+          └───┬────┘  ╲              ╱
+              │        ◇──────────◇
+              │         │        │
+              │    Yes  │        │ No
+              │         │        │
+              │         ▼        ▼
+              │    ┌────────┐  ┌────────┐
+              │    │Print "B"│  │Print "C"│
+              │    └───┬────┘  └────┬───┘
+              │        │            │
+              └────────┴────────────┘
+                       │
+                       ▼
+                  ┌─────────┐
+                  │   End   │
+                  └─────────┘
+                        </pre>
+                    </div>
+                </div>
+
+                <div class="warning-box">
+                    <i class="fas fa-exclamation-triangle"></i>
+                    <div>
+                        <strong data-lang-key="warning-title">⚠️ Lưu ý:</strong>
+                        <p data-lang-key="diamond-warning">
+                            Hình thoi (Diamond) chỉ nên có 2 đường ra: Yes/No hoặc True/False. 
+                            Tránh tạo quá nhiều nhánh từ một diamond.
+                        </p>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Section 5: Loop Flowchart -->
+            <section id="loop-flowchart" class="lesson-section">
+                <div class="section-icon">🔁</div>
+                <h2 data-lang-key="section5-title-lesson3">5. Flowcharts with Loops</h2>
+                
+                <p data-lang-key="section5-intro">
+                    Vòng lặp trong flowchart được biểu diễn bằng mũi tên quay lại (loop back) kết hợp với điều kiện dừng.
+                </p>
+
+                <div class="example-box">
+                    <h4 data-lang-key="example-for-title">📝 Ví dụ: In số từ 1 đến 5 (For loop)</h4>
+                    <div class="flowchart-text">
+                        <pre>
+         ┌─────────┐
+         │  Start  │
+         └────┬────┘
+              │
+              ▼
+         ┌─────────┐
+         │  i = 1  │  ← Initialize
+         └────┬────┘
+              │
+              ▼
+         ◇───────────◇
+        ╱   i <= 5?    ╲  ← Check condition
+        ╲             ╱
+         ◇───────────◇
+          │           │
+     Yes  │           │  No
+          │           │
+          ▼           ▼
+    ┌──────────┐  ┌─────────┐
+    │ Print i  │  │   End   │
+    └─────┬────┘  └─────────┘
+          │
+          ▼
+    ┌──────────┐
+    │  i = i+1 │  ← Increment
+    └─────┬────┘
+          │
+          │ Loop back
+          └──────┐
+                 │
+                 ↑
+                        </pre>
+                    </div>
+
+                    <div class="code-comparison">
+                        <pre><code class="language-python">for i in range(1, 6):
     print(i)</code></pre>
                     </div>
+                </div>
 
-                    <div class="tip-box">
-                        <i class="fas fa-lightbulb"></i>
-                        <div>
-                            <strong data-lang-key="tip-title">💡 Pro Tip</strong>
-                            <p data-lang-key="range-tip">
-                                range(start, stop, step) - start is inclusive, stop is exclusive, step is the increment
-                            </p>
-                        </div>
-                    </div>
-
-                    <h3 data-lang-key="iterating-title">🔍 Iterating Through Different Data Types</h3>
-                    
-                    <div class="example-grid">
-                        <div class="example-card">
-                            <h4 data-lang-key="string-iteration">String Iteration</h4>
-                            <pre><code class="language-python">word = "Python"
-for letter in word:
-    print(letter)</code></pre>
-                        </div>
-                        <div class="example-card">
-                            <h4 data-lang-key="list-iteration">List Iteration</h4>
-                            <pre><code class="language-python">fruits = ["apple", "banana", "orange"]
-for fruit in fruits:
-    print(f"I like {fruit}")</code></pre>
-                        </div>
-                    </div>
-
-                    <!-- Exercise 1 -->
-                    <div class="exercise-container">
-                        <div class="exercise-header">
-                            <i class="fas fa-dumbbell"></i>
-                            <h4 data-lang-key="exercise1-title">Exercise 1: Sum Calculator</h4>
-                        </div>
-                        <p data-lang-key="exercise1-desc">
-                            Create a program that calculates the sum of numbers from 1 to n using a for loop.
-                        </p>
-                        <div class="exercise-solution">
-                            <details>
-                                <summary data-lang-key="show-solution">💡 Show Solution</summary>
-                                <pre><code class="language-python">n = int(input("Enter a number: "))
-total = 0
-
-for i in range(1, n + 1):
-    total += i
-
-print(f"Sum from 1 to {n} is: {total}")
-
-# Alternative using built-in function
-print(f"Using sum(): {sum(range(1, n + 1))}")</code></pre>
-                            </details>
-                        </div>
+                <h3 data-lang-key="while-loop-title">🔁 While Loop trong Flowchart</h3>
+                <div class="example-box">
+                    <h4 data-lang-key="example-while-title">📝 Ví dụ: Nhập số cho đến khi nhập 0</h4>
+                    <div class="flowchart-text">
+                        <pre>
+         ┌─────────┐
+         │  Start  │
+         └────┬────┘
+              │
+              ▼
+         ┌─────────┐
+         │ Input n │  ← Loop starts here
+         └────┬────┘
+              │
+              ▼
+         ◇───────────◇
+        ╱   n != 0?    ╲  ← While condition
+        ╲             ╱
+         ◇───────────◇
+          │           │
+     Yes  │           │  No
+          │           │
+          ▼           ▼
+    ┌───────────┐  ┌─────────┐
+    │ Process n │  │   End   │
+    └─────┬─────┘  └─────────┘
+          │
+          ▼
+    ┌───────────┐
+    │ Input n   │  ← Read again
+    └─────┬─────┘
+          │
+          │ Loop back
+          └──────┐
+                 │
+                 ↑
+                        </pre>
                     </div>
                 </div>
-            </section>
 
-            <!-- Section 3: While Loops -->
-            <section id="while-loops" class="lesson-section">
-                <div class="section-icon">♻️</div>
-                <h2 data-lang-key="section3-title-lesson3">3. While Loops</h2>
-                
-                <div class="content-block">
-                    <p data-lang-key="section3-intro">
-                        While loops continue executing as long as a condition remains true. They're perfect for situations 
-                        where you don't know exactly how many iterations you'll need.
+                <div class="tip-box">
+                    <i class="fas fa-lightbulb"></i>
+                    <div>
+                        <strong data-lang-key="tip-title">💡 Phân biệt For và While:</strong>
+                        <ul>
+                            <li data-lang-key="for-tip"><strong>For loop:</strong> Biết trước số lần lặp → Khởi tạo biến đếm</li>
+                            <li data-lang-key="while-tip"><strong>While loop:</strong> Lặp dựa vào điều kiện → Kiểm tra điều kiện trước</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <h3 data-lang-key="nested-loop-title">🔄 Nested Loop (Vòng lặp lồng nhau)</h3>
+                <div class="example-box">
+                    <h4 data-lang-key="example-nested-title">📝 Ví dụ: In bảng cửu chương 2x2</h4>
+                    <p data-lang-key="nested-explanation">
+                        Với vòng lặp lồng nhau, flowchart sẽ có 2 vòng lặp: vòng ngoài và vòng trong.
                     </p>
-
-                    <h3 data-lang-key="basic-while-title">🔄 Basic While Loop Structure</h3>
-                    <div class="code-example">
-                        <pre><code class="language-python"># Basic while loop pattern
-initialization
-while condition:
-    # code to execute
-    update_condition
-
-# Example: Countdown
-count = 5
-while count > 0:
-    print(f"Countdown: {count}")
-    count -= 1
-print("Blast off! 🚀")</code></pre>
-                    </div>
-
-                    <div class="warning-box">
-                        <i class="fas fa-exclamation-triangle"></i>
-                        <div>
-                            <strong data-lang-key="warning-title">⚠️ Warning</strong>
-                            <p data-lang-key="infinite-loop-warning">
-                                Always make sure your while loop condition will eventually become false, 
-                                or you'll create an infinite loop!
-                            </p>
-                        </div>
-                    </div>
-
-                    <h3 data-lang-key="while-examples-title">📝 Practical While Loop Examples</h3>
-                    
-                    <div class="example-grid">
-                        <div class="example-card">
-                            <h4 data-lang-key="input-validation">Input Validation</h4>
-                            <pre><code class="language-python">age = -1
-while age < 0 or age > 150:
-    age = int(input("Enter valid age (0-150): "))
-print(f"Your age is {age}")</code></pre>
-                        </div>
-                        <div class="example-card">
-                            <h4 data-lang-key="guessing-game">Number Guessing</h4>
-                            <pre><code class="language-python">import random
-secret = random.randint(1, 10)
-guess = 0
-
-while guess != secret:
-    guess = int(input("Guess (1-10): "))
-    if guess < secret:
-        print("Too low!")
-    elif guess > secret:
-        print("Too high!")
-
-print("Congratulations! 🎉")</code></pre>
-                        </div>
-                    </div>
-
-                    <!-- Exercise 2 -->
-                    <div class="exercise-container">
-                        <div class="exercise-header">
-                            <i class="fas fa-dumbbell"></i>
-                            <h4 data-lang-key="exercise2-title">Exercise 2: Password Checker</h4>
-                        </div>
-                        <p data-lang-key="exercise2-desc">
-                            Create a password validation system that keeps asking for a password until a strong one is entered. 
-                            A strong password must have at least 8 characters and contain both letters and numbers.
-                        </p>
-                        <div class="exercise-solution">
-                            <details>
-                                <summary data-lang-key="show-solution">💡 Show Solution</summary>
-                                <pre><code class="language-python">def is_strong_password(password):
-    if len(password) < 8:
-        return False
-    has_letter = any(char.isalpha() for char in password)
-    has_number = any(char.isdigit() for char in password)
-    return has_letter and has_number
-
-password = ""
-while not is_strong_password(password):
-    password = input("Enter a strong password (8+ chars, letters & numbers): ")
-    if not is_strong_password(password):
-        print("❌ Password too weak. Try again!")
-
-print("✅ Strong password accepted!")</code></pre>
-                            </details>
-                        </div>
+                    <div class="code-comparison">
+                        <pre><code class="language-python"># Outer loop
+for i in range(1, 3):
+    # Inner loop
+    for j in range(1, 3):
+        print(f"{i} x {j} = {i*j}")
+    print()  # New line after each row</code></pre>
                     </div>
                 </div>
             </section>
 
-            <!-- Section 4: Loop Control Statements -->
-            <section id="loop-control" class="lesson-section">
-                <div class="section-icon">🎮</div>
-                <h2 data-lang-key="section4-title-lesson3">4. Loop Control Statements</h2>
-                
-                <div class="content-block">
-                    <p data-lang-key="section4-intro">
-                        Sometimes you need to alter the normal flow of loops. Python provides several control statements 
-                        to help you manage loop execution more precisely.
-                    </p>
-
-                    <div class="control-statements">
-                        <div class="control-card">
-                            <div class="control-header">
-                                <i class="fas fa-stop"></i>
-                                <h3>break</h3>
-                            </div>
-                            <p data-lang-key="break-desc">Exits the loop immediately</p>
-                            <pre><code class="language-python">for i in range(10):
-    if i == 5:
-        break
-    print(i)  # Prints 0,1,2,3,4</code></pre>
-                        </div>
-
-                        <div class="control-card">
-                            <div class="control-header">
-                                <i class="fas fa-forward"></i>
-                                <h3>continue</h3>
-                            </div>
-                            <p data-lang-key="continue-desc">Skips the current iteration</p>
-                            <pre><code class="language-python">for i in range(5):
-    if i == 2:
-        continue
-    print(i)  # Prints 0,1,3,4</code></pre>
-                        </div>
-
-                        <div class="control-card">
-                            <div class="control-header">
-                                <i class="fas fa-check"></i>
-                                <h3>else</h3>
-                            </div>
-                            <p data-lang-key="else-desc">Executes if loop completes normally</p>
-                            <pre><code class="language-python">for i in range(3):
-    print(i)
-else:
-    print("Loop finished!")  # This runs</code></pre>
-                        </div>
-                    </div>
-
-                    <!-- Exercise 3 -->
-                    <div class="exercise-container">
-                        <div class="exercise-header">
-                            <i class="fas fa-dumbbell"></i>
-                            <h4 data-lang-key="exercise3-title">Exercise 3: Prime Number Checker</h4>
-                        </div>
-                        <p data-lang-key="exercise3-desc">
-                            Write a program that checks if a number is prime using a for loop with break statement.
-                        </p>
-                        <div class="exercise-solution">
-                            <details>
-                                <summary data-lang-key="show-solution">💡 Show Solution</summary>
-                                <pre><code class="language-python">def is_prime(n):
-    if n < 2:
-        return False
-    
-    for i in range(2, int(n ** 0.5) + 1):
-        if n % i == 0:
-            return False
-    return True
-
-number = int(input("Enter a number to check: "))
-if is_prime(number):
-    print(f"{number} is a prime number! ✨")
-else:
-    print(f"{number} is not a prime number.")</code></pre>
-                            </details>
-                        </div>
-                    </div>
-                </div>
-            </section>
-
-            <!-- Section 5: Nested Loops -->
-            <section id="nested-loops" class="lesson-section">
-                <div class="section-icon">🎯</div>
-                <h2 data-lang-key="section5-title-lesson3">5. Nested Loops</h2>
-                
-                <div class="content-block">
-                    <p data-lang-key="section5-intro">
-                        Nested loops are loops inside other loops. They're powerful for creating patterns, 
-                        working with 2D data structures, and solving complex problems.
-                    </p>
-
-                    <h3 data-lang-key="pattern-creation-title">🎨 Creating Patterns</h3>
-                    
-                    <div class="pattern-examples">
-                        <div class="pattern-card">
-                            <h4 data-lang-key="star-pattern">Star Triangle</h4>
-                            <pre><code class="language-python"># Creating a star triangle
-for i in range(1, 6):
-    for j in range(i):
-        print("*", end="")
-    print()
-
-# Output:
-# *
-# **
-# ***
-# ****
-# *****</code></pre>
-                        </div>
-
-                        <div class="pattern-card">
-                            <h4 data-lang-key="number-pattern">Number Pattern</h4>
-                            <pre><code class="language-python"># Creating a number pattern
-for i in range(1, 5):
-    for j in range(1, i + 1):
-        print(j, end=" ")
-    print()
-
-# Output:
-# 1
-# 1 2
-# 1 2 3
-# 1 2 3 4</code></pre>
-                        </div>
-                    </div>
-
-                    <h3 data-lang-key="practical-nested-title">🏗️ Practical Applications</h3>
-                    
-                    <div class="code-example">
-                        <h4 data-lang-key="multiplication-table">Multiplication Table</h4>
-                        <pre><code class="language-python"># Creating a multiplication table
-print("Multiplication Table (1-5):")
-print("   ", end="")
-for i in range(1, 6):
-    print(f"{i:4}", end="")
-print()
-
-for i in range(1, 6):
-    print(f"{i}  ", end="")
-    for j in range(1, 6):
-        print(f"{i*j:4}", end="")
-    print()</code></pre>
-                    </div>
-
-                    <!-- Exercise 4 -->
-                    <div class="exercise-container">
-                        <div class="exercise-header">
-                            <i class="fas fa-dumbbell"></i>
-                            <h4 data-lang-key="exercise4-title">Exercise 4: Chess Board Pattern</h4>
-                        </div>
-                        <p data-lang-key="exercise4-desc">
-                            Create a program that prints a chess board pattern using nested loops. Use 'W' for white squares and 'B' for black squares.
-                        </p>
-                        <div class="exercise-solution">
-                            <details>
-                                <summary data-lang-key="show-solution">💡 Show Solution</summary>
-                                <pre><code class="language-python">size = 8
-print("Chess Board Pattern:")
-
-for i in range(size):
-    for j in range(size):
-        if (i + j) % 2 == 0:
-            print("W", end=" ")
-        else:
-            print("B", end=" ")
-    print()
-
-# Alternative with different characters
-print("\nWith different characters:")
-for i in range(size):
-    for j in range(size):
-        if (i + j) % 2 == 0:
-            print("⬜", end="")
-        else:
-            print("⬛", end="")
-    print()</code></pre>
-                            </details>
-                        </div>
-                    </div>
-                </div>
-            </section>
-
-            <!-- Section 6: Practice Exercises -->
+            <!-- Section 6: Exercises -->
             <section id="exercises" class="lesson-section">
-                <div class="section-icon">📝</div>
+                <div class="section-icon">✏️</div>
                 <h2 data-lang-key="section6-title-lesson3">6. Practice Exercises</h2>
                 
-                <div class="content-block">
-                    <div class="exercise-grid">
-                        <!-- Exercise 5 -->
-                        <div class="exercise-container">
-                            <div class="exercise-header">
-                                <i class="fas fa-dumbbell"></i>
-                                <h4 data-lang-key="exercise5-title">Exercise 5: Fibonacci Series</h4>
+                <p data-lang-key="exercises-intro">
+                    Thực hành vẽ flowchart cho các bài toán sau. Sau đó viết code Python tương ứng.
+                </p>
+
+                <div class="exercise-list">
+                    <div class="exercise-item">
+                        <div class="exercise-header">
+                            <span class="exercise-number">1</span>
+                            <h3 data-lang-key="exercise1-title">Tìm số lớn nhất trong 3 số</h3>
+                            <span class="difficulty easy" data-lang-key="difficulty-easy">Dễ</span>
+                        </div>
+                        <div class="exercise-content">
+                            <p data-lang-key="exercise1-desc">
+                                Nhập 3 số a, b, c. Tìm và in ra số lớn nhất.
+                            </p>
+                            <div class="requirements">
+                                <strong data-lang-key="requirements-title">Yêu cầu:</strong>
+                                <ul>
+                                    <li data-lang-key="exercise1-req1">Vẽ flowchart với các bước kiểm tra</li>
+                                    <li data-lang-key="exercise1-req2">Sử dụng if-elif-else</li>
+                                    <li data-lang-key="exercise1-req3">Viết code Python tương ứng</li>
+                                </ul>
                             </div>
+                        </div>
+                    </div>
+
+                    <div class="exercise-item">
+                        <div class="exercise-header">
+                            <span class="exercise-number">2</span>
+                            <h3 data-lang-key="exercise2-title">Tính giai thừa n!</h3>
+                            <span class="difficulty easy" data-lang-key="difficulty-easy">Dễ</span>
+                        </div>
+                        <div class="exercise-content">
+                            <p data-lang-key="exercise2-desc">
+                                Nhập số nguyên dương n. Tính n! = 1 × 2 × 3 × ... × n
+                            </p>
+                            <div class="requirements">
+                                <strong data-lang-key="requirements-title">Yêu cầu:</strong>
+                                <ul>
+                                    <li data-lang-key="exercise2-req1">Vẽ flowchart với vòng lặp</li>
+                                    <li data-lang-key="exercise2-req2">Khởi tạo result = 1</li>
+                                    <li data-lang-key="exercise2-req3">Lặp từ i = 1 đến n</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="exercise-item">
+                        <div class="exercise-header">
+                            <span class="exercise-number">3</span>
+                            <h3 data-lang-key="exercise3-title">Kiểm tra số nguyên tố</h3>
+                            <span class="difficulty medium" data-lang-key="difficulty-medium">Trung bình</span>
+                        </div>
+                        <div class="exercise-content">
+                            <p data-lang-key="exercise3-desc">
+                                Nhập số n. Kiểm tra n có phải số nguyên tố không.
+                            </p>
+                            <div class="requirements">
+                                <strong data-lang-key="requirements-title">Yêu cầu:</strong>
+                                <ul>
+                                    <li data-lang-key="exercise3-req1">Flowchart có điều kiện và vòng lặp</li>
+                                    <li data-lang-key="exercise3-req2">Kiểm tra chia hết từ 2 đến √n</li>
+                                    <li data-lang-key="exercise3-req3">Dừng sớm nếu tìm thấy ước</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="exercise-item">
+                        <div class="exercise-header">
+                            <span class="exercise-number">4</span>
+                            <h3 data-lang-key="exercise4-title">Tính tổng các số chẵn từ 1 đến n</h3>
+                            <span class="difficulty medium" data-lang-key="difficulty-medium">Trung bình</span>
+                        </div>
+                        <div class="exercise-content">
+                            <p data-lang-key="exercise4-desc">
+                                Nhập n. Tính tổng tất cả số chẵn từ 1 đến n.
+                            </p>
+                            <div class="requirements">
+                                <strong data-lang-key="requirements-title">Yêu cầu:</strong>
+                                <ul>
+                                    <li data-lang-key="exercise4-req1">Vòng lặp từ 1 đến n</li>
+                                    <li data-lang-key="exercise4-req2">Kiểm tra số chẵn (i % 2 == 0)</li>
+                                    <li data-lang-key="exercise4-req3">Cộng dồn vào sum</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="exercise-item">
+                        <div class="exercise-header">
+                            <span class="exercise-number">5</span>
+                            <h3 data-lang-key="exercise5-title">Menu chương trình</h3>
+                            <span class="difficulty medium" data-lang-key="difficulty-medium">Trung bình</span>
+                        </div>
+                        <div class="exercise-content">
                             <p data-lang-key="exercise5-desc">
-                                Generate the first n numbers in the Fibonacci sequence using a loop.
+                                Tạo menu với các lựa chọn: 1. Cộng, 2. Trừ, 3. Nhân, 4. Chia, 0. Thoát
                             </p>
-                            <div class="exercise-solution">
-                                <details>
-                                    <summary data-lang-key="show-solution">💡 Show Solution</summary>
-                                    <pre><code class="language-python">n = int(input("How many Fibonacci numbers? "))
-
-if n <= 0:
-    print("Please enter a positive number")
-elif n == 1:
-    print("Fibonacci sequence: 0")
-else:
-    a, b = 0, 1
-    print("Fibonacci sequence:")
-    print(a, end=" ")
-    print(b, end=" ")
-    
-    for i in range(2, n):
-        c = a + b
-        print(c, end=" ")
-        a, b = b, c
-    print()</code></pre>
-                                </details>
+                            <div class="requirements">
+                                <strong data-lang-key="requirements-title">Yêu cầu:</strong>
+                                <ul>
+                                    <li data-lang-key="exercise5-req1">While loop cho menu lặp lại</li>
+                                    <li data-lang-key="exercise5-req2">Multiple if-elif cho từng chức năng</li>
+                                    <li data-lang-key="exercise5-req3">Dừng khi chọn 0</li>
+                                </ul>
                             </div>
                         </div>
+                    </div>
 
-                        <!-- Exercise 6 -->
-                        <div class="exercise-container">
-                            <div class="exercise-header">
-                                <i class="fas fa-dumbbell"></i>
-                                <h4 data-lang-key="exercise6-title">Exercise 6: Digital Root</h4>
-                            </div>
+                    <div class="exercise-item">
+                        <div class="exercise-header">
+                            <span class="exercise-number">6</span>
+                            <h3 data-lang-key="exercise6-title">In tam giác số</h3>
+                            <span class="difficulty hard" data-lang-key="difficulty-hard">Khó</span>
+                        </div>
+                        <div class="exercise-content">
                             <p data-lang-key="exercise6-desc">
-                                Calculate the digital root of a number (keep adding digits until you get a single digit).
+                                Nhập n. In tam giác số có n hàng:
                             </p>
-                            <div class="exercise-solution">
-                                <details>
-                                    <summary data-lang-key="show-solution">💡 Show Solution</summary>
-                                    <pre><code class="language-python">def digital_root(n):
-    while n >= 10:
-        digit_sum = 0
-        while n > 0:
-            digit_sum += n % 10
-            n //= 10
-        n = digit_sum
-    return n
-
-number = int(input("Enter a number: "))
-result = digital_root(number)
-print(f"Digital root of {number} is: {result}")
-
-# Alternative one-liner using modulo
-def digital_root_short(n):
-    return 1 + (n - 1) % 9 if n > 0 else 0</code></pre>
-                                </details>
-                            </div>
-                        </div>
-
-                        <!-- Exercise 7 -->
-                        <div class="exercise-container">
-                            <div class="exercise-header">
-                                <i class="fas fa-dumbbell"></i>
-                                <h4 data-lang-key="exercise7-title">Exercise 7: Word Counter</h4>
-                            </div>
-                            <p data-lang-key="exercise7-desc">
-                                Count the frequency of each character in a string using loops.
-                            </p>
-                            <div class="exercise-solution">
-                                <details>
-                                    <summary data-lang-key="show-solution">💡 Show Solution</summary>
-                                    <pre><code class="language-python">text = input("Enter a text: ").lower()
-char_count = {}
-
-for char in text:
-    if char.isalpha():  # Only count letters
-        if char in char_count:
-            char_count[char] += 1
-        else:
-            char_count[char] = 1
-
-print("\nCharacter frequencies:")
-for char, count in sorted(char_count.items()):
-    print(f"'{char}': {count}")
-
-# Find most frequent character
-if char_count:
-    most_frequent = max(char_count, key=char_count.get)
-    print(f"\nMost frequent character: '{most_frequent}' ({char_count[most_frequent]} times)")</code></pre>
-                                </details>
-                            </div>
-                        </div>
-
-                        <!-- Exercise 8 -->
-                        <div class="exercise-container">
-                            <div class="exercise-header">
-                                <i class="fas fa-dumbbell"></i>
-                                <h4 data-lang-key="exercise8-title">Exercise 8: Perfect Numbers</h4>
-                            </div>
-                            <p data-lang-key="exercise8-desc">
-                                Find all perfect numbers up to a given limit. A perfect number equals the sum of its proper divisors.
-                            </p>
-                            <div class="exercise-solution">
-                                <details>
-                                    <summary data-lang-key="show-solution">💡 Show Solution</summary>
-                                    <pre><code class="language-python">def is_perfect(n):
-    if n < 2:
-        return False
-    
-    divisors_sum = 1  # 1 is always a proper divisor
-    for i in range(2, int(n ** 0.5) + 1):
-        if n % i == 0:
-            divisors_sum += i
-            if i != n // i:  # Avoid counting the same divisor twice
-                divisors_sum += n // i
-    
-    return divisors_sum == n
-
-limit = int(input("Find perfect numbers up to: "))
-perfect_numbers = []
-
-for num in range(2, limit + 1):
-    if is_perfect(num):
-        perfect_numbers.append(num)
-
-if perfect_numbers:
-    print(f"Perfect numbers up to {limit}: {perfect_numbers}")
-else:
-    print(f"No perfect numbers found up to {limit}")
-
-# Note: Perfect numbers are rare! 
-# The first few are: 6, 28, 496, 8128...</code></pre>
-                                </details>
+                            <pre>1
+1 2
+1 2 3
+1 2 3 4
+...</pre>
+                            <div class="requirements">
+                                <strong data-lang-key="requirements-title">Yêu cầu:</strong>
+                                <ul>
+                                    <li data-lang-key="exercise6-req1">Nested loop (vòng lặp lồng nhau)</li>
+                                    <li data-lang-key="exercise6-req2">Vòng ngoài: hàng (i từ 1 đến n)</li>
+                                    <li data-lang-key="exercise6-req3">Vòng trong: số (j từ 1 đến i)</li>
+                                </ul>
                             </div>
                         </div>
                     </div>
                 </div>
             </section>
 
-            <!-- Homework Card -->
-            <div class="homework-card">
-                <div class="homework-content">
-                    <h3 data-lang-key="homework-title">🎯 Ready for Practice?</h3>
-                    <p data-lang-key="homework-description">
-                        Test your loops and iterations knowledge with 15 carefully crafted exercises. 
-                        From basic for loops to complex nested patterns - perfect your skills step by step!
-                    </p>
-                    <div class="homework-stats">
-                        <div class="homework-stat">
-                            <span class="stat-number">5</span>
-                            <span class="stat-label" data-lang-key="easy-exercises">Easy</span>
-                        </div>
-                        <div class="homework-stat">
-                            <span class="stat-number">5</span>
-                            <span class="stat-label" data-lang-key="medium-exercises">Medium</span>
-                        </div>
-                        <div class="homework-stat">
-                            <span class="stat-number">5</span>
-                            <span class="stat-label" data-lang-key="hard-exercises">Hard</span>
-                        </div>
+            <!-- Summary -->
+            <section class="lesson-section summary">
+                <h2 data-lang-key="summary-title">🎯 Summary & Next Steps</h2>
+                
+                <div class="summary-grid">
+                    <div class="summary-item">
+                        <h3 data-lang-key="what-learned-title">✅ Những gì bạn đã học</h3>
+                        <ul>
+                            <li data-lang-key="learned1">Các ký hiệu chuẩn trong flowchart</li>
+                            <li data-lang-key="learned2">Quy tắc vẽ sơ đồ thuật toán</li>
+                            <li data-lang-key="learned3">Biểu diễn if-else trong flowchart</li>
+                            <li data-lang-key="learned4">Biểu diễn vòng lặp trong flowchart</li>
+                            <li data-lang-key="learned5">Chuyển đổi giữa flowchart và code</li>
+                        </ul>
                     </div>
-                    <a href="homework3.html" class="homework-button">
-                        <i class="fas fa-code"></i>
-                        <span data-lang-key="start-homework">Start Homework Exercises</span>
-                    </a>
+                    
+                    <div class="summary-item">
+                        <h3 data-lang-key="next-title">🚀 Tiếp theo là gì?</h3>
+                        <p data-lang-key="next-desc">
+                            Sau khi thành thạo flowchart, bạn sẽ học về <strong>Vòng lặp (Loops)</strong> 
+                            - một công cụ mạnh mẽ để lặp lại các thao tác trong code!
+                        </p>
+                        <a href="lesson4.html" class="btn btn-primary">
+                            <span data-lang-key="next-lesson">Tiếp theo: Vòng lặp</span>
+                            <i class="fas fa-arrow-right"></i>
+                        </a>
+                    </div>
                 </div>
-            </div>
+            </section>
 
             <!-- Navigation -->
             <div class="lesson-navigation">
                 <a href="lesson2.html" class="nav-button prev">
                     <i class="fas fa-arrow-left"></i>
-                    <span data-lang-key="prev-lesson">Previous: Conditional Statements</span>
+                    <div>
+                        <span class="nav-label" data-lang-key="previous-lesson">Bài trước</span>
+                        <span class="nav-title" data-lang-key="lesson2-nav">Câu lệnh điều kiện</span>
+                    </div>
                 </a>
-                <a href="../index.html#course" class="nav-button course">
-                    <i class="fas fa-list"></i>
-                    <span data-lang-key="back-course">Course Overview</span>
+                <a href="../index.html#course" class="nav-button home">
+                    <i class="fas fa-home"></i>
+                    <span data-lang-key="back-course">Về khóa học</span>
                 </a>
                 <a href="lesson4.html" class="nav-button next">
-                    <span data-lang-key="next-lesson">Next: Coming Soon</span>
+                    <div>
+                        <span class="nav-label" data-lang-key="next-lesson-label">Bài tiếp</span>
+                        <span class="nav-title" data-lang-key="lesson4-nav">Vòng lặp</span>
+                    </div>
                     <i class="fas fa-arrow-right"></i>
                 </a>
             </div>
         </div>
     </main>
 
-
     <!-- Footer -->
     <footer class="footer">
         <div class="container">
             <div class="footer-content">
-                <div class="footer-brand">
-                    <div class="brand-icon">
-                        <i class="fas fa-brain"></i>
+                <h4>Liên hệ</h4>
+                <div class="contact-info-compact">
+                    <div class="contact-item">
+                        <i class="fas fa-map-marker-alt"></i>
+                        <span>136 Nguyễn Mậu Tài, Hòa Xuân, Cẩm Lệ, Đà Nẵng</span>
                     </div>
-                    <div class="brand-info">
-                        <span data-lang-key="logo-text">Code Up Your Brain</span>
+                    <div class="contact-item">
+                        <i class="fas fa-phone"></i>
+                        <span>090 198 05 69</span>
                     </div>
-                    <p data-lang-key="footer-desc">
-                        Empowering minds through quality programming education
-                    </p>
-                </div>
-                <div class="footer-section">
-                    <h4 data-lang-key="footer-contact-title">Contact</h4>
-                    <div class="contact-info">
-                        <div class="contact-item">
-                            <i class="fas fa-envelope"></i>
-                            <span>innomindskills@gmail.com</span>
-                        </div>
-                        <div class="contact-item">
-                            <i class="fas fa-map-marker-alt"></i>
-                            <span data-lang-key="footer-address">Da Nang, Vietnam</span>
-                        </div>
+                    <div class="contact-item">
+                        <i class="fas fa-envelope"></i>
+                        <span>innomindskills@gmail.com</span>
+                    </div>
+                    <div class="contact-item">
+                        <i class="fab fa-facebook"></i>
+                        <a href="https://www.facebook.com/hocvienkynangthehemoiinnomind" target="_blank">
+                            Facebook
+                        </a>
                     </div>
                 </div>
             </div>
@@ -732,7 +785,6 @@ else:
         </div>
     </footer>
 
-    <!-- JavaScript -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/prism.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/components/prism-python.min.js"></script>
     <!-- Modular translations -->
@@ -740,5 +792,186 @@ else:
     <script src="../assets/js/translations-lesson3.js"></script>
     <script src="../assets/js/translations-loader.js"></script>
     <script src="../assets/js/script.js"></script>
+
+    <style>
+        /* Flowchart specific styles */
+        .symbols-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 20px;
+            margin: 30px 0;
+        }
+
+        .symbol-card {
+            background: white;
+            border: 2px solid #e0e0e0;
+            border-radius: 12px;
+            padding: 20px;
+            text-align: center;
+            transition: all 0.3s ease;
+        }
+
+        .symbol-card:hover {
+            border-color: #FF0000;
+            transform: translateY(-5px);
+            box-shadow: 0 10px 30px rgba(255, 0, 0, 0.1);
+        }
+
+        .symbol-shape {
+            width: 120px;
+            height: 80px;
+            margin: 0 auto 15px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-weight: 600;
+            color: #333;
+        }
+
+        .symbol-shape.oval {
+            border: 3px solid #FF0000;
+            border-radius: 50px;
+            background: #fff5f5;
+        }
+
+        .symbol-shape.rectangle {
+            border: 3px solid #2196F3;
+            background: #e3f2fd;
+        }
+
+        .symbol-shape.parallelogram {
+            border: 3px solid #4CAF50;
+            background: #e8f5e9;
+            transform: skew(-20deg);
+        }
+
+        .symbol-shape.parallelogram span {
+            transform: skew(20deg);
+        }
+
+        .symbol-shape.diamond {
+            border: 3px solid #FF9800;
+            background: #fff3e0;
+            transform: rotate(45deg);
+            width: 100px;
+            height: 100px;
+        }
+
+        .symbol-shape.diamond span {
+            transform: rotate(-45deg);
+            font-size: 14px;
+        }
+
+        .symbol-shape.arrow {
+            border: none;
+            font-size: 48px;
+            color: #9C27B0;
+        }
+
+        .symbol-shape.circle {
+            border: 3px solid #607D8B;
+            border-radius: 50%;
+            width: 80px;
+            height: 80px;
+            background: #eceff1;
+        }
+
+        .symbol-example {
+            margin-top: 10px;
+            padding: 10px;
+            background: #f5f5f5;
+            border-radius: 6px;
+            font-family: 'Courier New', monospace;
+            font-size: 13px;
+        }
+
+        .flowchart-text {
+            background: #1e1e1e;
+            color: #d4d4d4;
+            padding: 20px;
+            border-radius: 8px;
+            overflow-x: auto;
+            font-family: 'Courier New', monospace;
+            line-height: 1.4;
+        }
+
+        .flowchart-text pre {
+            margin: 0;
+            color: #d4d4d4;
+        }
+
+        .rules-list {
+            display: flex;
+            flex-direction: column;
+            gap: 15px;
+            margin: 20px 0;
+        }
+
+        .rule-item {
+            display: flex;
+            gap: 15px;
+            padding: 15px;
+            background: white;
+            border-left: 4px solid #FF0000;
+            border-radius: 8px;
+        }
+
+        .rule-number {
+            flex-shrink: 0;
+            width: 40px;
+            height: 40px;
+            background: #FF0000;
+            color: white;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-weight: 700;
+            font-size: 18px;
+        }
+
+        .rule-content h4 {
+            margin: 0 0 5px 0;
+            color: #333;
+        }
+
+        .rule-content p {
+            margin: 0;
+            color: #666;
+        }
+
+        .code-comparison {
+            display: flex;
+            gap: 20px;
+            align-items: center;
+            margin: 20px 0;
+            flex-wrap: wrap;
+        }
+
+        .comparison-item {
+            flex: 1;
+            min-width: 250px;
+        }
+
+        .comparison-arrow {
+            font-size: 32px;
+            color: #FF0000;
+            font-weight: bold;
+        }
+
+        @media (max-width: 768px) {
+            .symbols-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .code-comparison {
+                flex-direction: column;
+            }
+
+            .comparison-arrow {
+                transform: rotate(90deg);
+            }
+        }
+    </style>
 </body>
 </html>
