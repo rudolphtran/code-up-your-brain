@@ -720,7 +720,7 @@ const translations = {
         'lesson3-exercises': '8 bài tập',
         'breadcrumb-lesson3': 'Bài 3',
 
-        // Overview
+        // Homework 2 Translations
         'overview-title': '📖 Tổng quan bài học',
         'overview1-title': 'For Loops',
         'overview1-desc': 'Học cách lặp qua sequences và ranges với for loops',
@@ -798,17 +798,6 @@ const translations = {
         'multiplication-table': 'Bảng cửu chương',
         'exercise4-title': 'Bài tập 4: Pattern bàn cờ',
         'exercise4-desc': 'Tạo chương trình in pattern bàn cờ sử dụng nested loops. Dùng \'W\' cho ô trắng và \'B\' cho ô đen.',
-
-        // Section 6
-        'section6-title': '6. Bài tập thực hành',
-        'exercise5-title': 'Bài tập 5: Dãy Fibonacci',
-        'exercise5-desc': 'Tạo n số đầu tiên trong dãy Fibonacci sử dụng vòng lặp.',
-        'exercise6-title': 'Bài tập 6: Digital Root',
-        'exercise6-desc': 'Tính digital root của một số (tiếp tục cộng các chữ số cho đến khi được một chữ số).',
-        'exercise7-title': 'Bài tập 7: Đếm từ',
-        'exercise7-desc': 'Đếm tần suất của mỗi ký tự trong string sử dụng loops.',
-        'exercise8-title': 'Bài tập 8: Số hoàn hảo',
-        'exercise8-desc': 'Tìm tất cả số hoàn hảo đến một giới hạn cho trước. Số hoàn hảo bằng tổng các ước thực sự của nó.',
 
         // Summary
         'summary-title': '🎯 Tóm tắt & Bước tiếp theo',
@@ -1784,17 +1773,6 @@ const translations = {
         'multiplication-table': 'Multiplication Table',
         'exercise4-title': 'Exercise 4: Chess Board Pattern',
         'exercise4-desc': 'Create a program that prints a chess board pattern using nested loops. Use \'W\' for white squares and \'B\' for black squares.',
-
-        // Section 6
-        'section6-title': '6. Practice Exercises',
-        'exercise5-title': 'Exercise 5: Fibonacci Series',
-        'exercise5-desc': 'Generate the first n numbers in the Fibonacci sequence using a loop.',
-        'exercise6-title': 'Exercise 6: Digital Root',
-        'exercise6-desc': 'Calculate the digital root of a number (keep adding digits until you get a single digit).',
-        'exercise7-title': 'Exercise 7: Word Counter',
-        'exercise7-desc': 'Count the frequency of each character in a string using loops.',
-        'exercise8-title': 'Exercise 8: Perfect Numbers',
-        'exercise8-desc': 'Find all perfect numbers up to a given limit. A perfect number equals the sum of its proper divisors.',
 
         // Summary
         'summary-title': '🎯 Summary & Next Steps',
