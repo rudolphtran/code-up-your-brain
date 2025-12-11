@@ -342,24 +342,114 @@ This is a palindrome!</code></pre>
                         </div>
                     </div>
                 </div>
+
+                <!-- Exercise 6: Even or Odd Counter -->
+                <div class="exercise-card easy" data-exercise="6">
+                    <div class="exercise-header">
+                        <h3><span class="exercise-number">6.</span> <span data-lang-key="hw3-ex6-title">Even or Odd Counter</span></h3>
+                        <div class="exercise-meta">
+                            <span class="difficulty" data-lang-key="difficulty-easy">Easy</span>
+                            <span class="time">⏱️ 10-15 min</span>
+                            <button class="complete-btn" onclick="toggleComplete(12)">
+                                <i class="fas fa-check"></i> <span data-lang-key="mark-complete">Mark Complete</span>
+                            </button>
+                        </div>
+                    </div>
+                    <div class="exercise-content">
+                        <div class="problem-statement">
+                            <h4 data-lang-key="problem-label">Problem:</h4>
+                            <p data-lang-key="hw3-ex6-problem">Count how many even and odd numbers exist in a range from 1 to n.</p>
+                        </div>
+                        <div class="requirements">
+                            <h4 data-lang-key="requirements-label">Requirements:</h4>
+                            <ul>
+                                <li data-lang-key="hw3-ex6-req1">Accept a positive integer n from user</li>
+                                <li data-lang-key="hw3-ex6-req2">Count even numbers (divisible by 2)</li>
+                                <li data-lang-key="hw3-ex6-req3">Count odd numbers (not divisible by 2)</li>
+                                <li data-lang-key="hw3-ex6-req4">Display both counts clearly</li>
+                            </ul>
+                        </div>
+                        <div class="sample-io">
+                            <h4 data-lang-key="sample-io-label">Sample Input/Output:</h4>
+                            <pre><code>Input: 10
+Output:
+Even numbers: 5 (2, 4, 6, 8, 10)
+Odd numbers: 5 (1, 3, 5, 7, 9)</code></pre>
+                        </div>
+                        <div class="solution-section">
+                            <details>
+                                <summary>💡 Hint</summary>
+                                <p>Use a for loop from 1 to n. Check if number % 2 == 0 for even, else odd. Keep two counters.</p>
+                            </details>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Exercise 7: Simple Grade Average -->
+                <div class="exercise-card easy" data-exercise="7">
+                    <div class="exercise-header">
+                        <h3><span class="exercise-number">7.</span> <span data-lang-key="hw3-ex7-title">Simple Grade Average</span></h3>
+                        <div class="exercise-meta">
+                            <span class="difficulty" data-lang-key="difficulty-easy">Easy</span>
+                            <span class="time">⏱️ 15-20 min</span>
+                            <button class="complete-btn" onclick="toggleComplete(11)">
+                                <i class="fas fa-check"></i> <span data-lang-key="mark-complete">Mark Complete</span>
+                            </button>
+                        </div>
+                    </div>
+                    <div class="exercise-content">
+                        <div class="problem-statement">
+                            <h4 data-lang-key="problem-label">Problem:</h4>
+                            <p data-lang-key="hw3-ex7-problem">Enter scores for multiple subjects (enter -1 to stop), then calculate the average and assign a letter grade.</p>
+                        </div>
+                        <div class="requirements">
+                            <h4 data-lang-key="requirements-label">Requirements:</h4>
+                            <ul>
+                                <li data-lang-key="hw3-ex7-req1">Use a while loop to accept scores until -1 is entered</li>
+                                <li data-lang-key="hw3-ex7-req2">Validate scores are between 0-100</li>
+                                <li data-lang-key="hw3-ex7-req3">Calculate average of all valid scores</li>
+                                <li data-lang-key="hw3-ex7-req4">Assign letter grade: A (90-100), B (80-89), C (70-79), D (60-69), F (<60)</li>
+                                <li data-lang-key="hw3-ex7-req5">Display number of subjects, average, and letter grade</li>
+                            </ul>
+                        </div>
+                        <div class="sample-io">
+                            <h4 data-lang-key="sample-io-label">Sample Input/Output:</h4>
+                            <pre><code>Enter score (or -1 to finish): 85
+Enter score (or -1 to finish): 90
+Enter score (or -1 to finish): 78
+Enter score (or -1 to finish): -1
+
+Output:
+Number of subjects: 3
+Average score: 84.33
+Letter grade: B</code></pre>
+                        </div>
+                        <div class="solution-section">
+                            <details>
+                                <summary>💡 Hint</summary>
+                                <p>Use while loop with sentinel value -1. Keep sum and count of valid scores. Average = sum / count.</p>
+                            </details>
+                        </div>
+                    </div>
+                </div>
             </section>
 
-            <!-- Medium Exercises (6-10) -->
+            <!-- Medium Exercises (8-12) -->
             <section class="difficulty-section">
                 <div class="section-header medium">
                     <div class="difficulty-badge">🟡 MEDIUM</div>
-                    <h2 data-lang-key="medium-title">Medium Exercises (6-10)</h2>
+                    <h2 data-lang-key="medium-title">Medium Exercises (8-12)</h2>
                     <p data-lang-key="medium-desc">Challenge yourself with complex loop patterns and algorithms</p>
                 </div>
 
-                <!-- Exercise 6: Prime Number Generator -->
-                <div class="exercise-card medium" data-exercise="6">
+                <!-- Exercise 8: Prime Number Generator -->
+                <div class="exercise-card medium" data-exercise="8">
                     <div class="exercise-header">
-                        <h3><span class="exercise-number">6.</span> <span data-lang-key="hw3-ex6-title">Prime Number Generator</span></h3>
+                        <h3><span class="exercise-number">8.</span> <span data-lang-key="hw3-ex6-title">Prime Number Generator</span></h3>
                         <div class="exercise-meta">
                             <span class="difficulty" data-lang-key="difficulty-medium">Medium</span>
                             <span class="time">⏱️ 25-35 min</span>
-                            <button class="complete-btn" onclick="toggleComplete(6)">
+                            <button class="complete-btn" onclick="toggleComplete(12)">
                                 <i class="fas fa-check"></i> <span data-lang-key="mark-complete">Mark Complete</span>
                             </button>
                         </div>
@@ -401,7 +491,7 @@ Found 10 prime numbers.</code></pre>
                         <div class="exercise-meta">
                             <span class="difficulty" data-lang-key="difficulty-medium">Medium</span>
                             <span class="time">⏱️ 25-35 min</span>
-                            <button class="complete-btn" onclick="toggleComplete(7)">
+                            <button class="complete-btn" onclick="toggleComplete(11)">
                                 <i class="fas fa-check"></i> <span data-lang-key="mark-complete">Mark Complete</span>
                             </button>
                         </div>
@@ -444,7 +534,7 @@ Rating: Good!</code></pre>
                         <div class="exercise-meta">
                             <span class="difficulty" data-lang-key="difficulty-medium">Medium</span>
                             <span class="time">⏱️ 25-35 min</span>
-                            <button class="complete-btn" onclick="toggleComplete(8)">
+                            <button class="complete-btn" onclick="toggleComplete(12)">
                                 <i class="fas fa-check"></i> <span data-lang-key="mark-complete">Mark Complete</span>
                             </button>
                         </div>
@@ -489,7 +579,7 @@ Output:
                         <div class="exercise-meta">
                             <span class="difficulty" data-lang-key="difficulty-medium">Medium</span>
                             <span class="time">⏱️ 25-35 min</span>
-                            <button class="complete-btn" onclick="toggleComplete(9)">
+                            <button class="complete-btn" onclick="toggleComplete(11)">
                                 <i class="fas fa-check"></i> <span data-lang-key="mark-complete">Mark Complete</span>
                             </button>
                         </div>
@@ -533,7 +623,7 @@ Output:
                         <div class="exercise-meta">
                             <span class="difficulty" data-lang-key="difficulty-medium">Medium</span>
                             <span class="time">⏱️ 25-35 min</span>
-                            <button class="complete-btn" onclick="toggleComplete(10)">
+                            <button class="complete-btn" onclick="toggleComplete(12)">
                                 <i class="fas fa-check"></i> <span data-lang-key="mark-complete">Mark Complete</span>
                             </button>
                         </div>
