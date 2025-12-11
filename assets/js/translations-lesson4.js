@@ -13,6 +13,9 @@ const lesson4Translations = {
         // Breadcrumb
         'breadcrumb-lesson4': 'Bài 4',
         
+        // Supplementary Homework Link
+        'supplementary-homework': 'Bài tập bổ sung (Dễ)',
+        
         // Overview
         'overview-title': '📖 Tổng quan bài học',
         'overview1-title': 'For Loops',
@@ -238,7 +241,125 @@ const lesson4Translations = {
         'outcome6': 'Tối ưu hiệu quả code và hiệu suất',
         'back-lesson': 'Về Bài 3',
         'homework3-title': 'Thực hành Vòng lặp',
-        'homework3': 'Bài tập về nhà 3'
+        'homework3': 'Bài tập về nhà 3',
+        
+        // Supplementary Homework 4 Translations
+        'supp-hw4-title': 'Bài tập bổ sung 4: Bài tập Vòng lặp Dễ - Code Up Your Brain',
+        'supp-hw4-meta': 'Bài tập vòng lặp dễ để thực hành thêm cho Bài 4',
+        'supp-hw4-main-title': 'Bài tập Vòng lặp Dễ',
+        'supp-hw4-subtitle': 'Các bài tập thực hành bổ sung dễ về vòng lặp và lặp lại',
+        'breadcrumb-supp-homework': 'Bài tập bổ sung',
+        'supp-homework-label': 'Bài tập bổ sung',
+        
+        // Exercise 1: Count Odd Numbers
+        'supp-hw4-ex1-title': 'Đếm số lẻ từ A đến B',
+        'supp-hw4-ex1-problem': 'Viết chương trình đếm có bao nhiêu số lẻ trong khoảng từ A đến B (bao gồm cả hai).',
+        'supp-hw4-ex1-req1': 'Nhận hai số nguyên A và B từ người dùng',
+        'supp-hw4-ex1-req2': 'Sử dụng vòng lặp for để duyệt qua khoảng',
+        'supp-hw4-ex1-req3': 'Kiểm tra xem mỗi số có phải số lẻ không (số % 2 != 0)',
+        'supp-hw4-ex1-req4': 'Hiển thị tổng số lượng số lẻ',
+        'supp-hw4-ex1-req5': 'Xử lý trường hợp A > B bằng cách hoán đổi giá trị',
+        'supp-hw4-ex1-example': 'Input: A = 1, B = 10\nOutput: Có 5 số lẻ (1, 3, 5, 7, 9)\n\nInput: A = 10, B = 20\nOutput: Có 5 số lẻ (11, 13, 15, 17, 19)',
+        'supp-hw4-ex1-hint': 'Sử dụng range(A, B+1) để bao gồm cả hai đầu mút. Một số là lẻ nếu số % 2 != 0. Khởi tạo biến đếm trước vòng lặp.',
+        
+        // Exercise 2: Count Even Numbers
+        'supp-hw4-ex2-title': 'Đếm số chẵn từ A đến B',
+        'supp-hw4-ex2-problem': 'Viết chương trình đếm có bao nhiêu số chẵn trong khoảng từ A đến B (bao gồm cả hai).',
+        'supp-hw4-ex2-req1': 'Nhận hai số nguyên A và B từ người dùng',
+        'supp-hw4-ex2-req2': 'Sử dụng vòng lặp for để duyệt qua khoảng',
+        'supp-hw4-ex2-req3': 'Kiểm tra xem mỗi số có phải số chẵn không (số % 2 == 0)',
+        'supp-hw4-ex2-req4': 'Hiển thị tổng số lượng số chẵn',
+        'supp-hw4-ex2-req5': 'Xử lý trường hợp A > B bằng cách hoán đổi giá trị',
+        'supp-hw4-ex2-example': 'Input: A = 1, B = 10\nOutput: Có 5 số chẵn (2, 4, 6, 8, 10)\n\nInput: A = 10, B = 20\nOutput: Có 6 số chẵn (10, 12, 14, 16, 18, 20)',
+        'supp-hw4-ex2-hint': 'Sử dụng range(A, B+1) để bao gồm cả hai đầu mút. Một số là chẵn nếu số % 2 == 0. Khởi tạo biến đếm trước vòng lặp.',
+        
+        // Exercise 3: Sum from A to B
+        'supp-hw4-ex3-title': 'Tính tổng các số từ A đến B',
+        'supp-hw4-ex3-problem': 'Viết chương trình tính tổng tất cả các số trong khoảng từ A đến B (bao gồm cả hai).',
+        'supp-hw4-ex3-req1': 'Nhận hai số nguyên A và B từ người dùng',
+        'supp-hw4-ex3-req2': 'Sử dụng vòng lặp for để duyệt qua khoảng',
+        'supp-hw4-ex3-req3': 'Tính tổng tất cả các số trong khoảng',
+        'supp-hw4-ex3-req4': 'Hiển thị kết quả tổng',
+        'supp-hw4-ex3-req5': 'Xử lý trường hợp A > B bằng cách hoán đổi giá trị',
+        'supp-hw4-ex3-example': 'Input: A = 1, B = 5\nOutput: Tổng = 15 (1+2+3+4+5)\n\nInput: A = 10, B = 15\nOutput: Tổng = 75 (10+11+12+13+14+15)',
+        'supp-hw4-ex3-hint': 'Khởi tạo biến tổng bằng 0 trước vòng lặp. Cộng mỗi số vào biến tổng trong vòng lặp. Bạn có thể kiểm tra bằng công thức: tổng = n*(n+1)/2.',
+        
+        // Exercise 4: Count Multiples of 3
+        'supp-hw4-ex4-title': 'Đếm các số chia hết cho 3',
+        'supp-hw4-ex4-problem': 'Viết chương trình đếm và hiển thị tất cả các số chia hết cho 3 trong khoảng từ A đến B (bao gồm cả hai).',
+        'supp-hw4-ex4-req1': 'Nhận hai số nguyên A và B từ người dùng',
+        'supp-hw4-ex4-req2': 'Sử dụng vòng lặp for để duyệt qua khoảng',
+        'supp-hw4-ex4-req3': 'Kiểm tra xem mỗi số có chia hết cho 3 không (số % 3 == 0)',
+        'supp-hw4-ex4-req4': 'Hiển thị tất cả các số tìm được và tổng số lượng',
+        'supp-hw4-ex4-req5': 'Xử lý trường hợp A > B bằng cách hoán đổi giá trị',
+        'supp-hw4-ex4-example': 'Input: A = 1, B = 10\nOutput: Các số chia hết cho 3: 3, 6, 9\nSố lượng: 3\n\nInput: A = 10, B = 20\nOutput: Các số chia hết cho 3: 12, 15, 18\nSố lượng: 3',
+        'supp-hw4-ex4-hint': 'Một số chia hết cho 3 nếu số % 3 == 0. Sử dụng biến đếm để theo dõi số lượng. Lưu số vào list hoặc in ra ngay khi tìm được.',
+        
+        // Exercise 5: Count Digits in a Number
+        'supp-hw4-ex5-title': 'Đếm số lượng chữ số',
+        'supp-hw4-ex5-problem': 'Viết chương trình đếm có bao nhiêu chữ số trong một số nguyên dương sử dụng vòng lặp.',
+        'supp-hw4-ex5-req1': 'Nhận một số nguyên dương từ người dùng',
+        'supp-hw4-ex5-req2': 'Sử dụng vòng lặp while để đếm chữ số',
+        'supp-hw4-ex5-req3': 'Chia số cho 10 trong mỗi lần lặp',
+        'supp-hw4-ex5-req4': 'Hiển thị tổng số lượng chữ số',
+        'supp-hw4-ex5-req5': 'Xử lý trường hợp đặc biệt cho số 0 (có 1 chữ số)',
+        'supp-hw4-ex5-example': 'Input: 12345\nOutput: Số lượng chữ số: 5\n\nInput: 999\nOutput: Số lượng chữ số: 3\n\nInput: 0\nOutput: Số lượng chữ số: 1',
+        'supp-hw4-ex5-hint': 'Sử dụng phép chia nguyên (//) để bỏ chữ số cuối: số = số // 10. Đếm xem có thể chia bao nhiêu lần trước khi đến 0. Nhớ xử lý trường hợp đặc biệt khi input là 0.',
+        
+        // Exercise 6: Sum of Digits
+        'supp-hw4-ex6-title': 'Tính tổng các chữ số',
+        'supp-hw4-ex6-problem': 'Viết chương trình tính tổng tất cả các chữ số trong một số nguyên dương sử dụng vòng lặp.',
+        'supp-hw4-ex6-req1': 'Nhận một số nguyên dương từ người dùng',
+        'supp-hw4-ex6-req2': 'Sử dụng vòng lặp while để lấy từng chữ số',
+        'supp-hw4-ex6-req3': 'Cộng mỗi chữ số vào tổng',
+        'supp-hw4-ex6-req4': 'Hiển thị tổng các chữ số',
+        'supp-hw4-ex6-req5': 'Xử lý trường hợp đặc biệt cho số 0 (tổng là 0)',
+        'supp-hw4-ex6-example': 'Input: 12345\nOutput: Tổng các chữ số = 15 (1+2+3+4+5)\n\nInput: 999\nOutput: Tổng các chữ số = 27 (9+9+9)\n\nInput: 0\nOutput: Tổng các chữ số = 0',
+        'supp-hw4-ex6-hint': 'Sử dụng số % 10 để lấy chữ số cuối, sau đó chia cho 10 bằng phép chia nguyên (//). Giữ một biến tổng và lặp lại cho đến khi số trở thành 0.',
+        
+        // Exercise 7: Power Using Loop
+        'supp-hw4-ex7-title': 'Tính lũy thừa bằng vòng lặp',
+        'supp-hw4-ex7-problem': 'Viết chương trình tính lũy thừa của một số (cơ số^số mũ) chỉ sử dụng vòng lặp và phép nhân. Không được dùng toán tử ** hoặc hàm pow().',
+        'supp-hw4-ex7-req1': 'Nhận cơ số và số mũ từ người dùng',
+        'supp-hw4-ex7-req2': 'Sử dụng vòng lặp for để nhân cơ số với chính nó',
+        'supp-hw4-ex7-req3': 'KHÔNG được sử dụng toán tử ** hoặc hàm pow()',
+        'supp-hw4-ex7-req4': 'Hiển thị kết quả',
+        'supp-hw4-ex7-req5': 'Xử lý trường hợp đặc biệt: số mũ = 0 (kết quả là 1), số mũ = 1 (kết quả là cơ số)',
+        'supp-hw4-ex7-example': 'Input: cơ số = 2, số mũ = 5\nOutput: 2^5 = 32\n\nInput: cơ số = 3, số mũ = 4\nOutput: 3^4 = 81\n\nInput: cơ số = 5, số mũ = 0\nOutput: 5^0 = 1',
+        'supp-hw4-ex7-hint': 'Khởi tạo kết quả bằng 1. Sử dụng vòng lặp for chạy \'số mũ\' lần, nhân kết quả với cơ số trong mỗi lần lặp. Nhớ rằng bất kỳ số nào mũ 0 đều bằng 1.',
+        
+        // Exercise 8: Count Even Digits
+        'supp-hw4-ex8-title': 'Đếm chữ số chẵn trong một số',
+        'supp-hw4-ex8-problem': 'Viết chương trình đếm có bao nhiêu chữ số chẵn trong một số nguyên dương.',
+        'supp-hw4-ex8-req1': 'Nhận một số nguyên dương từ người dùng',
+        'supp-hw4-ex8-req2': 'Sử dụng vòng lặp while để lấy từng chữ số',
+        'supp-hw4-ex8-req3': 'Kiểm tra xem mỗi chữ số có chẵn không (chữ số % 2 == 0)',
+        'supp-hw4-ex8-req4': 'Hiển thị số lượng chữ số chẵn',
+        'supp-hw4-ex8-req5': 'Tùy chọn hiển thị các chữ số chẵn tìm được',
+        'supp-hw4-ex8-example': 'Input: 123456\nOutput: Các chữ số chẵn: 2, 4, 6\nSố lượng: 3 chữ số chẵn\n\nInput: 987654\nOutput: Các chữ số chẵn: 8, 6, 4\nSố lượng: 3 chữ số chẵn\n\nInput: 13579\nOutput: Số lượng: 0 chữ số chẵn',
+        'supp-hw4-ex8-hint': 'Sử dụng số % 10 để lấy chữ số cuối. Kiểm tra chữ số % 2 == 0 để xác định nó có chẵn không. Chia cho 10 bằng phép chia nguyên (//) để chuyển sang chữ số tiếp theo.',
+        
+        // Exercise 9: Count Words in a Sentence
+        'supp-hw4-ex9-title': 'Đếm số từ trong câu',
+        'supp-hw4-ex9-problem': 'Viết chương trình đếm số lượng từ trong một câu. Các từ được phân tách bởi khoảng trắng.',
+        'supp-hw4-ex9-req1': 'Nhận một câu từ người dùng',
+        'supp-hw4-ex9-req2': 'Sử dụng vòng lặp for để duyệt qua từng ký tự',
+        'supp-hw4-ex9-req3': 'Đếm khoảng trắng và cộng 1 để có số từ (hoặc dùng split())',
+        'supp-hw4-ex9-req4': 'Xử lý đúng các khoảng trắng liên tiếp',
+        'supp-hw4-ex9-req5': 'Hiển thị tổng số từ',
+        'supp-hw4-ex9-example': 'Input: "Hello world from Python"\nOutput: Số lượng từ: 4\n\nInput: "Programming is fun"\nOutput: Số lượng từ: 3\n\nInput: "Python"\nOutput: Số lượng từ: 1',
+        'supp-hw4-ex9-hint': 'Cách dễ nhất là dùng phương thức split() để tách chuỗi theo khoảng trắng và trả về list. Sau đó đếm độ dài của list. Hoặc đếm khoảng trắng và cộng 1 (nhưng phải xử lý cẩn thận các khoảng trắng liên tiếp).',
+        
+        // Exercise 10: Find All Divisors
+        'supp-hw4-ex10-title': 'Tìm tất cả ước số',
+        'supp-hw4-ex10-problem': 'Viết chương trình tìm và hiển thị tất cả các ước số của một số nguyên dương.',
+        'supp-hw4-ex10-req1': 'Nhận một số nguyên dương từ người dùng',
+        'supp-hw4-ex10-req2': 'Sử dụng vòng lặp for để kiểm tra tất cả số từ 1 đến N',
+        'supp-hw4-ex10-req3': 'Kiểm tra xem mỗi số có chia hết N không (N % i == 0)',
+        'supp-hw4-ex10-req4': 'Hiển thị tất cả ước số tìm được',
+        'supp-hw4-ex10-req5': 'Đếm và hiển thị tổng số ước số',
+        'supp-hw4-ex10-example': 'Input: 12\nOutput: Các ước số: 1, 2, 3, 4, 6, 12\nTổng: 6 ước số\n\nInput: 20\nOutput: Các ước số: 1, 2, 4, 5, 10, 20\nTổng: 6 ước số\n\nInput: 7\nOutput: Các ước số: 1, 7\nTổng: 2 ước số (số nguyên tố)',
+        'supp-hw4-ex10-hint': 'Sử dụng vòng lặp for từ 1 đến N (bao gồm cả hai). Với mỗi số i, kiểm tra nếu N % i == 0. Nếu đúng, i là ước số. Lưu ước số vào list hoặc in ra trực tiếp.'
     },
     
     en: {
@@ -253,6 +374,9 @@ const lesson4Translations = {
         
         // Breadcrumb
         'breadcrumb-lesson4': 'Lesson 4',
+        
+        // Supplementary Homework Link
+        'supplementary-homework': 'Supplementary Homework (Easy)',
         
         // Overview
         'overview-title': '📖 Lesson Overview',
@@ -479,7 +603,125 @@ const lesson4Translations = {
         'outcome6': 'Optimize code efficiency and performance',
         'back-lesson': 'Back to Lesson 3',
         'homework3-title': 'Loops Practice',
-        'homework3': 'Homework 3'
+        'homework3': 'Homework 3',
+        
+        // Supplementary Homework 4 Translations
+        'supp-hw4-title': 'Supplementary Homework 4: Easy Loop Exercises - Code Up Your Brain',
+        'supp-hw4-meta': 'Easy loop exercises for additional practice with Lesson 4',
+        'supp-hw4-main-title': 'Easy Loop Exercises',
+        'supp-hw4-subtitle': 'Additional easy practice exercises for loops and iterations',
+        'breadcrumb-supp-homework': 'Supplementary Homework',
+        'supp-homework-label': 'Supplementary Homework',
+        
+        // Exercise 1: Count Odd Numbers
+        'supp-hw4-ex1-title': 'Count Odd Numbers from A to B',
+        'supp-hw4-ex1-problem': 'Write a program that counts how many odd numbers exist in the range from A to B (inclusive).',
+        'supp-hw4-ex1-req1': 'Get two integers A and B from user input',
+        'supp-hw4-ex1-req2': 'Use a for loop to iterate through the range',
+        'supp-hw4-ex1-req3': 'Check if each number is odd (number % 2 != 0)',
+        'supp-hw4-ex1-req4': 'Display the total count of odd numbers',
+        'supp-hw4-ex1-req5': 'Handle cases where A > B by swapping values',
+        'supp-hw4-ex1-example': 'Input: A = 1, B = 10\nOutput: There are 5 odd numbers (1, 3, 5, 7, 9)\n\nInput: A = 10, B = 20\nOutput: There are 5 odd numbers (11, 13, 15, 17, 19)',
+        'supp-hw4-ex1-hint': 'Use range(A, B+1) to include both endpoints. A number is odd if number % 2 != 0. Initialize a counter variable before the loop.',
+        
+        // Exercise 2: Count Even Numbers
+        'supp-hw4-ex2-title': 'Count Even Numbers from A to B',
+        'supp-hw4-ex2-problem': 'Write a program that counts how many even numbers exist in the range from A to B (inclusive).',
+        'supp-hw4-ex2-req1': 'Get two integers A and B from user input',
+        'supp-hw4-ex2-req2': 'Use a for loop to iterate through the range',
+        'supp-hw4-ex2-req3': 'Check if each number is even (number % 2 == 0)',
+        'supp-hw4-ex2-req4': 'Display the total count of even numbers',
+        'supp-hw4-ex2-req5': 'Handle cases where A > B by swapping values',
+        'supp-hw4-ex2-example': 'Input: A = 1, B = 10\nOutput: There are 5 even numbers (2, 4, 6, 8, 10)\n\nInput: A = 10, B = 20\nOutput: There are 6 even numbers (10, 12, 14, 16, 18, 20)',
+        'supp-hw4-ex2-hint': 'Use range(A, B+1) to include both endpoints. A number is even if number % 2 == 0. Initialize a counter variable before the loop.',
+        
+        // Exercise 3: Sum from A to B
+        'supp-hw4-ex3-title': 'Sum of Numbers from A to B',
+        'supp-hw4-ex3-problem': 'Write a program that calculates the sum of all numbers in the range from A to B (inclusive).',
+        'supp-hw4-ex3-req1': 'Get two integers A and B from user input',
+        'supp-hw4-ex3-req2': 'Use a for loop to iterate through the range',
+        'supp-hw4-ex3-req3': 'Calculate the sum of all numbers in the range',
+        'supp-hw4-ex3-req4': 'Display the sum result',
+        'supp-hw4-ex3-req5': 'Handle cases where A > B by swapping values',
+        'supp-hw4-ex3-example': 'Input: A = 1, B = 5\nOutput: Sum = 15 (1+2+3+4+5)\n\nInput: A = 10, B = 15\nOutput: Sum = 75 (10+11+12+13+14+15)',
+        'supp-hw4-ex3-hint': 'Initialize a sum variable to 0 before the loop. Add each number to the sum inside the loop. You can validate using the formula: sum = n*(n+1)/2.',
+        
+        // Exercise 4: Count Multiples of 3
+        'supp-hw4-ex4-title': 'Count Numbers Divisible by 3',
+        'supp-hw4-ex4-problem': 'Write a program that counts and displays all numbers divisible by 3 in the range from A to B (inclusive).',
+        'supp-hw4-ex4-req1': 'Get two integers A and B from user input',
+        'supp-hw4-ex4-req2': 'Use a for loop to iterate through the range',
+        'supp-hw4-ex4-req3': 'Check if each number is divisible by 3 (number % 3 == 0)',
+        'supp-hw4-ex4-req4': 'Display all numbers found and the total count',
+        'supp-hw4-ex4-req5': 'Handle cases where A > B by swapping values',
+        'supp-hw4-ex4-example': 'Input: A = 1, B = 10\nOutput: Numbers divisible by 3: 3, 6, 9\nCount: 3\n\nInput: A = 10, B = 20\nOutput: Numbers divisible by 3: 12, 15, 18\nCount: 3',
+        'supp-hw4-ex4-hint': 'A number is divisible by 3 if number % 3 == 0. Use a counter variable to track the count. Store numbers in a list or print them as you find them.',
+        
+        // Exercise 5: Count Digits in a Number
+        'supp-hw4-ex5-title': 'Count Digits in a Number',
+        'supp-hw4-ex5-problem': 'Write a program that counts how many digits are in a positive integer using a loop.',
+        'supp-hw4-ex5-req1': 'Get a positive integer from user input',
+        'supp-hw4-ex5-req2': 'Use a while loop to count digits',
+        'supp-hw4-ex5-req3': 'Divide the number by 10 in each iteration',
+        'supp-hw4-ex5-req4': 'Display the total number of digits',
+        'supp-hw4-ex5-req5': 'Handle special case for 0 (has 1 digit)',
+        'supp-hw4-ex5-example': 'Input: 12345\nOutput: Number of digits: 5\n\nInput: 999\nOutput: Number of digits: 3\n\nInput: 0\nOutput: Number of digits: 1',
+        'supp-hw4-ex5-hint': 'Use integer division (//) to remove the last digit: number = number // 10. Count how many times you can divide before reaching 0. Handle the special case when input is 0.',
+        
+        // Exercise 6: Sum of Digits
+        'supp-hw4-ex6-title': 'Sum of Digits',
+        'supp-hw4-ex6-problem': 'Write a program that calculates the sum of all digits in a positive integer using a loop.',
+        'supp-hw4-ex6-req1': 'Get a positive integer from user input',
+        'supp-hw4-ex6-req2': 'Use a while loop to extract each digit',
+        'supp-hw4-ex6-req3': 'Add each digit to a running sum',
+        'supp-hw4-ex6-req4': 'Display the sum of all digits',
+        'supp-hw4-ex6-req5': 'Handle special case for 0 (sum is 0)',
+        'supp-hw4-ex6-example': 'Input: 12345\nOutput: Sum of digits = 15 (1+2+3+4+5)\n\nInput: 999\nOutput: Sum of digits = 27 (9+9+9)\n\nInput: 0\nOutput: Sum of digits = 0',
+        'supp-hw4-ex6-hint': 'Use number % 10 to get the last digit, then divide by 10 using integer division (//). Keep a running sum and repeat until the number becomes 0.',
+        
+        // Exercise 7: Power Using Loop
+        'supp-hw4-ex7-title': 'Calculate Power Using Loop',
+        'supp-hw4-ex7-problem': 'Write a program that calculates the power of a number (base^exponent) using only loops and multiplication. Do not use the ** operator or pow() function.',
+        'supp-hw4-ex7-req1': 'Get base and exponent from user input',
+        'supp-hw4-ex7-req2': 'Use a for loop to multiply the base by itself',
+        'supp-hw4-ex7-req3': 'Do NOT use ** operator or pow() function',
+        'supp-hw4-ex7-req4': 'Display the result',
+        'supp-hw4-ex7-req5': 'Handle special cases: exponent = 0 (result is 1), exponent = 1 (result is base)',
+        'supp-hw4-ex7-example': 'Input: base = 2, exponent = 5\nOutput: 2^5 = 32\n\nInput: base = 3, exponent = 4\nOutput: 3^4 = 81\n\nInput: base = 5, exponent = 0\nOutput: 5^0 = 1',
+        'supp-hw4-ex7-hint': 'Initialize result to 1. Use a for loop that runs \'exponent\' times, multiplying result by base in each iteration. Remember that any number to the power of 0 is 1.',
+        
+        // Exercise 8: Count Even Digits
+        'supp-hw4-ex8-title': 'Count Even Digits in a Number',
+        'supp-hw4-ex8-problem': 'Write a program that counts how many even digits are in a positive integer.',
+        'supp-hw4-ex8-req1': 'Get a positive integer from user input',
+        'supp-hw4-ex8-req2': 'Use a while loop to extract each digit',
+        'supp-hw4-ex8-req3': 'Check if each digit is even (digit % 2 == 0)',
+        'supp-hw4-ex8-req4': 'Display the count of even digits',
+        'supp-hw4-ex8-req5': 'Optionally display which even digits were found',
+        'supp-hw4-ex8-example': 'Input: 123456\nOutput: Even digits: 2, 4, 6\nCount: 3 even digits\n\nInput: 987654\nOutput: Even digits: 8, 6, 4\nCount: 3 even digits\n\nInput: 13579\nOutput: Count: 0 even digits',
+        'supp-hw4-ex8-hint': 'Use number % 10 to get the last digit. Check if digit % 2 == 0 to determine if it\'s even. Divide by 10 using integer division (//) to move to the next digit.',
+        
+        // Exercise 9: Count Words in a Sentence
+        'supp-hw4-ex9-title': 'Count Words in a Sentence',
+        'supp-hw4-ex9-problem': 'Write a program that counts the number of words in a sentence. Words are separated by spaces.',
+        'supp-hw4-ex9-req1': 'Get a sentence from user input',
+        'supp-hw4-ex9-req2': 'Use a for loop to iterate through each character',
+        'supp-hw4-ex9-req3': 'Count spaces and add 1 to get word count (or use split())',
+        'supp-hw4-ex9-req4': 'Handle multiple consecutive spaces correctly',
+        'supp-hw4-ex9-req5': 'Display the total word count',
+        'supp-hw4-ex9-example': 'Input: "Hello world from Python"\nOutput: Number of words: 4\n\nInput: "Programming is fun"\nOutput: Number of words: 3\n\nInput: "Python"\nOutput: Number of words: 1',
+        'supp-hw4-ex9-hint': 'The easiest way is to use the split() method which splits a string by spaces and returns a list. Then count the length of the list. Alternatively, count spaces and add 1 (but handle multiple spaces carefully).',
+        
+        // Exercise 10: Find All Divisors
+        'supp-hw4-ex10-title': 'Find All Divisors of a Number',
+        'supp-hw4-ex10-problem': 'Write a program that finds and displays all divisors (factors) of a positive integer.',
+        'supp-hw4-ex10-req1': 'Get a positive integer from user input',
+        'supp-hw4-ex10-req2': 'Use a for loop to check all numbers from 1 to N',
+        'supp-hw4-ex10-req3': 'Check if each number divides N evenly (N % i == 0)',
+        'supp-hw4-ex10-req4': 'Display all divisors found',
+        'supp-hw4-ex10-req5': 'Count and display the total number of divisors',
+        'supp-hw4-ex10-example': 'Input: 12\nOutput: Divisors: 1, 2, 3, 4, 6, 12\nTotal: 6 divisors\n\nInput: 20\nOutput: Divisors: 1, 2, 4, 5, 10, 20\nTotal: 6 divisors\n\nInput: 7\nOutput: Divisors: 1, 7\nTotal: 2 divisors (prime number)',
+        'supp-hw4-ex10-hint': 'Use a for loop from 1 to N (inclusive). For each number i, check if N % i == 0. If true, i is a divisor. Store divisors in a list or print them directly.'
     }
 };
 
