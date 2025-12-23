@@ -575,6 +575,150 @@ Total: 2 divisors (prime number)</code></pre>
                     </div>
                 </div>
 
+                <!-- Exercise 11: Check Prime Number -->
+                <div class="exercise-card easy" data-exercise="11">
+                    <div class="exercise-header">
+                        <h3><span class="exercise-number">11.</span> <span data-lang-key="supp-hw4-ex11-title">Check Prime Number</span></h3>
+                        <div class="exercise-meta">
+                            <span class="difficulty" data-lang-key="difficulty-easy">Easy</span>
+                            <span class="time">⏱️ 15-20 min</span>
+                            <button class="complete-btn" onclick="toggleComplete(11)">
+                                <i class="fas fa-check"></i> <span data-lang-key="mark-complete">Mark Complete</span>
+                            </button>
+                        </div>
+                    </div>
+                    <div class="exercise-content">
+                        <div class="problem-statement">
+                            <h4 data-lang-key="problem-label">Problem:</h4>
+                            <p data-lang-key="supp-hw4-ex11-problem">Write a program that checks whether a given positive integer is a prime number or not. A prime number is a number greater than 1 that has no divisors other than 1 and itself.</p>
+                        </div>
+                        <div class="requirements">
+                            <h4 data-lang-key="requirements-label">Requirements:</h4>
+                            <ul>
+                                <li data-lang-key="supp-hw4-ex11-req1">Get a positive integer from user input</li>
+                                <li data-lang-key="supp-hw4-ex11-req2">Use a for loop to check for divisors from 2 to N-1</li>
+                                <li data-lang-key="supp-hw4-ex11-req3">If any number divides N evenly, it's not prime</li>
+                                <li data-lang-key="supp-hw4-ex11-req4">Display whether the number is prime or not</li>
+                                <li data-lang-key="supp-hw4-ex11-req5">Handle special cases: numbers less than 2 are not prime</li>
+                            </ul>
+                        </div>
+                        <div class="example">
+                            <h4 data-lang-key="example-label">Example:</h4>
+                            <pre><code class="language-python" data-lang-key="supp-hw4-ex11-example">Input: 7
+Output: 7 is a prime number
+
+Input: 12
+Output: 12 is not a prime number (divisible by 2, 3, 4, 6)
+
+Input: 2
+Output: 2 is a prime number
+
+Input: 1
+Output: 1 is not a prime number</code></pre>
+                        </div>
+                        <div class="solution-section">
+                            <details>
+                                <summary>💡 Hint</summary>
+                                <p data-lang-key="supp-hw4-ex11-hint">Start by checking if the number is less than 2 (not prime). Then use a for loop from 2 to N-1 to check if any number divides N evenly. If you find a divisor, the number is not prime. You can optimize by only checking up to the square root of N.</p>
+                            </details>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Exercise 12: Sum of Odd Numbers from 1 to N -->
+                <div class="exercise-card easy" data-exercise="12">
+                    <div class="exercise-header">
+                        <h3><span class="exercise-number">12.</span> <span data-lang-key="supp-hw4-ex12-title">Sum of Odd Numbers from 1 to N</span></h3>
+                        <div class="exercise-meta">
+                            <span class="difficulty" data-lang-key="difficulty-easy">Easy</span>
+                            <span class="time">⏱️ 10-15 min</span>
+                            <button class="complete-btn" onclick="toggleComplete(12)">
+                                <i class="fas fa-check"></i> <span data-lang-key="mark-complete">Mark Complete</span>
+                            </button>
+                        </div>
+                    </div>
+                    <div class="exercise-content">
+                        <div class="problem-statement">
+                            <h4 data-lang-key="problem-label">Problem:</h4>
+                            <p data-lang-key="supp-hw4-ex12-problem">Write a program that calculates the sum of all odd numbers from 1 to N (inclusive).</p>
+                        </div>
+                        <div class="requirements">
+                            <h4 data-lang-key="requirements-label">Requirements:</h4>
+                            <ul>
+                                <li data-lang-key="supp-hw4-ex12-req1">Get a positive integer N from user input</li>
+                                <li data-lang-key="supp-hw4-ex12-req2">Use a for loop to iterate from 1 to N</li>
+                                <li data-lang-key="supp-hw4-ex12-req3">Check if each number is odd (number % 2 != 0)</li>
+                                <li data-lang-key="supp-hw4-ex12-req4">Add only odd numbers to the sum</li>
+                                <li data-lang-key="supp-hw4-ex12-req5">Display the final sum of all odd numbers</li>
+                            </ul>
+                        </div>
+                        <div class="example">
+                            <h4 data-lang-key="example-label">Example:</h4>
+                            <pre><code class="language-python" data-lang-key="supp-hw4-ex12-example">Input: N = 10
+Output: Sum of odd numbers = 25 (1+3+5+7+9)
+
+Input: N = 15
+Output: Sum of odd numbers = 64 (1+3+5+7+9+11+13+15)
+
+Input: N = 5
+Output: Sum of odd numbers = 9 (1+3+5)</code></pre>
+                        </div>
+                        <div class="solution-section">
+                            <details>
+                                <summary>💡 Hint</summary>
+                                <p data-lang-key="supp-hw4-ex12-hint">Initialize sum to 0. Use a for loop from 1 to N. For each number, check if it's odd using number % 2 != 0. If odd, add it to the sum. You can also use range(1, N+1, 2) to iterate only through odd numbers.</p>
+                            </details>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Exercise 13: Sum of Squares from 1 to N -->
+                <div class="exercise-card easy" data-exercise="13">
+                    <div class="exercise-header">
+                        <h3><span class="exercise-number">13.</span> <span data-lang-key="supp-hw4-ex13-title">Sum of Squares from 1 to N</span></h3>
+                        <div class="exercise-meta">
+                            <span class="difficulty" data-lang-key="difficulty-easy">Easy</span>
+                            <span class="time">⏱️ 10-15 min</span>
+                            <button class="complete-btn" onclick="toggleComplete(13)">
+                                <i class="fas fa-check"></i> <span data-lang-key="mark-complete">Mark Complete</span>
+                            </button>
+                        </div>
+                    </div>
+                    <div class="exercise-content">
+                        <div class="problem-statement">
+                            <h4 data-lang-key="problem-label">Problem:</h4>
+                            <p data-lang-key="supp-hw4-ex13-problem">Write a program that calculates the sum of squares of all numbers from 1 to N (1² + 2² + 3² + ... + N²).</p>
+                        </div>
+                        <div class="requirements">
+                            <h4 data-lang-key="requirements-label">Requirements:</h4>
+                            <ul>
+                                <li data-lang-key="supp-hw4-ex13-req1">Get a positive integer N from user input</li>
+                                <li data-lang-key="supp-hw4-ex13-req2">Use a for loop to iterate from 1 to N</li>
+                                <li data-lang-key="supp-hw4-ex13-req3">Calculate the square of each number (number * number or number ** 2)</li>
+                                <li data-lang-key="supp-hw4-ex13-req4">Add each square to the running sum</li>
+                                <li data-lang-key="supp-hw4-ex13-req5">Display the final sum of all squares</li>
+                            </ul>
+                        </div>
+                        <div class="example">
+                            <h4 data-lang-key="example-label">Example:</h4>
+                            <pre><code class="language-python" data-lang-key="supp-hw4-ex13-example">Input: N = 3
+Output: Sum of squares = 14 (1² + 2² + 3² = 1 + 4 + 9)
+
+Input: N = 5
+Output: Sum of squares = 55 (1 + 4 + 9 + 16 + 25)
+
+Input: N = 10
+Output: Sum of squares = 385 (1 + 4 + 9 + 16 + 25 + 36 + 49 + 64 + 81 + 100)</code></pre>
+                        </div>
+                        <div class="solution-section">
+                            <details>
+                                <summary>💡 Hint</summary>
+                                <p data-lang-key="supp-hw4-ex13-hint">Initialize sum to 0. Use a for loop from 1 to N. In each iteration, calculate the square (i * i or i ** 2) and add it to sum. You can verify your answer using the formula: sum = N × (N + 1) × (2N + 1) / 6.</p>
+                            </details>
+                        </div>
+                    </div>
+                </div>
+
             </section>
 
             <!-- Progress Tracker -->
@@ -586,7 +730,7 @@ Total: 2 divisors (prime number)</code></pre>
                         <span class="stat-label" data-lang-key="completed-label">Completed</span>
                     </div>
                     <div class="stat-item">
-                        <span class="stat-number">10</span>
+                        <span class="stat-number">13</span>
                         <span class="stat-label" data-lang-key="total-label">Total</span>
                     </div>
                     <div class="stat-item">
@@ -657,7 +801,7 @@ Total: 2 divisors (prime number)</code></pre>
     <script>
         // Progress tracking for supplementary homework
         let completedExercises = JSON.parse(localStorage.getItem('supp-hw4-completed') || '[]');
-        const totalExercises = 10;
+        const totalExercises = 13;
 
         function updateProgress() {
             const completedCount = completedExercises.length;

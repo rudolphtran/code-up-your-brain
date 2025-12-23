@@ -359,7 +359,40 @@ const lesson4Translations = {
         'supp-hw4-ex10-req4': 'Hiển thị tất cả ước số tìm được',
         'supp-hw4-ex10-req5': 'Đếm và hiển thị tổng số ước số',
         'supp-hw4-ex10-example': 'Input: 12\nOutput: Các ước số: 1, 2, 3, 4, 6, 12\nTổng: 6 ước số\n\nInput: 20\nOutput: Các ước số: 1, 2, 4, 5, 10, 20\nTổng: 6 ước số\n\nInput: 7\nOutput: Các ước số: 1, 7\nTổng: 2 ước số (số nguyên tố)',
-        'supp-hw4-ex10-hint': 'Sử dụng vòng lặp for từ 1 đến N (bao gồm cả hai). Với mỗi số i, kiểm tra nếu N % i == 0. Nếu đúng, i là ước số. Lưu ước số vào list hoặc in ra trực tiếp.'
+        'supp-hw4-ex10-hint': 'Sử dụng vòng lặp for từ 1 đến N (bao gồm cả hai). Với mỗi số i, kiểm tra nếu N % i == 0. Nếu đúng, i là ước số. Lưu ước số vào list hoặc in ra trực tiếp.',
+
+        // Exercise 11: Check Prime Number
+        'supp-hw4-ex11-title': 'Kiểm tra số nguyên tố',
+        'supp-hw4-ex11-problem': 'Viết chương trình kiểm tra xem một số nguyên dương có phải là số nguyên tố hay không. Số nguyên tố là số lớn hơn 1 và chỉ có ước số là 1 và chính nó.',
+        'supp-hw4-ex11-req1': 'Nhận một số nguyên dương từ người dùng',
+        'supp-hw4-ex11-req2': 'Sử dụng vòng lặp for để kiểm tra ước số từ 2 đến N-1',
+        'supp-hw4-ex11-req3': 'Nếu có số nào chia hết N, nó không phải số nguyên tố',
+        'supp-hw4-ex11-req4': 'Hiển thị số đó có phải số nguyên tố hay không',
+        'supp-hw4-ex11-req5': 'Xử lý trường hợp đặc biệt: số nhỏ hơn 2 không phải số nguyên tố',
+        'supp-hw4-ex11-example': 'Input: 7\nOutput: 7 là số nguyên tố\n\nInput: 12\nOutput: 12 không phải số nguyên tố (chia hết cho 2, 3, 4, 6)\n\nInput: 2\nOutput: 2 là số nguyên tố\n\nInput: 1\nOutput: 1 không phải số nguyên tố',
+        'supp-hw4-ex11-hint': 'Bắt đầu bằng cách kiểm tra nếu số nhỏ hơn 2 (không phải nguyên tố). Sau đó dùng vòng lặp for từ 2 đến N-1 để kiểm tra xem có số nào chia hết N không. Nếu tìm thấy ước số, số đó không phải nguyên tố. Bạn có thể tối ưu bằng cách chỉ kiểm tra đến căn bậc hai của N.',
+
+        // Exercise 12: Sum of Odd Numbers from 1 to N
+        'supp-hw4-ex12-title': 'Tổng các số lẻ từ 1 đến N',
+        'supp-hw4-ex12-problem': 'Viết chương trình tính tổng tất cả các số lẻ từ 1 đến N (bao gồm cả hai đầu).',
+        'supp-hw4-ex12-req1': 'Nhận một số nguyên dương N từ người dùng',
+        'supp-hw4-ex12-req2': 'Sử dụng vòng lặp for để lặp từ 1 đến N',
+        'supp-hw4-ex12-req3': 'Kiểm tra xem mỗi số có phải số lẻ không (number % 2 != 0)',
+        'supp-hw4-ex12-req4': 'Chỉ cộng các số lẻ vào tổng',
+        'supp-hw4-ex12-req5': 'Hiển thị tổng cuối cùng của tất cả số lẻ',
+        'supp-hw4-ex12-example': 'Input: N = 10\nOutput: Tổng các số lẻ = 25 (1+3+5+7+9)\n\nInput: N = 15\nOutput: Tổng các số lẻ = 64 (1+3+5+7+9+11+13+15)\n\nInput: N = 5\nOutput: Tổng các số lẻ = 9 (1+3+5)',
+        'supp-hw4-ex12-hint': 'Khởi tạo biến sum = 0. Dùng vòng lặp for từ 1 đến N. Với mỗi số, kiểm tra nếu nó lẻ bằng number % 2 != 0. Nếu lẻ, cộng vào sum. Bạn cũng có thể dùng range(1, N+1, 2) để chỉ lặp qua các số lẻ.',
+
+        // Exercise 13: Sum of Squares from 1 to N
+        'supp-hw4-ex13-title': 'Tổng bình phương từ 1 đến N',
+        'supp-hw4-ex13-problem': 'Viết chương trình tính tổng bình phương của tất cả các số từ 1 đến N (1² + 2² + 3² + ... + N²).',
+        'supp-hw4-ex13-req1': 'Nhận một số nguyên dương N từ người dùng',
+        'supp-hw4-ex13-req2': 'Sử dụng vòng lặp for để lặp từ 1 đến N',
+        'supp-hw4-ex13-req3': 'Tính bình phương của mỗi số (number * number hoặc number ** 2)',
+        'supp-hw4-ex13-req4': 'Cộng mỗi bình phương vào tổng đang chạy',
+        'supp-hw4-ex13-req5': 'Hiển thị tổng cuối cùng của tất cả bình phương',
+        'supp-hw4-ex13-example': 'Input: N = 3\nOutput: Tổng bình phương = 14 (1² + 2² + 3² = 1 + 4 + 9)\n\nInput: N = 5\nOutput: Tổng bình phương = 55 (1 + 4 + 9 + 16 + 25)\n\nInput: N = 10\nOutput: Tổng bình phương = 385 (1 + 4 + 9 + 16 + 25 + 36 + 49 + 64 + 81 + 100)',
+        'supp-hw4-ex13-hint': 'Khởi tạo sum = 0. Dùng vòng lặp for từ 1 đến N. Trong mỗi vòng lặp, tính bình phương (i * i hoặc i ** 2) và cộng vào sum. Bạn có thể kiểm tra kết quả bằng công thức: sum = N × (N + 1) × (2N + 1) / 6.'
     },
     
     en: {
@@ -721,7 +754,40 @@ const lesson4Translations = {
         'supp-hw4-ex10-req4': 'Display all divisors found',
         'supp-hw4-ex10-req5': 'Count and display the total number of divisors',
         'supp-hw4-ex10-example': 'Input: 12\nOutput: Divisors: 1, 2, 3, 4, 6, 12\nTotal: 6 divisors\n\nInput: 20\nOutput: Divisors: 1, 2, 4, 5, 10, 20\nTotal: 6 divisors\n\nInput: 7\nOutput: Divisors: 1, 7\nTotal: 2 divisors (prime number)',
-        'supp-hw4-ex10-hint': 'Use a for loop from 1 to N (inclusive). For each number i, check if N % i == 0. If true, i is a divisor. Store divisors in a list or print them directly.'
+        'supp-hw4-ex10-hint': 'Use a for loop from 1 to N (inclusive). For each number i, check if N % i == 0. If true, i is a divisor. Store divisors in a list or print them directly.',
+
+        // Exercise 11: Check Prime Number
+        'supp-hw4-ex11-title': 'Check Prime Number',
+        'supp-hw4-ex11-problem': 'Write a program that checks whether a given positive integer is a prime number or not. A prime number is a number greater than 1 that has no divisors other than 1 and itself.',
+        'supp-hw4-ex11-req1': 'Get a positive integer from user input',
+        'supp-hw4-ex11-req2': 'Use a for loop to check for divisors from 2 to N-1',
+        'supp-hw4-ex11-req3': 'If any number divides N evenly, it\'s not prime',
+        'supp-hw4-ex11-req4': 'Display whether the number is prime or not',
+        'supp-hw4-ex11-req5': 'Handle special cases: numbers less than 2 are not prime',
+        'supp-hw4-ex11-example': 'Input: 7\nOutput: 7 is a prime number\n\nInput: 12\nOutput: 12 is not a prime number (divisible by 2, 3, 4, 6)\n\nInput: 2\nOutput: 2 is a prime number\n\nInput: 1\nOutput: 1 is not a prime number',
+        'supp-hw4-ex11-hint': 'Start by checking if the number is less than 2 (not prime). Then use a for loop from 2 to N-1 to check if any number divides N evenly. If you find a divisor, the number is not prime. You can optimize by only checking up to the square root of N.',
+
+        // Exercise 12: Sum of Odd Numbers from 1 to N
+        'supp-hw4-ex12-title': 'Sum of Odd Numbers from 1 to N',
+        'supp-hw4-ex12-problem': 'Write a program that calculates the sum of all odd numbers from 1 to N (inclusive).',
+        'supp-hw4-ex12-req1': 'Get a positive integer N from user input',
+        'supp-hw4-ex12-req2': 'Use a for loop to iterate from 1 to N',
+        'supp-hw4-ex12-req3': 'Check if each number is odd (number % 2 != 0)',
+        'supp-hw4-ex12-req4': 'Add only odd numbers to the sum',
+        'supp-hw4-ex12-req5': 'Display the final sum of all odd numbers',
+        'supp-hw4-ex12-example': 'Input: N = 10\nOutput: Sum of odd numbers = 25 (1+3+5+7+9)\n\nInput: N = 15\nOutput: Sum of odd numbers = 64 (1+3+5+7+9+11+13+15)\n\nInput: N = 5\nOutput: Sum of odd numbers = 9 (1+3+5)',
+        'supp-hw4-ex12-hint': 'Initialize sum to 0. Use a for loop from 1 to N. For each number, check if it\'s odd using number % 2 != 0. If odd, add it to the sum. You can also use range(1, N+1, 2) to iterate only through odd numbers.',
+
+        // Exercise 13: Sum of Squares from 1 to N
+        'supp-hw4-ex13-title': 'Sum of Squares from 1 to N',
+        'supp-hw4-ex13-problem': 'Write a program that calculates the sum of squares of all numbers from 1 to N (1² + 2² + 3² + ... + N²).',
+        'supp-hw4-ex13-req1': 'Get a positive integer N from user input',
+        'supp-hw4-ex13-req2': 'Use a for loop to iterate from 1 to N',
+        'supp-hw4-ex13-req3': 'Calculate the square of each number (number * number or number ** 2)',
+        'supp-hw4-ex13-req4': 'Add each square to the running sum',
+        'supp-hw4-ex13-req5': 'Display the final sum of all squares',
+        'supp-hw4-ex13-example': 'Input: N = 3\nOutput: Sum of squares = 14 (1² + 2² + 3² = 1 + 4 + 9)\n\nInput: N = 5\nOutput: Sum of squares = 55 (1 + 4 + 9 + 16 + 25)\n\nInput: N = 10\nOutput: Sum of squares = 385 (1 + 4 + 9 + 16 + 25 + 36 + 49 + 64 + 81 + 100)',
+        'supp-hw4-ex13-hint': 'Initialize sum to 0. Use a for loop from 1 to N. In each iteration, calculate the square (i * i or i ** 2) and add it to sum. You can verify your answer using the formula: sum = N × (N + 1) × (2N + 1) / 6.'
     }
 };
 
