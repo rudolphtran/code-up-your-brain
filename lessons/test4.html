@@ -1,0 +1,470 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="color-scheme" content="light only">
+    <title data-lang-key="test4-title">Test 4: Loop Exercises - Code Up Your Brain</title>
+    <meta name="description" data-lang-key="test4-meta" content="Test your loop programming skills with 6 carefully selected exercises">
+    <link rel="stylesheet" href="../assets/css/styles.css">
+    <link rel="stylesheet" href="../assets/css/lesson.css">
+    <link rel="stylesheet" href="../assets/css/auth.css">
+    <link rel="stylesheet" href="../assets/css/mobile-optimizations.css">
+    <link rel="stylesheet" href="../assets/css/ultra-compact-header.css">
+    <link rel="stylesheet" href="../assets/css/force-hide-logo.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/themes/prism-tomorrow.min.css">
+</head>
+<body>
+    <!-- Header -->
+    <header class="header">
+        <div class="container">
+            <div class="header-content">
+                <div class="logo">
+                    <a href="../index.html">
+                        <i class="fas fa-code"></i>
+                        <span data-lang-key="logo-text">Code Up Your Brain</span>
+                    </a>
+                </div>
+                <div class="innomind-header-logo">
+                    <a href="../index.html">
+                        <img src="../assets/images/logo.png" alt="InnoMind Logo" />
+                    </a>
+                </div>
+                <nav class="nav">
+                    <a href="../index.html" data-lang-key="nav-home">Home</a>
+                    <a href="../index.html#about" data-lang-key="nav-about">About</a>
+                    <a href="../index.html#course" data-lang-key="nav-course">Course</a>
+                    <a href="../index.html#instructor" data-lang-key="nav-instructor">Instructor</a>
+                    <a href="#contact" data-lang-key="nav-contact">Contact</a>
+                </nav>
+                <div class="header-actions">
+                    <button class="lang-toggle" id="langToggle">
+                        <i class="fas fa-globe"></i>
+                        <span id="currentLang">EN</span>
+                    </button>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!-- Test Content -->
+    <main class="lesson-content">
+        <div class="container">
+            <!-- Breadcrumb -->
+            <nav class="breadcrumb">
+                <a href="../index.html" data-lang-key="breadcrumb-home">Home</a>
+                <span class="separator">/</span>
+                <a href="../index.html#course" data-lang-key="breadcrumb-course">Course</a>
+                <span class="separator">/</span>
+                <a href="lesson4.html" data-lang-key="breadcrumb-lesson4">Lesson 4</a>
+                <span class="separator">/</span>
+                <span data-lang-key="breadcrumb-test">Test</span>
+            </nav>
+
+            <!-- Test Header -->
+            <div class="lesson-header">
+                <div class="lesson-number">
+                    <span data-lang-key="test-label">Test</span> 4
+                </div>
+                <h1 data-lang-key="test4-main-title">Loop Programming Test</h1>
+                <p class="lesson-subtitle" data-lang-key="test4-subtitle">
+                    6 exercises to test your loop programming skills - No hints provided!
+                </p>
+            </div>
+
+            <!-- Instructions -->
+            <div class="homework-instructions">
+                <h2 data-lang-key="instructions-title">📋 Instructions</h2>
+                <div class="instructions-grid">
+                    <div class="instruction-item">
+                        <div class="instruction-icon">💻</div>
+                        <h3 data-lang-key="instruction1-title">Code in Python</h3>
+                        <p data-lang-key="instruction1-desc">Write all solutions in Python 3.x using proper syntax and indentation</p>
+                    </div>
+                    <div class="instruction-item">
+                        <div class="instruction-icon">🧪</div>
+                        <h3 data-lang-key="instruction2-title">Test Your Code</h3>
+                        <p data-lang-key="instruction2-desc">Test each program with multiple inputs to ensure it works correctly</p>
+                    </div>
+                    <div class="instruction-item">
+                        <div class="instruction-icon">📝</div>
+                        <h3 data-lang-key="instruction3-title">Add Comments</h3>
+                        <p data-lang-key="instruction3-desc">Include comments explaining your logic and approach</p>
+                    </div>
+                    <div class="instruction-item">
+                        <div class="instruction-icon">⏱️</div>
+                        <h3 data-lang-key="instruction4-title">Time Management</h3>
+                        <p data-lang-key="instruction4-desc">Recommended time: 90 minutes for all 6 exercises</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Exercises Section -->
+            <section class="exercises-section">
+                <h2 data-lang-key="test-exercises-title">📝 Test Exercises</h2>
+                <p class="section-description" data-lang-key="test-exercises-desc">
+                    Complete all 6 exercises. No hints are provided - test your understanding!
+                </p>
+
+                <!-- Exercise 1: Count Odd Numbers -->
+                <div class="exercise-card easy" data-exercise="1">
+                    <div class="exercise-header">
+                        <h3><span class="exercise-number">1.</span> <span data-lang-key="supp-hw4-ex1-title">Count Odd Numbers from A to B</span></h3>
+                        <div class="exercise-meta">
+                            <span class="difficulty" data-lang-key="difficulty-easy">Easy</span>
+                            <span class="time">⏱️ 10-15 min</span>
+                            <button class="complete-btn" onclick="toggleComplete(1)">
+                                <i class="fas fa-check"></i> <span data-lang-key="mark-complete">Mark Complete</span>
+                            </button>
+                        </div>
+                    </div>
+                    <div class="exercise-content">
+                        <div class="problem-statement">
+                            <h4 data-lang-key="problem-label">Problem:</h4>
+                            <p data-lang-key="supp-hw4-ex1-problem">Write a program that counts how many odd numbers exist in the range from A to B (inclusive).</p>
+                        </div>
+                        <div class="requirements">
+                            <h4 data-lang-key="requirements-label">Requirements:</h4>
+                            <ul>
+                                <li data-lang-key="supp-hw4-ex1-req1">Get two integers A and B from user input</li>
+                                <li data-lang-key="supp-hw4-ex1-req4">Display the total count of odd numbers</li>
+                            </ul>
+                        </div>
+                        <div class="example">
+                            <h4 data-lang-key="example-label">Example:</h4>
+                            <pre><code class="language-python" data-lang-key="supp-hw4-ex1-example">Input: A = 1, B = 10
+Output: There are 5 odd numbers (1, 3, 5, 7, 9)
+
+Input: A = 10, B = 20
+Output: There are 5 odd numbers (11, 13, 15, 17, 19)</code></pre>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Exercise 2: Sum from A to B -->
+                <div class="exercise-card easy" data-exercise="2">
+                    <div class="exercise-header">
+                        <h3><span class="exercise-number">2.</span> <span data-lang-key="supp-hw4-ex3-title">Sum of Numbers from A to B</span></h3>
+                        <div class="exercise-meta">
+                            <span class="difficulty" data-lang-key="difficulty-easy">Easy</span>
+                            <span class="time">⏱️ 10-15 min</span>
+                            <button class="complete-btn" onclick="toggleComplete(2)">
+                                <i class="fas fa-check"></i> <span data-lang-key="mark-complete">Mark Complete</span>
+                            </button>
+                        </div>
+                    </div>
+                    <div class="exercise-content">
+                        <div class="problem-statement">
+                            <h4 data-lang-key="problem-label">Problem:</h4>
+                            <p data-lang-key="supp-hw4-ex3-problem">Write a program that calculates the sum of all numbers in the range from A to B (inclusive).</p>
+                        </div>
+                        <div class="requirements">
+                            <h4 data-lang-key="requirements-label">Requirements:</h4>
+                            <ul>
+                                <li data-lang-key="supp-hw4-ex3-req1">Get two integers A and B from user input</li>
+                                <li data-lang-key="supp-hw4-ex3-req4">Display the sum result</li>
+                            </ul>
+                        </div>
+                        <div class="example">
+                            <h4 data-lang-key="example-label">Example:</h4>
+                            <pre><code class="language-python" data-lang-key="supp-hw4-ex3-example">Input: A = 1, B = 5
+Output: Sum = 15 (1+2+3+4+5)
+
+Input: A = 10, B = 15
+Output: Sum = 75 (10+11+12+13+14+15)</code></pre>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Exercise 3: Count Multiples of 3 -->
+                <div class="exercise-card easy" data-exercise="3">
+                    <div class="exercise-header">
+                        <h3><span class="exercise-number">3.</span> <span data-lang-key="supp-hw4-ex4-title">Count Numbers Divisible by 3</span></h3>
+                        <div class="exercise-meta">
+                            <span class="difficulty" data-lang-key="difficulty-easy">Easy</span>
+                            <span class="time">⏱️ 10-15 min</span>
+                            <button class="complete-btn" onclick="toggleComplete(3)">
+                                <i class="fas fa-check"></i> <span data-lang-key="mark-complete">Mark Complete</span>
+                            </button>
+                        </div>
+                    </div>
+                    <div class="exercise-content">
+                        <div class="problem-statement">
+                            <h4 data-lang-key="problem-label">Problem:</h4>
+                            <p data-lang-key="supp-hw4-ex4-problem">Write a program that counts and displays all numbers divisible by 3 in the range from A to B (inclusive).</p>
+                        </div>
+                        <div class="requirements">
+                            <h4 data-lang-key="requirements-label">Requirements:</h4>
+                            <ul>
+                                <li data-lang-key="supp-hw4-ex4-req1">Get two integers A and B from user input</li>
+                                <li data-lang-key="supp-hw4-ex4-req4">Display all numbers found and the total count</li>
+                            </ul>
+                        </div>
+                        <div class="example">
+                            <h4 data-lang-key="example-label">Example:</h4>
+                            <pre><code class="language-python" data-lang-key="supp-hw4-ex4-example">Input: A = 1, B = 10
+Output: Numbers divisible by 3: 3, 6, 9
+Count: 3
+
+Input: A = 10, B = 20
+Output: Numbers divisible by 3: 12, 15, 18
+Count: 3</code></pre>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Exercise 4: Sum of Digits -->
+                <div class="exercise-card easy" data-exercise="4">
+                    <div class="exercise-header">
+                        <h3><span class="exercise-number">4.</span> <span data-lang-key="supp-hw4-ex6-title">Sum of Digits</span></h3>
+                        <div class="exercise-meta">
+                            <span class="difficulty" data-lang-key="difficulty-easy">Easy</span>
+                            <span class="time">⏱️ 15-20 min</span>
+                            <button class="complete-btn" onclick="toggleComplete(4)">
+                                <i class="fas fa-check"></i> <span data-lang-key="mark-complete">Mark Complete</span>
+                            </button>
+                        </div>
+                    </div>
+                    <div class="exercise-content">
+                        <div class="problem-statement">
+                            <h4 data-lang-key="problem-label">Problem:</h4>
+                            <p data-lang-key="supp-hw4-ex6-problem">Write a program that calculates the sum of all digits in a positive integer using a loop.</p>
+                        </div>
+                        <div class="requirements">
+                            <h4 data-lang-key="requirements-label">Requirements:</h4>
+                            <ul>
+                                <li data-lang-key="supp-hw4-ex6-req1">Get a positive integer from user input</li>
+                                <li data-lang-key="supp-hw4-ex6-req4">Display the sum of all digits</li>
+                                <li data-lang-key="supp-hw4-ex6-req5">Handle special case for 0 (sum is 0)</li>
+                            </ul>
+                        </div>
+                        <div class="example">
+                            <h4 data-lang-key="example-label">Example:</h4>
+                            <pre><code class="language-python" data-lang-key="supp-hw4-ex6-example">Input: 12345
+Output: Sum of digits = 15 (1+2+3+4+5)
+
+Input: 999
+Output: Sum of digits = 27 (9+9+9)
+
+Input: 0
+Output: Sum of digits = 0</code></pre>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Exercise 5: Count Even Digits -->
+                <div class="exercise-card easy" data-exercise="5">
+                    <div class="exercise-header">
+                        <h3><span class="exercise-number">5.</span> <span data-lang-key="supp-hw4-ex8-title">Count Even Digits in a Number</span></h3>
+                        <div class="exercise-meta">
+                            <span class="difficulty" data-lang-key="difficulty-easy">Easy</span>
+                            <span class="time">⏱️ 15-20 min</span>
+                            <button class="complete-btn" onclick="toggleComplete(5)">
+                                <i class="fas fa-check"></i> <span data-lang-key="mark-complete">Mark Complete</span>
+                            </button>
+                        </div>
+                    </div>
+                    <div class="exercise-content">
+                        <div class="problem-statement">
+                            <h4 data-lang-key="problem-label">Problem:</h4>
+                            <p data-lang-key="supp-hw4-ex8-problem">Write a program that counts how many even digits are in a positive integer.</p>
+                        </div>
+                        <div class="requirements">
+                            <h4 data-lang-key="requirements-label">Requirements:</h4>
+                            <ul>
+                                <li data-lang-key="supp-hw4-ex8-req1">Get a positive integer from user input</li>
+                                <li data-lang-key="supp-hw4-ex8-req4">Display the count of even digits</li>
+                            </ul>
+                        </div>
+                        <div class="example">
+                            <h4 data-lang-key="example-label">Example:</h4>
+                            <pre><code class="language-python" data-lang-key="supp-hw4-ex8-example">Input: 123456
+Output: Even digits: 2, 4, 6
+Count: 3 even digits
+
+Input: 987654
+Output: Even digits: 8, 6, 4
+Count: 3 even digits
+
+Input: 13579
+Output: Count: 0 even digits</code></pre>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Exercise 6: Check Prime Number -->
+                <div class="exercise-card easy" data-exercise="6">
+                    <div class="exercise-header">
+                        <h3><span class="exercise-number">6.</span> <span data-lang-key="supp-hw4-ex11-title">Check Prime Number</span></h3>
+                        <div class="exercise-meta">
+                            <span class="difficulty" data-lang-key="difficulty-easy">Easy</span>
+                            <span class="time">⏱️ 15-20 min</span>
+                            <button class="complete-btn" onclick="toggleComplete(6)">
+                                <i class="fas fa-check"></i> <span data-lang-key="mark-complete">Mark Complete</span>
+                            </button>
+                        </div>
+                    </div>
+                    <div class="exercise-content">
+                        <div class="problem-statement">
+                            <h4 data-lang-key="problem-label">Problem:</h4>
+                            <p data-lang-key="supp-hw4-ex11-problem">Write a program that checks whether a given positive integer is a prime number or not. A prime number is a number greater than 1 that has no divisors other than 1 and itself.</p>
+                        </div>
+                        <div class="requirements">
+                            <h4 data-lang-key="requirements-label">Requirements:</h4>
+                            <ul>
+                                <li data-lang-key="supp-hw4-ex11-req1">Get a positive integer from user input</li>
+                                <li data-lang-key="supp-hw4-ex11-req4">Display whether the number is prime or not</li>
+                                <li data-lang-key="supp-hw4-ex11-req5">Handle special cases: numbers less than 2 are not prime</li>
+                            </ul>
+                        </div>
+                        <div class="example">
+                            <h4 data-lang-key="example-label">Example:</h4>
+                            <pre><code class="language-python" data-lang-key="supp-hw4-ex11-example">Input: 7
+Output: 7 is a prime number
+
+Input: 12
+Output: 12 is not a prime number (divisible by 2, 3, 4, 6)
+
+Input: 2
+Output: 2 is a prime number
+
+Input: 1
+Output: 1 is not a prime number</code></pre>
+                        </div>
+                    </div>
+                </div>
+
+            </section>
+
+            <!-- Progress Tracker -->
+            <div class="progress-section">
+                <h3 data-lang-key="your-progress">Your Progress</h3>
+                <div class="progress-stats">
+                    <div class="stat-item">
+                        <span class="stat-number" id="completedCount">0</span>
+                        <span class="stat-label" data-lang-key="completed-label">Completed</span>
+                    </div>
+                    <div class="stat-item">
+                        <span class="stat-number">6</span>
+                        <span class="stat-label" data-lang-key="total-label">Total</span>
+                    </div>
+                    <div class="stat-item">
+                        <span class="stat-number" id="progressPercent">0%</span>
+                        <span class="stat-label" data-lang-key="progress-label">Progress</span>
+                    </div>
+                </div>
+                <div class="progress-bar">
+                    <div class="progress-fill" id="progressBar"></div>
+                </div>
+            </div>
+
+            <!-- Navigation -->
+            <div class="lesson-navigation">
+                <a href="lesson4.html" class="nav-btn prev">
+                    <i class="fas fa-arrow-left"></i>
+                    <span data-lang-key="back-to-lesson">Back to Lesson 4</span>
+                </a>
+                <a href="homework4.html" class="nav-btn next">
+                    <span data-lang-key="main-homework">Main Homework</span>
+                    <i class="fas fa-arrow-right"></i>
+                </a>
+            </div>
+        </div>
+    </main>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <h4>Liên hệ</h4>
+                <div class="contact-info-compact">
+                    <div class="contact-item">
+                        <i class="fas fa-map-marker-alt"></i>
+                        <span>136 Nguyễn Mậu Tài, Hòa Xuân, Cẩm Lệ, Đà Nẵng</span>
+                    </div>
+                    <div class="contact-item">
+                        <i class="fas fa-phone"></i>
+                        <span>090 198 05 69</span>
+                    </div>
+                    <div class="contact-item">
+                        <i class="fas fa-envelope"></i>
+                        <span>innomindskills@gmail.com</span>
+                    </div>
+                    <div class="contact-item">
+                        <i class="fab fa-facebook"></i>
+                        <a href="https://www.facebook.com/hocvienkynangthehemoiinnomind" target="_blank">
+                            Facebook
+                        </a>
+                    </div>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p data-lang-key="footer-copyright">&copy; 2025 Code Up Your Brain. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- JavaScript -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/prism.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/components/prism-python.min.js"></script>
+    <!-- Modular translations -->
+    <script src="../assets/js/translations-common.js"></script>
+    <script src="../assets/js/translations-lesson4.js"></script>
+    <script src="../assets/js/translations-loader.js"></script>
+    <script src="../assets/js/script.js"></script>
+    
+    <script>
+        // Progress tracking for test 4
+        let completedExercises = JSON.parse(localStorage.getItem('test4-completed') || '[]');
+        const totalExercises = 6;
+
+        function updateProgress() {
+            const completedCount = completedExercises.length;
+            const progressPercent = Math.round((completedCount / totalExercises) * 100);
+            
+            document.getElementById('completedCount').textContent = completedCount;
+            document.getElementById('progressPercent').textContent = progressPercent + '%';
+            document.getElementById('progressBar').style.width = progressPercent + '%';
+            
+            // Update button states
+            completedExercises.forEach(ex => {
+                const card = document.querySelector(`[data-exercise="${ex}"]`);
+                if (card) {
+                    card.classList.add('completed');
+                    const btn = card.querySelector('.complete-btn');
+                    if (btn) {
+                        btn.classList.add('completed');
+                        const spanText = btn.querySelector('span');
+                        if (spanText) {
+                            spanText.setAttribute('data-lang-key', 'mark-incomplete');
+                        }
+                    }
+                }
+            });
+        }
+
+        function toggleComplete(exerciseNum) {
+            const index = completedExercises.indexOf(exerciseNum);
+            if (index > -1) {
+                completedExercises.splice(index, 1);
+            } else {
+                completedExercises.push(exerciseNum);
+            }
+            localStorage.setItem('test4-completed', JSON.stringify(completedExercises));
+            updateProgress();
+            
+            // Re-apply translations after updating
+            if (window.applyTranslations) {
+                window.applyTranslations();
+            }
+        }
+
+        // Initialize on load
+        document.addEventListener('DOMContentLoaded', updateProgress);
+    </script>
+</body>
+</html>
