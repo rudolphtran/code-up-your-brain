@@ -39,6 +39,8 @@ function initializeTranslations() {
         lessonTranslations = window.lesson3Translations;
     } else if (typeof window.lesson4Translations !== 'undefined') {
         lessonTranslations = window.lesson4Translations;
+    } else if (typeof window.lesson5Translations !== 'undefined') {
+        lessonTranslations = window.lesson5Translations;
     }
     
     // Merge common and lesson-specific translations

@@ -1,0 +1,852 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="color-scheme" content="light only">
+    <title data-lang-key="lesson5-title">Lesson 5: Functions - Code Up Your Brain</title>
+    <meta name="description" data-lang-key="lesson5-meta" content="Master functions in Python. Learn to create reusable code with parameters, return values, and best practices.">
+    
+    <link rel="stylesheet" href="../assets/css/styles.css">
+    <link rel="stylesheet" href="../assets/css/lesson.css">
+    <link rel="stylesheet" href="../assets/css/auth.css">
+    <link rel="stylesheet" href="../assets/css/mobile-optimizations.css">
+    <link rel="stylesheet" href="../assets/css/ultra-compact-header.css">
+    <link rel="stylesheet" href="../assets/css/force-hide-logo.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/themes/prism-tomorrow.min.css">
+    
+    <!-- Favicon -->
+    <link rel="icon" type="image/x-icon" href="../assets/images/favicon.ico">
+</head>
+<body>
+    <!-- Header -->
+    <header class="header">
+        <div class="container">
+            <div class="header-content">
+                <div class="logo">
+                    <a href="../index.html">
+                        <i class="fas fa-code"></i>
+                        <span data-lang-key="logo-text">Code Up Your Brain</span>
+                    </a>
+                </div>
+                <div class="innomind-header-logo">
+                    <a href="../index.html">
+                        <img src="../assets/images/logo.png" alt="InnoMind Logo" />
+                    </a>
+                </div>
+                <nav class="nav">
+                    <a href="../index.html" data-lang-key="nav-home">Home</a>
+                    <a href="../index.html#about" data-lang-key="nav-about">About</a>
+                    <a href="../index.html#course" data-lang-key="nav-course">Course</a>
+                    <a href="../index.html#instructor" data-lang-key="nav-instructor">Instructor</a>
+                    <a href="#contact" data-lang-key="nav-contact">Contact</a>
+                </nav>
+                <div class="header-actions">
+                    <button class="lang-toggle" id="langToggle">
+                        <i class="fas fa-globe"></i>
+                        <span id="currentLang">EN</span>
+                    </button>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!-- Lesson Content -->
+    <main class="lesson-content">
+        <div class="container">
+            <!-- Breadcrumb -->
+            <nav class="breadcrumb">
+                <a href="../index.html" data-lang-key="breadcrumb-home">Home</a>
+                <span class="separator">/</span>
+                <a href="../index.html#course" data-lang-key="breadcrumb-course">Course</a>
+                <span class="separator">/</span>
+                <span data-lang-key="breadcrumb-lesson5">Lesson 5</span>
+            </nav>
+
+            <!-- Lesson Header -->
+            <div class="lesson-header">
+                <div class="lesson-number">
+                    <span data-lang-key="lesson-label">Lesson</span> 5
+                </div>
+                <h1 data-lang-key="lesson5-main-title">Functions</h1>
+                <p class="lesson-subtitle" data-lang-key="lesson5-subtitle">
+                    Learn to write reusable, modular code with functions, parameters, and return values
+                </p>
+            </div>
+
+            <!-- Table of Contents -->
+            <div class="table-of-contents">
+                <h3 data-lang-key="toc-title">Table of Contents</h3>
+                <ul>
+                    <li><a href="#intro-functions" data-lang-key="toc-intro-functions">1. Introduction to Functions</a></li>
+                    <li><a href="#creating-functions" data-lang-key="toc-creating-functions">2. Creating Functions</a></li>
+                    <li><a href="#parameters-arguments" data-lang-key="toc-parameters-arguments">3. Parameters and Arguments</a></li>
+                    <li><a href="#return-values" data-lang-key="toc-return-values">4. Return Values</a></li>
+                    <li><a href="#scope" data-lang-key="toc-scope">5. Variable Scope</a></li>
+                    <li><a href="#exercises" data-lang-key="toc-exercises">6. Practice Exercises</a></li>
+                </ul>
+            </div>
+
+            <!-- Section 1: Introduction to Functions -->
+            <section id="intro-functions" class="lesson-section">
+                <div class="section-icon">🔧</div>
+                <h2 data-lang-key="section1-title-lesson5">1. Introduction to Functions</h2>
+                
+                <div class="content-block">
+                    <p data-lang-key="section1-intro">
+                        Functions are reusable blocks of code that perform a specific task. They help make your code 
+                        more organized, readable, and maintainable. Instead of writing the same code multiple times, 
+                        you can create a function and call it whenever needed.
+                    </p>
+                    
+                    <h3 data-lang-key="why-functions">Why Use Functions?</h3>
+                    <ul>
+                        <li data-lang-key="functions-reason1"><strong>Code Reusability:</strong> Write once, use many times</li>
+                        <li data-lang-key="functions-reason2"><strong>Modularity:</strong> Break complex problems into smaller, manageable pieces</li>
+                        <li data-lang-key="functions-reason3"><strong>Readability:</strong> Make code easier to understand and maintain</li>
+                        <li data-lang-key="functions-reason4"><strong>Testing:</strong> Test individual functions independently</li>
+                        <li data-lang-key="functions-reason5"><strong>Collaboration:</strong> Multiple developers can work on different functions</li>
+                    </ul>
+                </div>
+
+                <div class="example-box">
+                    <h4 data-lang-key="example-title">Example: Without and With Functions</h4>
+                    <div class="comparison-container">
+                        <div class="comparison-column">
+                            <h5 data-lang-key="without-functions">❌ Without Functions (Repetitive)</h5>
+                            <pre><code class="language-python"># Greeting three people
+print("Hello, Alice!")
+print("Welcome to our program!")
+print("-" * 30)
+
+print("Hello, Bob!")
+print("Welcome to our program!")
+print("-" * 30)
+
+print("Hello, Charlie!")
+print("Welcome to our program!")
+print("-" * 30)</code></pre>
+                        </div>
+                        <div class="comparison-column">
+                            <h5 data-lang-key="with-functions">✅ With Functions (Reusable)</h5>
+                            <pre><code class="language-python"># Define function once
+def greet_user(name):
+    print(f"Hello, {name}!")
+    print("Welcome to our program!")
+    print("-" * 30)
+
+# Use multiple times
+greet_user("Alice")
+greet_user("Bob")
+greet_user("Charlie")</code></pre>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Section 2: Creating Functions -->
+            <section id="creating-functions" class="lesson-section">
+                <div class="section-icon">⚙️</div>
+                <h2 data-lang-key="section2-title-lesson5">2. Creating Functions</h2>
+                
+                <div class="content-block">
+                    <h3 data-lang-key="function-syntax">Function Syntax</h3>
+                    <p data-lang-key="syntax-explanation">
+                        In Python, we define functions using the <code>def</code> keyword followed by the function name 
+                        and parentheses. The code block inside the function is indented.
+                    </p>
+                    
+                    <div class="syntax-box">
+                        <pre><code class="language-python">def function_name():
+    # Function body (indented)
+    # Code to execute
+    pass  # placeholder</code></pre>
+                    </div>
+                </div>
+
+                <div class="example-box">
+                    <h4 data-lang-key="simple-function-example">Simple Function Examples</h4>
+                    
+                    <pre><code class="language-python"># Example 1: Function that prints a message
+def say_hello():
+    print("Hello, World!")
+    print("Welcome to Python!")
+
+# Call the function
+say_hello()
+# Output:
+# Hello, World!
+# Welcome to Python!
+
+
+# Example 2: Function that performs a calculation
+def show_sum():
+    result = 10 + 20
+    print(f"The sum is: {result}")
+
+show_sum()
+# Output: The sum is: 30
+
+
+# Example 3: Function that draws a pattern
+def draw_line():
+    print("=" * 40)
+    
+draw_line()
+print("Important Message")
+draw_line()
+# Output:
+# ========================================
+# Important Message
+# ========================================</code></pre>
+                </div>
+
+                <div class="tip-box">
+                    <h4 data-lang-key="naming-conventions">🎯 Function Naming Best Practices</h4>
+                    <ul>
+                        <li data-lang-key="naming-rule1">Use lowercase letters with underscores: <code>calculate_total()</code></li>
+                        <li data-lang-key="naming-rule2">Use descriptive names: <code>get_user_input()</code> not <code>gui()</code></li>
+                        <li data-lang-key="naming-rule3">Start with a verb: <code>print_report()</code>, <code>calculate_average()</code></li>
+                        <li data-lang-key="naming-rule4">Avoid Python keywords: don't use <code>print()</code>, <code>sum()</code> as names</li>
+                    </ul>
+                </div>
+            </section>
+
+            <!-- Section 3: Parameters and Arguments -->
+            <section id="parameters-arguments" class="lesson-section">
+                <div class="section-icon">📥</div>
+                <h2 data-lang-key="section3-title-lesson5">3. Parameters and Arguments</h2>
+                
+                <div class="content-block">
+                    <p data-lang-key="params-intro">
+                        <strong>Parameters</strong> are variables listed in the function definition. 
+                        <strong>Arguments</strong> are the actual values passed to the function when calling it.
+                    </p>
+                    
+                    <h3 data-lang-key="single-parameter">Single Parameter</h3>
+                    <pre><code class="language-python">def greet(name):  # 'name' is a parameter
+    print(f"Hello, {name}!")
+
+greet("Alice")    # "Alice" is an argument
+greet("Bob")      # "Bob" is an argument
+
+# Output:
+# Hello, Alice!
+# Hello, Bob!</code></pre>
+
+                    <h3 data-lang-key="multiple-parameters">Multiple Parameters</h3>
+                    <pre><code class="language-python">def introduce(name, age, city):
+    print(f"My name is {name}")
+    print(f"I am {age} years old")
+    print(f"I live in {city}")
+    
+introduce("Alice", 15, "Hanoi")
+# Output:
+# My name is Alice
+# I am 15 years old
+# I live in Hanoi</code></pre>
+
+                    <h3 data-lang-key="default-parameters">Default Parameters</h3>
+                    <pre><code class="language-python">def greet(name, greeting="Hello"):
+    print(f"{greeting}, {name}!")
+    
+greet("Alice")              # Uses default greeting
+# Output: Hello, Alice!
+
+greet("Bob", "Hi")          # Custom greeting
+# Output: Hi, Bob!
+
+greet("Charlie", "Good morning")
+# Output: Good morning, Charlie!</code></pre>
+
+                    <h3 data-lang-key="keyword-arguments">Keyword Arguments</h3>
+                    <pre><code class="language-python">def create_profile(name, age, country, hobby):
+    print(f"Name: {name}")
+    print(f"Age: {age}")
+    print(f"Country: {country}")
+    print(f"Hobby: {hobby}")
+
+# Positional arguments (order matters)
+create_profile("Alice", 15, "Vietnam", "Reading")
+
+# Keyword arguments (order doesn't matter)
+create_profile(hobby="Gaming", name="Bob", country="USA", age=16)
+
+# Mix of both (positional first)
+create_profile("Charlie", 14, hobby="Music", country="UK")</code></pre>
+                </div>
+
+                <div class="warning-box">
+                    <h4 data-lang-key="common-mistakes">⚠️ Common Mistakes</h4>
+                    <pre><code class="language-python"># ❌ WRONG: Default parameters must come after non-default
+def greet(greeting="Hello", name):  # SyntaxError
+    print(f"{greeting}, {name}!")
+
+# ✅ CORRECT: Non-default parameters first
+def greet(name, greeting="Hello"):
+    print(f"{greeting}, {name}!")
+
+# ❌ WRONG: Keyword arguments before positional
+greet(greeting="Hi", "Alice")  # SyntaxError
+
+# ✅ CORRECT: Positional arguments first
+greet("Alice", greeting="Hi")</code></pre>
+                </div>
+            </section>
+
+            <!-- Section 4: Return Values -->
+            <section id="return-values" class="lesson-section">
+                <div class="section-icon">📤</div>
+                <h2 data-lang-key="section4-title-lesson5">4. Return Values</h2>
+                
+                <div class="content-block">
+                    <p data-lang-key="return-intro">
+                        The <code>return</code> statement sends a value back to the caller. Functions can return 
+                        values that can be stored in variables or used in expressions.
+                    </p>
+                    
+                    <h3 data-lang-key="basic-return">Basic Return Statement</h3>
+                    <pre><code class="language-python">def add_numbers(a, b):
+    result = a + b
+    return result  # Send result back to caller
+
+# Use returned value
+sum1 = add_numbers(5, 3)
+print(f"Sum: {sum1}")  # Output: Sum: 8
+
+# Use directly in expression
+total = add_numbers(10, 20) + add_numbers(5, 15)
+print(f"Total: {total}")  # Output: Total: 50</code></pre>
+
+                    <h3 data-lang-key="return-types">Different Return Types</h3>
+                    <pre><code class="language-python"># Return number
+def square(n):
+    return n * n
+
+result = square(5)
+print(result)  # Output: 25
+
+
+# Return string
+def get_greeting(name):
+    return f"Welcome, {name}!"
+
+message = get_greeting("Alice")
+print(message)  # Output: Welcome, Alice!
+
+
+# Return boolean
+def is_adult(age):
+    return age >= 18
+
+print(is_adult(20))  # Output: True
+print(is_adult(15))  # Output: False
+
+
+# Return list
+def get_first_n_numbers(n):
+    return list(range(1, n + 1))
+
+numbers = get_first_n_numbers(5)
+print(numbers)  # Output: [1, 2, 3, 4, 5]</code></pre>
+
+                    <h3 data-lang-key="multiple-returns">Returning Multiple Values</h3>
+                    <pre><code class="language-python">def calculate_stats(numbers):
+    total = sum(numbers)
+    average = total / len(numbers)
+    maximum = max(numbers)
+    minimum = min(numbers)
+    return total, average, maximum, minimum
+
+# Unpack returned values
+numbers = [10, 20, 30, 40, 50]
+sum_val, avg_val, max_val, min_val = calculate_stats(numbers)
+
+print(f"Sum: {sum_val}")        # Sum: 150
+print(f"Average: {avg_val}")    # Average: 30.0
+print(f"Maximum: {max_val}")    # Maximum: 50
+print(f"Minimum: {min_val}")    # Minimum: 10</code></pre>
+
+                    <h3 data-lang-key="early-return">Early Return (Guard Clauses)</h3>
+                    <pre><code class="language-python">def divide(a, b):
+    # Guard clause: check for invalid input
+    if b == 0:
+        return "Error: Cannot divide by zero"
+    
+    # Normal execution
+    return a / b
+
+print(divide(10, 2))   # Output: 5.0
+print(divide(10, 0))   # Output: Error: Cannot divide by zero
+
+
+def get_grade(score):
+    # Multiple early returns
+    if score >= 90:
+        return "A"
+    if score >= 80:
+        return "B"
+    if score >= 70:
+        return "C"
+    if score >= 60:
+        return "D"
+    return "F"
+
+print(get_grade(85))   # Output: B</code></pre>
+                </div>
+
+                <div class="tip-box">
+                    <h4 data-lang-key="return-vs-print">💡 Return vs Print</h4>
+                    <pre><code class="language-python"># print() displays output but returns nothing
+def greet_print(name):
+    print(f"Hello, {name}!")
+
+result1 = greet_print("Alice")  # Displays: Hello, Alice!
+print(result1)                  # Output: None
+
+
+# return sends value back
+def greet_return(name):
+    return f"Hello, {name}!"
+
+result2 = greet_return("Bob")
+print(result2)                  # Output: Hello, Bob!
+
+# You can use the returned value multiple times
+message = greet_return("Charlie")
+print(message)
+print(message.upper())
+print(len(message))</code></pre>
+                </div>
+            </section>
+
+            <!-- Section 5: Variable Scope -->
+            <section id="scope" class="lesson-section">
+                <div class="section-icon">🌐</div>
+                <h2 data-lang-key="section5-title-lesson5">5. Variable Scope</h2>
+                
+                <div class="content-block">
+                    <p data-lang-key="scope-intro">
+                        <strong>Scope</strong> determines where a variable can be accessed. Python has two main scopes:
+                        <strong>local</strong> (inside functions) and <strong>global</strong> (outside functions).
+                    </p>
+                    
+                    <h3 data-lang-key="local-scope">Local Scope</h3>
+                    <pre><code class="language-python">def my_function():
+    x = 10  # Local variable (only exists inside function)
+    print(f"Inside function: x = {x}")
+
+my_function()
+# Output: Inside function: x = 10
+
+# print(x)  # ❌ Error! x doesn't exist outside function</code></pre>
+
+                    <h3 data-lang-key="global-scope">Global Scope</h3>
+                    <pre><code class="language-python">y = 20  # Global variable (exists everywhere)
+
+def my_function():
+    print(f"Inside function: y = {y}")  # Can read global
+
+my_function()
+# Output: Inside function: y = 20
+
+print(f"Outside function: y = {y}")
+# Output: Outside function: y = 20</code></pre>
+
+                    <h3 data-lang-key="scope-rules">Scope Rules</h3>
+                    <pre><code class="language-python"># Example 1: Local variable shadows global
+x = 100  # Global
+
+def example1():
+    x = 10  # Local (different from global x)
+    print(f"Inside: x = {x}")
+
+example1()          # Output: Inside: x = 10
+print(f"Outside: x = {x}")  # Output: Outside: x = 100
+
+
+# Example 2: Modifying global variable
+count = 0  # Global
+
+def increment():
+    global count  # Declare we want to modify global
+    count += 1
+    print(f"Count: {count}")
+
+increment()  # Output: Count: 1
+increment()  # Output: Count: 2
+print(f"Final count: {count}")  # Output: Final count: 2
+
+
+# Example 3: Best practice - use parameters and return
+def add_one(value):
+    return value + 1  # Don't modify global, return new value
+
+number = 10
+number = add_one(number)  # Reassign returned value
+print(number)  # Output: 11</code></pre>
+                </div>
+
+                <div class="warning-box">
+                    <h4 data-lang-key="scope-best-practices">⚠️ Best Practices</h4>
+                    <ul>
+                        <li data-lang-key="scope-tip1">✅ Prefer local variables and parameters</li>
+                        <li data-lang-key="scope-tip2">✅ Return values instead of modifying globals</li>
+                        <li data-lang-key="scope-tip3">⚠️ Avoid using <code>global</code> keyword unless necessary</li>
+                        <li data-lang-key="scope-tip4">✅ Use descriptive variable names to avoid confusion</li>
+                    </ul>
+                </div>
+            </section>
+
+            <!-- Section 7: Practice Exercises -->
+            <section id="exercises" class="lesson-section">
+                <div class="section-icon">💪</div>
+                <h2 data-lang-key="section7-title-lesson5">7. Practice Exercises</h2>
+                
+                <div class="exercise-box">
+                    <h4 data-lang-key="exercise1-title">Exercise 1: Temperature Converter</h4>
+                    <p data-lang-key="exercise1-desc">
+                        Create a function that converts Celsius to Fahrenheit.
+                        Formula: F = (C × 9/5) + 32
+                    </p>
+                    <pre><code class="language-python"># Your code here
+def celsius_to_fahrenheit(celsius):
+    # Write your code here
+    pass
+
+# Test your function
+print(celsius_to_fahrenheit(0))    # Should output: 32.0
+print(celsius_to_fahrenheit(100))  # Should output: 212.0
+print(celsius_to_fahrenheit(37))   # Should output: 98.6</code></pre>
+                    
+                    <details>
+                        <summary data-lang-key="show-solution">💡 Show Solution</summary>
+                        <pre><code class="language-python">def celsius_to_fahrenheit(celsius):
+    """Convert Celsius to Fahrenheit"""
+    fahrenheit = (celsius * 9/5) + 32
+    return fahrenheit
+
+print(celsius_to_fahrenheit(0))    # Output: 32.0
+print(celsius_to_fahrenheit(100))  # Output: 212.0
+print(celsius_to_fahrenheit(37))   # Output: 98.6</code></pre>
+                    </details>
+                </div>
+
+                <div class="exercise-box">
+                    <h4 data-lang-key="exercise2-title">Exercise 2: Grade Calculator</h4>
+                    <p data-lang-key="exercise2-desc">
+                        Create a function that takes a score (0-100) and returns a letter grade:
+                        A: 90-100, B: 80-89, C: 70-79, D: 60-69, F: below 60
+                    </p>
+                    <pre><code class="language-python"># Your code here
+def get_letter_grade(score):
+    # Write your code here
+    pass
+
+# Test your function
+print(get_letter_grade(95))   # Should output: A
+print(get_letter_grade(83))   # Should output: B
+print(get_letter_grade(58))   # Should output: F</code></pre>
+                    
+                    <details>
+                        <summary data-lang-key="show-solution">💡 Show Solution</summary>
+                        <pre><code class="language-python">def get_letter_grade(score):
+    """Return letter grade based on score"""
+    if score >= 90:
+        return "A"
+    elif score >= 80:
+        return "B"
+    elif score >= 70:
+        return "C"
+    elif score >= 60:
+        return "D"
+    else:
+        return "F"
+
+print(get_letter_grade(95))   # Output: A
+print(get_letter_grade(83))   # Output: B
+print(get_letter_grade(58))   # Output: F</code></pre>
+                    </details>
+                </div>
+
+                <div class="exercise-box">
+                    <h4 data-lang-key="exercise3-title">Exercise 3: List Statistics</h4>
+                    <p data-lang-key="exercise3-desc">
+                        Create a function that takes a list of numbers and returns the sum, average, 
+                        maximum, and minimum values.
+                    </p>
+                    <pre><code class="language-python"># Your code here
+def calculate_statistics(numbers):
+    # Write your code here
+    pass
+
+# Test your function
+nums = [10, 20, 30, 40, 50]
+stats = calculate_statistics(nums)
+print(stats)  # Should output: (150, 30.0, 50, 10)</code></pre>
+                    
+                    <details>
+                        <summary data-lang-key="show-solution">💡 Show Solution</summary>
+                        <pre><code class="language-python">def calculate_statistics(numbers):
+    """Calculate sum, average, max, and min of a list"""
+    total = sum(numbers)
+    average = total / len(numbers)
+    maximum = max(numbers)
+    minimum = min(numbers)
+    return total, average, maximum, minimum
+
+nums = [10, 20, 30, 40, 50]
+total, avg, max_val, min_val = calculate_statistics(nums)
+print(f"Sum: {total}")        # Sum: 150
+print(f"Average: {avg}")      # Average: 30.0
+print(f"Maximum: {max_val}")  # Maximum: 50
+print(f"Minimum: {min_val}")  # Minimum: 10</code></pre>
+                    </details>
+                </div>
+
+                <div class="exercise-box">
+                    <h4 data-lang-key="exercise4-title">Exercise 4: Password Validator</h4>
+                    <p data-lang-key="exercise4-desc">
+                        Create a function that checks if a password is valid. A valid password must:
+                        - Be at least 8 characters long
+                        - Contain at least one digit
+                        - Contain at least one uppercase letter
+                    </p>
+                    <pre><code class="language-python"># Your code here
+def is_valid_password(password):
+    # Write your code here
+    pass
+
+# Test your function
+print(is_valid_password("Abc12345"))  # Should output: True
+print(is_valid_password("short"))     # Should output: False
+print(is_valid_password("NoNumbers")) # Should output: False</code></pre>
+                    
+                    <details>
+                        <summary data-lang-key="show-solution">💡 Show Solution</summary>
+                        <pre><code class="language-python">def is_valid_password(password):
+    """Check if password meets requirements"""
+    # Check length
+    if len(password) < 8:
+        return False
+    
+    # Check for digit
+    has_digit = False
+    for char in password:
+        if char.isdigit():
+            has_digit = True
+            break
+    
+    if not has_digit:
+        return False
+    
+    # Check for uppercase
+    has_upper = False
+    for char in password:
+        if char.isupper():
+            has_upper = True
+            break
+    
+    if not has_upper:
+        return False
+    
+    return True
+
+print(is_valid_password("Abc12345"))  # True
+print(is_valid_password("short"))     # False
+print(is_valid_password("NoNumbers")) # False</code></pre>
+                    </details>
+                </div>
+
+                <div class="exercise-box">
+                    <h4 data-lang-key="exercise5-title">Exercise 5: Factorial Function</h4>
+                    <p data-lang-key="exercise5-desc">
+                        Create a function that calculates the factorial of a number.
+                        Example: factorial(5) = 5 × 4 × 3 × 2 × 1 = 120
+                    </p>
+                    <pre><code class="language-python"># Your code here (try both iterative and recursive approaches)
+def factorial_iterative(n):
+    # Write your code here
+    pass
+
+def factorial_recursive(n):
+    # Write your code here
+    pass
+
+# Test your functions
+print(factorial_iterative(5))   # Should output: 120
+print(factorial_recursive(5))   # Should output: 120</code></pre>
+                    
+                    <details>
+                        <summary data-lang-key="show-solution">💡 Show Solution</summary>
+                        <pre><code class="language-python"># Iterative approach
+def factorial_iterative(n):
+    """Calculate factorial using a loop"""
+    result = 1
+    for i in range(1, n + 1):
+        result *= i
+    return result
+
+# Recursive approach
+def factorial_recursive(n):
+    """Calculate factorial using recursion"""
+    if n == 0 or n == 1:
+        return 1
+    else:
+        return n * factorial_recursive(n - 1)
+
+print(factorial_iterative(5))   # Output: 120
+print(factorial_recursive(5))   # Output: 120
+print(factorial_iterative(0))   # Output: 1
+print(factorial_recursive(7))   # Output: 5040</code></pre>
+                    </details>
+                </div>
+
+                <div class="exercise-box">
+                    <h4 data-lang-key="exercise6-title">Exercise 6: List Filter</h4>
+                    <p data-lang-key="exercise6-desc">
+                        Create a function that filters a list based on a condition. The function should 
+                        take a list and return only the even numbers.
+                    </p>
+                    <pre><code class="language-python"># Your code here
+def get_even_numbers(numbers):
+    # Write your code here
+    pass
+
+# Test your function
+nums = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10]
+print(get_even_numbers(nums))  # Should output: [2, 4, 6, 8, 10]</code></pre>
+                    
+                    <details>
+                        <summary data-lang-key="show-solution">💡 Show Solution</summary>
+                        <pre><code class="language-python">def get_even_numbers(numbers):
+    """Return only even numbers from list"""
+    even_nums = []
+    for num in numbers:
+        if num % 2 == 0:
+            even_nums.append(num)
+    return even_nums
+
+# Alternative: using list comprehension
+def get_even_numbers_v2(numbers):
+    return [num for num in numbers if num % 2 == 0]
+
+nums = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10]
+print(get_even_numbers(nums))     # [2, 4, 6, 8, 10]
+print(get_even_numbers_v2(nums))  # [2, 4, 6, 8, 10]</code></pre>
+                    </details>
+                </div>
+
+                <div class="challenge-box">
+                    <h4 data-lang-key="challenge-title">🏆 Challenge: Prime Number Checker</h4>
+                    <p data-lang-key="challenge-desc">
+                        Create a function that checks if a number is prime. A prime number is only 
+                        divisible by 1 and itself. Then, create another function that finds all prime 
+                        numbers up to a given limit.
+                    </p>
+                    <pre><code class="language-python"># Your code here
+def is_prime(n):
+    # Write your code here
+    pass
+
+def get_primes_up_to(limit):
+    # Write your code here
+    pass
+
+# Test your functions
+print(is_prime(7))           # Should output: True
+print(is_prime(10))          # Should output: False
+print(get_primes_up_to(20))  # Should output: [2, 3, 5, 7, 11, 13, 17, 19]</code></pre>
+                    
+                    <details>
+                        <summary data-lang-key="show-solution">💡 Show Solution</summary>
+                        <pre><code class="language-python">def is_prime(n):
+    """Check if a number is prime"""
+    if n < 2:
+        return False
+    
+    # Check divisibility from 2 to square root of n
+    for i in range(2, int(n ** 0.5) + 1):
+        if n % i == 0:
+            return False
+    
+    return True
+
+def get_primes_up_to(limit):
+    """Find all prime numbers up to limit"""
+    primes = []
+    for num in range(2, limit + 1):
+        if is_prime(num):
+            primes.append(num)
+    return primes
+
+print(is_prime(7))           # True
+print(is_prime(10))          # False
+print(is_prime(17))          # True
+print(get_primes_up_to(20))  # [2, 3, 5, 7, 11, 13, 17, 19]
+print(get_primes_up_to(50))  # [2, 3, 5, 7, 11, 13, 17, 19, 23, 29, 31, 37, 41, 43, 47]</code></pre>
+                    </details>
+                </div>
+            </section>
+
+            <!-- Navigation -->
+            <div class="lesson-navigation">
+                <a href="lesson4.html" class="nav-button prev">
+                    <i class="fas fa-arrow-left"></i>
+                    <span data-lang-key="prev-lesson">Previous: Lesson 4 - Loops</span>
+                </a>
+                <a href="#" class="nav-button next disabled">
+                    <span data-lang-key="next-lesson">Next: Coming Soon</span>
+                    <i class="fas fa-arrow-right"></i>
+                </a>
+            </div>
+        </div>
+    </main>
+
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <h4>Liên hệ</h4>
+                <div class="contact-info-compact">
+                    <div class="contact-item">
+                        <i class="fas fa-map-marker-alt"></i>
+                        <span>136 Nguyễn Mậu Tài, Hòa Xuân, Cẩm Lệ, Đà Nẵng</span>
+                    </div>
+                    <div class="contact-item">
+                        <i class="fas fa-phone"></i>
+                        <span>090 198 05 69</span>
+                    </div>
+                    <div class="contact-item">
+                        <i class="fas fa-envelope"></i>
+                        <span>innomindskills@gmail.com</span>
+                    </div>
+                    <div class="contact-item">
+                        <i class="fab fa-facebook"></i>
+                        <a href="https://www.facebook.com/hocvienkynangthehemoiinnomind" target="_blank">
+                            Facebook
+                        </a>
+                    </div>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p data-lang-key="footer-copyright">&copy; 2025 Code Up Your Brain. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- JavaScript -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/prism.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/components/prism-python.min.js"></script>
+    <!-- Modular translations -->
+    <script src="../assets/js/translations-common.js"></script>
+    <script src="../assets/js/translations-lesson5.js"></script>
+    <script src="../assets/js/translations-loader.js"></script>
+    <script src="../assets/js/script.js"></script>
+</body>
+</html>
