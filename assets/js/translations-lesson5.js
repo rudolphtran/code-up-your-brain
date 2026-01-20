@@ -98,7 +98,68 @@ const lesson5Translations = {
         
         // Điều hướng
         "prev-lesson": "Trước: Bài 4 - Vòng lặp",
-        "next-lesson": "Tiếp: Sắp ra mắt"
+        "next-lesson": "Tiếp: Sắp ra mắt",
+        
+        // Homework 5 translations
+        "homework5-title": "Bài tập 5: Functions Practice - Code Up Your Brain",
+        "homework5-meta": "Luyện tập về hàm với 15 bài tập từ cơ bản đến nâng cao",
+        "homework5-main-title": "Functions Practice",
+        "homework5-subtitle": "15 bài tập thực hành để làm chủ hàm, tham số và giá trị trả về",
+        "homework-label": "Bài tập",
+        "breadcrumb-homework": "Bài tập",
+        "instructions-title": "📋 Hướng dẫn",
+        "instruction1-title": "Code bằng Python",
+        "instruction1-desc": "Viết tất cả các giải pháp bằng Python 3.x",
+        "instruction2-title": "Kiểm tra Code",
+        "instruction2-desc": "Test với nhiều đầu vào khác nhau",
+        "instruction3-title": "Thêm Comment",
+        "instruction3-desc": "Giải thích logic và cách tiếp cận",
+        "instruction4-title": "Quản lý Thời gian",
+        "instruction4-desc": "Dành 5-10 phút cho mỗi bài",
+        "progress-title": "📊 Tiến Độ Của Bạn",
+        
+        // Homework 5 Exercise Titles
+        "hw5-ex1-title": "Tính Tổng Hai Số",
+        "hw5-ex2-title": "Tìm Số Lớn Nhất",
+        "hw5-ex3-title": "Kiểm Tra Số Chẵn",
+        "hw5-ex4-title": "Tính Giai Thừa",
+        "hw5-ex5-title": "Đảo Ngược Chuỗi",
+        "hw5-ex6-title": "Đếm Ký Tự",
+        "hw5-ex7-title": "Diện Tích HCN",
+        "hw5-ex8-title": "Kiểm Tra Năm Nhuận",
+        "hw5-ex9-title": "Tổng Danh Sách",
+        "hw5-ex10-title": "Tìm Giá Trị Nhỏ Nhất",
+        "hw5-ex11-title": "Chuyển F sang C",
+        "hw5-ex12-title": "Kiểm Tra Số",
+        "hw5-ex13-title": "Tính Lũy Thừa",
+        "hw5-ex14-title": "Đếm Chữ Số",
+        "hw5-ex15-title": "Kiểm Tra Palindrome",
+        
+        // Common labels for homework5
+        "hw5-difficulty-easy": "Dễ",
+        "hw5-time-5-10": "⏱️ 5-10 phút",
+        "hw5-btn-mark": "Đánh dấu hoàn thành",
+        "hw5-btn-completed": "Hoàn thành",
+        "hw5-problem-label": "Bài toán:",
+        "hw5-example-label": "Ví dụ Input/Output:",
+        "hw5-nav-back": "Quay lại: Bài 5 - Functions",
+        
+        // Exercise descriptions
+        "hw5-ex1-desc": "Viết hàm <code>tinh_tong(a, b)</code> nhận vào hai số và trả về tổng của chúng.",
+        "hw5-ex2-desc": "Viết hàm <code>tim_max(a, b, c)</code> nhận vào ba số và trả về số lớn nhất.",
+        "hw5-ex3-desc": "Viết hàm <code>la_so_chan(n)</code> kiểm tra số n có chẵn không. Trả về True/False.",
+        "hw5-ex4-desc": "Viết hàm <code>giai_thua(n)</code> tính n! = n × (n-1) × ... × 1.",
+        "hw5-ex5-desc": "Viết hàm <code>dao_nguoc(chuoi)</code> trả về chuỗi đảo ngược.",
+        "hw5-ex6-desc": "Viết hàm <code>dem_ky_tu(chuoi)</code> trả về số lượng ký tự trong chuỗi.",
+        "hw5-ex7-desc": "Viết hàm <code>dien_tich_hcn(dai, rong)</code> tính diện tích hình chữ nhật.",
+        "hw5-ex8-desc": "Viết hàm <code>la_nam_nhuan(nam)</code> kiểm tra năm nhuận. Chia hết cho 4 nhưng không chia hết cho 100, hoặc chia hết cho 400.",
+        "hw5-ex9-desc": "Viết hàm <code>tong_list(danh_sach)</code> tính tổng các số trong danh sách.",
+        "hw5-ex10-desc": "Viết hàm <code>tim_min(danh_sach)</code> tìm số nhỏ nhất trong danh sách.",
+        "hw5-ex11-desc": "Viết hàm <code>fahrenheit_sang_celsius(f)</code> chuyển độ F sang C. Công thức: C = (F - 32) × 5/9",
+        "hw5-ex12-desc": "Viết hàm <code>kiem_tra_so(n)</code> trả về \"Dương\" nếu n > 0, \"Âm\" nếu n < 0, \"Không\" nếu n = 0.",
+        "hw5-ex13-desc": "Viết hàm <code>luy_thua(co_so, so_mu)</code> tính lũy thừa (co_so ^ so_mu).",
+        "hw5-ex14-desc": "Viết hàm <code>dem_chu_so(n)</code> đếm số lượng chữ số trong số nguyên n.",
+        "hw5-ex15-desc": "Viết hàm <code>la_palindrome(chuoi)</code> kiểm tra chuỗi có đọc xuôi ngược giống nhau không."
     },
     en: {
         // Meta and Title
@@ -198,7 +259,68 @@ const lesson5Translations = {
         
         // Navigation
         "prev-lesson": "Previous: Lesson 4 - Loops",
-        "next-lesson": "Next: Coming Soon"
+        "next-lesson": "Next: Coming Soon",
+        
+        // Homework 5 translations
+        "homework5-title": "Homework 5: Functions Practice - Code Up Your Brain",
+        "homework5-meta": "Practice functions with 15 exercises from basic to advanced",
+        "homework5-main-title": "Functions Practice",
+        "homework5-subtitle": "15 hands-on exercises to master functions, parameters, and return values",
+        "homework-label": "Homework",
+        "breadcrumb-homework": "Homework",
+        "instructions-title": "📋 Instructions",
+        "instruction1-title": "Code in Python",
+        "instruction1-desc": "Write all solutions in Python 3.x",
+        "instruction2-title": "Test Your Code",
+        "instruction2-desc": "Test with multiple different inputs",
+        "instruction3-title": "Add Comments",
+        "instruction3-desc": "Explain logic and approach",
+        "instruction4-title": "Time Management",
+        "instruction4-desc": "Spend 5-10 minutes per exercise",
+        "progress-title": "📊 Your Progress",
+        
+        // Homework 5 Exercise Titles
+        "hw5-ex1-title": "Sum Two Numbers",
+        "hw5-ex2-title": "Find Maximum Number",
+        "hw5-ex3-title": "Check Even Number",
+        "hw5-ex4-title": "Calculate Factorial",
+        "hw5-ex5-title": "Reverse String",
+        "hw5-ex6-title": "Count Characters",
+        "hw5-ex7-title": "Rectangle Area",
+        "hw5-ex8-title": "Check Leap Year",
+        "hw5-ex9-title": "List Sum",
+        "hw5-ex10-title": "Find Minimum Value",
+        "hw5-ex11-title": "Fahrenheit to Celsius",
+        "hw5-ex12-title": "Check Number Sign",
+        "hw5-ex13-title": "Calculate Power",
+        "hw5-ex14-title": "Count Digits",
+        "hw5-ex15-title": "Check Palindrome",
+        
+        // Common labels for homework5
+        "hw5-difficulty-easy": "Easy",
+        "hw5-time-5-10": "⏱️ 5-10 minutes",
+        "hw5-btn-mark": "Mark as complete",
+        "hw5-btn-completed": "Completed",
+        "hw5-problem-label": "Problem:",
+        "hw5-example-label": "Sample Input/Output:",
+        "hw5-nav-back": "Back to: Lesson 5 - Functions",
+        
+        // Exercise descriptions
+        "hw5-ex1-desc": "Write a function <code>tinh_tong(a, b)</code> that takes two numbers and returns their sum.",
+        "hw5-ex2-desc": "Write a function <code>tim_max(a, b, c)</code> that takes three numbers and returns the largest one.",
+        "hw5-ex3-desc": "Write a function <code>la_so_chan(n)</code> that checks if number n is even. Returns True/False.",
+        "hw5-ex4-desc": "Write a function <code>giai_thua(n)</code> that calculates n! = n × (n-1) × ... × 1.",
+        "hw5-ex5-desc": "Write a function <code>dao_nguoc(chuoi)</code> that returns the reversed string.",
+        "hw5-ex6-desc": "Write a function <code>dem_ky_tu(chuoi)</code> that returns the number of characters in the string.",
+        "hw5-ex7-desc": "Write a function <code>dien_tich_hcn(dai, rong)</code> that calculates the area of a rectangle.",
+        "hw5-ex8-desc": "Write a function <code>la_nam_nhuan(nam)</code> that checks if a year is a leap year. Divisible by 4 but not by 100, or divisible by 400.",
+        "hw5-ex9-desc": "Write a function <code>tong_list(danh_sach)</code> that calculates the sum of numbers in a list.",
+        "hw5-ex10-desc": "Write a function <code>tim_min(danh_sach)</code> that finds the smallest number in a list.",
+        "hw5-ex11-desc": "Write a function <code>fahrenheit_sang_celsius(f)</code> that converts Fahrenheit to Celsius. Formula: C = (F - 32) × 5/9",
+        "hw5-ex12-desc": "Write a function <code>kiem_tra_so(n)</code> that returns \"Positive\" if n > 0, \"Negative\" if n < 0, \"Zero\" if n = 0.",
+        "hw5-ex13-desc": "Write a function <code>luy_thua(co_so, so_mu)</code> that calculates power (base ^ exponent).",
+        "hw5-ex14-desc": "Write a function <code>dem_chu_so(n)</code> that counts the number of digits in integer n.",
+        "hw5-ex15-desc": "Write a function <code>la_palindrome(chuoi)</code> that checks if a string reads the same forwards and backwards."
     }
 };
 
