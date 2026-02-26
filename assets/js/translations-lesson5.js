@@ -98,7 +98,7 @@ const lesson5Translations = {
         
         // Điều hướng
         "prev-lesson": "Trước: Bài 4 - Vòng lặp",
-        "next-lesson": "Tiếp: Sắp ra mắt",
+        "next-lesson": "Tiếp: Bài 6 - Mảng (Arrays)",
         
         // Homework 5 translations
         "homework5-title": "Bài tập 5: Functions Practice - Code Up Your Brain",
@@ -259,7 +259,7 @@ const lesson5Translations = {
         
         // Navigation
         "prev-lesson": "Previous: Lesson 4 - Loops",
-        "next-lesson": "Next: Coming Soon",
+        "next-lesson": "Next: Lesson 6 - Arrays",
         
         // Homework 5 translations
         "homework5-title": "Homework 5: Functions Practice - Code Up Your Brain",

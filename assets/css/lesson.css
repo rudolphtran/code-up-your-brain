@@ -1823,6 +1823,65 @@ kbd {
     border: 1px solid #90caf9;
 }
 
+.content-block,
+.tip-box,
+.warning-box,
+.syntax-box,
+.exercise-box,
+.challenge-box {
+    background: #ffffff;
+    border: 1px solid #e9ecef;
+    border-radius: 10px;
+    padding: 1.25rem;
+    margin: 0.8rem 0;
+}
+
+.content-block {
+    box-shadow: var(--shadow-light);
+}
+
+.tip-box {
+    background: #f0f9ff;
+    border-left: 4px solid #0ea5e9;
+}
+
+.warning-box {
+    background: #fff7ed;
+    border-left: 4px solid #f59e0b;
+}
+
+.syntax-box {
+    background: #f8fafc;
+    border-left: 4px solid var(--primary-color);
+}
+
+.exercise-box {
+    border-left: 4px solid #22c55e;
+}
+
+.challenge-box {
+    border-left: 4px solid #8b5cf6;
+    background: #faf5ff;
+}
+
+.comparison-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 1rem;
+}
+
+.comparison-column {
+    background: rgba(255, 255, 255, 0.85);
+    border: 1px solid #dbeafe;
+    border-radius: 8px;
+    padding: 0.9rem;
+}
+
+.comparison-column h5 {
+    margin-bottom: 0.6rem;
+    font-weight: 600;
+}
+
 .calculation-steps {
     margin-top: 1rem;
     display: flex;
