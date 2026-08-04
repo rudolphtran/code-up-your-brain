@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="color-scheme" content="light only">
     <title data-lang-key="lesson6-title">Lesson 6: Arrays - Code Up Your Brain</title>
-    <meta name="description" data-lang-key="lesson6-meta" content="Học mảng một chiều trong Python: khai báo, duyệt, tìm kiếm, cập nhật và các bài tập thực hành.">
+    <meta name="description" data-lang-key="lesson6-meta" content="Học mảng một chiều trong Python: khai báo, duyệt, tìm kiếm, cập nhật, làm quen với chuỗi (string) và các bài tập thực hành.">
 
     <link rel="stylesheet" href="../assets/css/styles.css">
     <link rel="stylesheet" href="../assets/css/lesson.css">
@@ -69,7 +69,7 @@
                 </div>
                 <h1 data-lang-key="lesson6-main-title">Arrays</h1>
                 <p class="lesson-subtitle" data-lang-key="lesson6-subtitle">
-                    Làm chủ mảng một chiều trong Python: khai báo, duyệt, cập nhật và xử lý dữ liệu hiệu quả
+                    Làm chủ mảng một chiều trong Python: khai báo, duyệt, cập nhật, xử lý dữ liệu hiệu quả và làm quen với chuỗi (string)
                 </p>
             </div>
 
@@ -81,7 +81,8 @@
                     <li><a href="#traversal" data-lang-key="toc-traversal">3. Duyệt mảng và tính toán</a></li>
                     <li><a href="#update" data-lang-key="toc-update">4. Cập nhật mảng</a></li>
                     <li><a href="#search" data-lang-key="toc-search">5. Tìm kiếm và thống kê</a></li>
-                    <li><a href="#exercises" data-lang-key="toc-exercises">6. Practice Exercises</a></li>
+                    <li><a href="#strings" data-lang-key="toc-strings">6. String - Chuỗi và mảng ký tự</a></li>
+                    <li><a href="#exercises" data-lang-key="toc-exercises">7. Practice Exercises</a></li>
                 </ul>
             </div>
 
@@ -234,9 +235,69 @@ print("Vi tri diem 9 dau tien:", idx)  # 1</code></pre>
                 </div>
             </section>
 
+            <section id="strings" class="lesson-section">
+                <div class="section-icon">🔤</div>
+                <h2 data-lang-key="section6-title-lesson6">6. String - Chuỗi và mảng ký tự</h2>
+                <div class="content-block">
+                    <p data-lang-key="section6-intro-lesson6">
+                        Chuỗi (<code>string</code>) trong Python cũng là một dạng dãy phần tử giống mảng, chỉ khác là mỗi phần tử
+                        là một ký tự. Ta có thể truy cập theo chỉ số, cắt (slicing) và duyệt qua từng ký tự y hệt cách làm với mảng.
+                    </p>
+                </div>
+
+                <div class="example-box">
+                    <h4 data-lang-key="string-example-index">Ví dụ: Truy cập và duyệt chuỗi như mảng</h4>
+                    <pre><code class="language-python">word = "Python"
+print(word[0])      # P
+print(word[-1])     # n
+print(word[1:4])    # yth (cat tu chi so 1 den 3)
+
+for ch in word:
+    print(ch)</code></pre>
+                </div>
+
+                <div class="content-block">
+                    <h3 data-lang-key="string-list-title">Chuyển đổi giữa String và List</h3>
+                    <p data-lang-key="string-list-intro">
+                        Khác với mảng (list), string trong Python là kiểu bất biến (immutable) - không thể thay đổi trực tiếp
+                        từng ký tự. Muốn chỉnh sửa, ta chuyển string thành list ký tự, xử lý rồi ghép lại bằng <code>join()</code>.
+                    </p>
+                </div>
+
+                <div class="example-box">
+                    <h4 data-lang-key="string-list-example">Ví dụ: list(string) và join()</h4>
+                    <pre><code class="language-python">name = "python"
+chars = list(name)        # ['p', 'y', 't', 'h', 'o', 'n']
+chars[0] = 'P'
+new_name = "".join(chars)
+
+print(new_name)           # Python</code></pre>
+                </div>
+
+                <div class="tip-box">
+                    <h4 data-lang-key="string-note-title">💡 Lưu ý</h4>
+                    <p data-lang-key="string-note-content">
+                        Viết <code>word[0] = 'x'</code> sẽ gây lỗi <code>TypeError</code> vì string không hỗ trợ gán trực tiếp
+                        theo chỉ số như list.
+                    </p>
+                </div>
+
+                <div class="example-box">
+                    <h4 data-lang-key="string-methods-example">Một số hàm xử lý chuỗi thường dùng</h4>
+                    <pre><code class="language-python">s = "  Hello World  "
+
+print(len(s))                     # 15
+print(s.strip())                  # "Hello World"
+print(s.lower())                  # "  hello world  "
+print(s.split())                  # ['Hello', 'World']
+print("-".join(["a", "b", "c"]))  # "a-b-c"
+print(s.count("l"))               # 3</code></pre>
+                </div>
+            </section>
+
             <section id="exercises" class="lesson-section">
                 <div class="section-icon">💪</div>
-                <h2 data-lang-key="section6-title-lesson6">6. Practice Exercises</h2>
+                <h2 data-lang-key="section7-title-lesson6">7. Practice Exercises</h2>
 
                 <div class="exercise-box">
                     <h4 data-lang-key="lesson6-ex1-title">Bài tập 1: Tính tổng mảng</h4>
@@ -280,6 +341,25 @@ for value in arr:
         even_arr.append(value)
 
 print(even_arr)  # [2, 4, 6, 8]</code></pre>
+                    </details>
+                </div>
+
+                <div class="exercise-box">
+                    <h4 data-lang-key="lesson6-ex4-title">Bài tập 4: Đếm nguyên âm trong chuỗi</h4>
+                    <p data-lang-key="lesson6-ex4-desc">Viết chương trình đếm số nguyên âm (a, e, i, o, u - không phân biệt hoa/thường) trong một chuỗi.</p>
+                    <pre><code class="language-python">text = "Hello World"
+# TODO: dem so nguyen am trong text</code></pre>
+                    <details>
+                        <summary data-lang-key="show-solution">💡 Show Solution</summary>
+                        <pre><code class="language-python">text = "Hello World"
+vowels = "aeiouAEIOU"
+count = 0
+
+for ch in text:
+    if ch in vowels:
+        count += 1
+
+print(count)  # 3</code></pre>
                     </details>
                 </div>
 
