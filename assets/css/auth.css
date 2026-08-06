@@ -386,29 +386,6 @@
     }
 }
 
-/* Dark mode support */
-@media (prefers-color-scheme: dark) {
-    .auth-modal-content {
-        background: #2d3748;
-        color: #e2e8f0;
-    }
-    
-    .form-input {
-        background: #4a5568;
-        border-color: #718096;
-        color: #e2e8f0;
-    }
-    
-    .form-input:focus {
-        background: #2d3748;
-        border-color: var(--primary-color);
-    }
-    
-    .auth-footer {
-        border-color: #4a5568;
-    }
-}
-
 /* Animation for protected content reveal */
 @keyframes contentReveal {
     from {

@@ -4,8 +4,8 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="color-scheme" content="light only">
-    <title data-lang-key="homework6-title">Bài tập 6: Arrays Practice - Code Up Your Brain</title>
-    <meta name="description" data-lang-key="homework6-meta" content="Luyện tập mảng một chiều với 15 bài tập mức độ dễ.">
+    <title data-lang-key="homework6-title">Bài tập 6: Arrays & Strings Practice - Code Up Your Brain</title>
+    <meta name="description" data-lang-key="homework6-meta" content="Luyện tập mảng một chiều và chuỗi với 21 bài tập từ dễ đến khó.">
     <link rel="stylesheet" href="../assets/css/styles.css">
     <link rel="stylesheet" href="../assets/css/lesson.css">
     <link rel="stylesheet" href="../assets/css/auth.css">
@@ -66,9 +66,9 @@
                 <div class="lesson-number">
                     <span data-lang-key="homework-label">Bài tập</span> 6
                 </div>
-                <h1 data-lang-key="homework6-main-title">Arrays Practice</h1>
+                <h1 data-lang-key="homework6-main-title">Arrays & Strings Practice</h1>
                 <p class="lesson-subtitle" data-lang-key="homework6-subtitle">
-                    15 bài tập mức độ dễ để củng cố xử lý mảng một chiều
+                    21 bài tập từ dễ đến khó để củng cố xử lý mảng một chiều và chuỗi
                 </p>
             </div>
 
@@ -103,7 +103,7 @@
                 <div class="progress-stats">
                     <div class="progress-stat total">
                         <span class="stat-number" id="totalCompleted">0</span>
-                        <span class="stat-label" data-lang-key="homework6-progress-label">Hoàn thành (15)</span>
+                        <span class="stat-label" data-lang-key="homework6-progress-label">Hoàn thành (21)</span>
                     </div>
                 </div>
                 <div class="progress-bar">
@@ -114,8 +114,8 @@
             <section class="difficulty-section">
                 <div class="section-header easy">
                     <div class="difficulty-badge" data-lang-key="homework6-easy-badge">🟢 DỄ</div>
-                    <h2 data-lang-key="homework6-easy-title">Bài tập Dễ (1-15)</h2>
-                    <p data-lang-key="homework6-easy-desc">Tập trung vào duyệt mảng, tìm kiếm và thống kê cơ bản</p>
+                    <h2 data-lang-key="homework6-easy-title">Bài tập Dễ (1-17)</h2>
+                    <p data-lang-key="homework6-easy-desc">Tập trung vào duyệt mảng, tìm kiếm, thống kê cơ bản và làm quen với chuỗi</p>
                 </div>
 
                 <div class="exercise-card easy" data-exercise="1">
@@ -492,6 +492,172 @@ print(dich_trai_1([]))                 # Output: []</code></pre>
                         </div>
                     </div>
                 </div>
+
+                <div class="exercise-card easy" data-exercise="16">
+                    <div class="exercise-header">
+                        <h3><span class="exercise-number">16.</span> <span data-lang-key="hw6-ex16-title">Đảo Ngược Chuỗi</span></h3>
+                        <div class="exercise-meta">
+                            <span class="difficulty" data-lang-key="hw6-difficulty-easy">Dễ</span>
+                            <span class="time" data-lang-key="hw6-time-5-10">⏱️ 5-10 phút</span>
+                            <button class="complete-btn" onclick="toggleComplete(16)">
+                                <i class="fas fa-check"></i> <span data-lang-key="hw6-btn-mark">Đánh dấu hoàn thành</span>
+                            </button>
+                        </div>
+                    </div>
+                    <div class="exercise-content">
+                        <div class="problem-statement">
+                            <h4 data-lang-key="hw6-problem-label">Bài toán:</h4>
+                            <p data-lang-key="hw6-ex16-desc">Viết hàm <code>dao_nguoc_chuoi(s)</code> trả về chuỗi s theo thứ tự ngược lại.</p>
+                        </div>
+                        <div class="sample-io">
+                            <h4 data-lang-key="hw6-example-label">Ví dụ Input/Output:</h4>
+                            <pre><code class="language-python">print(dao_nguoc_chuoi("python"))   # Output: nohtyp
+print(dao_nguoc_chuoi("ab"))       # Output: ba
+print(dao_nguoc_chuoi(""))         # Output: (chuoi rong)</code></pre>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="exercise-card easy" data-exercise="17">
+                    <div class="exercise-header">
+                        <h3><span class="exercise-number">17.</span> <span data-lang-key="hw6-ex17-title">Đếm Ký Tự Xuất Hiện</span></h3>
+                        <div class="exercise-meta">
+                            <span class="difficulty" data-lang-key="hw6-difficulty-easy">Dễ</span>
+                            <span class="time" data-lang-key="hw6-time-5-10">⏱️ 5-10 phút</span>
+                            <button class="complete-btn" onclick="toggleComplete(17)">
+                                <i class="fas fa-check"></i> <span data-lang-key="hw6-btn-mark">Đánh dấu hoàn thành</span>
+                            </button>
+                        </div>
+                    </div>
+                    <div class="exercise-content">
+                        <div class="problem-statement">
+                            <h4 data-lang-key="hw6-problem-label">Bài toán:</h4>
+                            <p data-lang-key="hw6-ex17-desc">Viết hàm <code>dem_ky_tu(s, c)</code> đếm số lần ký tự c xuất hiện trong chuỗi s.</p>
+                        </div>
+                        <div class="sample-io">
+                            <h4 data-lang-key="hw6-example-label">Ví dụ Input/Output:</h4>
+                            <pre><code class="language-python">print(dem_ky_tu("banana", "a"))   # Output: 3
+print(dem_ky_tu("hello", "z"))    # Output: 0
+print(dem_ky_tu("aaa", "a"))      # Output: 3</code></pre>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <section class="difficulty-section">
+                <div class="section-header medium">
+                    <div class="difficulty-badge" data-lang-key="homework6-medium-badge">🟡 TRUNG BÌNH</div>
+                    <h2 data-lang-key="homework6-medium-title">Bài tập Trung bình (18-19)</h2>
+                    <p data-lang-key="homework6-medium-desc">Thử thách với các bài toán chuỗi đòi hỏi tư duy logic nhiều hơn</p>
+                </div>
+
+                <div class="exercise-card medium" data-exercise="18">
+                    <div class="exercise-header">
+                        <h3><span class="exercise-number">18.</span> <span data-lang-key="hw6-ex18-title">Kiểm Tra Palindrome</span></h3>
+                        <div class="exercise-meta">
+                            <span class="difficulty" data-lang-key="hw6-difficulty-medium">Trung bình</span>
+                            <span class="time" data-lang-key="hw6-time-15-20">⏱️ 15-20 phút</span>
+                            <button class="complete-btn" onclick="toggleComplete(18)">
+                                <i class="fas fa-check"></i> <span data-lang-key="hw6-btn-mark">Đánh dấu hoàn thành</span>
+                            </button>
+                        </div>
+                    </div>
+                    <div class="exercise-content">
+                        <div class="problem-statement">
+                            <h4 data-lang-key="hw6-problem-label">Bài toán:</h4>
+                            <p data-lang-key="hw6-ex18-desc">Viết hàm <code>la_palindrome(s)</code> trả về <code>True</code> nếu chuỗi s đọc xuôi và ngược giống nhau, ngược lại trả về <code>False</code>.</p>
+                        </div>
+                        <div class="sample-io">
+                            <h4 data-lang-key="hw6-example-label">Ví dụ Input/Output:</h4>
+                            <pre><code class="language-python">print(la_palindrome("madam"))   # Output: True
+print(la_palindrome("python"))  # Output: False
+print(la_palindrome("a"))       # Output: True</code></pre>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="exercise-card medium" data-exercise="19">
+                    <div class="exercise-header">
+                        <h3><span class="exercise-number">19.</span> <span data-lang-key="hw6-ex19-title">Đếm Nguyên Âm Và Phụ Âm</span></h3>
+                        <div class="exercise-meta">
+                            <span class="difficulty" data-lang-key="hw6-difficulty-medium">Trung bình</span>
+                            <span class="time" data-lang-key="hw6-time-15-20">⏱️ 15-20 phút</span>
+                            <button class="complete-btn" onclick="toggleComplete(19)">
+                                <i class="fas fa-check"></i> <span data-lang-key="hw6-btn-mark">Đánh dấu hoàn thành</span>
+                            </button>
+                        </div>
+                    </div>
+                    <div class="exercise-content">
+                        <div class="problem-statement">
+                            <h4 data-lang-key="hw6-problem-label">Bài toán:</h4>
+                            <p data-lang-key="hw6-ex19-desc">Viết hàm <code>dem_nguyen_am_phu_am(s)</code> trả về một tuple (số nguyên âm, số phụ âm) trong chuỗi s (giả sử s chỉ gồm chữ cái).</p>
+                        </div>
+                        <div class="sample-io">
+                            <h4 data-lang-key="hw6-example-label">Ví dụ Input/Output:</h4>
+                            <pre><code class="language-python">print(dem_nguyen_am_phu_am("hello"))   # Output: (2, 3)
+print(dem_nguyen_am_phu_am("xyz"))     # Output: (0, 3)
+print(dem_nguyen_am_phu_am("aeiou"))   # Output: (5, 0)</code></pre>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <section class="difficulty-section">
+                <div class="section-header hard">
+                    <div class="difficulty-badge" data-lang-key="homework6-hard-badge">🔴 KHÓ</div>
+                    <h2 data-lang-key="homework6-hard-title">Bài tập Khó (20-21)</h2>
+                    <p data-lang-key="homework6-hard-desc">Các bài toán chuỗi nâng cao, kết hợp nhiều kỹ thuật xử lý</p>
+                </div>
+
+                <div class="exercise-card hard" data-exercise="20">
+                    <div class="exercise-header">
+                        <h3><span class="exercise-number">20.</span> <span data-lang-key="hw6-ex20-title">Kiểm Tra Anagram</span></h3>
+                        <div class="exercise-meta">
+                            <span class="difficulty" data-lang-key="hw6-difficulty-hard">Khó</span>
+                            <span class="time" data-lang-key="hw6-time-25-30">⏱️ 25-30 phút</span>
+                            <button class="complete-btn" onclick="toggleComplete(20)">
+                                <i class="fas fa-check"></i> <span data-lang-key="hw6-btn-mark">Đánh dấu hoàn thành</span>
+                            </button>
+                        </div>
+                    </div>
+                    <div class="exercise-content">
+                        <div class="problem-statement">
+                            <h4 data-lang-key="hw6-problem-label">Bài toán:</h4>
+                            <p data-lang-key="hw6-ex20-desc">Viết hàm <code>la_anagram(s1, s2)</code> trả về <code>True</code> nếu hai chuỗi là anagram của nhau (không phân biệt hoa/thường), ngược lại trả về <code>False</code>.</p>
+                        </div>
+                        <div class="sample-io">
+                            <h4 data-lang-key="hw6-example-label">Ví dụ Input/Output:</h4>
+                            <pre><code class="language-python">print(la_anagram("listen", "silent"))         # Output: True
+print(la_anagram("hello", "world"))           # Output: False
+print(la_anagram("Dormitory", "dirtyroom"))   # Output: True</code></pre>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="exercise-card hard" data-exercise="21">
+                    <div class="exercise-header">
+                        <h3><span class="exercise-number">21.</span> <span data-lang-key="hw6-ex21-title">Nén Chuỗi (Run-Length Encoding)</span></h3>
+                        <div class="exercise-meta">
+                            <span class="difficulty" data-lang-key="hw6-difficulty-hard">Khó</span>
+                            <span class="time" data-lang-key="hw6-time-25-30">⏱️ 25-30 phút</span>
+                            <button class="complete-btn" onclick="toggleComplete(21)">
+                                <i class="fas fa-check"></i> <span data-lang-key="hw6-btn-mark">Đánh dấu hoàn thành</span>
+                            </button>
+                        </div>
+                    </div>
+                    <div class="exercise-content">
+                        <div class="problem-statement">
+                            <h4 data-lang-key="hw6-problem-label">Bài toán:</h4>
+                            <p data-lang-key="hw6-ex21-desc">Viết hàm <code>nen_chuoi(s)</code> nén các ký tự liên tiếp giống nhau thành ký tự kèm số lần lặp. Ví dụ "aaabbc" → "a3b2c1".</p>
+                        </div>
+                        <div class="sample-io">
+                            <h4 data-lang-key="hw6-example-label">Ví dụ Input/Output:</h4>
+                            <pre><code class="language-python">print(nen_chuoi("aaabbc"))   # Output: a3b2c1
+print(nen_chuoi("abc"))      # Output: a1b1c1
+print(nen_chuoi(""))         # Output: (chuoi rong)</code></pre>
+                        </div>
+                    </div>
+                </div>
             </section>
 
             <div class="lesson-navigation">
@@ -570,7 +736,7 @@ print(dich_trai_1([]))                 # Output: []</code></pre>
             const total = completedExercises.size;
             document.getElementById('totalCompleted').textContent = total;
 
-            const percentage = (total / 15) * 100;
+            const percentage = (total / 21) * 100;
             document.getElementById('progressFill').style.width = percentage + '%';
         }
 

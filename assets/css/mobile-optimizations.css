@@ -159,34 +159,6 @@ img {
     }
 }
 
-/* Dark mode improvements */
-@media (prefers-color-scheme: dark) {
-    :root {
-        --background-color: #1a1a1a;
-        --text-color: #e0e0e0;
-        --text-light: #a0a0a0;
-        --gray-100: #2d2d2d;
-        --gray-200: #404040;
-        --gray-300: #525252;
-        --shadow: 0 4px 6px rgba(0, 0, 0, 0.3);
-        --shadow-large: 0 10px 25px rgba(0, 0, 0, 0.4);
-    }
-    
-    .header {
-        background: rgba(26, 26, 26, 0.95);
-        border-bottom-color: var(--gray-300);
-    }
-    
-    .footer {
-        background: #0f0f0f;
-    }
-    
-    .code-animation {
-        background: #2d2d2d;
-        border-color: #404040;
-    }
-}
-
 /* Orientation change handling */
 @media (orientation: landscape) and (max-height: 500px) {
     .hero {

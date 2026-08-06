@@ -140,6 +140,20 @@ const translations = {
         'exp-3': 'Tốt nghiệp Leadership Program - Fulbright University',
         'exp-5': 'Hiện đang học Kinh doanh & Khởi nghiệp tại YUP Education, Tâm lý học & Phát triển bản thân',
         'exp-4': 'Đồng sáng lập học viện InnoMind (2025)',
+
+        // Instructor 2 section (Thầy Triều)
+        'instructor-name-2': 'Thầy Triều',
+        'instructor-position-2': 'Mobile Developer & AI Engineer tại Hodfords',
+        'badge-senior-2': 'Mobile Developer & AI Engineer',
+        'badge-experience-2': '1+ Năm',
+        'edu-1-2': 'Đang học Thạc sĩ tại ĐH Kinh tế Đà Nẵng',
+        'edu-2-2': 'Xuất bản bài báo khoa học tại hội nghị COMBELT 2026',
+        'exp-1-2': '1+ năm kinh nghiệm phát triển mobile và AI engineering',
+        'exp-2-2': 'Phát triển ứng dụng Hodfords với 100+ người dùng',
+        'ach-1-2': 'Đạt Học bổng Xuất sắc 3 năm liên tiếp (2021-2022, 2023-2024, 2024-2025)',
+        'ach-2-2': 'Bí thư & Phó Bí thư BCH Chi Đoàn; Trưởng ban Truyền thông BCH Liên chi Đoàn Khoa',
+        'ach-4-2': 'Ban tổ chức các chương trình quy mô lớn >500 người',
+
         'vision-title': 'Tầm nhìn InnoMind',
         'vision-desc': '"InnoMind là học viện chuẩn quốc tế đào tạo Toán Quốc Tế, Tiếng Anh, Lập trình & AI hàng đầu tại Đà Nẵng"',
         
@@ -1107,6 +1121,20 @@ const translations = {
         'exp-3': 'Graduated Leadership Program - Fulbright University',
         'exp-5': 'Currently studying Business & Entrepreneurship at YUP Education, Psychology & Personal Development',
         'exp-4': 'Co-founded InnoMind Academy (2025)',
+
+        // Instructor 2 section (Mr. Trieu)
+        'instructor-name-2': 'Mr. Trieu',
+        'instructor-position-2': 'Mobile Developer & AI Engineer at Hodfords',
+        'badge-senior-2': 'Mobile Developer & AI Engineer',
+        'badge-experience-2': '1+ Years',
+        'edu-1-2': 'Studying for bachelor\'s degree at Danang University of Economics',
+        'edu-2-2': 'Published scientific paper at COMBELT 2026 conference',
+        'exp-1-2': '1+ years experience in mobile development and AI engineering',
+        'exp-2-2': 'Developed Hodfords mobile application with 100+ users',
+        'ach-1-2': 'Earned Outstanding Scholarships three consecutive years (2021-2022, 2023-2024, 2024-2025)',
+        'ach-2-2': 'Secretary & Vice Secretary of Youth Union Committee; Communications Head of Faculty Committee',
+        'ach-4-2': 'Led planning and execution of large-scale university programs >500 people',
+
         'vision-title': 'InnoMind Vision',
         'vision-desc': '"InnoMind is an international standard academy for training International Mathematics, English, Programming & AI in Da Nang"',
         
