@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="color-scheme" content="light only">
     <title data-lang-key="homework6-title">Bài tập 6: Arrays & Strings Practice - Code Up Your Brain</title>
-    <meta name="description" data-lang-key="homework6-meta" content="Luyện tập mảng một chiều và chuỗi với 21 bài tập từ dễ đến khó.">
+    <meta name="description" data-lang-key="homework6-meta" content="Luyện tập mảng một chiều và chuỗi với 26 bài tập từ dễ đến tổng hợp đa chương.">
     <link rel="stylesheet" href="../assets/css/styles.css">
     <link rel="stylesheet" href="../assets/css/lesson.css">
     <link rel="stylesheet" href="../assets/css/auth.css">
@@ -68,7 +68,7 @@
                 </div>
                 <h1 data-lang-key="homework6-main-title">Arrays & Strings Practice</h1>
                 <p class="lesson-subtitle" data-lang-key="homework6-subtitle">
-                    21 bài tập từ dễ đến khó để củng cố xử lý mảng một chiều và chuỗi
+                    26 bài tập từ dễ đến tổng hợp để củng cố xử lý mảng một chiều, chuỗi và ôn lại kiến thức đã học
                 </p>
             </div>
 
@@ -103,7 +103,7 @@
                 <div class="progress-stats">
                     <div class="progress-stat total">
                         <span class="stat-number" id="totalCompleted">0</span>
-                        <span class="stat-label" data-lang-key="homework6-progress-label">Hoàn thành (21)</span>
+                        <span class="stat-label" data-lang-key="homework6-progress-label">Hoàn thành (26)</span>
                     </div>
                 </div>
                 <div class="progress-bar">
@@ -660,6 +660,141 @@ print(nen_chuoi(""))         # Output: (chuoi rong)</code></pre>
                 </div>
             </section>
 
+            <section class="difficulty-section">
+                <div class="section-header hard">
+                    <div class="difficulty-badge" data-lang-key="homework6-comprehensive-badge">🟣 TỔNG HỢP</div>
+                    <h2 data-lang-key="homework6-comprehensive-title">Bài tập Tổng hợp (22-26)</h2>
+                    <p data-lang-key="homework6-comprehensive-desc">Kết hợp mảng với kiến thức đã học ở các chương trước: hàm, vòng lặp, cấu trúc điều kiện</p>
+                </div>
+
+                <div class="exercise-card hard" data-exercise="22">
+                    <div class="exercise-header">
+                        <h3><span class="exercise-number">22.</span> <span data-lang-key="hw6-ex22-title">Phân Loại Điểm Học Sinh</span></h3>
+                        <div class="exercise-meta">
+                            <span class="difficulty" data-lang-key="hw6-difficulty-comprehensive">Tổng hợp</span>
+                            <span class="time" data-lang-key="hw6-time-30-40">⏱️ 30-40 phút</span>
+                            <button class="complete-btn" onclick="toggleComplete(22)">
+                                <i class="fas fa-check"></i> <span data-lang-key="hw6-btn-mark">Đánh dấu hoàn thành</span>
+                            </button>
+                        </div>
+                    </div>
+                    <div class="exercise-content">
+                        <div class="problem-statement">
+                            <h4 data-lang-key="hw6-problem-label">Bài toán:</h4>
+                            <p data-lang-key="hw6-ex22-desc">Viết hàm <code>phan_loai_diem(scores)</code> (Bài 5: Hàm) dùng vòng lặp (Bài 4) và cấu trúc điều kiện (Bài 2) để phân loại mảng điểm: Giỏi (&ge;8.0), Khá (&ge;6.5), Trung bình (&ge;5.0), Yếu (còn lại). Trả về dict đếm số lượng mỗi loại.</p>
+                        </div>
+                        <div class="sample-io">
+                            <h4 data-lang-key="hw6-example-label">Ví dụ Input/Output:</h4>
+                            <pre><code class="language-python">print(phan_loai_diem([9, 7, 6, 4, 8.5, 5.5]))
+# Output: {'Gioi': 2, 'Kha': 1, 'TB': 2, 'Yeu': 1}
+print(phan_loai_diem([10, 10]))
+# Output: {'Gioi': 2, 'Kha': 0, 'TB': 0, 'Yeu': 0}</code></pre>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="exercise-card hard" data-exercise="23">
+                    <div class="exercise-header">
+                        <h3><span class="exercise-number">23.</span> <span data-lang-key="hw6-ex23-title">Lọc Số Nguyên Tố Trong Mảng</span></h3>
+                        <div class="exercise-meta">
+                            <span class="difficulty" data-lang-key="hw6-difficulty-comprehensive">Tổng hợp</span>
+                            <span class="time" data-lang-key="hw6-time-30-40">⏱️ 30-40 phút</span>
+                            <button class="complete-btn" onclick="toggleComplete(23)">
+                                <i class="fas fa-check"></i> <span data-lang-key="hw6-btn-mark">Đánh dấu hoàn thành</span>
+                            </button>
+                        </div>
+                    </div>
+                    <div class="exercise-content">
+                        <div class="problem-statement">
+                            <h4 data-lang-key="hw6-problem-label">Bài toán:</h4>
+                            <p data-lang-key="hw6-ex23-desc">Viết hàm phụ <code>la_so_nguyen_to(n)</code> (Bài 5: Hàm) kiểm tra số nguyên tố bằng vòng lặp (Bài 4, giống ví dụ "Số nguyên tố"), sau đó viết <code>loc_so_nguyen_to(arr)</code> gọi lại hàm trên để lọc các số nguyên tố trong mảng.</p>
+                        </div>
+                        <div class="sample-io">
+                            <h4 data-lang-key="hw6-example-label">Ví dụ Input/Output:</h4>
+                            <pre><code class="language-python">print(loc_so_nguyen_to([4, 7, 10, 13, 15, 2]))   # Output: [7, 13, 2]
+print(loc_so_nguyen_to([1, 4, 6, 8]))            # Output: []
+print(loc_so_nguyen_to([2, 3, 5, 7]))            # Output: [2, 3, 5, 7]</code></pre>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="exercise-card hard" data-exercise="24">
+                    <div class="exercise-header">
+                        <h3><span class="exercise-number">24.</span> <span data-lang-key="hw6-ex24-title">Ước Chung Lớn Nhất Của Mảng</span></h3>
+                        <div class="exercise-meta">
+                            <span class="difficulty" data-lang-key="hw6-difficulty-comprehensive">Tổng hợp</span>
+                            <span class="time" data-lang-key="hw6-time-30-40">⏱️ 30-40 phút</span>
+                            <button class="complete-btn" onclick="toggleComplete(24)">
+                                <i class="fas fa-check"></i> <span data-lang-key="hw6-btn-mark">Đánh dấu hoàn thành</span>
+                            </button>
+                        </div>
+                    </div>
+                    <div class="exercise-content">
+                        <div class="problem-statement">
+                            <h4 data-lang-key="hw6-problem-label">Bài toán:</h4>
+                            <p data-lang-key="hw6-ex24-desc">Viết hàm phụ <code>uscln(a, b)</code> (Bài 5: Hàm, giống ví dụ "Ước chung lớn nhất") rồi viết <code>uscln_mang(arr)</code> dùng vòng lặp (Bài 4) gọi lại hàm trên để tính USCLN của toàn bộ mảng.</p>
+                        </div>
+                        <div class="sample-io">
+                            <h4 data-lang-key="hw6-example-label">Ví dụ Input/Output:</h4>
+                            <pre><code class="language-python">print(uscln_mang([12, 18, 24]))   # Output: 6
+print(uscln_mang([7, 14, 21]))    # Output: 7
+print(uscln_mang([5, 9]))         # Output: 1</code></pre>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="exercise-card hard" data-exercise="25">
+                    <div class="exercise-header">
+                        <h3><span class="exercise-number">25.</span> <span data-lang-key="hw6-ex25-title">Sắp Xếp Nổi Bọt (Bubble Sort)</span></h3>
+                        <div class="exercise-meta">
+                            <span class="difficulty" data-lang-key="hw6-difficulty-comprehensive">Tổng hợp</span>
+                            <span class="time" data-lang-key="hw6-time-30-40">⏱️ 30-40 phút</span>
+                            <button class="complete-btn" onclick="toggleComplete(25)">
+                                <i class="fas fa-check"></i> <span data-lang-key="hw6-btn-mark">Đánh dấu hoàn thành</span>
+                            </button>
+                        </div>
+                    </div>
+                    <div class="exercise-content">
+                        <div class="problem-statement">
+                            <h4 data-lang-key="hw6-problem-label">Bài toán:</h4>
+                            <p data-lang-key="hw6-ex25-desc">Viết hàm <code>sap_xep_noi_bot(arr)</code> tự cài đặt thuật toán sắp xếp nổi bọt bằng vòng lặp lồng nhau (Bài 4) và điều kiện so sánh/hoán đổi (Bài 2), không dùng <code>sort()</code> hay <code>sorted()</code> có sẵn. Trả về mảng mới đã sắp xếp tăng dần.</p>
+                        </div>
+                        <div class="sample-io">
+                            <h4 data-lang-key="hw6-example-label">Ví dụ Input/Output:</h4>
+                            <pre><code class="language-python">print(sap_xep_noi_bot([5, 2, 9, 1, 7]))   # Output: [1, 2, 5, 7, 9]
+print(sap_xep_noi_bot([3, 3, 1]))         # Output: [1, 3, 3]
+print(sap_xep_noi_bot([]))                # Output: []</code></pre>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="exercise-card hard" data-exercise="26">
+                    <div class="exercise-header">
+                        <h3><span class="exercise-number">26.</span> <span data-lang-key="hw6-ex26-title">Quản Lý Giỏ Hàng</span></h3>
+                        <div class="exercise-meta">
+                            <span class="difficulty" data-lang-key="hw6-difficulty-comprehensive">Tổng hợp</span>
+                            <span class="time" data-lang-key="hw6-time-30-40">⏱️ 30-40 phút</span>
+                            <button class="complete-btn" onclick="toggleComplete(26)">
+                                <i class="fas fa-check"></i> <span data-lang-key="hw6-btn-mark">Đánh dấu hoàn thành</span>
+                            </button>
+                        </div>
+                    </div>
+                    <div class="exercise-content">
+                        <div class="problem-statement">
+                            <h4 data-lang-key="hw6-problem-label">Bài toán:</h4>
+                            <p data-lang-key="hw6-ex26-desc">Viết hàm <code>xu_ly_gio_hang(actions)</code> nhận vào mảng các hành động dạng tuple: <code>("them", ten, gia)</code> để thêm sản phẩm hoặc <code>("xoa", ten)</code> để xóa sản phẩm theo tên. Dùng vòng lặp (Bài 4) và điều kiện rẽ nhánh (Bài 2) để xử lý lần lượt từng hành động, trả về tổng tiền còn lại trong giỏ.</p>
+                        </div>
+                        <div class="sample-io">
+                            <h4 data-lang-key="hw6-example-label">Ví dụ Input/Output:</h4>
+                            <pre><code class="language-python">print(xu_ly_gio_hang([("them", "Tao", 15000), ("them", "Sua", 20000), ("xoa", "Tao")]))
+# Output: 20000
+print(xu_ly_gio_hang([("them", "A", 10000), ("them", "B", 5000)]))
+# Output: 15000</code></pre>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
             <div class="lesson-navigation">
                 <a href="lesson6.html" class="nav-button prev">
                     <i class="fas fa-arrow-left"></i>
@@ -736,7 +871,7 @@ print(nen_chuoi(""))         # Output: (chuoi rong)</code></pre>
             const total = completedExercises.size;
             document.getElementById('totalCompleted').textContent = total;
 
-            const percentage = (total / 21) * 100;
+            const percentage = (total / 26) * 100;
             document.getElementById('progressFill').style.width = percentage + '%';
         }
 
