@@ -1,0 +1,639 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="color-scheme" content="light only">
+    <title data-lang-key="homework7-title">Bài tập 7: Matrix Practice - Code Up Your Brain</title>
+    <meta name="description" data-lang-key="homework7-meta" content="Luyện tập mảng hai chiều với 15 bài tập từ dễ đến tổng hợp.">
+    <link rel="stylesheet" href="../assets/css/styles.css">
+    <link rel="stylesheet" href="../assets/css/lesson.css">
+    <link rel="stylesheet" href="../assets/css/auth.css">
+    <link rel="stylesheet" href="../assets/css/mobile-optimizations.css">
+    <link rel="stylesheet" href="../assets/css/ultra-compact-header.css">
+    <link rel="stylesheet" href="../assets/css/force-hide-logo.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/themes/prism-tomorrow.min.css">
+</head>
+<body>
+    <header class="header">
+        <div class="container">
+            <div class="header-content">
+                <div class="logo">
+                    <a href="../index.html">
+                        <i class="fas fa-code"></i>
+                        <span data-lang-key="logo-text">Code Up Your Brain</span>
+                    </a>
+                </div>
+                <div class="innomind-header-logo">
+                    <a href="../index.html">
+                        <img src="../assets/images/logo.png" alt="InnoMind Logo" />
+                    </a>
+                </div>
+                <nav class="nav">
+                    <a href="../index.html" data-lang-key="nav-home">Trang chủ</a>
+                    <a href="../index.html#about" data-lang-key="nav-about">Giới thiệu</a>
+                    <a href="../index.html#course" data-lang-key="nav-course">Khóa học</a>
+                    <a href="../index.html#instructor" data-lang-key="nav-instructor">Giảng viên</a>
+                    <a href="#contact" data-lang-key="nav-contact">Liên hệ</a>
+                </nav>
+                <div class="header-actions">
+                    <button class="lang-toggle" id="langToggle">
+                        <i class="fas fa-globe"></i>
+                        <span id="currentLang">VI</span>
+                    </button>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <main class="lesson-content">
+        <div class="container">
+            <nav class="breadcrumb">
+                <a href="../index.html" data-lang-key="breadcrumb-home">Trang chủ</a>
+                <span class="separator">/</span>
+                <a href="../index.html#course" data-lang-key="breadcrumb-course">Khóa học</a>
+                <span class="separator">/</span>
+                <a href="lesson7.html" data-lang-key="breadcrumb-lesson7">Bài 7</a>
+                <span class="separator">/</span>
+                <span data-lang-key="breadcrumb-homework">Bài tập</span>
+            </nav>
+
+            <div class="lesson-header">
+                <div class="lesson-number">
+                    <span data-lang-key="homework-label">Bài tập</span> 7
+                </div>
+                <h1 data-lang-key="homework7-main-title">Matrix Practice</h1>
+                <p class="lesson-subtitle" data-lang-key="homework7-subtitle">
+                    15 bài tập từ dễ đến tổng hợp để củng cố xử lý ma trận: duyệt, hàng/cột, đường chéo, xoay ma trận và ma trận xoắn ốc
+                </p>
+            </div>
+
+            <div class="homework-instructions">
+                <h2 data-lang-key="instructions-title">📋 Hướng dẫn</h2>
+                <div class="instructions-grid">
+                    <div class="instruction-item">
+                        <div class="instruction-icon">💻</div>
+                        <h3 data-lang-key="instruction1-title">Code bằng Python</h3>
+                        <p data-lang-key="instruction1-desc">Viết tất cả các giải pháp bằng Python 3.x</p>
+                    </div>
+                    <div class="instruction-item">
+                        <div class="instruction-icon">🧪</div>
+                        <h3 data-lang-key="instruction2-title">Kiểm tra Code</h3>
+                        <p data-lang-key="instruction2-desc">Test với nhiều đầu vào khác nhau</p>
+                    </div>
+                    <div class="instruction-item">
+                        <div class="instruction-icon">📝</div>
+                        <h3 data-lang-key="instruction3-title">Thêm Comment</h3>
+                        <p data-lang-key="instruction3-desc">Giải thích logic và cách tiếp cận</p>
+                    </div>
+                    <div class="instruction-item">
+                        <div class="instruction-icon">⏱️</div>
+                        <h3 data-lang-key="instruction4-title">Quản lý Thời gian</h3>
+                        <p data-lang-key="instruction4-desc">Dành 5-10 phút cho mỗi bài</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="progress-tracker">
+                <h3 data-lang-key="progress-title">📊 Tiến độ của bạn</h3>
+                <div class="progress-stats">
+                    <div class="progress-stat total">
+                        <span class="stat-number" id="totalCompleted">0</span>
+                        <span class="stat-label" data-lang-key="homework7-progress-label">Hoàn thành (15)</span>
+                    </div>
+                </div>
+                <div class="progress-bar">
+                    <div class="progress-fill" id="progressFill"></div>
+                </div>
+            </div>
+
+            <section class="difficulty-section">
+                <div class="section-header easy">
+                    <div class="difficulty-badge" data-lang-key="homework7-easy-badge">🟢 DỄ</div>
+                    <h2 data-lang-key="homework7-easy-title">Bài tập Dễ (1-8)</h2>
+                    <p data-lang-key="homework7-easy-desc">Tổng, đếm, tìm max/min, tổng hàng/cột và đường chéo trên ma trận</p>
+                </div>
+
+                <div class="exercise-card easy" data-exercise="1">
+                    <div class="exercise-header">
+                        <h3><span class="exercise-number">1.</span> <span data-lang-key="hw7-ex1-title">Tổng Ma Trận</span></h3>
+                        <div class="exercise-meta">
+                            <span class="difficulty" data-lang-key="hw7-difficulty-easy">Dễ</span>
+                            <span class="time" data-lang-key="hw7-time-5-10">⏱️ 5-10 phút</span>
+                            <button class="complete-btn" onclick="toggleComplete(1)">
+                                <i class="fas fa-check"></i> <span data-lang-key="hw7-btn-mark">Đánh dấu hoàn thành</span>
+                            </button>
+                        </div>
+                    </div>
+                    <div class="exercise-content">
+                        <div class="problem-statement">
+                            <h4 data-lang-key="hw7-problem-label">Bài toán:</h4>
+                            <p data-lang-key="hw7-ex1-desc">Viết hàm <code>tong_ma_tran(matrix)</code> trả về tổng tất cả các phần tử trong ma trận.</p>
+                        </div>
+                        <div class="sample-io">
+                            <h4 data-lang-key="hw7-example-label">Ví dụ Input/Output:</h4>
+                            <pre><code class="language-python">print(tong_ma_tran([[1, 2], [3, 4]]))   # Output: 10
+print(tong_ma_tran([[5]]))               # Output: 5
+print(tong_ma_tran([]))                  # Output: 0</code></pre>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="exercise-card easy" data-exercise="2">
+                    <div class="exercise-header">
+                        <h3><span class="exercise-number">2.</span> <span data-lang-key="hw7-ex2-title">Đếm Số Chẵn Trong Ma Trận</span></h3>
+                        <div class="exercise-meta">
+                            <span class="difficulty" data-lang-key="hw7-difficulty-easy">Dễ</span>
+                            <span class="time" data-lang-key="hw7-time-5-10">⏱️ 5-10 phút</span>
+                            <button class="complete-btn" onclick="toggleComplete(2)">
+                                <i class="fas fa-check"></i> <span data-lang-key="hw7-btn-mark">Đánh dấu hoàn thành</span>
+                            </button>
+                        </div>
+                    </div>
+                    <div class="exercise-content">
+                        <div class="problem-statement">
+                            <h4 data-lang-key="hw7-problem-label">Bài toán:</h4>
+                            <p data-lang-key="hw7-ex2-desc">Viết hàm <code>dem_so_chan_matrix(matrix)</code> trả về số lượng phần tử chẵn trong ma trận.</p>
+                        </div>
+                        <div class="sample-io">
+                            <h4 data-lang-key="hw7-example-label">Ví dụ Input/Output:</h4>
+                            <pre><code class="language-python">print(dem_so_chan_matrix([[1, 2, 3], [4, 5, 6]]))   # Output: 3
+print(dem_so_chan_matrix([[1, 3, 5]]))               # Output: 0
+print(dem_so_chan_matrix([[2, 4], [6, 8]]))          # Output: 4</code></pre>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="exercise-card easy" data-exercise="3">
+                    <div class="exercise-header">
+                        <h3><span class="exercise-number">3.</span> <span data-lang-key="hw7-ex3-title">Tìm Giá Trị Lớn Nhất</span></h3>
+                        <div class="exercise-meta">
+                            <span class="difficulty" data-lang-key="hw7-difficulty-easy">Dễ</span>
+                            <span class="time" data-lang-key="hw7-time-5-10">⏱️ 5-10 phút</span>
+                            <button class="complete-btn" onclick="toggleComplete(3)">
+                                <i class="fas fa-check"></i> <span data-lang-key="hw7-btn-mark">Đánh dấu hoàn thành</span>
+                            </button>
+                        </div>
+                    </div>
+                    <div class="exercise-content">
+                        <div class="problem-statement">
+                            <h4 data-lang-key="hw7-problem-label">Bài toán:</h4>
+                            <p data-lang-key="hw7-ex3-desc">Viết hàm <code>tim_max_matrix(matrix)</code> trả về một tuple <code>(gia_tri, hang, cot)</code> của phần tử lớn nhất (lấy vị trí xuất hiện đầu tiên nếu có nhiều phần tử bằng nhau).</p>
+                        </div>
+                        <div class="sample-io">
+                            <h4 data-lang-key="hw7-example-label">Ví dụ Input/Output:</h4>
+                            <pre><code class="language-python">print(tim_max_matrix([[3, 8, 1], [9, 2, 7]]))   # Output: (9, 1, 0)
+print(tim_max_matrix([[5]]))                     # Output: (5, 0, 0)
+print(tim_max_matrix([[1, 9], [9, 1]]))          # Output: (9, 0, 1)</code></pre>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="exercise-card easy" data-exercise="4">
+                    <div class="exercise-header">
+                        <h3><span class="exercise-number">4.</span> <span data-lang-key="hw7-ex4-title">Tổng Từng Hàng</span></h3>
+                        <div class="exercise-meta">
+                            <span class="difficulty" data-lang-key="hw7-difficulty-easy">Dễ</span>
+                            <span class="time" data-lang-key="hw7-time-5-10">⏱️ 5-10 phút</span>
+                            <button class="complete-btn" onclick="toggleComplete(4)">
+                                <i class="fas fa-check"></i> <span data-lang-key="hw7-btn-mark">Đánh dấu hoàn thành</span>
+                            </button>
+                        </div>
+                    </div>
+                    <div class="exercise-content">
+                        <div class="problem-statement">
+                            <h4 data-lang-key="hw7-problem-label">Bài toán:</h4>
+                            <p data-lang-key="hw7-ex4-desc">Viết hàm <code>tong_tung_hang(matrix)</code> trả về danh sách tổng các phần tử của mỗi hàng.</p>
+                        </div>
+                        <div class="sample-io">
+                            <h4 data-lang-key="hw7-example-label">Ví dụ Input/Output:</h4>
+                            <pre><code class="language-python">print(tong_tung_hang([[1, 2, 3], [4, 5, 6]]))   # Output: [6, 15]
+print(tong_tung_hang([[10]]))                    # Output: [10]
+print(tong_tung_hang([[1, 1], [2, 2], [3, 3]]))  # Output: [2, 4, 6]</code></pre>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="exercise-card easy" data-exercise="5">
+                    <div class="exercise-header">
+                        <h3><span class="exercise-number">5.</span> <span data-lang-key="hw7-ex5-title">Tổng Từng Cột</span></h3>
+                        <div class="exercise-meta">
+                            <span class="difficulty" data-lang-key="hw7-difficulty-easy">Dễ</span>
+                            <span class="time" data-lang-key="hw7-time-5-10">⏱️ 5-10 phút</span>
+                            <button class="complete-btn" onclick="toggleComplete(5)">
+                                <i class="fas fa-check"></i> <span data-lang-key="hw7-btn-mark">Đánh dấu hoàn thành</span>
+                            </button>
+                        </div>
+                    </div>
+                    <div class="exercise-content">
+                        <div class="problem-statement">
+                            <h4 data-lang-key="hw7-problem-label">Bài toán:</h4>
+                            <p data-lang-key="hw7-ex5-desc">Viết hàm <code>tong_tung_cot(matrix)</code> trả về danh sách tổng các phần tử của mỗi cột.</p>
+                        </div>
+                        <div class="sample-io">
+                            <h4 data-lang-key="hw7-example-label">Ví dụ Input/Output:</h4>
+                            <pre><code class="language-python">print(tong_tung_cot([[1, 2, 3], [4, 5, 6]]))   # Output: [5, 7, 9]
+print(tong_tung_cot([[1], [2], [3]]))           # Output: [6]
+print(tong_tung_cot([[1, 2], [3, 4], [5, 6]]))  # Output: [9, 12]</code></pre>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="exercise-card easy" data-exercise="6">
+                    <div class="exercise-header">
+                        <h3><span class="exercise-number">6.</span> <span data-lang-key="hw7-ex6-title">Tổng Đường Chéo Chính</span></h3>
+                        <div class="exercise-meta">
+                            <span class="difficulty" data-lang-key="hw7-difficulty-easy">Dễ</span>
+                            <span class="time" data-lang-key="hw7-time-5-10">⏱️ 5-10 phút</span>
+                            <button class="complete-btn" onclick="toggleComplete(6)">
+                                <i class="fas fa-check"></i> <span data-lang-key="hw7-btn-mark">Đánh dấu hoàn thành</span>
+                            </button>
+                        </div>
+                    </div>
+                    <div class="exercise-content">
+                        <div class="problem-statement">
+                            <h4 data-lang-key="hw7-problem-label">Bài toán:</h4>
+                            <p data-lang-key="hw7-ex6-desc">Viết hàm <code>tong_duong_cheo_chinh(matrix)</code> trả về tổng các phần tử trên đường chéo chính của ma trận vuông.</p>
+                        </div>
+                        <div class="sample-io">
+                            <h4 data-lang-key="hw7-example-label">Ví dụ Input/Output:</h4>
+                            <pre><code class="language-python">print(tong_duong_cheo_chinh([[1, 2], [3, 4]]))                  # Output: 5
+print(tong_duong_cheo_chinh([[5]]))                              # Output: 5
+print(tong_duong_cheo_chinh([[1, 2, 3], [4, 5, 6], [7, 8, 9]]))  # Output: 15</code></pre>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="exercise-card easy" data-exercise="7">
+                    <div class="exercise-header">
+                        <h3><span class="exercise-number">7.</span> <span data-lang-key="hw7-ex7-title">Đếm Số Lần Xuất Hiện</span></h3>
+                        <div class="exercise-meta">
+                            <span class="difficulty" data-lang-key="hw7-difficulty-easy">Dễ</span>
+                            <span class="time" data-lang-key="hw7-time-5-10">⏱️ 5-10 phút</span>
+                            <button class="complete-btn" onclick="toggleComplete(7)">
+                                <i class="fas fa-check"></i> <span data-lang-key="hw7-btn-mark">Đánh dấu hoàn thành</span>
+                            </button>
+                        </div>
+                    </div>
+                    <div class="exercise-content">
+                        <div class="problem-statement">
+                            <h4 data-lang-key="hw7-problem-label">Bài toán:</h4>
+                            <p data-lang-key="hw7-ex7-desc">Viết hàm <code>dem_xuat_hien(matrix, x)</code> đếm số lần giá trị x xuất hiện trong ma trận.</p>
+                        </div>
+                        <div class="sample-io">
+                            <h4 data-lang-key="hw7-example-label">Ví dụ Input/Output:</h4>
+                            <pre><code class="language-python">print(dem_xuat_hien([[1, 2, 2], [3, 2, 1]], 2))   # Output: 3
+print(dem_xuat_hien([[1, 1], [1, 1]], 5))          # Output: 0
+print(dem_xuat_hien([[7]], 7))                     # Output: 1</code></pre>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="exercise-card easy" data-exercise="8">
+                    <div class="exercise-header">
+                        <h3><span class="exercise-number">8.</span> <span data-lang-key="hw7-ex8-title">Hàng Có Tổng Lớn Nhất</span></h3>
+                        <div class="exercise-meta">
+                            <span class="difficulty" data-lang-key="hw7-difficulty-easy">Dễ</span>
+                            <span class="time" data-lang-key="hw7-time-5-10">⏱️ 5-10 phút</span>
+                            <button class="complete-btn" onclick="toggleComplete(8)">
+                                <i class="fas fa-check"></i> <span data-lang-key="hw7-btn-mark">Đánh dấu hoàn thành</span>
+                            </button>
+                        </div>
+                    </div>
+                    <div class="exercise-content">
+                        <div class="problem-statement">
+                            <h4 data-lang-key="hw7-problem-label">Bài toán:</h4>
+                            <p data-lang-key="hw7-ex8-desc">Viết hàm <code>hang_co_tong_lon_nhat(matrix)</code> trả về chỉ số của hàng có tổng các phần tử lớn nhất (lấy hàng đầu tiên nếu có nhiều hàng bằng nhau).</p>
+                        </div>
+                        <div class="sample-io">
+                            <h4 data-lang-key="hw7-example-label">Ví dụ Input/Output:</h4>
+                            <pre><code class="language-python">print(hang_co_tong_lon_nhat([[1, 2], [3, 4], [0, 1]]))   # Output: 1
+print(hang_co_tong_lon_nhat([[10]]))                      # Output: 0
+print(hang_co_tong_lon_nhat([[5, 5], [1, 1], [5, 5]]))    # Output: 0</code></pre>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <section class="difficulty-section">
+                <div class="section-header medium">
+                    <div class="difficulty-badge" data-lang-key="homework7-medium-badge">🟡 TRUNG BÌNH</div>
+                    <h2 data-lang-key="homework7-medium-title">Bài tập Trung bình (9-11)</h2>
+                    <p data-lang-key="homework7-medium-desc">Kiểm tra tính chất và biến đổi ma trận đòi hỏi tư duy logic nhiều hơn</p>
+                </div>
+
+                <div class="exercise-card medium" data-exercise="9">
+                    <div class="exercise-header">
+                        <h3><span class="exercise-number">9.</span> <span data-lang-key="hw7-ex9-title">Kiểm Tra Ma Trận Đối Xứng</span></h3>
+                        <div class="exercise-meta">
+                            <span class="difficulty" data-lang-key="hw7-difficulty-medium">Trung bình</span>
+                            <span class="time" data-lang-key="hw7-time-15-20">⏱️ 15-20 phút</span>
+                            <button class="complete-btn" onclick="toggleComplete(9)">
+                                <i class="fas fa-check"></i> <span data-lang-key="hw7-btn-mark">Đánh dấu hoàn thành</span>
+                            </button>
+                        </div>
+                    </div>
+                    <div class="exercise-content">
+                        <div class="problem-statement">
+                            <h4 data-lang-key="hw7-problem-label">Bài toán:</h4>
+                            <p data-lang-key="hw7-ex9-desc">Viết hàm <code>la_doi_xung(matrix)</code> trả về <code>True</code> nếu ma trận vuông đối xứng qua đường chéo chính (matrix[i][j] == matrix[j][i] với mọi i, j), ngược lại trả về <code>False</code>.</p>
+                        </div>
+                        <div class="sample-io">
+                            <h4 data-lang-key="hw7-example-label">Ví dụ Input/Output:</h4>
+                            <pre><code class="language-python">print(la_doi_xung([[1, 2, 3], [2, 5, 6], [3, 6, 9]]))   # Output: True
+print(la_doi_xung([[1, 2], [3, 4]]))                     # Output: False
+print(la_doi_xung([[7]]))                                # Output: True</code></pre>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="exercise-card medium" data-exercise="10">
+                    <div class="exercise-header">
+                        <h3><span class="exercise-number">10.</span> <span data-lang-key="hw7-ex10-title">Chuyển Vị Ma Trận</span></h3>
+                        <div class="exercise-meta">
+                            <span class="difficulty" data-lang-key="hw7-difficulty-medium">Trung bình</span>
+                            <span class="time" data-lang-key="hw7-time-15-20">⏱️ 15-20 phút</span>
+                            <button class="complete-btn" onclick="toggleComplete(10)">
+                                <i class="fas fa-check"></i> <span data-lang-key="hw7-btn-mark">Đánh dấu hoàn thành</span>
+                            </button>
+                        </div>
+                    </div>
+                    <div class="exercise-content">
+                        <div class="problem-statement">
+                            <h4 data-lang-key="hw7-problem-label">Bài toán:</h4>
+                            <p data-lang-key="hw7-ex10-desc">Viết hàm <code>chuyen_vi(matrix)</code> trả về ma trận chuyển vị (đổi hàng thành cột), không dùng zip().</p>
+                        </div>
+                        <div class="sample-io">
+                            <h4 data-lang-key="hw7-example-label">Ví dụ Input/Output:</h4>
+                            <pre><code class="language-python">print(chuyen_vi([[1, 2, 3], [4, 5, 6]]))   # Output: [[1, 4], [2, 5], [3, 6]]
+print(chuyen_vi([[1], [2], [3]]))          # Output: [[1, 2, 3]]
+print(chuyen_vi([[5]]))                    # Output: [[5]]</code></pre>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="exercise-card medium" data-exercise="11">
+                    <div class="exercise-header">
+                        <h3><span class="exercise-number">11.</span> <span data-lang-key="hw7-ex11-title">Tìm Điểm Yên Ngựa</span></h3>
+                        <div class="exercise-meta">
+                            <span class="difficulty" data-lang-key="hw7-difficulty-medium">Trung bình</span>
+                            <span class="time" data-lang-key="hw7-time-15-20">⏱️ 15-20 phút</span>
+                            <button class="complete-btn" onclick="toggleComplete(11)">
+                                <i class="fas fa-check"></i> <span data-lang-key="hw7-btn-mark">Đánh dấu hoàn thành</span>
+                            </button>
+                        </div>
+                    </div>
+                    <div class="exercise-content">
+                        <div class="problem-statement">
+                            <h4 data-lang-key="hw7-problem-label">Bài toán:</h4>
+                            <p data-lang-key="hw7-ex11-desc">Viết hàm <code>tim_diem_yen_ngua(matrix)</code> trả về giá trị của phần tử vừa là nhỏ nhất trong hàng của nó, vừa là lớn nhất trong cột của nó. Nếu không có, trả về <code>None</code>.</p>
+                        </div>
+                        <div class="sample-io">
+                            <h4 data-lang-key="hw7-example-label">Ví dụ Input/Output:</h4>
+                            <pre><code class="language-python">print(tim_diem_yen_ngua([[3, 2, 1], [6, 5, 4], [9, 8, 7]]))   # Output: 7
+print(tim_diem_yen_ngua([[1, 2], [3, 1]]))                     # Output: None
+print(tim_diem_yen_ngua([[5]]))                                # Output: 5</code></pre>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <section class="difficulty-section">
+                <div class="section-header hard">
+                    <div class="difficulty-badge" data-lang-key="homework7-hard-badge">🔴 KHÓ</div>
+                    <h2 data-lang-key="homework7-hard-title">Bài tập Khó (12-13)</h2>
+                    <p data-lang-key="homework7-hard-desc">Xoay ma trận và duyệt ma trận theo hình xoắn ốc</p>
+                </div>
+
+                <div class="exercise-card hard" data-exercise="12">
+                    <div class="exercise-header">
+                        <h3><span class="exercise-number">12.</span> <span data-lang-key="hw7-ex12-title">Xoay Ma Trận Ngược Chiều Kim Đồng Hồ</span></h3>
+                        <div class="exercise-meta">
+                            <span class="difficulty" data-lang-key="hw7-difficulty-hard">Khó</span>
+                            <span class="time" data-lang-key="hw7-time-25-30">⏱️ 25-30 phút</span>
+                            <button class="complete-btn" onclick="toggleComplete(12)">
+                                <i class="fas fa-check"></i> <span data-lang-key="hw7-btn-mark">Đánh dấu hoàn thành</span>
+                            </button>
+                        </div>
+                    </div>
+                    <div class="exercise-content">
+                        <div class="problem-statement">
+                            <h4 data-lang-key="hw7-problem-label">Bài toán:</h4>
+                            <p data-lang-key="hw7-ex12-desc">Viết hàm <code>xoay_nguoc_kim_dong_ho(matrix)</code> xoay một ma trận vuông 90 độ ngược chiều kim đồng hồ mà không dùng thư viện có sẵn.</p>
+                        </div>
+                        <div class="sample-io">
+                            <h4 data-lang-key="hw7-example-label">Ví dụ Input/Output:</h4>
+                            <pre><code class="language-python">print(xoay_nguoc_kim_dong_ho([[1, 2, 3], [4, 5, 6], [7, 8, 9]]))
+# Output: [[3, 6, 9], [2, 5, 8], [1, 4, 7]]
+print(xoay_nguoc_kim_dong_ho([[1, 2], [3, 4]]))
+# Output: [[2, 4], [1, 3]]
+print(xoay_nguoc_kim_dong_ho([[5]]))
+# Output: [[5]]</code></pre>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="exercise-card hard" data-exercise="13">
+                    <div class="exercise-header">
+                        <h3><span class="exercise-number">13.</span> <span data-lang-key="hw7-ex13-title">Duyệt Ma Trận Theo Hình Xoắn Ốc</span></h3>
+                        <div class="exercise-meta">
+                            <span class="difficulty" data-lang-key="hw7-difficulty-hard">Khó</span>
+                            <span class="time" data-lang-key="hw7-time-25-30">⏱️ 25-30 phút</span>
+                            <button class="complete-btn" onclick="toggleComplete(13)">
+                                <i class="fas fa-check"></i> <span data-lang-key="hw7-btn-mark">Đánh dấu hoàn thành</span>
+                            </button>
+                        </div>
+                    </div>
+                    <div class="exercise-content">
+                        <div class="problem-statement">
+                            <h4 data-lang-key="hw7-problem-label">Bài toán:</h4>
+                            <p data-lang-key="hw7-ex13-desc">Viết hàm <code>duyet_xoan_oc(matrix)</code> trả về danh sách các phần tử của ma trận (không nhất thiết vuông) theo thứ tự duyệt xoắn ốc từ ngoài vào trong, theo chiều kim đồng hồ.</p>
+                        </div>
+                        <div class="sample-io">
+                            <h4 data-lang-key="hw7-example-label">Ví dụ Input/Output:</h4>
+                            <pre><code class="language-python">print(duyet_xoan_oc([[1, 2, 3], [4, 5, 6], [7, 8, 9]]))
+# Output: [1, 2, 3, 6, 9, 8, 7, 4, 5]
+print(duyet_xoan_oc([[1, 2, 3, 4], [5, 6, 7, 8]]))
+# Output: [1, 2, 3, 4, 8, 7, 6, 5]
+print(duyet_xoan_oc([[1]]))
+# Output: [1]</code></pre>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <section class="difficulty-section">
+                <div class="section-header hard">
+                    <div class="difficulty-badge" data-lang-key="homework7-comprehensive-badge">🟣 TỔNG HỢP</div>
+                    <h2 data-lang-key="homework7-comprehensive-title">Bài tập Tổng hợp (14-15)</h2>
+                    <p data-lang-key="homework7-comprehensive-desc">Kết hợp ma trận với hàm và vòng lặp để giải các bài toán thực tế</p>
+                </div>
+
+                <div class="exercise-card hard" data-exercise="14">
+                    <div class="exercise-header">
+                        <h3><span class="exercise-number">14.</span> <span data-lang-key="hw7-ex14-title">Cộng Hai Ma Trận</span></h3>
+                        <div class="exercise-meta">
+                            <span class="difficulty" data-lang-key="hw7-difficulty-comprehensive">Tổng hợp</span>
+                            <span class="time" data-lang-key="hw7-time-30-40">⏱️ 30-40 phút</span>
+                            <button class="complete-btn" onclick="toggleComplete(14)">
+                                <i class="fas fa-check"></i> <span data-lang-key="hw7-btn-mark">Đánh dấu hoàn thành</span>
+                            </button>
+                        </div>
+                    </div>
+                    <div class="exercise-content">
+                        <div class="problem-statement">
+                            <h4 data-lang-key="hw7-problem-label">Bài toán:</h4>
+                            <p data-lang-key="hw7-ex14-desc">Viết hàm <code>cong_hai_ma_tran(a, b)</code> (Bài 5: Hàm) nhận vào hai ma trận cùng kích thước và trả về ma trận tổng theo từng phần tử.</p>
+                        </div>
+                        <div class="sample-io">
+                            <h4 data-lang-key="hw7-example-label">Ví dụ Input/Output:</h4>
+                            <pre><code class="language-python">print(cong_hai_ma_tran([[1, 2], [3, 4]], [[5, 6], [7, 8]]))
+# Output: [[6, 8], [10, 12]]
+print(cong_hai_ma_tran([[1]], [[9]]))
+# Output: [[10]]
+print(cong_hai_ma_tran([[0, 0]], [[1, 1]]))
+# Output: [[1, 1]]</code></pre>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="exercise-card hard" data-exercise="15">
+                    <div class="exercise-header">
+                        <h3><span class="exercise-number">15.</span> <span data-lang-key="hw7-ex15-title">Đếm Cặp Quân Hậu Tấn Công Nhau</span></h3>
+                        <div class="exercise-meta">
+                            <span class="difficulty" data-lang-key="hw7-difficulty-comprehensive">Tổng hợp</span>
+                            <span class="time" data-lang-key="hw7-time-30-40">⏱️ 30-40 phút</span>
+                            <button class="complete-btn" onclick="toggleComplete(15)">
+                                <i class="fas fa-check"></i> <span data-lang-key="hw7-btn-mark">Đánh dấu hoàn thành</span>
+                            </button>
+                        </div>
+                    </div>
+                    <div class="exercise-content">
+                        <div class="problem-statement">
+                            <h4 data-lang-key="hw7-problem-label">Bài toán:</h4>
+                            <p data-lang-key="hw7-ex15-desc">Viết hàm <code>dem_cap_hau_tan_cong(positions)</code> (Bài 5: Hàm) nhận vào danh sách vị trí <code>(hang, cot)</code> của các quân hậu, dùng vòng lặp lồng (Bài 4) để đếm số cặp quân hậu tấn công nhau (cùng hàng, cùng cột, hoặc cùng đường chéo).</p>
+                        </div>
+                        <div class="sample-io">
+                            <h4 data-lang-key="hw7-example-label">Ví dụ Input/Output:</h4>
+                            <pre><code class="language-python">print(dem_cap_hau_tan_cong([(0, 0), (1, 1), (0, 4)]))   # Output: 2
+print(dem_cap_hau_tan_cong([(0, 0), (2, 1)]))            # Output: 0
+print(dem_cap_hau_tan_cong([(0, 0), (1, 0), (2, 0)]))    # Output: 3</code></pre>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <div class="lesson-navigation">
+                <a href="lesson7.html" class="nav-button prev">
+                    <i class="fas fa-arrow-left"></i>
+                    <span data-lang-key="hw7-nav-back">Quay lại: Bài 7 - Ma trận</span>
+                </a>
+            </div>
+        </div>
+    </main>
+
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <h4>Liên hệ</h4>
+                <div class="contact-info-compact">
+                    <div class="contact-item">
+                        <i class="fas fa-map-marker-alt"></i>
+                        <span>136 Nguyễn Mậu Tài, Hòa Xuân, Cẩm Lệ, Đà Nẵng</span>
+                    </div>
+                    <div class="contact-item">
+                        <i class="fas fa-phone"></i>
+                        <span>090 198 05 69</span>
+                    </div>
+                    <div class="contact-item">
+                        <i class="fas fa-envelope"></i>
+                        <span>innomindskills@gmail.com</span>
+                    </div>
+                    <div class="contact-item">
+                        <i class="fab fa-facebook"></i>
+                        <a href="https://www.facebook.com/hocvienkynangthehemoiinnomind" target="_blank">Facebook</a>
+                    </div>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2025 Code Up Your Brain. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/prism.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/components/prism-python.min.js"></script>
+    <script src="../assets/js/translations-common.js"></script>
+    <script src="../assets/js/translations-lesson7.js"></script>
+    <script src="../assets/js/translations-loader.js"></script>
+    <script src="../assets/js/script.js"></script>
+
+    <script>
+        let completedExercises = new Set();
+
+        function toggleComplete(exerciseNum) {
+            const button = document.querySelector(`[data-exercise="${exerciseNum}"] .complete-btn`);
+            const card = document.querySelector(`[data-exercise="${exerciseNum}"]`);
+
+            if (completedExercises.has(exerciseNum)) {
+                completedExercises.delete(exerciseNum);
+                button.innerHTML = '<i class="fas fa-check"></i> <span data-lang-key="hw7-btn-mark">Đánh dấu hoàn thành</span>';
+                button.classList.remove('completed');
+                card.classList.remove('completed');
+            } else {
+                completedExercises.add(exerciseNum);
+                button.innerHTML = '<i class="fas fa-check-circle"></i> <span data-lang-key="hw7-btn-completed">Hoàn thành</span>';
+                button.classList.add('completed');
+                card.classList.add('completed');
+            }
+
+            if (typeof applyTranslations === 'function') {
+                applyTranslations();
+            }
+
+            updateProgress();
+            saveProgress();
+        }
+
+        function updateProgress() {
+            const total = completedExercises.size;
+            document.getElementById('totalCompleted').textContent = total;
+
+            const percentage = (total / 15) * 100;
+            document.getElementById('progressFill').style.width = percentage + '%';
+        }
+
+        function saveProgress() {
+            localStorage.setItem('homework7Progress', JSON.stringify(Array.from(completedExercises)));
+        }
+
+        function loadProgress() {
+            const saved = localStorage.getItem('homework7Progress');
+            if (saved) {
+                completedExercises = new Set(JSON.parse(saved));
+                completedExercises.forEach(num => {
+                    const button = document.querySelector(`[data-exercise="${num}"] .complete-btn`);
+                    const card = document.querySelector(`[data-exercise="${num}"]`);
+                    if (button && card) {
+                        button.innerHTML = '<i class="fas fa-check-circle"></i> <span data-lang-key="hw7-btn-completed">Hoàn thành</span>';
+                        button.classList.add('completed');
+                        card.classList.add('completed');
+                    }
+                });
+                updateProgress();
+
+                if (typeof applyTranslations === 'function') {
+                    applyTranslations();
+                }
+            }
+        }
+
+        document.addEventListener('DOMContentLoaded', loadProgress);
+        window.addEventListener('beforeunload', saveProgress);
+    </script>
+</body>
+</html>

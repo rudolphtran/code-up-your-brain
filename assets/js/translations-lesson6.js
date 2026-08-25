@@ -160,7 +160,7 @@ const lesson6Translations = {
         "hw6-ex26-desc": "Viết hàm <code>xu_ly_gio_hang(actions)</code> nhận vào mảng các hành động dạng tuple: <code>(\"them\", ten, gia)</code> để thêm sản phẩm hoặc <code>(\"xoa\", ten)</code> để xóa sản phẩm theo tên. Dùng vòng lặp (Bài 4) và điều kiện rẽ nhánh (Bài 2) để xử lý lần lượt từng hành động, trả về tổng tiền còn lại trong giỏ.",
 
         "prev-lesson": "Trước: Bài 5 - Hàm (Functions)",
-        "next-lesson": "Tiếp: Sắp ra mắt"
+        "next-lesson": "Tiếp: Bài 7 - Ma trận"
     },
     en: {
         "lesson6-title": "Lesson 6: Arrays - Code Up Your Brain",
@@ -322,7 +322,7 @@ const lesson6Translations = {
         "hw6-ex26-desc": "Write a function <code>xu_ly_gio_hang(actions)</code> that takes an array of tuple actions: <code>(\"them\", name, price)</code> to add an item or <code>(\"xoa\", name)</code> to remove an item by name. Use a loop (Lesson 4) and branching conditionals (Lesson 2) to process each action in order, returning the total remaining cart value.",
 
         "prev-lesson": "Previous: Lesson 5 - Functions",
-        "next-lesson": "Next: Coming Soon"
+        "next-lesson": "Next: Lesson 7 - Matrix"
     }
 };
 

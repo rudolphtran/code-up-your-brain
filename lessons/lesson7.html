@@ -1,0 +1,547 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="color-scheme" content="light only">
+    <title data-lang-key="lesson7-title">Lesson 7: Matrix - 2D Arrays - Code Up Your Brain</title>
+    <meta name="description" data-lang-key="lesson7-meta" content="Học mảng hai chiều trong Python: khai báo, duyệt, tính toán trên hàng/cột/đường chéo, xoay ma trận, ma trận xoắn ốc và bài tập thực hành.">
+
+    <link rel="stylesheet" href="../assets/css/styles.css">
+    <link rel="stylesheet" href="../assets/css/lesson.css">
+    <link rel="stylesheet" href="../assets/css/auth.css">
+    <link rel="stylesheet" href="../assets/css/mobile-optimizations.css">
+    <link rel="stylesheet" href="../assets/css/ultra-compact-header.css">
+    <link rel="stylesheet" href="../assets/css/force-hide-logo.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/themes/prism-tomorrow.min.css">
+
+    <link rel="icon" type="image/x-icon" href="../assets/images/favicon.ico">
+</head>
+<body>
+    <header class="header">
+        <div class="container">
+            <div class="header-content">
+                <div class="logo">
+                    <a href="../index.html">
+                        <i class="fas fa-code"></i>
+                        <span data-lang-key="logo-text">Code Up Your Brain</span>
+                    </a>
+                </div>
+                <div class="innomind-header-logo">
+                    <a href="../index.html">
+                        <img src="../assets/images/logo.png" alt="InnoMind Logo" />
+                    </a>
+                </div>
+                <nav class="nav">
+                    <a href="../index.html" data-lang-key="nav-home">Home</a>
+                    <a href="../index.html#about" data-lang-key="nav-about">About</a>
+                    <a href="../index.html#course" data-lang-key="nav-course">Course</a>
+                    <a href="../index.html#instructor" data-lang-key="nav-instructor">Instructor</a>
+                    <a href="#contact" data-lang-key="nav-contact">Contact</a>
+                </nav>
+                <div class="header-actions">
+                    <button class="lang-toggle" id="langToggle">
+                        <i class="fas fa-globe"></i>
+                        <span id="currentLang">EN</span>
+                    </button>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <main class="lesson-content">
+        <div class="container">
+            <nav class="breadcrumb">
+                <a href="../index.html" data-lang-key="breadcrumb-home">Home</a>
+                <span class="separator">/</span>
+                <a href="../index.html#course" data-lang-key="breadcrumb-course">Course</a>
+                <span class="separator">/</span>
+                <span data-lang-key="breadcrumb-lesson7">Lesson 7</span>
+            </nav>
+
+            <div class="lesson-header">
+                <div class="lesson-number">
+                    <span data-lang-key="lesson-label">Lesson</span> 7
+                </div>
+                <h1 data-lang-key="lesson7-main-title">Matrix (2D Arrays)</h1>
+                <p class="lesson-subtitle" data-lang-key="lesson7-subtitle">
+                    Làm chủ mảng hai chiều trong Python: khởi tạo, duyệt, xử lý hàng/cột/đường chéo và các kỹ thuật nâng cao như xoay ma trận, duyệt xoắn ốc
+                </p>
+            </div>
+
+            <div class="table-of-contents">
+                <h3 data-lang-key="toc-title">Table of Contents</h3>
+                <ul>
+                    <li><a href="#intro-matrix" data-lang-key="toc-intro-matrix">1. Ma trận là gì?</a></li>
+                    <li><a href="#create-access-matrix" data-lang-key="toc-create-access-matrix">2. Khởi tạo và truy cập phần tử</a></li>
+                    <li><a href="#traversal-matrix" data-lang-key="toc-traversal-matrix">3. Duyệt ma trận và tính toán</a></li>
+                    <li><a href="#diagonal" data-lang-key="toc-diagonal">4. Ma trận vuông và đường chéo</a></li>
+                    <li><a href="#rotate-spiral" data-lang-key="toc-rotate-spiral">5. Xoay ma trận và ma trận xoắn ốc</a></li>
+                    <li><a href="#applications" data-lang-key="toc-applications">6. Bài toán ứng dụng</a></li>
+                    <li><a href="#exercises-matrix" data-lang-key="toc-exercises-matrix">7. Bài tập thực hành</a></li>
+                </ul>
+            </div>
+
+            <section id="intro-matrix" class="lesson-section">
+                <div class="section-icon">🧮</div>
+                <h2 data-lang-key="section1-title-lesson7">1. Ma trận là gì?</h2>
+                <div class="content-block">
+                    <p data-lang-key="section1-intro-lesson7">
+                        Ma trận (mảng hai chiều) là một bảng dữ liệu gồm nhiều hàng và nhiều cột. Trong Python, ta cài đặt
+                        ma trận bằng một <code>list</code> chứa các <code>list</code> con, mỗi list con tương ứng với một hàng.
+                    </p>
+                    <h3 data-lang-key="matrix-benefits-title">Khi nào cần dùng ma trận?</h3>
+                    <ul>
+                        <li data-lang-key="matrix-benefit-1"><strong>Dữ liệu dạng bảng:</strong> bảng điểm nhiều môn, bảng cờ vua, ảnh (pixel).</li>
+                        <li data-lang-key="matrix-benefit-2"><strong>Lưới (grid):</strong> bản đồ trò chơi, mê cung, sơ đồ chỗ ngồi.</li>
+                        <li data-lang-key="matrix-benefit-3"><strong>Thống kê nhiều chiều:</strong> lượt like theo album và theo ngày, doanh số theo tháng và theo cửa hàng.</li>
+                    </ul>
+                </div>
+
+                <div class="example-box">
+                    <h4 data-lang-key="matrix-example-compare">Ví dụ: Không dùng ma trận vs Dùng ma trận</h4>
+                    <div class="comparison-container">
+                        <div class="comparison-column">
+                            <h5 data-lang-key="matrix-no-matrix">❌ Không dùng ma trận</h5>
+                            <pre><code class="language-python">row1 = [8, 9, 7]
+row2 = [6, 10, 8]
+row3 = [9, 9, 10]
+# Muon lay diem hang 2, cot 3 phai nho ten bien
+print(row2[2])</code></pre>
+                        </div>
+                        <div class="comparison-column">
+                            <h5 data-lang-key="matrix-with-matrix">✅ Dùng ma trận (list trong list)</h5>
+                            <pre><code class="language-python">scores = [
+    [8, 9, 7],
+    [6, 10, 8],
+    [9, 9, 10]
+]
+print(scores[1][2])  # 8</code></pre>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <section id="create-access-matrix" class="lesson-section">
+                <div class="section-icon">📦</div>
+                <h2 data-lang-key="section2-title-lesson7">2. Khởi tạo và truy cập phần tử</h2>
+                <div class="content-block">
+                    <h3 data-lang-key="matrix-basic-syntax">Cú pháp cơ bản</h3>
+                    <div class="syntax-box">
+                        <pre><code class="language-python">matrix = [
+    [1, 2, 3],
+    [4, 5, 6],
+    [7, 8, 9]
+]
+
+print(matrix[0][0])   # 1 (hang 0, cot 0)
+print(matrix[1][2])   # 6 (hang 1, cot 2)
+print(matrix[-1][-1])  # 9 (phan tu cuoi cung)</code></pre>
+                    </div>
+                    <p data-lang-key="section2-intro-lesson7">
+                        Ma trận được truy cập bằng hai chỉ số: <code>matrix[i][j]</code>, trong đó <code>i</code> là chỉ số
+                        hàng và <code>j</code> là chỉ số cột, đều bắt đầu từ <code>0</code>.
+                    </p>
+                </div>
+
+                <div class="example-box">
+                    <h4 data-lang-key="matrix-create-empty-title">Tạo ma trận rỗng kích thước n hàng x m cột</h4>
+                    <pre><code class="language-python">n, m = 3, 4
+
+# Dung list comprehension - moi hang la 1 list doc lap
+matrix = [[0] * m for _ in range(n)]
+
+matrix[1][2] = 5
+print(matrix)
+# [[0, 0, 0, 0], [0, 0, 5, 0], [0, 0, 0, 0]]</code></pre>
+                </div>
+
+                <div class="tip-box">
+                    <h4 data-lang-key="matrix-warning-title">⚠️ Lỗi thường gặp</h4>
+                    <p data-lang-key="matrix-warning-content">
+                        Viết <code>[[0] * m] * n</code> sẽ tạo ra <code>n</code> hàng nhưng cùng tham chiếu đến MỘT list,
+                        sửa 1 phần tử sẽ làm thay đổi cả cột đó ở mọi hàng. Luôn dùng list comprehension
+                        <code>[[0] * m for _ in range(n)]</code> để tạo các hàng độc lập.
+                    </p>
+                </div>
+            </section>
+
+            <section id="traversal-matrix" class="lesson-section">
+                <div class="section-icon">🔁</div>
+                <h2 data-lang-key="section3-title-lesson7">3. Duyệt ma trận và tính toán</h2>
+                <div class="content-block">
+                    <p data-lang-key="section3-intro-lesson7">
+                        Duyệt ma trận cần hai vòng lặp lồng nhau: vòng ngoài duyệt từng hàng, vòng trong duyệt từng cột
+                        trong hàng đó.
+                    </p>
+                </div>
+
+                <div class="example-box">
+                    <h4 data-lang-key="matrix-example-sum-all">Ví dụ: Tính tổng toàn bộ ma trận</h4>
+                    <pre><code class="language-python">matrix = [
+    [1, 2, 3],
+    [4, 5, 6],
+    [7, 8, 9]
+]
+
+total = 0
+for row in matrix:
+    for value in row:
+        total += value
+
+print(total)  # 45</code></pre>
+                </div>
+
+                <div class="example-box">
+                    <h4 data-lang-key="matrix-example-row-col-sum">Ví dụ: Tổng từng hàng và tổng từng cột</h4>
+                    <pre><code class="language-python">matrix = [
+    [1, 2, 3],
+    [4, 5, 6],
+    [7, 8, 9]
+]
+n, m = len(matrix), len(matrix[0])
+
+# Tong tung hang
+for i in range(n):
+    print(f"Tong hang {i}:", sum(matrix[i]))
+
+# Tong tung cot
+for j in range(m):
+    col_sum = 0
+    for i in range(n):
+        col_sum += matrix[i][j]
+    print(f"Tong cot {j}:", col_sum)</code></pre>
+                </div>
+            </section>
+
+            <section id="diagonal" class="lesson-section">
+                <div class="section-icon">📐</div>
+                <h2 data-lang-key="section4-title-lesson7">4. Ma trận vuông và đường chéo</h2>
+                <div class="content-block">
+                    <p data-lang-key="section4-intro-lesson7">
+                        Ma trận vuông có số hàng bằng số cột (n x n). Đường chéo chính gồm các phần tử
+                        <code>matrix[i][i]</code>, đường chéo phụ gồm các phần tử <code>matrix[i][n-1-i]</code>.
+                    </p>
+                </div>
+
+                <div class="example-box">
+                    <h4 data-lang-key="matrix-example-diagonal">Ví dụ: Tổng đường chéo chính và đường chéo phụ</h4>
+                    <pre><code class="language-python">matrix = [
+    [1, 2, 3],
+    [4, 5, 6],
+    [7, 8, 9]
+]
+n = len(matrix)
+
+main_diag = 0
+anti_diag = 0
+for i in range(n):
+    main_diag += matrix[i][i]
+    anti_diag += matrix[i][n - 1 - i]
+
+print("Duong cheo chinh:", main_diag)  # 1 + 5 + 9 = 15
+print("Duong cheo phu:", anti_diag)    # 3 + 5 + 7 = 15</code></pre>
+                </div>
+            </section>
+
+            <section id="rotate-spiral" class="lesson-section">
+                <div class="section-icon">🌀</div>
+                <h2 data-lang-key="section5-title-lesson7">5. Xoay ma trận và ma trận xoắn ốc</h2>
+                <div class="content-block">
+                    <p data-lang-key="section5-intro-lesson7">
+                        Đây là hai kỹ thuật nâng cao thường gặp trong đề thi: xoay ma trận vuông 90 độ và duyệt ma trận
+                        theo đường xoắn ốc từ ngoài vào trong.
+                    </p>
+                </div>
+
+                <div class="example-box">
+                    <h4 data-lang-key="matrix-example-rotate">Ví dụ: Xoay ma trận vuông 90 độ theo chiều kim đồng hồ</h4>
+                    <pre><code class="language-python">matrix = [
+    [1, 2, 3],
+    [4, 5, 6],
+    [7, 8, 9]
+]
+n = len(matrix)
+
+rotated = [[0] * n for _ in range(n)]
+for i in range(n):
+    for j in range(n):
+        rotated[j][n - 1 - i] = matrix[i][j]
+
+print(rotated)
+# [[7, 4, 1], [8, 5, 2], [9, 6, 3]]</code></pre>
+                </div>
+
+                <div class="example-box">
+                    <h4 data-lang-key="matrix-example-spiral">Ví dụ: Duyệt ma trận theo hình xoắn ốc</h4>
+                    <pre><code class="language-python">matrix = [
+    [1, 2, 3],
+    [4, 5, 6],
+    [7, 8, 9]
+]
+
+top, bottom = 0, len(matrix) - 1
+left, right = 0, len(matrix[0]) - 1
+result = []
+
+while top <= bottom and left <= right:
+    for j in range(left, right + 1):
+        result.append(matrix[top][j])
+    top += 1
+
+    for i in range(top, bottom + 1):
+        result.append(matrix[i][right])
+    right -= 1
+
+    if top <= bottom:
+        for j in range(right, left - 1, -1):
+            result.append(matrix[bottom][j])
+        bottom -= 1
+
+    if left <= right:
+        for i in range(bottom, top - 1, -1):
+            result.append(matrix[i][left])
+        left += 1
+
+print(result)  # [1, 2, 3, 6, 9, 8, 7, 4, 5]</code></pre>
+                </div>
+            </section>
+
+            <section id="applications" class="lesson-section">
+                <div class="section-icon">🎯</div>
+                <h2 data-lang-key="section6-title-lesson7">6. Bài toán ứng dụng</h2>
+                <div class="content-block">
+                    <p data-lang-key="section6-intro-lesson7">
+                        Áp dụng ma trận vào hai bài toán quen thuộc: bàn cờ vua và bảng thống kê lượt thích trên mạng xã hội.
+                    </p>
+                </div>
+
+                <div class="example-box">
+                    <h4 data-lang-key="matrix-example-chess">Ví dụ: Đếm số ô bị hậu (queen) tấn công trên bàn cờ</h4>
+                    <p data-lang-key="matrix-example-chess-desc">
+                        Cho vị trí một quân hậu trên bàn cờ 8x8, đánh dấu tất cả các ô mà quân hậu có thể tấn công
+                        (cùng hàng, cùng cột, cùng đường chéo).
+                    </p>
+                    <pre><code class="language-python">size = 8
+board = [[0] * size for _ in range(size)]
+qr, qc = 3, 4  # vi tri quan hau (hang, cot)
+
+for i in range(size):
+    for j in range(size):
+        same_row = (i == qr)
+        same_col = (j == qc)
+        same_diag = (abs(i - qr) == abs(j - qc))
+        if same_row or same_col or same_diag:
+            board[i][j] = 1
+
+attacked_cells = sum(row.count(1) for row in board) - 1  # tru o hau dang dung
+print("So o bi tan cong:", attacked_cells)</code></pre>
+                </div>
+
+                <div class="example-box">
+                    <h4 data-lang-key="matrix-example-likes">Ví dụ: Thống kê lượt like album ảnh</h4>
+                    <p data-lang-key="matrix-example-likes-desc">
+                        Ma trận <code>likes[i][j]</code> lưu số lượt like của ảnh thứ <code>j</code> trong album thứ
+                        <code>i</code>. Tìm album có tổng lượt like cao nhất.
+                    </p>
+                    <pre><code class="language-python">likes = [
+    [120, 45, 300],   # Album 0
+    [80, 95, 60, 40], # Album 1
+    [500, 220]        # Album 2
+]
+
+best_album = 0
+best_total = 0
+for i in range(len(likes)):
+    total = sum(likes[i])
+    if total > best_total:
+        best_total = total
+        best_album = i
+
+print("Album nhieu like nhat:", best_album, "voi", best_total, "likes")</code></pre>
+                </div>
+            </section>
+
+            <section id="exercises-matrix" class="lesson-section">
+                <div class="section-icon">💪</div>
+                <h2 data-lang-key="section7-title-lesson7">7. Bài tập thực hành</h2>
+
+                <div class="exercise-box">
+                    <h4 data-lang-key="lesson7-ex1-title">Bài tập 1: Tổng ma trận</h4>
+                    <p data-lang-key="lesson7-ex1-desc">Viết chương trình tính tổng tất cả các phần tử trong một ma trận.</p>
+                    <pre><code class="language-python">matrix = [[1, 2], [3, 4], [5, 6]]
+# TODO: in ra tong cac phan tu cua matrix</code></pre>
+                    <details>
+                        <summary data-lang-key="show-solution">💡 Show Solution</summary>
+                        <pre><code class="language-python">matrix = [[1, 2], [3, 4], [5, 6]]
+total = sum(sum(row) for row in matrix)
+print(total)  # 21</code></pre>
+                    </details>
+                </div>
+
+                <div class="exercise-box">
+                    <h4 data-lang-key="lesson7-ex2-title">Bài tập 2: Tìm phần tử lớn nhất</h4>
+                    <p data-lang-key="lesson7-ex2-desc">Cho ma trận số nguyên, tìm giá trị lớn nhất và vị trí (hàng, cột) của nó.</p>
+                    <pre><code class="language-python">matrix = [[3, 8, 1], [9, 2, 7], [4, 6, 5]]
+# TODO: tim gia tri lon nhat va vi tri (hang, cot)</code></pre>
+                    <details>
+                        <summary data-lang-key="show-solution">💡 Show Solution</summary>
+                        <pre><code class="language-python">matrix = [[3, 8, 1], [9, 2, 7], [4, 6, 5]]
+best_val = matrix[0][0]
+best_pos = (0, 0)
+
+for i in range(len(matrix)):
+    for j in range(len(matrix[i])):
+        if matrix[i][j] > best_val:
+            best_val = matrix[i][j]
+            best_pos = (i, j)
+
+print(best_val, best_pos)  # 9 (1, 0)</code></pre>
+                    </details>
+                </div>
+
+                <div class="exercise-box">
+                    <h4 data-lang-key="lesson7-ex3-title">Bài tập 3: Tổng từng hàng</h4>
+                    <p data-lang-key="lesson7-ex3-desc">Viết chương trình in ra tổng các phần tử của từng hàng trong ma trận.</p>
+                    <pre><code class="language-python">matrix = [[1, 2, 3], [4, 5, 6]]
+# TODO: in ra tong cua tung hang</code></pre>
+                    <details>
+                        <summary data-lang-key="show-solution">💡 Show Solution</summary>
+                        <pre><code class="language-python">matrix = [[1, 2, 3], [4, 5, 6]]
+for i, row in enumerate(matrix):
+    print(f"Hang {i}:", sum(row))
+# Hang 0: 6
+# Hang 1: 15</code></pre>
+                    </details>
+                </div>
+
+                <div class="exercise-box">
+                    <h4 data-lang-key="lesson7-ex4-title">Bài tập 4: Ma trận đối xứng</h4>
+                    <p data-lang-key="lesson7-ex4-desc">Kiểm tra một ma trận vuông có đối xứng qua đường chéo chính hay không (matrix[i][j] == matrix[j][i] với mọi i, j).</p>
+                    <pre><code class="language-python">matrix = [[1, 2, 3], [2, 5, 6], [3, 6, 9]]
+# TODO: kiem tra doi xung</code></pre>
+                    <details>
+                        <summary data-lang-key="show-solution">💡 Show Solution</summary>
+                        <pre><code class="language-python">matrix = [[1, 2, 3], [2, 5, 6], [3, 6, 9]]
+n = len(matrix)
+is_symmetric = True
+
+for i in range(n):
+    for j in range(n):
+        if matrix[i][j] != matrix[j][i]:
+            is_symmetric = False
+
+print(is_symmetric)  # True</code></pre>
+                    </details>
+                </div>
+
+                <div class="challenge-box">
+                    <h4 data-lang-key="lesson7-challenge-title">🏆 Thử thách: Xoay ma trận thủ công</h4>
+                    <p data-lang-key="lesson7-challenge-desc">
+                        Viết chương trình xoay một ma trận vuông 90 độ theo chiều kim đồng hồ mà không dùng zip() hay
+                        thư viện có sẵn, chỉ dùng vòng lặp.
+                    </p>
+                    <pre><code class="language-python">matrix = [[1, 2], [3, 4]]
+# TODO: xoay matrix 90 do theo chieu kim dong ho</code></pre>
+                    <details>
+                        <summary data-lang-key="show-solution">💡 Show Solution</summary>
+                        <pre><code class="language-python">matrix = [[1, 2], [3, 4]]
+n = len(matrix)
+rotated = [[0] * n for _ in range(n)]
+
+for i in range(n):
+    for j in range(n):
+        rotated[j][n - 1 - i] = matrix[i][j]
+
+print(rotated)  # [[3, 1], [4, 2]]</code></pre>
+                    </details>
+                </div>
+            </section>
+
+            <div class="homework-card">
+                <div class="homework-content">
+                    <h3 data-lang-key="homework-title">🎯 Ready for Practice?</h3>
+                    <p data-lang-key="lesson7-homework-desc">
+                        Luyện tập xử lý ma trận với các bài tập từ dễ đến tổng hợp để củng cố tư duy thuật toán trên mảng hai chiều.
+                    </p>
+                    <div class="homework-stats">
+                        <div class="homework-stat">
+                            <span class="stat-number">8</span>
+                            <span class="stat-label" data-lang-key="easy-exercises">Easy</span>
+                        </div>
+                        <div class="homework-stat">
+                            <span class="stat-number">3</span>
+                            <span class="stat-label" data-lang-key="medium-exercises">Medium</span>
+                        </div>
+                        <div class="homework-stat">
+                            <span class="stat-number">2</span>
+                            <span class="stat-label" data-lang-key="hard-exercises">Hard</span>
+                        </div>
+                        <div class="homework-stat">
+                            <span class="stat-number">2</span>
+                            <span class="stat-label" data-lang-key="comprehensive-exercises">Comprehensive</span>
+                        </div>
+                    </div>
+                    <a href="homework7.html" class="homework-button">
+                        <i class="fas fa-code"></i>
+                        <span data-lang-key="lesson7-homework-start">Start Homework 7</span>
+                    </a>
+                </div>
+            </div>
+
+            <div class="lesson-navigation">
+                <a href="lesson6.html" class="nav-button prev">
+                    <i class="fas fa-arrow-left"></i>
+                    <span data-lang-key="prev-lesson">Previous: Lesson 6 - Arrays</span>
+                </a>
+                <a href="#" class="nav-button next disabled">
+                    <span data-lang-key="next-lesson">Next: Coming Soon</span>
+                    <i class="fas fa-arrow-right"></i>
+                </a>
+            </div>
+        </div>
+    </main>
+
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <h4>Liên hệ</h4>
+                <div class="contact-info-compact">
+                    <div class="contact-item">
+                        <i class="fas fa-map-marker-alt"></i>
+                        <span>136 Nguyễn Mậu Tài, Hòa Xuân, Cẩm Lệ, Đà Nẵng</span>
+                    </div>
+                    <div class="contact-item">
+                        <i class="fas fa-phone"></i>
+                        <span>090 198 05 69</span>
+                    </div>
+                    <div class="contact-item">
+                        <i class="fas fa-envelope"></i>
+                        <span>innomindskills@gmail.com</span>
+                    </div>
+                    <div class="contact-item">
+                        <i class="fab fa-facebook"></i>
+                        <a href="https://www.facebook.com/hocvienkynangthehemoiinnomind" target="_blank">
+                            Facebook
+                        </a>
+                    </div>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p data-lang-key="footer-copyright">&copy; 2025 Code Up Your Brain. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/prism.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/components/prism-python.min.js"></script>
+    <script src="../assets/js/translations-common.js"></script>
+    <script src="../assets/js/translations-lesson7.js"></script>
+    <script src="../assets/js/translations-loader.js"></script>
+    <script src="../assets/js/script.js"></script>
+</body>
+</html>
