@@ -40,8 +40,8 @@ const translations = {
         
         // Curriculum section
         'curriculum-title': 'Chương trình học',
-        'curriculum-subtitle': '12 modules từ cơ bản đến nâng cao',
-        'show-more': 'Xem thêm 6 modules',
+        'curriculum-subtitle': '17 modules từ cơ bản đến nâng cao',
+        'show-more': 'Xem thêm 10 modules',
         'show-less': 'Thu gọn',
         
         // Module 1
@@ -87,40 +87,64 @@ const translations = {
         'module7-topic2': 'Đếm like album',
         
         // Module 8
-        'module8-title': 'String',
-        'module8-desc': 'Chuỗi và kiểu kí tự, bảng mã ASCII và kỹ thuật lập trình với chuỗi.',
-        'module8-topic1': 'Chuẩn hóa tên',
-        'module8-topic2': 'Đếm kí tự phân biệt',
-        
-        // Module 8
-        'module8-title': 'Recursion',
-        'module8-desc': 'Kỹ thuật lập trình đệ quy cơ bản và cấu trúc dữ liệu Stack.',
-        'module8-topic1': 'Số Fibonacci',
-        'module8-topic2': 'Chuyển đổi hệ số',
-        
+        'module8-title': 'OOP Basics',
+        'module8-desc': 'Khái niệm class, object, thuộc tính và phương thức ở mức nhận biết cơ bản.',
+        'module8-topic1': 'Class & Object',
+        'module8-topic2': 'Thuộc tính, phương thức',
+
         // Module 9
-        'module9-title': 'Data Abstraction',
-        'module9-desc': 'Struct/Class và getters/setters để tạo kiểu dữ liệu mới.',
-        'module9-topic1': 'Thông tin học sinh',
-        'module9-topic2': 'Tọa độ 2D',
-        
+        'module9-title': 'Error Handling',
+        'module9-desc': 'Dùng try/except cơ bản để kiểm tra dữ liệu nhập và tránh chương trình bị crash.',
+        'module9-topic1': 'Try - Except',
+        'module9-topic2': 'Kiểm tra dữ liệu nhập',
+
         // Module 10
-        'module10-title': 'Sorting Algorithms',
-        'module10-desc': 'Các thuật toán sắp xếp kinh điển và độ phức tạp thuật toán.',
-        'module10-topic1': 'Sắp xếp sinh viên',
-        'module10-topic2': 'Xây dựng tháp',
-        
+        'module10-title': 'Libraries & Modules',
+        'module10-desc': 'Làm quen thư viện math, random và một số hàm dựng sẵn hữu ích khi giải đề.',
+        'module10-topic1': 'math, random',
+        'module10-topic2': 'Hàm dựng sẵn',
+
         // Module 11
-        'module11-title': 'Singly Linked List',
-        'module11-desc': 'Danh sách liên kết đơn FIFO/LIFO và các thao tác cơ bản.',
-        'module11-topic1': 'Phòng khách sạn',
-        'module11-topic2': 'Reversed list',
-        
+        'module11-title': 'Complexity & Brute Force',
+        'module11-desc': 'Tư duy đánh giá độ phức tạp thuật toán và kỹ thuật thử mọi khả năng.',
+        'module11-topic1': 'Độ phức tạp thuật toán',
+        'module11-topic2': 'Duyệt toàn bộ',
+
         // Module 12
-        'module12-title': 'Trees',
-        'module12-desc': 'Cấu trúc dữ liệu cây và Binary Search Tree.',
-        'module12-topic1': 'Điểm cao nhất',
-        'module12-topic2': 'Level order traversal',
+        'module12-title': 'Searching & Sorting',
+        'module12-desc': 'Tìm kiếm tuyến tính/nhị phân và các thuật toán sắp xếp kinh điển.',
+        'module12-topic1': 'Binary Search',
+        'module12-topic2': 'Sắp xếp',
+
+        // Module 13
+        'module13-title': 'Number Theory',
+        'module13-desc': 'Số nguyên tố, sàng Eratosthenes, ước chung/bội chung phục vụ giải đề.',
+        'module13-topic1': 'Sàng nguyên tố',
+        'module13-topic2': 'UCLN - BCNN',
+
+        // Module 14
+        'module14-title': 'Recursion',
+        'module14-desc': 'Tư duy quy nạp, viết hàm đệ quy và các bài toán đếm/liệt kê kinh điển.',
+        'module14-topic1': 'Fibonacci',
+        'module14-topic2': 'Đếm số cách',
+
+        // Module 15
+        'module15-title': 'Advanced Array & String',
+        'module15-desc': 'Hai con trỏ, dãy con liên tiếp và tổng tiền tố (prefix sum).',
+        'module15-topic1': 'Hai con trỏ',
+        'module15-topic2': 'Prefix Sum',
+
+        // Module 16
+        'module16-title': 'Greedy & Simulation',
+        'module16-desc': 'Tư duy chọn lựa tối ưu từng bước và giải bài toán mô phỏng theo đề.',
+        'module16-topic1': 'Thuật toán tham lam',
+        'module16-topic2': 'Bài toán mô phỏng',
+
+        // Module 17
+        'module17-title': 'Mock Tests & Strategy',
+        'module17-desc': 'Thi thử tổng hợp bám cấu trúc đề HSG và chiến thuật làm bài.',
+        'module17-topic1': 'Thi thử có chấm giờ',
+        'module17-topic2': 'Chữa đề & rút kinh nghiệm',
         
         // Module Actions
         'start-lesson': 'Bắt đầu học',
@@ -1021,8 +1045,8 @@ const translations = {
         
         // Curriculum section
         'curriculum-title': 'Course Curriculum',
-        'curriculum-subtitle': '12 modules from basic to advanced',
-        'show-more': 'Show 6 more modules',
+        'curriculum-subtitle': '17 modules from basic to advanced',
+        'show-more': 'Show 10 more modules',
         'show-less': 'Collapse',
         
         // Module 1
@@ -1068,40 +1092,64 @@ const translations = {
         'module7-topic2': 'Album likes count',
         
         // Module 8
-        'module8-title': 'String',
-        'module8-desc': 'Strings and character types, ASCII table and string programming techniques.',
-        'module8-topic1': 'Name normalization',
-        'module8-topic2': 'Distinct character count',
-        
-        // Module 8
-        'module8-title': 'Recursion',
-        'module8-desc': 'Basic recursive programming techniques and Stack data structure.',
-        'module8-topic1': 'Fibonacci numbers',
-        'module8-topic2': 'Number system conversion',
-        
+        'module8-title': 'OOP Basics',
+        'module8-desc': 'Introductory concepts of class, object, attributes and methods.',
+        'module8-topic1': 'Class & Object',
+        'module8-topic2': 'Attributes & Methods',
+
         // Module 9
-        'module9-title': 'Data Abstraction',
-        'module9-desc': 'Struct/Class and getters/setters to create new data types.',
-        'module9-topic1': 'Student information',
-        'module9-topic2': '2D coordinates',
-        
+        'module9-title': 'Error Handling',
+        'module9-desc': 'Basic try/except to validate input and avoid crashes.',
+        'module9-topic1': 'Try - Except',
+        'module9-topic2': 'Input Validation',
+
         // Module 10
-        'module10-title': 'Sorting Algorithms',
-        'module10-desc': 'Classic sorting algorithms and algorithm complexity.',
-        'module10-topic1': 'Student sorting',
-        'module10-topic2': 'Tower building',
-        
+        'module10-title': 'Libraries & Modules',
+        'module10-desc': 'Get familiar with math, random and useful built-in functions for contest problems.',
+        'module10-topic1': 'math, random',
+        'module10-topic2': 'Built-in functions',
+
         // Module 11
-        'module11-title': 'Singly Linked List',
-        'module11-desc': 'Single linked list FIFO/LIFO and basic operations.',
-        'module11-topic1': 'Hotel rooms',
-        'module11-topic2': 'Reversed list',
-        
+        'module11-title': 'Complexity & Brute Force',
+        'module11-desc': 'Reasoning about algorithm complexity and exhaustive search techniques.',
+        'module11-topic1': 'Time Complexity',
+        'module11-topic2': 'Exhaustive Search',
+
         // Module 12
-        'module12-title': 'Trees',
-        'module12-desc': 'Tree data structure and Binary Search Tree.',
-        'module12-topic1': 'Highest score',
-        'module12-topic2': 'Level order traversal',
+        'module12-title': 'Searching & Sorting',
+        'module12-desc': 'Linear/binary search and classic sorting algorithms.',
+        'module12-topic1': 'Binary Search',
+        'module12-topic2': 'Sorting',
+
+        // Module 13
+        'module13-title': 'Number Theory',
+        'module13-desc': 'Primes, Sieve of Eratosthenes, GCD/LCM for contest problems.',
+        'module13-topic1': 'Prime Sieve',
+        'module13-topic2': 'GCD - LCM',
+
+        // Module 14
+        'module14-title': 'Recursion',
+        'module14-desc': 'Inductive thinking, writing recursive functions, and classic counting problems.',
+        'module14-topic1': 'Fibonacci',
+        'module14-topic2': 'Counting',
+
+        // Module 15
+        'module15-title': 'Advanced Array & String',
+        'module15-desc': 'Two pointers, contiguous subarrays, and prefix sums.',
+        'module15-topic1': 'Two Pointers',
+        'module15-topic2': 'Prefix Sum',
+
+        // Module 16
+        'module16-title': 'Greedy & Simulation',
+        'module16-desc': 'Step-by-step optimal choices and simulation-style problems.',
+        'module16-topic1': 'Greedy Algorithms',
+        'module16-topic2': 'Simulation',
+
+        // Module 17
+        'module17-title': 'Mock Tests & Strategy',
+        'module17-desc': 'Full mock exams matching contest structure plus exam-day strategy.',
+        'module17-topic1': 'Timed Mock Exams',
+        'module17-topic2': 'Review & Strategy',
         
         // Module Actions
         'start-lesson': 'Start Learning',

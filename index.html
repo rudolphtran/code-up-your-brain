@@ -65,7 +65,7 @@
                     </p>
                     <div class="hero-stats">
                         <div class="stat">
-                            <span class="stat-number">12</span>
+                            <span class="stat-number">17</span>
                             <span class="stat-label" data-lang-key="stat-modules">Modules</span>
                         </div>
                         <div class="stat">
@@ -276,7 +276,7 @@
         <div class="container">
             <div class="section-header">
                 <h2 data-lang-key="curriculum-title">Chương trình học</h2>
-                <p data-lang-key="curriculum-subtitle">12 modules từ cơ bản đến nâng cao</p>
+                <p data-lang-key="curriculum-subtitle">17 modules từ cơ bản đến nâng cao</p>
             </div>
             <div class="curriculum-content">
                 <div class="curriculum-list">
@@ -376,7 +376,7 @@
                         </div>
                     </div>
                     
-                    <div class="module-item">
+                    <div class="module-item" onclick="window.location.href='lessons/lesson7.html'" style="cursor: pointer;">
                         <div class="module-number">07</div>
                         <div class="module-content">
                             <h3 data-lang-key="module7-title">Matrix - 2D Arrays</h3>
@@ -385,32 +385,24 @@
                                 <span class="topic" data-lang-key="module7-topic1">Chơi cờ vua</span>
                                 <span class="topic" data-lang-key="module7-topic2">Đếm like album</span>
                             </div>
+                            <div class="module-action">
+                                <i class="fas fa-play-circle"></i>
+                                <span data-lang-key="start-lesson">Bắt đầu học</span>
+                            </div>
                         </div>
                     </div>
                 </div>
-                
-                <!-- Hidden modules (modules 8-13) -->
+
+                <!-- Hidden modules (modules 8-17) -->
                 <div class="hidden-modules" id="hiddenModules">
                     <div class="module-item">
                         <div class="module-number">08</div>
                         <div class="module-content">
-                            <h3 data-lang-key="module8-title">String</h3>
-                            <p data-lang-key="module8-desc">Chuỗi và kiểu kí tự, bảng mã ASCII và kỹ thuật lập trình với chuỗi.</p>
+                            <h3 data-lang-key="module8-title">OOP Basics</h3>
+                            <p data-lang-key="module8-desc">Khái niệm class, object, thuộc tính và phương thức ở mức nhận biết cơ bản.</p>
                             <div class="module-topics">
-                                <span class="topic" data-lang-key="module8-topic1">Chuẩn hóa tên</span>
-                                <span class="topic" data-lang-key="module8-topic2">Đếm kí tự phân biệt</span>
-                            </div>
-                        </div>
-                    </div>
-
-                    <div class="module-item">
-                        <div class="module-number">08</div>
-                        <div class="module-content">
-                            <h3 data-lang-key="module8-title">Object-Oriented Programming</h3>
-                            <p data-lang-key="module8-desc">Lập trình hướng đối tượng với Python.</p>
-                            <div class="module-topics">
-                                <span class="topic" data-lang-key="module8-topic1">Classes & Objects</span>
-                                <span class="topic" data-lang-key="module8-topic2">Inheritance</span>
+                                <span class="topic" data-lang-key="module8-topic1">Class & Object</span>
+                                <span class="topic" data-lang-key="module8-topic2">Thuộc tính, phương thức</span>
                             </div>
                         </div>
                     </div>
@@ -419,10 +411,10 @@
                         <div class="module-number">09</div>
                         <div class="module-content">
                             <h3 data-lang-key="module9-title">Error Handling</h3>
-                            <p data-lang-key="module9-desc">Xử lý lỗi và exception trong Python.</p>
+                            <p data-lang-key="module9-desc">Dùng try/except cơ bản để kiểm tra dữ liệu nhập và tránh chương trình bị crash.</p>
                             <div class="module-topics">
-                                <span class="topic" data-lang-key="module9-topic1">Try-Catch blocks</span>
-                                <span class="topic" data-lang-key="module9-topic2">Custom exceptions</span>
+                                <span class="topic" data-lang-key="module9-topic1">Try - Except</span>
+                                <span class="topic" data-lang-key="module9-topic2">Kiểm tra dữ liệu nhập</span>
                             </div>
                         </div>
                     </div>
@@ -431,10 +423,10 @@
                         <div class="module-number">10</div>
                         <div class="module-content">
                             <h3 data-lang-key="module10-title">Libraries & Modules</h3>
-                            <p data-lang-key="module10-desc">Sử dụng thư viện Python và tạo module riêng.</p>
+                            <p data-lang-key="module10-desc">Làm quen thư viện math, random và một số hàm dựng sẵn hữu ích khi giải đề.</p>
                             <div class="module-topics">
-                                <span class="topic" data-lang-key="module10-topic1">Import libraries</span>
-                                <span class="topic" data-lang-key="module10-topic2">Create modules</span>
+                                <span class="topic" data-lang-key="module10-topic1">math, random</span>
+                                <span class="topic" data-lang-key="module10-topic2">Hàm dựng sẵn</span>
                             </div>
                         </div>
                     </div>
@@ -442,11 +434,11 @@
                     <div class="module-item">
                         <div class="module-number">11</div>
                         <div class="module-content">
-                            <h3 data-lang-key="module11-title">Data Structures & Algorithms</h3>
-                            <p data-lang-key="module11-desc">Cấu trúc dữ liệu và thuật toán nâng cao.</p>
+                            <h3 data-lang-key="module11-title">Complexity & Brute Force</h3>
+                            <p data-lang-key="module11-desc">Tư duy đánh giá độ phức tạp thuật toán và kỹ thuật thử mọi khả năng.</p>
                             <div class="module-topics">
-                                <span class="topic" data-lang-key="module11-topic1">Stack & Queue</span>
-                                <span class="topic" data-lang-key="module11-topic2">Sorting algorithms</span>
+                                <span class="topic" data-lang-key="module11-topic1">Độ phức tạp thuật toán</span>
+                                <span class="topic" data-lang-key="module11-topic2">Duyệt toàn bộ</span>
                             </div>
                         </div>
                     </div>
@@ -454,36 +446,78 @@
                     <div class="module-item">
                         <div class="module-number">12</div>
                         <div class="module-content">
-                            <h3 data-lang-key="module12-title">Trees</h3>
-                            <p data-lang-key="module12-desc">Cấu trúc dữ liệu cây và Binary Search Tree.</p>
+                            <h3 data-lang-key="module12-title">Searching & Sorting</h3>
+                            <p data-lang-key="module12-desc">Tìm kiếm tuyến tính/nhị phân và các thuật toán sắp xếp kinh điển.</p>
                             <div class="module-topics">
-                                <span class="topic" data-lang-key="module12-topic1">Điểm cao nhất</span>
-                                <span class="topic" data-lang-key="module12-topic2">Level order traversal</span>
+                                <span class="topic" data-lang-key="module12-topic1">Binary Search</span>
+                                <span class="topic" data-lang-key="module12-topic2">Sắp xếp</span>
                             </div>
                         </div>
                     </div>
 
-                    <div class="module-item highlight-ai">
+                    <div class="module-item">
                         <div class="module-number">13</div>
                         <div class="module-content">
-                            <h3 data-lang-key="module13-title">🤖 AI Integration</h3>
-                            <p data-lang-key="module13-desc">Tích hợp AI và Machine Learning vào ứng dụng Python.</p>
+                            <h3 data-lang-key="module13-title">Number Theory</h3>
+                            <p data-lang-key="module13-desc">Số nguyên tố, sàng Eratosthenes, ước chung/bội chung phục vụ giải đề.</p>
                             <div class="module-topics">
-                                <span class="topic" data-lang-key="module13-topic1">OpenAI API</span>
-                                <span class="topic" data-lang-key="module13-topic2">Chatbot development</span>
-                                <span class="topic" data-lang-key="module13-topic3">Image recognition</span>
-                                <span class="topic" data-lang-key="module13-topic4">Data analysis with AI</span>
+                                <span class="topic" data-lang-key="module13-topic1">Sàng nguyên tố</span>
+                                <span class="topic" data-lang-key="module13-topic2">UCLN - BCNN</span>
                             </div>
-                            <div class="module-highlight">
-                                <i class="fas fa-star"></i>
-                                <span data-lang-key="ai-highlight">New & Advanced</span>
+                        </div>
+                    </div>
+
+                    <div class="module-item">
+                        <div class="module-number">14</div>
+                        <div class="module-content">
+                            <h3 data-lang-key="module14-title">Recursion</h3>
+                            <p data-lang-key="module14-desc">Tư duy quy nạp, viết hàm đệ quy và các bài toán đếm/liệt kê kinh điển.</p>
+                            <div class="module-topics">
+                                <span class="topic" data-lang-key="module14-topic1">Fibonacci</span>
+                                <span class="topic" data-lang-key="module14-topic2">Đếm số cách</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="module-item">
+                        <div class="module-number">15</div>
+                        <div class="module-content">
+                            <h3 data-lang-key="module15-title">Advanced Array & String</h3>
+                            <p data-lang-key="module15-desc">Hai con trỏ, dãy con liên tiếp và tổng tiền tố (prefix sum).</p>
+                            <div class="module-topics">
+                                <span class="topic" data-lang-key="module15-topic1">Hai con trỏ</span>
+                                <span class="topic" data-lang-key="module15-topic2">Prefix Sum</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="module-item">
+                        <div class="module-number">16</div>
+                        <div class="module-content">
+                            <h3 data-lang-key="module16-title">Greedy & Simulation</h3>
+                            <p data-lang-key="module16-desc">Tư duy chọn lựa tối ưu từng bước và giải bài toán mô phỏng theo đề.</p>
+                            <div class="module-topics">
+                                <span class="topic" data-lang-key="module16-topic1">Thuật toán tham lam</span>
+                                <span class="topic" data-lang-key="module16-topic2">Bài toán mô phỏng</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="module-item">
+                        <div class="module-number">17</div>
+                        <div class="module-content">
+                            <h3 data-lang-key="module17-title">Mock Tests & Strategy</h3>
+                            <p data-lang-key="module17-desc">Thi thử tổng hợp bám cấu trúc đề HSG và chiến thuật làm bài.</p>
+                            <div class="module-topics">
+                                <span class="topic" data-lang-key="module17-topic1">Thi thử có chấm giờ</span>
+                                <span class="topic" data-lang-key="module17-topic2">Chữa đề & rút kinh nghiệm</span>
                             </div>
                         </div>
                     </div>
                 </div>
-                
+
                 <div class="curriculum-more">
-                    <button class="btn btn-outline" id="showMoreModules" data-lang-key="show-more">Xem thêm 7 modules</button>
+                    <button class="btn btn-outline" id="showMoreModules" data-lang-key="show-more">Xem thêm 10 modules</button>
                 </div>
             </div>
         </div>

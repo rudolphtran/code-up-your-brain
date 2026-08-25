@@ -43,6 +43,8 @@ function initializeTranslations() {
         lessonTranslations = window.lesson5Translations;
     } else if (typeof window.lesson6Translations !== 'undefined') {
         lessonTranslations = window.lesson6Translations;
+    } else if (typeof window.lesson7Translations !== 'undefined') {
+        lessonTranslations = window.lesson7Translations;
     }
     
     // Merge common and lesson-specific translations
