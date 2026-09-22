@@ -1,0 +1,895 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="color-scheme" content="light only">
+    <title data-lang-key="lesson8-title">Chương 8: Ôn tập tổng hợp - Code Up Your Brain</title>
+    <meta name="description" data-lang-key="lesson8-meta" content="8 buổi ôn tập, 24 bài tập tổng hợp nhiều chủ đề đã học, độ khó tăng dần theo phong cách đề thi HSG.">
+    <link rel="stylesheet" href="../assets/css/styles.css">
+    <link rel="stylesheet" href="../assets/css/lesson.css">
+    <link rel="stylesheet" href="../assets/css/auth.css">
+    <link rel="stylesheet" href="../assets/css/mobile-optimizations.css">
+    <link rel="stylesheet" href="../assets/css/ultra-compact-header.css">
+    <link rel="stylesheet" href="../assets/css/force-hide-logo.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/themes/prism-tomorrow.min.css">
+</head>
+<body>
+    <header class="header">
+        <div class="container">
+            <div class="header-content">
+                <div class="logo">
+                    <a href="../index.html">
+                        <i class="fas fa-code"></i>
+                        <span data-lang-key="logo-text">Code Up Your Brain</span>
+                    </a>
+                </div>
+                <div class="innomind-header-logo">
+                    <a href="../index.html">
+                        <img src="../assets/images/logo.png" alt="InnoMind Logo" />
+                    </a>
+                </div>
+                <nav class="nav">
+                    <a href="../index.html" data-lang-key="nav-home">Trang chủ</a>
+                    <a href="../index.html#about" data-lang-key="nav-about">Giới thiệu</a>
+                    <a href="../index.html#course" data-lang-key="nav-course">Khóa học</a>
+                    <a href="../index.html#instructor" data-lang-key="nav-instructor">Giảng viên</a>
+                    <a href="#contact" data-lang-key="nav-contact">Liên hệ</a>
+                </nav>
+                <div class="header-actions">
+                    <button class="lang-toggle" id="langToggle">
+                        <i class="fas fa-globe"></i>
+                        <span id="currentLang">VI</span>
+                    </button>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <main class="lesson-content">
+        <div class="container">
+            <nav class="breadcrumb">
+                <a href="../index.html" data-lang-key="breadcrumb-home">Trang chủ</a>
+                <span class="separator">/</span>
+                <a href="../index.html#course" data-lang-key="breadcrumb-course">Khóa học</a>
+                <span class="separator">/</span>
+                <span data-lang-key="breadcrumb-lesson8">Chương 8</span>
+            </nav>
+
+            <div class="lesson-header">
+                <div class="lesson-number">
+                    <span data-lang-key="chapter-label">Chương</span> 8
+                </div>
+                <h1 data-lang-key="lesson8-main-title">Ôn tập tổng hợp</h1>
+                <p class="lesson-subtitle" data-lang-key="lesson8-subtitle">
+                    8 buổi, mỗi buổi 3 bài kết hợp nhiều chủ đề đã học (nhập xuất, điều kiện, vòng lặp, hàm, mảng, xâu, ma trận). Độ khó tăng dần, bám sát phong cách đề thi HSG Tin học thật.
+                </p>
+            </div>
+
+            <div class="table-of-contents">
+                <h3 data-lang-key="toc-title">Mục lục</h3>
+                <ul>
+                    <li><a href="#buoi-28" data-lang-key="lesson8-toc-28">1. Buổi 28: Khởi động</a></li>
+                    <li><a href="#buoi-29" data-lang-key="lesson8-toc-29">2. Buổi 29: Nhập môn mảng 1 chiều</a></li>
+                    <li><a href="#buoi-30" data-lang-key="lesson8-toc-30">3. Buổi 30: Xâu ký tự kết hợp</a></li>
+                    <li><a href="#buoi-31" data-lang-key="lesson8-toc-31">4. Buổi 31: Nhập môn ma trận kết hợp</a></li>
+                    <li><a href="#buoi-32" data-lang-key="lesson8-toc-32">5. Buổi 32: Tổng hợp mảng 1D và ma trận</a></li>
+                    <li><a href="#buoi-33" data-lang-key="lesson8-toc-33">6. Buổi 33: Tổng hợp hàm đa chủ đề</a></li>
+                    <li><a href="#buoi-34" data-lang-key="lesson8-toc-34">7. Buổi 34: Đa chủ đề nâng cao</a></li>
+                    <li><a href="#buoi-35" data-lang-key="lesson8-toc-35">8. Buổi 35: Ôn tổng hợp cuối</a></li>
+                </ul>
+            </div>
+
+            <div class="homework-instructions">
+                <h2 data-lang-key="instructions-title">📋 Hướng dẫn</h2>
+                <div class="instructions-grid">
+                    <div class="instruction-item">
+                        <div class="instruction-icon">💻</div>
+                        <h3 data-lang-key="instruction1-title">Code bằng Python</h3>
+                        <p data-lang-key="instruction1-desc">Viết tất cả các giải pháp bằng Python 3.x</p>
+                    </div>
+                    <div class="instruction-item">
+                        <div class="instruction-icon">🧪</div>
+                        <h3 data-lang-key="instruction2-title">Kiểm tra Code</h3>
+                        <p data-lang-key="instruction2-desc">Test với nhiều đầu vào khác nhau</p>
+                    </div>
+                    <div class="instruction-item">
+                        <div class="instruction-icon">📝</div>
+                        <h3 data-lang-key="instruction3-title">Thêm Comment</h3>
+                        <p data-lang-key="instruction3-desc">Giải thích logic và cách tiếp cận</p>
+                    </div>
+                    <div class="instruction-item">
+                        <div class="instruction-icon">⏱️</div>
+                        <h3 data-lang-key="instruction4-title">Quản lý Thời gian</h3>
+                        <p data-lang-key="instruction4-desc">Dành 10-45 phút mỗi bài tuỳ độ khó</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="progress-tracker">
+                <h3 data-lang-key="progress-title">📊 Tiến độ của bạn</h3>
+                <div class="progress-stats">
+                    <div class="progress-stat total">
+                        <span class="stat-number" id="totalCompleted">0</span>
+                        <span class="stat-label" data-lang-key="lesson8-progress-label">Hoàn thành (24)</span>
+                    </div>
+                </div>
+                <div class="progress-bar">
+                    <div class="progress-fill" id="progressFill"></div>
+                </div>
+            </div>
+
+            <section class="lesson-section" id="buoi-28">
+                <h2 data-lang-key="buoi28-title">Buổi 28: Khởi động — IO, điều kiện, vòng lặp, hàm</h2>
+                <p data-lang-key="buoi28-desc">Ôn lại nhập/xuất, rẽ nhánh, vòng lặp và hàm cơ bản qua 3 bài kết hợp, chưa cần dùng mảng.</p>
+
+                <div class="exercise-card easy" data-exercise="1">
+                    <div class="exercise-header">
+                        <h3><span class="exercise-number">1.</span> <span data-lang-key="hw8-ex1-title">Phân Loại Tam Giác</span></h3>
+                        <div class="exercise-meta">
+                            <span class="difficulty" data-lang-key="difficulty-easy">Dễ</span>
+                            <span class="time" data-lang-key="hw8-time-10-15">⏱️ 10-15 phút</span>
+                            <button class="complete-btn" onclick="toggleComplete(1)">
+                                <i class="fas fa-check"></i> <span data-lang-key="mark-complete">Đánh dấu hoàn thành</span>
+                            </button>
+                        </div>
+                    </div>
+                    <div class="exercise-content">
+                        <div class="problem-statement">
+                            <h4 data-lang-key="problem-label">Bài toán:</h4>
+                            <p data-lang-key="hw8-ex1-desc">Viết hàm <code>phan_loai_tam_giac(a, b, c)</code> nhận vào độ dài 3 cạnh. Nếu không tạo thành tam giác hợp lệ, trả về <code>"khong_phai_tam_giac"</code>. Nếu hợp lệ, phân loại theo thứ tự ưu tiên: <code>"deu"</code> (3 cạnh bằng nhau), <code>"vuong"</code> (thỏa định lý Pitago), <code>"can"</code> (có 2 cạnh bằng nhau), hoặc <code>"thuong"</code>.</p>
+                        </div>
+                        <div class="sample-io">
+                            <h4 data-lang-key="sample-io-label">Ví dụ Input/Output:</h4>
+                            <pre><code class="language-python">print(phan_loai_tam_giac(3, 4, 5))   # Output: "vuong"
+print(phan_loai_tam_giac(5, 5, 5))   # Output: "deu"
+print(phan_loai_tam_giac(5, 5, 8))   # Output: "can"
+print(phan_loai_tam_giac(4, 5, 6))   # Output: "thuong"
+print(phan_loai_tam_giac(1, 2, 3))   # Output: "khong_phai_tam_giac"</code></pre>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="exercise-card medium" data-exercise="2">
+                    <div class="exercise-header">
+                        <h3><span class="exercise-number">2.</span> <span data-lang-key="hw8-ex2-title">Căn Số Số Học (Digital Root)</span></h3>
+                        <div class="exercise-meta">
+                            <span class="difficulty" data-lang-key="difficulty-medium">Trung bình</span>
+                            <span class="time" data-lang-key="hw8-time-15-20">⏱️ 15-20 phút</span>
+                            <button class="complete-btn" onclick="toggleComplete(2)">
+                                <i class="fas fa-check"></i> <span data-lang-key="mark-complete">Đánh dấu hoàn thành</span>
+                            </button>
+                        </div>
+                    </div>
+                    <div class="exercise-content">
+                        <div class="problem-statement">
+                            <h4 data-lang-key="problem-label">Bài toán:</h4>
+                            <p data-lang-key="hw8-ex2-desc">Viết hàm <code>tinh_can_so(n)</code> liên tục tính tổng các chữ số của <code>n</code> cho đến khi chỉ còn một chữ số duy nhất (từ 0 đến 9). Trả về tuple gồm 2 giá trị <code>(can_so, so_buoc_lap)</code>.</p>
+                        </div>
+                        <div class="sample-io">
+                            <h4 data-lang-key="sample-io-label">Ví dụ Input/Output:</h4>
+                            <pre><code class="language-python">print(tinh_can_so(987))  # Output: (6, 2)
+print(tinh_can_so(38))   # Output: (2, 2)
+print(tinh_can_so(7))    # Output: (7, 0)
+print(tinh_can_so(99))   # Output: (9, 2)</code></pre>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="exercise-card hard" data-exercise="3">
+                    <div class="exercise-header">
+                        <h3><span class="exercise-number">3.</span> <span data-lang-key="hw8-ex3-title">Khảo Sát Dãy Số Collatz</span></h3>
+                        <div class="exercise-meta">
+                            <span class="difficulty" data-lang-key="difficulty-hard">Khó</span>
+                            <span class="time" data-lang-key="hw8-time-20-25">⏱️ 20-25 phút</span>
+                            <button class="complete-btn" onclick="toggleComplete(3)">
+                                <i class="fas fa-check"></i> <span data-lang-key="mark-complete">Đánh dấu hoàn thành</span>
+                            </button>
+                        </div>
+                    </div>
+                    <div class="exercise-content">
+                        <div class="problem-statement">
+                            <h4 data-lang-key="problem-label">Bài toán:</h4>
+                            <p data-lang-key="hw8-ex3-desc">Viết hàm <code>khao_sat_collatz(n)</code> mô phỏng dãy biến đổi Collatz từ <code>n</code> (chẵn chia 2, lẻ nhân 3 cộng 1) cho đến khi đạt giá trị 1. Trả về tuple <code>(so_buoc, gia_tri_lon_nhat)</code> đạt được trong suốt quá trình (tính cả <code>n</code> ban đầu).</p>
+                        </div>
+                        <div class="sample-io">
+                            <h4 data-lang-key="sample-io-label">Ví dụ Input/Output:</h4>
+                            <pre><code class="language-python">print(khao_sat_collatz(6))   # Output: (8, 16)
+print(khao_sat_collatz(1))   # Output: (0, 1)
+print(khao_sat_collatz(11))  # Output: (14, 52)</code></pre>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <section class="lesson-section" id="buoi-29">
+                <h2 data-lang-key="buoi29-title">Buổi 29: Nhập môn mảng một chiều</h2>
+                <p data-lang-key="buoi29-desc">Áp dụng mảng 1 chiều cùng điều kiện, vòng lặp và hàm để xử lý dãy số.</p>
+
+                <div class="exercise-card easy" data-exercise="4">
+                    <div class="exercise-header">
+                        <h3><span class="exercise-number">4.</span> <span data-lang-key="hw8-ex4-title">Trung Bình Cộng Mảng</span></h3>
+                        <div class="exercise-meta">
+                            <span class="difficulty" data-lang-key="difficulty-easy">Dễ</span>
+                            <span class="time" data-lang-key="hw8-time-5-10">⏱️ 5-10 phút</span>
+                            <button class="complete-btn" onclick="toggleComplete(4)">
+                                <i class="fas fa-check"></i> <span data-lang-key="mark-complete">Đánh dấu hoàn thành</span>
+                            </button>
+                        </div>
+                    </div>
+                    <div class="exercise-content">
+                        <div class="problem-statement">
+                            <h4 data-lang-key="problem-label">Bài toán:</h4>
+                            <p data-lang-key="hw8-ex4-desc">Viết hàm <code>tinh_trung_binh(mang)</code> trả về trung bình cộng các phần tử trong mảng (kiểu số thực).</p>
+                        </div>
+                        <div class="sample-io">
+                            <h4 data-lang-key="sample-io-label">Ví dụ Input/Output:</h4>
+                            <pre><code class="language-python">print(tinh_trung_binh([1, 2, 3, 4]))   # Output: 2.5
+print(tinh_trung_binh([10]))            # Output: 10.0
+print(tinh_trung_binh([2, 2, 2]))       # Output: 2.0</code></pre>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="exercise-card medium" data-exercise="5">
+                    <div class="exercise-header">
+                        <h3><span class="exercise-number">5.</span> <span data-lang-key="hw8-ex5-title">Lọc Số Lẻ</span></h3>
+                        <div class="exercise-meta">
+                            <span class="difficulty" data-lang-key="difficulty-medium">Trung bình</span>
+                            <span class="time" data-lang-key="hw8-time-10-15">⏱️ 10-15 phút</span>
+                            <button class="complete-btn" onclick="toggleComplete(5)">
+                                <i class="fas fa-check"></i> <span data-lang-key="mark-complete">Đánh dấu hoàn thành</span>
+                            </button>
+                        </div>
+                    </div>
+                    <div class="exercise-content">
+                        <div class="problem-statement">
+                            <h4 data-lang-key="problem-label">Bài toán:</h4>
+                            <p data-lang-key="hw8-ex5-desc">Viết hàm <code>loc_so_le(mang)</code> trả về danh sách các số lẻ trong mảng, giữ nguyên thứ tự xuất hiện.</p>
+                        </div>
+                        <div class="sample-io">
+                            <h4 data-lang-key="sample-io-label">Ví dụ Input/Output:</h4>
+                            <pre><code class="language-python">print(loc_so_le([1, 2, 3, 4, 5]))   # Output: [1, 3, 5]
+print(loc_so_le([2, 4, 6]))          # Output: []
+print(loc_so_le([7]))                # Output: [7]</code></pre>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="exercise-card hard" data-exercise="6">
+                    <div class="exercise-header">
+                        <h3><span class="exercise-number">6.</span> <span data-lang-key="hw8-ex6-title">Phần Tử Xuất Hiện Nhiều Nhất</span></h3>
+                        <div class="exercise-meta">
+                            <span class="difficulty" data-lang-key="difficulty-hard">Khó</span>
+                            <span class="time" data-lang-key="hw8-time-15-20">⏱️ 15-20 phút</span>
+                            <button class="complete-btn" onclick="toggleComplete(6)">
+                                <i class="fas fa-check"></i> <span data-lang-key="mark-complete">Đánh dấu hoàn thành</span>
+                            </button>
+                        </div>
+                    </div>
+                    <div class="exercise-content">
+                        <div class="problem-statement">
+                            <h4 data-lang-key="problem-label">Bài toán:</h4>
+                            <p data-lang-key="hw8-ex6-desc">Viết hàm <code>phan_tu_xuat_hien_nhieu_nhat(mang)</code> trả về giá trị xuất hiện nhiều lần nhất trong mảng (nếu có nhiều giá trị đồng hạng, lấy giá trị xuất hiện trước theo thứ tự mảng).</p>
+                        </div>
+                        <div class="sample-io">
+                            <h4 data-lang-key="sample-io-label">Ví dụ Input/Output:</h4>
+                            <pre><code class="language-python">print(phan_tu_xuat_hien_nhieu_nhat([1, 3, 3, 2, 3, 2]))   # Output: 3
+print(phan_tu_xuat_hien_nhieu_nhat([5, 5, 2, 2]))           # Output: 5
+print(phan_tu_xuat_hien_nhieu_nhat([9]))                    # Output: 9</code></pre>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <section class="lesson-section" id="buoi-30">
+                <h2 data-lang-key="buoi30-title">Buổi 30: Xâu ký tự kết hợp</h2>
+                <p data-lang-key="buoi30-desc">Xử lý chuỗi ký tự kết hợp điều kiện, vòng lặp và hàm.</p>
+
+                <div class="exercise-card easy" data-exercise="7">
+                    <div class="exercise-header">
+                        <h3><span class="exercise-number">7.</span> <span data-lang-key="hw8-ex7-title">Kiểm Tra Chuỗi Đối Xứng</span></h3>
+                        <div class="exercise-meta">
+                            <span class="difficulty" data-lang-key="difficulty-easy">Dễ</span>
+                            <span class="time" data-lang-key="hw8-time-5-10">⏱️ 5-10 phút</span>
+                            <button class="complete-btn" onclick="toggleComplete(7)">
+                                <i class="fas fa-check"></i> <span data-lang-key="mark-complete">Đánh dấu hoàn thành</span>
+                            </button>
+                        </div>
+                    </div>
+                    <div class="exercise-content">
+                        <div class="problem-statement">
+                            <h4 data-lang-key="problem-label">Bài toán:</h4>
+                            <p data-lang-key="hw8-ex7-desc">Viết hàm <code>la_doi_xung(xau)</code> trả về <code>True</code> nếu chuỗi đọc xuôi và đọc ngược giống nhau, ngược lại trả về <code>False</code>.</p>
+                        </div>
+                        <div class="sample-io">
+                            <h4 data-lang-key="sample-io-label">Ví dụ Input/Output:</h4>
+                            <pre><code class="language-python">print(la_doi_xung("level"))    # Output: True
+print(la_doi_xung("python"))   # Output: False
+print(la_doi_xung("a"))        # Output: True</code></pre>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="exercise-card medium" data-exercise="8">
+                    <div class="exercise-header">
+                        <h3><span class="exercise-number">8.</span> <span data-lang-key="hw8-ex8-title">Đếm Nguyên Âm</span></h3>
+                        <div class="exercise-meta">
+                            <span class="difficulty" data-lang-key="difficulty-medium">Trung bình</span>
+                            <span class="time" data-lang-key="hw8-time-10-15">⏱️ 10-15 phút</span>
+                            <button class="complete-btn" onclick="toggleComplete(8)">
+                                <i class="fas fa-check"></i> <span data-lang-key="mark-complete">Đánh dấu hoàn thành</span>
+                            </button>
+                        </div>
+                    </div>
+                    <div class="exercise-content">
+                        <div class="problem-statement">
+                            <h4 data-lang-key="problem-label">Bài toán:</h4>
+                            <p data-lang-key="hw8-ex8-desc">Viết hàm <code>dem_nguyen_am(xau)</code> đếm số nguyên âm (a, e, i, o, u, không phân biệt hoa thường) xuất hiện trong chuỗi.</p>
+                        </div>
+                        <div class="sample-io">
+                            <h4 data-lang-key="sample-io-label">Ví dụ Input/Output:</h4>
+                            <pre><code class="language-python">print(dem_nguyen_am("Hello World"))   # Output: 3
+print(dem_nguyen_am("xyz"))            # Output: 0
+print(dem_nguyen_am("AEIOU"))          # Output: 5</code></pre>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="exercise-card hard" data-exercise="9">
+                    <div class="exercise-header">
+                        <h3><span class="exercise-number">9.</span> <span data-lang-key="hw8-ex9-title">Đếm Từ Phân Biệt</span></h3>
+                        <div class="exercise-meta">
+                            <span class="difficulty" data-lang-key="difficulty-hard">Khó</span>
+                            <span class="time" data-lang-key="hw8-time-15-20">⏱️ 15-20 phút</span>
+                            <button class="complete-btn" onclick="toggleComplete(9)">
+                                <i class="fas fa-check"></i> <span data-lang-key="mark-complete">Đánh dấu hoàn thành</span>
+                            </button>
+                        </div>
+                    </div>
+                    <div class="exercise-content">
+                        <div class="problem-statement">
+                            <h4 data-lang-key="problem-label">Bài toán:</h4>
+                            <p data-lang-key="hw8-ex9-desc">Viết hàm <code>dem_tu_phan_biet(cau)</code> tách câu thành các từ theo khoảng trắng và trả về số lượng từ phân biệt (không phân biệt hoa thường).</p>
+                        </div>
+                        <div class="sample-io">
+                            <h4 data-lang-key="sample-io-label">Ví dụ Input/Output:</h4>
+                            <pre><code class="language-python">print(dem_tu_phan_biet("con meo ngoi tren con meo"))   # Output: 4
+print(dem_tu_phan_biet("Hello hello HELLO"))              # Output: 1
+print(dem_tu_phan_biet("one two three"))                  # Output: 3</code></pre>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <section class="lesson-section" id="buoi-31">
+                <h2 data-lang-key="buoi31-title">Buổi 31: Nhập môn ma trận kết hợp</h2>
+                <p data-lang-key="buoi31-desc">Làm quen ma trận cùng điều kiện, vòng lặp và hàm.</p>
+
+                <div class="exercise-card easy" data-exercise="10">
+                    <div class="exercise-header">
+                        <h3><span class="exercise-number">10.</span> <span data-lang-key="hw8-ex10-title">Trung Bình Ma Trận</span></h3>
+                        <div class="exercise-meta">
+                            <span class="difficulty" data-lang-key="difficulty-easy">Dễ</span>
+                            <span class="time" data-lang-key="hw8-time-10-15">⏱️ 10-15 phút</span>
+                            <button class="complete-btn" onclick="toggleComplete(10)">
+                                <i class="fas fa-check"></i> <span data-lang-key="mark-complete">Đánh dấu hoàn thành</span>
+                            </button>
+                        </div>
+                    </div>
+                    <div class="exercise-content">
+                        <div class="problem-statement">
+                            <h4 data-lang-key="problem-label">Bài toán:</h4>
+                            <p data-lang-key="hw8-ex10-desc">Viết hàm <code>trung_binh_ma_tran(matrix)</code> trả về trung bình cộng tất cả các phần tử trong ma trận (kiểu số thực).</p>
+                        </div>
+                        <div class="sample-io">
+                            <h4 data-lang-key="sample-io-label">Ví dụ Input/Output:</h4>
+                            <pre><code class="language-python">print(trung_binh_ma_tran([[1, 2], [3, 4]]))            # Output: 2.5
+print(trung_binh_ma_tran([[10]]))                        # Output: 10.0
+print(trung_binh_ma_tran([[2, 2], [2, 2], [2, 2]]))      # Output: 2.0</code></pre>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="exercise-card medium" data-exercise="11">
+                    <div class="exercise-header">
+                        <h3><span class="exercise-number">11.</span> <span data-lang-key="hw8-ex11-title">Hàng Nhiều Số Âm Nhất</span></h3>
+                        <div class="exercise-meta">
+                            <span class="difficulty" data-lang-key="difficulty-medium">Trung bình</span>
+                            <span class="time" data-lang-key="hw8-time-15-20">⏱️ 15-20 phút</span>
+                            <button class="complete-btn" onclick="toggleComplete(11)">
+                                <i class="fas fa-check"></i> <span data-lang-key="mark-complete">Đánh dấu hoàn thành</span>
+                            </button>
+                        </div>
+                    </div>
+                    <div class="exercise-content">
+                        <div class="problem-statement">
+                            <h4 data-lang-key="problem-label">Bài toán:</h4>
+                            <p data-lang-key="hw8-ex11-desc">Viết hàm <code>hang_co_nhieu_so_am_nhat(matrix)</code> trả về chỉ số của hàng chứa nhiều số âm nhất (lấy hàng đầu tiên nếu có nhiều hàng đồng hạng).</p>
+                        </div>
+                        <div class="sample-io">
+                            <h4 data-lang-key="sample-io-label">Ví dụ Input/Output:</h4>
+                            <pre><code class="language-python">print(hang_co_nhieu_so_am_nhat([[1, -2, -3], [4, 5, 6], [-1, -2, 0]]))   # Output: 0
+print(hang_co_nhieu_so_am_nhat([[1, 2, 3], [-1, -2, -3], [0, 0, 0]]))    # Output: 1
+print(hang_co_nhieu_so_am_nhat([[0]]))                                     # Output: 0</code></pre>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="exercise-card hard" data-exercise="12">
+                    <div class="exercise-header">
+                        <h3><span class="exercise-number">12.</span> <span data-lang-key="hw8-ex12-title">Tổng Đường Chéo Phụ</span></h3>
+                        <div class="exercise-meta">
+                            <span class="difficulty" data-lang-key="difficulty-hard">Khó</span>
+                            <span class="time" data-lang-key="hw8-time-20-25">⏱️ 20-25 phút</span>
+                            <button class="complete-btn" onclick="toggleComplete(12)">
+                                <i class="fas fa-check"></i> <span data-lang-key="mark-complete">Đánh dấu hoàn thành</span>
+                            </button>
+                        </div>
+                    </div>
+                    <div class="exercise-content">
+                        <div class="problem-statement">
+                            <h4 data-lang-key="problem-label">Bài toán:</h4>
+                            <p data-lang-key="hw8-ex12-desc">Viết hàm <code>tong_duong_cheo_phu(matrix)</code> trả về tổng các phần tử trên đường chéo phụ của ma trận vuông.</p>
+                        </div>
+                        <div class="sample-io">
+                            <h4 data-lang-key="sample-io-label">Ví dụ Input/Output:</h4>
+                            <pre><code class="language-python">print(tong_duong_cheo_phu([[1, 2], [3, 4]]))                     # Output: 5
+print(tong_duong_cheo_phu([[1, 2, 3], [4, 5, 6], [7, 8, 9]]))    # Output: 15
+print(tong_duong_cheo_phu([[7]]))                                  # Output: 7</code></pre>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <section class="lesson-section" id="buoi-32">
+                <h2 data-lang-key="buoi32-title">Buổi 32: Tổng hợp mảng 1D và ma trận</h2>
+                <p data-lang-key="buoi32-desc">Kết hợp mảng 1 chiều với ma trận, xử lý bảng ký tự và tính đối xứng.</p>
+
+                <div class="exercise-card easy" data-exercise="13">
+                    <div class="exercise-header">
+                        <h3><span class="exercise-number">13.</span> <span data-lang-key="hw8-ex13-title">Chuyển Mảng Thành Ma Trận</span></h3>
+                        <div class="exercise-meta">
+                            <span class="difficulty" data-lang-key="difficulty-easy">Dễ</span>
+                            <span class="time" data-lang-key="hw8-time-10-15">⏱️ 10-15 phút</span>
+                            <button class="complete-btn" onclick="toggleComplete(13)">
+                                <i class="fas fa-check"></i> <span data-lang-key="mark-complete">Đánh dấu hoàn thành</span>
+                            </button>
+                        </div>
+                    </div>
+                    <div class="exercise-content">
+                        <div class="problem-statement">
+                            <h4 data-lang-key="problem-label">Bài toán:</h4>
+                            <p data-lang-key="hw8-ex13-desc">Viết hàm <code>mang_thanh_ma_tran(mang, so_cot)</code> chuyển mảng một chiều thành ma trận có <code>so_cot</code> cột (giả sử độ dài mảng chia hết cho <code>so_cot</code>), các phần tử được xếp lần lượt theo hàng.</p>
+                        </div>
+                        <div class="sample-io">
+                            <h4 data-lang-key="sample-io-label">Ví dụ Input/Output:</h4>
+                            <pre><code class="language-python">print(mang_thanh_ma_tran([1, 2, 3, 4, 5, 6], 3))   # Output: [[1, 2, 3], [4, 5, 6]]
+print(mang_thanh_ma_tran([1, 2, 3, 4], 2))           # Output: [[1, 2], [3, 4]]
+print(mang_thanh_ma_tran([5, 6], 1))                  # Output: [[5], [6]]</code></pre>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="exercise-card medium" data-exercise="14">
+                    <div class="exercise-header">
+                        <h3><span class="exercise-number">14.</span> <span data-lang-key="hw8-ex14-title">Đếm Ký Tự Trong Bảng</span></h3>
+                        <div class="exercise-meta">
+                            <span class="difficulty" data-lang-key="difficulty-medium">Trung bình</span>
+                            <span class="time" data-lang-key="hw8-time-15-20">⏱️ 15-20 phút</span>
+                            <button class="complete-btn" onclick="toggleComplete(14)">
+                                <i class="fas fa-check"></i> <span data-lang-key="mark-complete">Đánh dấu hoàn thành</span>
+                            </button>
+                        </div>
+                    </div>
+                    <div class="exercise-content">
+                        <div class="problem-statement">
+                            <h4 data-lang-key="problem-label">Bài toán:</h4>
+                            <p data-lang-key="hw8-ex14-desc">Viết hàm <code>dem_ky_tu_trong_bang(bang, ky_tu)</code> đếm số lần ký tự <code>ky_tu</code> xuất hiện trong bảng ký tự <code>bang</code> (danh sách các chuỗi, mỗi chuỗi là một hàng).</p>
+                        </div>
+                        <div class="sample-io">
+                            <h4 data-lang-key="sample-io-label">Ví dụ Input/Output:</h4>
+                            <pre><code class="language-python">print(dem_ky_tu_trong_bang(["ABC", "BCA", "CAB"], "A"))   # Output: 3
+print(dem_ky_tu_trong_bang(["XXX", "XYX"], "X"))            # Output: 5
+print(dem_ky_tu_trong_bang(["AB"], "Z"))                     # Output: 0</code></pre>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="exercise-card hard" data-exercise="15">
+                    <div class="exercise-header">
+                        <h3><span class="exercise-number">15.</span> <span data-lang-key="hw8-ex15-title">Kiểm Tra Đối Xứng Ngang</span></h3>
+                        <div class="exercise-meta">
+                            <span class="difficulty" data-lang-key="difficulty-hard">Khó</span>
+                            <span class="time" data-lang-key="hw8-time-20-25">⏱️ 20-25 phút</span>
+                            <button class="complete-btn" onclick="toggleComplete(15)">
+                                <i class="fas fa-check"></i> <span data-lang-key="mark-complete">Đánh dấu hoàn thành</span>
+                            </button>
+                        </div>
+                    </div>
+                    <div class="exercise-content">
+                        <div class="problem-statement">
+                            <h4 data-lang-key="problem-label">Bài toán:</h4>
+                            <p data-lang-key="hw8-ex15-desc">Viết hàm <code>la_doi_xung_ngang(matrix)</code> trả về <code>True</code> nếu ma trận đối xứng qua trục ngang giữa (hàng đầu tiên giống hàng cuối cùng, hàng thứ hai giống hàng áp cuối,...), ngược lại trả về <code>False</code>.</p>
+                        </div>
+                        <div class="sample-io">
+                            <h4 data-lang-key="sample-io-label">Ví dụ Input/Output:</h4>
+                            <pre><code class="language-python">print(la_doi_xung_ngang([[1, 2], [3, 4], [1, 2]]))   # Output: True
+print(la_doi_xung_ngang([[1, 2], [3, 4]]))             # Output: False
+print(la_doi_xung_ngang([[5, 5]]))                       # Output: True</code></pre>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <section class="lesson-section" id="buoi-33">
+                <h2 data-lang-key="buoi33-title">Buổi 33: Tổng hợp hàm đa chủ đề</h2>
+                <p data-lang-key="buoi33-desc">Viết hàm kết hợp kiểm tra số học, mảng và ma trận.</p>
+
+                <div class="exercise-card easy" data-exercise="16">
+                    <div class="exercise-header">
+                        <h3><span class="exercise-number">16.</span> <span data-lang-key="hw8-ex16-title">Lọc Số Nguyên Tố Trong Dãy</span></h3>
+                        <div class="exercise-meta">
+                            <span class="difficulty" data-lang-key="difficulty-easy">Dễ</span>
+                            <span class="time" data-lang-key="hw8-time-10-15">⏱️ 10-15 phút</span>
+                            <button class="complete-btn" onclick="toggleComplete(16)">
+                                <i class="fas fa-check"></i> <span data-lang-key="mark-complete">Đánh dấu hoàn thành</span>
+                            </button>
+                        </div>
+                    </div>
+                    <div class="exercise-content">
+                        <div class="problem-statement">
+                            <h4 data-lang-key="problem-label">Bài toán:</h4>
+                            <p data-lang-key="hw8-ex16-desc">Viết hàm <code>loc_so_nguyen_to(day)</code> trả về danh sách các số nguyên tố có trong dãy <code>day</code>, giữ nguyên thứ tự.</p>
+                        </div>
+                        <div class="sample-io">
+                            <h4 data-lang-key="sample-io-label">Ví dụ Input/Output:</h4>
+                            <pre><code class="language-python">print(loc_so_nguyen_to([2, 3, 4, 5, 6, 7, 8, 9]))   # Output: [2, 3, 5, 7]
+print(loc_so_nguyen_to([1, 4, 6, 8]))                 # Output: []
+print(loc_so_nguyen_to([11]))                          # Output: [11]</code></pre>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="exercise-card medium" data-exercise="17">
+                    <div class="exercise-header">
+                        <h3><span class="exercise-number">17.</span> <span data-lang-key="hw8-ex17-title">ƯCLN Các Cặp Liên Tiếp</span></h3>
+                        <div class="exercise-meta">
+                            <span class="difficulty" data-lang-key="difficulty-medium">Trung bình</span>
+                            <span class="time" data-lang-key="hw8-time-15-20">⏱️ 15-20 phút</span>
+                            <button class="complete-btn" onclick="toggleComplete(17)">
+                                <i class="fas fa-check"></i> <span data-lang-key="mark-complete">Đánh dấu hoàn thành</span>
+                            </button>
+                        </div>
+                    </div>
+                    <div class="exercise-content">
+                        <div class="problem-statement">
+                            <h4 data-lang-key="problem-label">Bài toán:</h4>
+                            <p data-lang-key="hw8-ex17-desc">Viết hàm <code>ucln_lien_tiep(mang)</code> trả về danh sách ước chung lớn nhất (ƯCLN) của từng cặp phần tử liên tiếp trong mảng.</p>
+                        </div>
+                        <div class="sample-io">
+                            <h4 data-lang-key="sample-io-label">Ví dụ Input/Output:</h4>
+                            <pre><code class="language-python">print(ucln_lien_tiep([12, 18, 24, 36]))   # Output: [6, 6, 12]
+print(ucln_lien_tiep([7, 14]))             # Output: [7]
+print(ucln_lien_tiep([5]))                  # Output: []</code></pre>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="exercise-card hard" data-exercise="18">
+                    <div class="exercise-header">
+                        <h3><span class="exercise-number">18.</span> <span data-lang-key="hw8-ex18-title">Tổng Mỗi Hàng Và Hàng Lớn Nhất</span></h3>
+                        <div class="exercise-meta">
+                            <span class="difficulty" data-lang-key="difficulty-hard">Khó</span>
+                            <span class="time" data-lang-key="hw8-time-20-25">⏱️ 20-25 phút</span>
+                            <button class="complete-btn" onclick="toggleComplete(18)">
+                                <i class="fas fa-check"></i> <span data-lang-key="mark-complete">Đánh dấu hoàn thành</span>
+                            </button>
+                        </div>
+                    </div>
+                    <div class="exercise-content">
+                        <div class="problem-statement">
+                            <h4 data-lang-key="problem-label">Bài toán:</h4>
+                            <p data-lang-key="hw8-ex18-desc">Viết hàm <code>tra_ve_hang_max(matrix)</code> trả về một tuple gồm (danh sách tổng các phần tử của mỗi hàng, chỉ số hàng có tổng lớn nhất). Nếu có nhiều hàng đồng hạng, lấy hàng đầu tiên.</p>
+                        </div>
+                        <div class="sample-io">
+                            <h4 data-lang-key="sample-io-label">Ví dụ Input/Output:</h4>
+                            <pre><code class="language-python">print(tra_ve_hang_max([[1, 2], [3, 4], [0, 1]]))   # Output: ([3, 7, 1], 1)
+print(tra_ve_hang_max([[5]]))                        # Output: ([5], 0)
+print(tra_ve_hang_max([[1, 1], [1, 1]]))             # Output: ([2, 2], 0)</code></pre>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <section class="lesson-section" id="buoi-34">
+                <h2 data-lang-key="buoi34-title">Buổi 34: Đa chủ đề nâng cao</h2>
+                <p data-lang-key="buoi34-desc">Kết hợp 4 chủ đề trở lên trong mỗi bài, độ khó tăng mạnh, mô phỏng gần với đề thi.</p>
+
+                <div class="exercise-card medium" data-exercise="19">
+                    <div class="exercise-header">
+                        <h3><span class="exercise-number">19.</span> <span data-lang-key="hw8-ex19-title">Mô Phỏng Kho Hàng</span></h3>
+                        <div class="exercise-meta">
+                            <span class="difficulty" data-lang-key="difficulty-medium">Trung bình</span>
+                            <span class="time" data-lang-key="hw8-time-20-25">⏱️ 20-25 phút</span>
+                            <button class="complete-btn" onclick="toggleComplete(19)">
+                                <i class="fas fa-check"></i> <span data-lang-key="mark-complete">Đánh dấu hoàn thành</span>
+                            </button>
+                        </div>
+                    </div>
+                    <div class="exercise-content">
+                        <div class="problem-statement">
+                            <h4 data-lang-key="problem-label">Bài toán:</h4>
+                            <p data-lang-key="hw8-ex19-desc">Viết hàm <code>mo_phong_kho_hang(lenh)</code> mô phỏng quản lý kho: <code>lenh</code> là danh sách các tuple <code>("nhap", so_luong)</code> hoặc <code>("xuat", so_luong)</code>. Với mỗi lệnh xuất, nếu số lượng tồn kho không đủ thì bỏ qua lệnh đó. Trả về số lượng tồn kho cuối cùng.</p>
+                        </div>
+                        <div class="sample-io">
+                            <h4 data-lang-key="sample-io-label">Ví dụ Input/Output:</h4>
+                            <pre><code class="language-python">print(mo_phong_kho_hang([("nhap", 10), ("xuat", 4), ("xuat", 20), ("nhap", 5)]))
+# Output: 11
+print(mo_phong_kho_hang([("xuat", 5)]))
+# Output: 0
+print(mo_phong_kho_hang([("nhap", 3), ("nhap", 2)]))
+# Output: 5</code></pre>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="exercise-card hard" data-exercise="20">
+                    <div class="exercise-header">
+                        <h3><span class="exercise-number">20.</span> <span data-lang-key="hw8-ex20-title">Mảng Thành Ma Trận Vuông</span></h3>
+                        <div class="exercise-meta">
+                            <span class="difficulty" data-lang-key="difficulty-hard">Khó</span>
+                            <span class="time" data-lang-key="hw8-time-25-30">⏱️ 25-30 phút</span>
+                            <button class="complete-btn" onclick="toggleComplete(20)">
+                                <i class="fas fa-check"></i> <span data-lang-key="mark-complete">Đánh dấu hoàn thành</span>
+                            </button>
+                        </div>
+                    </div>
+                    <div class="exercise-content">
+                        <div class="problem-statement">
+                            <h4 data-lang-key="problem-label">Bài toán:</h4>
+                            <p data-lang-key="hw8-ex20-desc">Viết hàm <code>mang_thanh_ma_tran_vuong(mang)</code> trả về ma trận vuông tạo từ mảng nếu độ dài mảng là số chính phương (ví dụ 4, 9, 16...), ngược lại trả về <code>None</code>.</p>
+                        </div>
+                        <div class="sample-io">
+                            <h4 data-lang-key="sample-io-label">Ví dụ Input/Output:</h4>
+                            <pre><code class="language-python">print(mang_thanh_ma_tran_vuong([1, 2, 3, 4]))
+# Output: [[1, 2], [3, 4]]
+print(mang_thanh_ma_tran_vuong([1, 2, 3]))
+# Output: None
+print(mang_thanh_ma_tran_vuong([1, 2, 3, 4, 5, 6, 7, 8, 9]))
+# Output: [[1, 2, 3], [4, 5, 6], [7, 8, 9]]</code></pre>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="exercise-card hard" data-exercise="21">
+                    <div class="exercise-header">
+                        <h3><span class="exercise-number">21.</span> <span data-lang-key="hw8-ex21-title">Áp Dụng Nước Đi Lên Bàn Cờ</span></h3>
+                        <div class="exercise-meta">
+                            <span class="difficulty" data-lang-key="difficulty-hard">Khó</span>
+                            <span class="time" data-lang-key="hw8-time-30-40">⏱️ 30-40 phút</span>
+                            <button class="complete-btn" onclick="toggleComplete(21)">
+                                <i class="fas fa-check"></i> <span data-lang-key="mark-complete">Đánh dấu hoàn thành</span>
+                            </button>
+                        </div>
+                    </div>
+                    <div class="exercise-content">
+                        <div class="problem-statement">
+                            <h4 data-lang-key="problem-label">Bài toán:</h4>
+                            <p data-lang-key="hw8-ex21-desc">Viết hàm <code>ap_dung_nuoc_di(ban_co, nuoc_di)</code> nhận vào bàn cờ <code>ban_co</code> (ma trận ký tự, <code>'.'</code> là ô trống) và danh sách nước đi <code>nuoc_di</code> (mỗi nước đi là tuple <code>(hang, cot)</code>). Một nước đi hợp lệ khi vị trí nằm trong bàn cờ và ô đó đang trống; khi đó đánh dấu ô bằng <code>'X'</code>. Trả về tuple (bàn cờ sau khi áp dụng, số nước đi hợp lệ).</p>
+                        </div>
+                        <div class="sample-io">
+                            <h4 data-lang-key="sample-io-label">Ví dụ Input/Output:</h4>
+                            <pre><code class="language-python">print(ap_dung_nuoc_di([['.', '.', '.'], ['.', '.', '.'], ['.', '.', '.']], [(0, 0), (0, 0), (1, 1), (5, 5)]))
+# Output: ([['X', '.', '.'], ['.', 'X', '.'], ['.', '.', '.']], 2)
+print(ap_dung_nuoc_di([['.', '.'], ['.', '.']], [(0, 1), (1, 0)]))
+# Output: ([['.', 'X'], ['X', '.']], 2)
+print(ap_dung_nuoc_di([['.']], [(0, 0), (0, 0)]))
+# Output: ([['X']], 1)</code></pre>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <section class="lesson-section" id="buoi-35">
+                <h2 data-lang-key="buoi35-title">Buổi 35: Ôn tổng hợp cuối, sát đề thi thật</h2>
+                <p data-lang-key="buoi35-desc">3 bài khó nhất, kết hợp toàn bộ kiến thức đã học, đúng phong cách đề thi HSG.</p>
+
+                <div class="exercise-card hard" data-exercise="22">
+                    <div class="exercise-header">
+                        <h3><span class="exercise-number">22.</span> <span data-lang-key="hw8-ex22-title">Đếm Cặp Tăng Liên Tiếp</span></h3>
+                        <div class="exercise-meta">
+                            <span class="difficulty" data-lang-key="difficulty-hard">Khó</span>
+                            <span class="time" data-lang-key="hw8-time-25-30">⏱️ 25-30 phút</span>
+                            <button class="complete-btn" onclick="toggleComplete(22)">
+                                <i class="fas fa-check"></i> <span data-lang-key="mark-complete">Đánh dấu hoàn thành</span>
+                            </button>
+                        </div>
+                    </div>
+                    <div class="exercise-content">
+                        <div class="problem-statement">
+                            <h4 data-lang-key="problem-label">Bài toán:</h4>
+                            <p data-lang-key="hw8-ex22-desc">Viết hàm <code>dem_cap_tang_lien_tiep(mang)</code> đếm số cặp phần tử liền kề (<code>mang[i]</code>, <code>mang[i+1]</code>) mà <code>mang[i]</code> nhỏ hơn <code>mang[i+1]</code>.</p>
+                        </div>
+                        <div class="sample-io">
+                            <h4 data-lang-key="sample-io-label">Ví dụ Input/Output:</h4>
+                            <pre><code class="language-python">print(dem_cap_tang_lien_tiep([1, 3, 2, 5, 7, 4]))   # Output: 3
+print(dem_cap_tang_lien_tiep([5, 4, 3]))              # Output: 0
+print(dem_cap_tang_lien_tiep([1, 2, 3, 4]))           # Output: 3</code></pre>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="exercise-card hard" data-exercise="23">
+                    <div class="exercise-header">
+                        <h3><span class="exercise-number">23.</span> <span data-lang-key="hw8-ex23-title">Vị Trí Cuối Trên Lưới</span></h3>
+                        <div class="exercise-meta">
+                            <span class="difficulty" data-lang-key="difficulty-hard">Khó</span>
+                            <span class="time" data-lang-key="hw8-time-30-40">⏱️ 30-40 phút</span>
+                            <button class="complete-btn" onclick="toggleComplete(23)">
+                                <i class="fas fa-check"></i> <span data-lang-key="mark-complete">Đánh dấu hoàn thành</span>
+                            </button>
+                        </div>
+                    </div>
+                    <div class="exercise-content">
+                        <div class="problem-statement">
+                            <h4 data-lang-key="problem-label">Bài toán:</h4>
+                            <p data-lang-key="hw8-ex23-desc">Viết hàm <code>vi_tri_cuoi(so_hang, so_cot, chuoi_huong)</code> mô phỏng việc di chuyển trên lưới kích thước <code>so_hang x so_cot</code>, bắt đầu từ ô (0, 0). Mỗi ký tự trong <code>chuoi_huong</code> là một hướng: <code>'U'</code> (lên), <code>'D'</code> (xuống), <code>'L'</code> (trái), <code>'R'</code> (phải). Nếu bước đi ra ngoài lưới thì bỏ qua bước đó (giữ nguyên vị trí). Trả về vị trí cuối cùng dạng tuple (hang, cot).</p>
+                        </div>
+                        <div class="sample-io">
+                            <h4 data-lang-key="sample-io-label">Ví dụ Input/Output:</h4>
+                            <pre><code class="language-python">print(vi_tri_cuoi(3, 3, "RRD"))     # Output: (1, 2)
+print(vi_tri_cuoi(2, 2, "DDRR"))    # Output: (1, 1)
+print(vi_tri_cuoi(1, 1, "UDLR"))    # Output: (0, 0)</code></pre>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="exercise-card hard" data-exercise="24">
+                    <div class="exercise-header">
+                        <h3><span class="exercise-number">24.</span> <span data-lang-key="hw8-ex24-title">Báo Cáo Tổng Hợp Lưới</span></h3>
+                        <div class="exercise-meta">
+                            <span class="difficulty" data-lang-key="difficulty-hard">Khó</span>
+                            <span class="time" data-lang-key="hw8-time-35-45">⏱️ 35-45 phút</span>
+                            <button class="complete-btn" onclick="toggleComplete(24)">
+                                <i class="fas fa-check"></i> <span data-lang-key="mark-complete">Đánh dấu hoàn thành</span>
+                            </button>
+                        </div>
+                    </div>
+                    <div class="exercise-content">
+                        <div class="problem-statement">
+                            <h4 data-lang-key="problem-label">Bài toán:</h4>
+                            <p data-lang-key="hw8-ex24-desc">Viết hàm <code>bao_cao_luoi(luoi)</code> nhận vào <code>luoi</code> là danh sách các hàng, mỗi hàng là một danh sách số nguyên có thể có độ dài khác nhau. Trả về tuple gồm 3 giá trị: (tổng tất cả phần tử trong <code>luoi</code>, số hàng có tổng các phần tử là số âm, chỉ số của hàng có độ dài lớn nhất — nếu nhiều hàng đồng hạng thì lấy hàng đầu tiên).</p>
+                        </div>
+                        <div class="sample-io">
+                            <h4 data-lang-key="sample-io-label">Ví dụ Input/Output:</h4>
+                            <pre><code class="language-python">print(bao_cao_luoi([[1, -2, 3], [-5, -1], [4]]))
+# Output: (0, 1, 0)
+print(bao_cao_luoi([[5]]))
+# Output: (5, 0, 0)
+print(bao_cao_luoi([[-1, -1], [-2, -2], [0, 0]]))
+# Output: (-6, 2, 0)</code></pre>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <div class="lesson-navigation">
+                <a href="lesson7.html" class="nav-button prev">
+                    <i class="fas fa-arrow-left"></i>
+                    <span data-lang-key="prev-lesson">Chương 7: Matrix</span>
+                </a>
+                <a href="../index.html#course" class="nav-button next">
+                    <span data-lang-key="back-course">Tổng quan Khóa học</span>
+                    <i class="fas fa-th-large"></i>
+                </a>
+            </div>
+        </div>
+    </main>
+
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <h4>Liên hệ</h4>
+                <div class="contact-info-compact">
+                    <div class="contact-item">
+                        <i class="fas fa-map-marker-alt"></i>
+                        <span>136 Nguyễn Mậu Tài, Hòa Xuân, Cẩm Lệ, Đà Nẵng</span>
+                    </div>
+                    <div class="contact-item">
+                        <i class="fas fa-phone"></i>
+                        <span>090 198 05 69</span>
+                    </div>
+                    <div class="contact-item">
+                        <i class="fas fa-envelope"></i>
+                        <span>innomindskills@gmail.com</span>
+                    </div>
+                    <div class="contact-item">
+                        <i class="fab fa-facebook"></i>
+                        <a href="https://www.facebook.com/hocvienkynangthehemoiinnomind" target="_blank">Facebook</a>
+                    </div>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2025 Code Up Your Brain. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/prism.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/components/prism-python.min.js"></script>
+    <script src="../assets/js/translations-common.js"></script>
+    <script src="../assets/js/translations-lesson8.js"></script>
+    <script src="../assets/js/translations-loader.js"></script>
+    <script src="../assets/js/script.js"></script>
+
+    <script>
+        let completedExercises = new Set();
+        const TOTAL_EXERCISES = 24;
+
+        function toggleComplete(exerciseNum) {
+            const button = document.querySelector(`[data-exercise="${exerciseNum}"] .complete-btn`);
+            const card = document.querySelector(`[data-exercise="${exerciseNum}"]`);
+
+            if (completedExercises.has(exerciseNum)) {
+                completedExercises.delete(exerciseNum);
+                button.innerHTML = '<i class="fas fa-check"></i> <span data-lang-key="mark-complete">Đánh dấu hoàn thành</span>';
+                button.classList.remove('completed');
+                card.classList.remove('completed');
+            } else {
+                completedExercises.add(exerciseNum);
+                button.innerHTML = '<i class="fas fa-check-circle"></i> <span data-lang-key="hw8-btn-completed">Hoàn thành</span>';
+                button.classList.add('completed');
+                card.classList.add('completed');
+            }
+
+            if (typeof applyTranslations === 'function') {
+                applyTranslations();
+            }
+
+            updateProgress();
+            saveProgress();
+        }
+
+        function updateProgress() {
+            const total = completedExercises.size;
+            document.getElementById('totalCompleted').textContent = total;
+
+            const percentage = (total / TOTAL_EXERCISES) * 100;
+            document.getElementById('progressFill').style.width = percentage + '%';
+        }
+
+        function saveProgress() {
+            localStorage.setItem('lesson8Progress', JSON.stringify(Array.from(completedExercises)));
+        }
+
+        function loadProgress() {
+            const saved = localStorage.getItem('lesson8Progress');
+            if (saved) {
+                completedExercises = new Set(JSON.parse(saved));
+                completedExercises.forEach(num => {
+                    const button = document.querySelector(`[data-exercise="${num}"] .complete-btn`);
+                    const card = document.querySelector(`[data-exercise="${num}"]`);
+                    if (button && card) {
+                        button.innerHTML = '<i class="fas fa-check-circle"></i> <span data-lang-key="hw8-btn-completed">Hoàn thành</span>';
+                        button.classList.add('completed');
+                        card.classList.add('completed');
+                    }
+                });
+                updateProgress();
+
+                if (typeof applyTranslations === 'function') {
+                    applyTranslations();
+                }
+            }
+        }
+
+        document.addEventListener('DOMContentLoaded', loadProgress);
+        window.addEventListener('beforeunload', saveProgress);
+    </script>
+</body>
+</html>
