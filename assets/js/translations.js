@@ -41,7 +41,7 @@ const translations = {
         // Curriculum section
         'curriculum-title': 'Chương trình học',
         'curriculum-subtitle': '17 modules từ cơ bản đến nâng cao',
-        'show-more': 'Xem thêm 10 modules',
+        'show-more': 'Xem thêm 9 modules',
         'show-less': 'Thu gọn',
         
         // Module 1
@@ -87,10 +87,10 @@ const translations = {
         'module7-topic2': 'Đếm like album',
         
         // Module 8
-        'module8-title': 'OOP Basics',
-        'module8-desc': 'Khái niệm class, object, thuộc tính và phương thức ở mức nhận biết cơ bản.',
-        'module8-topic1': 'Class & Object',
-        'module8-topic2': 'Thuộc tính, phương thức',
+        'module8-title': 'Ôn tập tổng hợp',
+        'module8-desc': '8 buổi ôn tập, 24 bài tập tổng hợp nhiều chủ đề theo phong cách đề thi HSG.',
+        'module8-topic1': '24 bài tập HSG',
+        'module8-topic2': 'Tổng hợp đa chủ đề',
 
         // Module 9
         'module9-title': 'Error Handling',
@@ -1046,7 +1046,7 @@ const translations = {
         // Curriculum section
         'curriculum-title': 'Course Curriculum',
         'curriculum-subtitle': '17 modules from basic to advanced',
-        'show-more': 'Show 10 more modules',
+        'show-more': 'Show 9 more modules',
         'show-less': 'Collapse',
         
         // Module 1
@@ -1092,10 +1092,10 @@ const translations = {
         'module7-topic2': 'Album likes count',
         
         // Module 8
-        'module8-title': 'OOP Basics',
-        'module8-desc': 'Introductory concepts of class, object, attributes and methods.',
-        'module8-topic1': 'Class & Object',
-        'module8-topic2': 'Attributes & Methods',
+        'module8-title': 'Comprehensive Review',
+        'module8-desc': '8 review sessions, 24 comprehensive exercises in competitive programming style.',
+        'module8-topic1': '24 HSG exercises',
+        'module8-topic2': 'Multi-topic synthesis',
 
         // Module 9
         'module9-title': 'Error Handling',

@@ -131,7 +131,7 @@ const lesson7Translations = {
         "hw7-ex15-desc": "Viết hàm <code>dem_cap_hau_tan_cong(positions)</code> (Bài 5: Hàm) nhận vào danh sách vị trí <code>(hang, cot)</code> của các quân hậu, dùng vòng lặp lồng (Bài 4) để đếm số cặp quân hậu tấn công nhau (cùng hàng, cùng cột, hoặc cùng đường chéo).",
 
         "prev-lesson": "Trước: Bài 6 - Mảng (Arrays)",
-        "next-lesson": "Tiếp: Sắp ra mắt"
+        "next-lesson": "Tiếp: Chương 8 - Ôn tập tổng hợp"
     },
     en: {
         "lesson7-title": "Lesson 7: Matrix - 2D Arrays - Code Up Your Brain",
@@ -264,7 +264,7 @@ const lesson7Translations = {
         "hw7-ex15-desc": "Write a function <code>dem_cap_hau_tan_cong(positions)</code> (Lesson 5: Functions) that takes a list of queen positions <code>(row, col)</code>, using nested loops (Lesson 4) to count the number of queen pairs that attack each other (same row, same column, or same diagonal).",
 
         "prev-lesson": "Previous: Lesson 6 - Arrays",
-        "next-lesson": "Next: Coming Soon"
+        "next-lesson": "Next: Lesson 8 - Comprehensive Review"
     }
 };
 
