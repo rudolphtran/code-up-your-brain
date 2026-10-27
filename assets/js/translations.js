@@ -88,8 +88,8 @@ const translations = {
         
         // Module 8
         'module8-title': 'Ôn tập tổng hợp',
-        'module8-desc': '8 buổi ôn tập, 24 bài tập tổng hợp nhiều chủ đề theo phong cách đề thi HSG.',
-        'module8-topic1': '24 bài tập HSG',
+        'module8-desc': '11 buổi ôn tập, 33 bài tập tổng hợp nhiều chủ đề theo phong cách đề thi HSG.',
+        'module8-topic1': '33 bài tập HSG',
         'module8-topic2': 'Tổng hợp đa chủ đề',
 
         // Module 9
@@ -1093,8 +1093,8 @@ const translations = {
         
         // Module 8
         'module8-title': 'Comprehensive Review',
-        'module8-desc': '8 review sessions, 24 comprehensive exercises in competitive programming style.',
-        'module8-topic1': '24 HSG exercises',
+        'module8-desc': '11 review sessions, 33 comprehensive exercises in competitive programming style.',
+        'module8-topic1': '33 HSG exercises',
         'module8-topic2': 'Multi-topic synthesis',
 
         // Module 9

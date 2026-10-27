@@ -2,11 +2,11 @@
 const lesson8Translations = {
     vi: {
         'lesson8-title': 'Chương 8: Ôn tập tổng hợp - Code Up Your Brain',
-        'lesson8-meta': '8 buổi ôn tập, 24 bài tập tổng hợp nhiều chủ đề đã học, độ khó tăng dần theo phong cách đề thi HSG.',
+        'lesson8-meta': '11 buổi ôn tập, 33 bài tập tổng hợp nhiều chủ đề đã học, độ khó tăng dần theo phong cách đề thi HSG.',
         'breadcrumb-lesson8': 'Chương 8',
         'chapter-label': 'Chương',
         'lesson8-main-title': 'Ôn tập tổng hợp',
-        'lesson8-subtitle': '8 buổi, mỗi buổi 3 bài kết hợp nhiều chủ đề đã học (nhập xuất, điều kiện, vòng lặp, hàm, mảng, xâu, ma trận). Độ khó tăng dần, bám sát phong cách đề thi HSG Tin học thật.',
+        'lesson8-subtitle': '11 buổi, mỗi buổi 3 bài kết hợp nhiều chủ đề đã học (nhập xuất, điều kiện, vòng lặp, hàm, mảng, xâu, ma trận). Độ khó tăng dần, bám sát phong cách đề thi HSG Tin học thật.',
 
         'instructions-title': '📋 Hướng dẫn',
         'instruction1-title': 'Code bằng Python',
@@ -19,7 +19,7 @@ const lesson8Translations = {
         'instruction4-desc': 'Dành 10-45 phút mỗi bài tuỳ độ khó',
 
         'progress-title': '📊 Tiến độ của bạn',
-        'lesson8-progress-label': 'Hoàn thành (24)',
+        'lesson8-progress-label': 'Hoàn thành (33)',
 
         'lesson8-toc-28': '1. Buổi 28: Khởi động',
         'lesson8-toc-29': '2. Buổi 29: Nhập môn mảng 1 chiều',
@@ -29,6 +29,9 @@ const lesson8Translations = {
         'lesson8-toc-33': '6. Buổi 33: Tổng hợp hàm đa chủ đề',
         'lesson8-toc-34': '7. Buổi 34: Đa chủ đề nâng cao',
         'lesson8-toc-35': '8. Buổi 35: Ôn tổng hợp cuối',
+        'lesson8-toc-36': '9. Buổi 36: Luyện đề HSG 01',
+        'lesson8-toc-37': '10. Buổi 37: Luyện đề HSG 02',
+        'lesson8-toc-38': '11. Buổi 38: Luyện đề HSG 03',
 
         'buoi28-title': 'Buổi 28: Khởi động — IO, điều kiện, vòng lặp, hàm',
         'buoi28-desc': 'Ôn lại nhập/xuất, rẽ nhánh, vòng lặp và hàm cơ bản qua 3 bài kết hợp, chưa cần dùng mảng.',
@@ -46,18 +49,25 @@ const lesson8Translations = {
         'buoi34-desc': 'Kết hợp 4 chủ đề trở lên trong mỗi bài, độ khó tăng mạnh, mô phỏng gần với đề thi.',
         'buoi35-title': 'Buổi 35: Ôn tổng hợp cuối, sát đề thi thật',
         'buoi35-desc': '3 bài khó nhất, kết hợp toàn bộ kiến thức đã học, đúng phong cách đề thi HSG.',
+        'buoi36-title': 'Buổi 36: Luyện đề HSG 01 — Xâu ký tự & Đoạn con',
+        'buoi36-desc': 'Bộ đề luyện tập số 1 gồm 3 bài: Nén xâu ký tự, đếm đoạn con có tổng bằng K và tính tổng vành đai ma trận.',
+        'buoi37-title': 'Buổi 37: Luyện đề HSG 02 — Số học & Ma trận',
+        'buoi37-desc': 'Bộ đề luyện tập số 2 gồm 3 bài: Kiểm tra số siêu nguyên tố, tìm đoạn con tăng dài nhất và xoay ma trận 90 độ.',
+        'buoi38-title': 'Buổi 38: Luyện đề HSG 03 — Mô phỏng & Đề thi hoàn chỉnh',
+        'buoi38-desc': 'Bộ đề luyện tập số 3 gồm 3 bài: Chuẩn hóa họ tên tạo email, tìm điểm yên ngựa ma trận và mô phỏng robot thu gom vàng.',
 
         'hw8-time-5-10': '⏱️ 5-10 phút',
         'hw8-time-10-15': '⏱️ 10-15 phút',
         'hw8-time-15-20': '⏱️ 15-20 phút',
         'hw8-time-20-25': '⏱️ 20-25 phút',
         'hw8-time-25-30': '⏱️ 25-30 phút',
+        'hw8-time-25-35': '⏱️ 25-35 phút',
         'hw8-time-30-40': '⏱️ 30-40 phút',
         'hw8-time-35-45': '⏱️ 35-45 phút',
         'hw8-btn-completed': 'Hoàn thành',
 
         'hw8-ex1-title': 'Phân Loại Tam Giác',
-        'hw8-ex1-desc': 'Viết hàm <code>phan_loai_tam_giac(a, b, c)</code> nhận vào độ dài 3 cạnh. Nếu không tạo thành tam giác hợp lệ, trả về <code>"khong_phai_tam_giac"</code>. Nếu hợp lệ, phân loại theo thứ tự ưu tiên: <code>"deu"</code> (3 cạnh bằng nhau), <code>"vuong"</code> (thỏa định lý Pitago), <code>"can"</code> (có 2 cạnh bằng nhau), hoặc <code>"thuong"</code>.',
+        'hw8-ex1-desc': 'Viết hàm <code>phan_loai_tam_giac(a, b, c)</code> nhận vào độ dài 3 cạnh (có thể là số âm, bằng 0, và <b>không theo thứ tự</b> nào). Nếu 3 cạnh không tạo thành tam giác hợp lệ (có cạnh ≤ 0, hoặc tổng 2 cạnh nhỏ hơn hoặc bằng cạnh còn lại), trả về chuỗi <code>"khong_phai_tam_giac"</code>. Nếu hợp lệ, trả về tuple <code>(theo_canh, theo_goc)</code> trong đó: <code>theo_canh</code> là <code>"deu"</code> (3 cạnh bằng nhau), <code>"can"</code> (đúng 2 cạnh bằng nhau) hoặc <code>"thuong"</code>; <code>theo_goc</code> là <code>"vuong"</code> (a² + b² = c² với c là cạnh lớn nhất), <code>"nhon"</code> (a² + b² &gt; c²) hoặc <code>"tu"</code> (a² + b² &lt; c²).',
         'hw8-ex2-title': 'Căn Số Số Học (Digital Root)',
         'hw8-ex2-desc': 'Viết hàm <code>tinh_can_so(n)</code> liên tục tính tổng các chữ số của <code>n</code> cho đến khi chỉ còn một chữ số duy nhất (từ 0 đến 9). Trả về tuple gồm 2 giá trị <code>(can_so, so_buoc_lap)</code>.',
         'hw8-ex3-title': 'Khảo Sát Dãy Số Collatz',
@@ -72,8 +82,8 @@ const lesson8Translations = {
 
         'hw8-ex7-title': 'Kiểm Tra Chuỗi Đối Xứng',
         'hw8-ex7-desc': 'Viết hàm <code>la_doi_xung(xau)</code> trả về <code>True</code> nếu chuỗi đọc xuôi và đọc ngược giống nhau, ngược lại trả về <code>False</code>.',
-        'hw8-ex8-title': 'Đếm Nguyên Âm',
-        'hw8-ex8-desc': 'Viết hàm <code>dem_nguyen_am(xau)</code> đếm số nguyên âm (a, e, i, o, u, không phân biệt hoa thường) xuất hiện trong chuỗi.',
+        'hw8-ex8-title': 'Phân Tích Nguyên Âm',
+        'hw8-ex8-desc': 'Viết hàm <code>phan_tich_nguyen_am(xau)</code> phân tích các chữ cái trong chuỗi (không phân biệt hoa thường; bỏ qua chữ số, khoảng trắng và dấu câu; <code>y</code> được tính là phụ âm). Trả về tuple <code>(so_nguyen_am, so_phu_am, nguyen_am_nhieu_nhat)</code>, trong đó <code>nguyen_am_nhieu_nhat</code> là nguyên âm (a, e, i, o, u) xuất hiện nhiều lần nhất, viết thường. Nếu nhiều nguyên âm xuất hiện bằng nhau, chọn nguyên âm đứng trước theo thứ tự bảng chữ cái; nếu không có nguyên âm nào, trả về <code>None</code>.',
         'hw8-ex9-title': 'Đếm Từ Phân Biệt',
         'hw8-ex9-desc': 'Viết hàm <code>dem_tu_phan_biet(cau)</code> tách câu thành các từ theo khoảng trắng và trả về số lượng từ phân biệt (không phân biệt hoa thường).',
 
@@ -112,17 +122,38 @@ const lesson8Translations = {
         'hw8-ex24-title': 'Báo Cáo Tổng Hợp Lưới',
         'hw8-ex24-desc': 'Viết hàm <code>bao_cao_luoi(luoi)</code> nhận vào <code>luoi</code> là danh sách các hàng, mỗi hàng là một danh sách số nguyên có thể có độ dài khác nhau. Trả về tuple gồm 3 giá trị: (tổng tất cả phần tử trong <code>luoi</code>, số hàng có tổng các phần tử là số âm, chỉ số của hàng có độ dài lớn nhất — nếu nhiều hàng đồng hạng thì lấy hàng đầu tiên).',
 
+        'hw8-ex25-title': 'Nén Chuỗi Ký Tự',
+        'hw8-ex25-desc': 'Viết hàm <code>nen_chuoi(s)</code> thực hiện nén chuỗi <code>s</code> theo quy tắc Run-Length Encoding: mỗi nhóm ký tự liên tiếp giống nhau được biểu diễn bằng ký tự đó kèm theo số lần xuất hiện liên tiếp (ví dụ: <code>"AAABBC"</code> thành <code>"A3B2C1"</code>). Nếu chuỗi rỗng thì trả về chuỗi rỗng <code>""</code>.',
+        'hw8-ex26-title': 'Đoạn Con Có Tổng Bằng K',
+        'hw8-ex26-desc': 'Viết hàm <code>dem_doan_con_tong_k(mang, k)</code> nhận vào danh sách số nguyên <code>mang</code> và số nguyên <code>k</code>. Đếm số lượng đoạn con liên tiếp <code>mang[i:j+1]</code> có tổng các phần tử đúng bằng <code>k</code>.',
+        'hw8-ex27-title': 'Tổng Vành Đai Ma Trận',
+        'hw8-ex27-desc': 'Viết hàm <code>tong_vanh_dai(matrix)</code> nhận vào ma trận số nguyên <code>matrix</code> kích thước <code>m x n</code>. Trả về tổng của tất cả các phần tử nằm trên 4 đường biên ngoài cùng (hàng đầu, hàng cuối, cột đầu, cột cuối). Chú ý không cộng trùng các phần tử ở 4 góc.',
+
+        'hw8-ex28-title': 'Số Siêu Nguyên Tố',
+        'hw8-ex28-desc': 'Viết hàm <code>la_sieu_nguyen_to(n)</code> nhận vào số nguyên dương <code>n</code>. Số <code>n</code> là siêu nguyên tố nếu bản thân <code>n</code> là số nguyên tố và khi lần lượt bỏ chữ số cuối cùng bên phải đi, tất cả các số thu được đều là số nguyên tố. Hàm trả về <code>True</code> nếu <code>n</code> là siêu nguyên tố, ngược lại trả về <code>False</code>.',
+        'hw8-ex29-title': 'Đoạn Tăng Dài Nhất Liền Kề',
+        'hw8-ex29-desc': 'Viết hàm <code>doan_tang_dai_nhat(mang)</code> nhận vào danh sách số nguyên <code>mang</code>. Trả về độ dài lớn nhất của một đoạn con gồm các phần tử liên tiếp tăng nghiêm ngặt (<code>mang[i] &lt; mang[i+1]</code>). Nếu mảng rỗng thì trả về 0.',
+        'hw8-ex30-title': 'Xoay Ma Trận 90°',
+        'hw8-ex30-desc': 'Viết hàm <code>xoay_ma_tran_90(matrix)</code> nhận vào ma trận vuông <code>matrix</code> kích thước <code>n x n</code>. Trả về ma trận mới sau khi xoay 90 độ theo chiều kim đồng hồ (hàng <code>i</code> trở thành cột <code>n - 1 - i</code>).',
+
+        'hw8-ex31-title': 'Chuẩn Hóa Họ Tên Và Tạo Email',
+        'hw8-ex31-desc': 'Viết hàm <code>chuan_hoa_va_tao_email(ho_ten)</code> nhận vào chuỗi họ tên có thể chứa khoảng trắng thừa. Chuẩn hóa họ tên (viết hoa chữ cái đầu mỗi từ, còn lại viết thường). Đồng thời tạo địa chỉ email học viên theo định dạng <code>&lt;ten&gt;&lt;chu_cai_dau_ho_va_dem&gt;@innomind.edu.vn</code> (toàn bộ chữ thường). Trả về tuple <code>(ho_ten_chuan, email)</code>.',
+        'hw8-ex32-title': 'Điểm Yên Ngựa Trong Ma Trận',
+        'hw8-ex32-desc': 'Viết hàm <code>tim_diem_yen_ngua(matrix)</code> nhận vào ma trận <code>matrix</code>. Điểm yên ngựa là phần tử vừa nhỏ nhất trên hàng của nó, vừa lớn nhất trên cột của nó. Trả về danh sách các tuple <code>(hang, cot, gia_tri)</code> chứa tất cả các điểm yên ngựa tìm được. Nếu không có, trả về danh sách rỗng <code>[]</code>.',
+        'hw8-ex33-title': 'Mô Phỏng Robot Thu Gom Vàng',
+        'hw8-ex33-desc': 'Viết hàm <code>thu_gom_vang(luoi, lenh_di_chuyen)</code> mô phỏng robot bắt đầu từ ô <code>(0, 0)</code> trên lưới ma trận chứa số vàng. Robot nhặt toàn bộ số vàng tại các ô bước qua (ô sau khi nhặt sẽ còn 0 vàng, ô xuất phát <code>(0, 0)</code> cũng được nhặt ngay ban đầu). Mỗi ký tự trong <code>lenh_di_chuyen</code> là một hướng <code>\'U\', \'D\', \'L\', \'R\'</code>; nếu bước ra ngoài lưới thì bỏ qua lệnh đó và giữ nguyên vị trí. Trả về tuple <code>(tong_vang_thu_duoc, vi_tri_cuoi)</code>.',
+
         'prev-lesson': 'Chương 7: Matrix',
         'back-course': 'Tổng quan Khóa học'
     },
 
     en: {
         'lesson8-title': 'Chapter 8: Comprehensive Review - Code Up Your Brain',
-        'lesson8-meta': '8 review sessions, 24 exercises combining multiple topics learned so far, increasing difficulty in HSG exam style.',
+        'lesson8-meta': '11 review sessions, 33 exercises combining multiple topics learned so far, increasing difficulty in HSG exam style.',
         'breadcrumb-lesson8': 'Chapter 8',
         'chapter-label': 'Chapter',
         'lesson8-main-title': 'Comprehensive Review',
-        'lesson8-subtitle': '8 sessions, 3 exercises each combining multiple topics learned so far (I/O, conditionals, loops, functions, arrays, strings, matrices). Increasing difficulty, closely following real HSG Informatics exam style.',
+        'lesson8-subtitle': '11 sessions, 3 exercises each combining multiple topics learned so far (I/O, conditionals, loops, functions, arrays, strings, matrices). Increasing difficulty, closely following real HSG Informatics exam style.',
 
         'instructions-title': '📋 Instructions',
         'instruction1-title': 'Code in Python',
@@ -135,7 +166,7 @@ const lesson8Translations = {
         'instruction4-desc': 'Spend 10-45 minutes per exercise depending on difficulty',
 
         'progress-title': '📊 Your Progress',
-        'lesson8-progress-label': 'Completed (24)',
+        'lesson8-progress-label': 'Completed (33)',
 
         'lesson8-toc-28': '1. Session 28: Warm-up',
         'lesson8-toc-29': '2. Session 29: Introduction to 1D Arrays',
@@ -145,6 +176,9 @@ const lesson8Translations = {
         'lesson8-toc-33': '6. Session 33: Multi-Topic Functions',
         'lesson8-toc-34': '7. Session 34: Advanced Multi-Topic Problems',
         'lesson8-toc-35': '8. Session 35: Final Comprehensive Review',
+        'lesson8-toc-36': '9. Session 36: HSG Mock Contest 01',
+        'lesson8-toc-37': '10. Session 37: HSG Mock Contest 02',
+        'lesson8-toc-38': '11. Session 38: HSG Mock Contest 03',
 
         'buoi28-title': 'Session 28: Warm-up — IO, Conditionals, Loops, Functions',
         'buoi28-desc': 'Review input/output, branching, loops, and basic functions through 3 combined exercises, without arrays yet.',
@@ -162,18 +196,25 @@ const lesson8Translations = {
         'buoi34-desc': 'Combine 4 or more topics in each problem, sharply higher difficulty, simulations close to real exams.',
         'buoi35-title': 'Session 35: Final Comprehensive Review, Close to Real Exams',
         'buoi35-desc': 'The 3 hardest problems, combining everything learned so far, in true HSG exam style.',
+        'buoi36-title': 'Session 36: HSG Mock Contest 01 — Strings & Subarrays',
+        'buoi36-desc': 'Mock contest 1 with 3 problems: Run-length string compression, subarray count with sum K, and matrix border sum.',
+        'buoi37-title': 'Session 37: HSG Mock Contest 02 — Number Theory & Matrices',
+        'buoi37-desc': 'Mock contest 2 with 3 problems: Super prime verification, longest contiguous increasing subarray, and 90-degree matrix rotation.',
+        'buoi38-title': 'Session 38: HSG Mock Contest 03 — Simulation & Complete Contest',
+        'buoi38-desc': 'Mock contest 3 with 3 problems: Name normalization with email generation, matrix saddle points, and robot gold collector simulation.',
 
         'hw8-time-5-10': '⏱️ 5-10 min',
         'hw8-time-10-15': '⏱️ 10-15 min',
         'hw8-time-15-20': '⏱️ 15-20 min',
         'hw8-time-20-25': '⏱️ 20-25 min',
         'hw8-time-25-30': '⏱️ 25-30 min',
+        'hw8-time-25-35': '⏱️ 25-35 min',
         'hw8-time-30-40': '⏱️ 30-40 min',
         'hw8-time-35-45': '⏱️ 35-45 min',
         'hw8-btn-completed': 'Completed',
 
         'hw8-ex1-title': 'Triangle Classification',
-        'hw8-ex1-desc': 'Write function <code>phan_loai_tam_giac(a, b, c)</code> taking 3 side lengths. If they cannot form a valid triangle, return <code>"khong_phai_tam_giac"</code>. Otherwise, classify in priority order: <code>"deu"</code> (equilateral), <code>"vuong"</code> (right triangle via Pythagorean theorem), <code>"can"</code> (isosceles), or <code>"thuong"</code> (scalene).',
+        'hw8-ex1-desc': 'Write function <code>phan_loai_tam_giac(a, b, c)</code> taking 3 side lengths (they may be negative, zero, and in <b>any order</b>). If they cannot form a valid triangle (any side ≤ 0, or the sum of two sides is less than or equal to the third), return the string <code>"khong_phai_tam_giac"</code>. Otherwise, return a tuple <code>(theo_canh, theo_goc)</code> where <code>theo_canh</code> is <code>"deu"</code> (equilateral), <code>"can"</code> (exactly 2 equal sides) or <code>"thuong"</code>; and <code>theo_goc</code> is <code>"vuong"</code> (a² + b² = c², c being the longest side), <code>"nhon"</code> (a² + b² &gt; c²) or <code>"tu"</code> (a² + b² &lt; c²).',
         'hw8-ex2-title': 'Digital Root (Sum of Digits)',
         'hw8-ex2-desc': 'Write function <code>tinh_can_so(n)</code> that repeatedly sums the digits of <code>n</code> until a single digit (0-9) remains. Return a tuple of two values: <code>(can_so, so_buoc_lap)</code>.',
         'hw8-ex3-title': 'Collatz Sequence Exploration',
@@ -188,8 +229,8 @@ const lesson8Translations = {
 
         'hw8-ex7-title': 'Check Palindrome String',
         'hw8-ex7-desc': 'Write function <code>la_doi_xung(xau)</code> that returns <code>True</code> if the string reads the same forwards and backwards, otherwise <code>False</code>.',
-        'hw8-ex8-title': 'Count Vowels',
-        'hw8-ex8-desc': 'Write function <code>dem_nguyen_am(xau)</code> that counts the vowels (a, e, i, o, u, case-insensitive) in the string.',
+        'hw8-ex8-title': 'Vowel Analysis',
+        'hw8-ex8-desc': 'Write function <code>phan_tich_nguyen_am(xau)</code> that analyzes the letters in a string (case-insensitive; ignore digits, spaces and punctuation; <code>y</code> counts as a consonant). Return a tuple <code>(so_nguyen_am, so_phu_am, nguyen_am_nhieu_nhat)</code>, where <code>nguyen_am_nhieu_nhat</code> is the most frequent vowel (a, e, i, o, u) in lowercase. If several vowels are tied, pick the one that comes first alphabetically; if there are no vowels, return <code>None</code>.',
         'hw8-ex9-title': 'Count Distinct Words',
         'hw8-ex9-desc': 'Write function <code>dem_tu_phan_biet(cau)</code> that splits the sentence into words by whitespace and returns the number of distinct words (case-insensitive).',
 
@@ -227,6 +268,27 @@ const lesson8Translations = {
         'hw8-ex23-desc': 'Write function <code>vi_tri_cuoi(so_hang, so_cot, chuoi_huong)</code> that simulates moving on a <code>so_hang x so_cot</code> grid, starting at (0, 0). Each character in <code>chuoi_huong</code> is a direction: <code>\'U\'</code> (up), <code>\'D\'</code> (down), <code>\'L\'</code> (left), <code>\'R\'</code> (right). If a move would go outside the grid, skip it (stay in place). Return the final position as a tuple (row, col).',
         'hw8-ex24-title': 'Comprehensive Grid Report',
         'hw8-ex24-desc': 'Write function <code>bao_cao_luoi(luoi)</code> that takes <code>luoi</code>, a list of rows where each row is a list of integers that may have different lengths. Return a tuple of three values: (the sum of all elements in <code>luoi</code>, the number of rows whose sum is negative, the index of the longest row — if tied, return the first such row).',
+
+        'hw8-ex25-title': 'String Compression (Run-Length Encoding)',
+        'hw8-ex25-desc': 'Write function <code>nen_chuoi(s)</code> that compresses string <code>s</code> using Run-Length Encoding: each consecutive identical character group is represented as the character followed by its count (e.g., <code>"AAABBC"</code> becomes <code>"A3B2C1"</code>). If the string is empty, return an empty string <code>""</code>.',
+        'hw8-ex26-title': 'Subarrays With Sum K',
+        'hw8-ex26-desc': 'Write function <code>dem_doan_con_tong_k(mang, k)</code> that takes a list of integers <code>mang</code> and an integer <code>k</code>. Count the number of contiguous subarrays <code>mang[i:j+1]</code> whose sum equals <code>k</code>.',
+        'hw8-ex27-title': 'Matrix Border Sum',
+        'hw8-ex27-desc': 'Write function <code>tong_vanh_dai(matrix)</code> taking an <code>m x n</code> integer matrix <code>matrix</code>. Return the sum of all elements along the 4 outer borders (first row, last row, first column, last column) without counting corner elements twice.',
+
+        'hw8-ex28-title': 'Super Prime Number',
+        'hw8-ex28-desc': 'Write function <code>la_sieu_nguyen_to(n)</code> taking a positive integer <code>n</code>. <code>n</code> is a super prime if <code>n</code> itself is prime and every number obtained by repeatedly removing the rightmost digit is also prime. Return <code>True</code> if <code>n</code> is super prime, otherwise <code>False</code>.',
+        'hw8-ex29-title': 'Longest Contiguous Increasing Subarray',
+        'hw8-ex29-desc': 'Write function <code>doan_tang_dai_nhat(mang)</code> taking a list of integers <code>mang</code>. Return the maximum length of a contiguous subarray of strictly increasing elements (<code>mang[i] &lt; mang[i+1]</code>). Return 0 if the array is empty.',
+        'hw8-ex30-title': 'Rotate Matrix 90° Clockwise',
+        'hw8-ex30-desc': 'Write function <code>xoay_ma_tran_90(matrix)</code> taking an <code>n x n</code> square matrix <code>matrix</code>. Return a new matrix rotated 90 degrees clockwise (row <code>i</code> becomes column <code>n - 1 - i</code>).',
+
+        'hw8-ex31-title': 'Normalize Name and Generate Email',
+        'hw8-ex31-desc': 'Write function <code>chuan_hoa_va_tao_email(ho_ten)</code> taking a name string that may contain redundant spaces. Normalize the name (capitalize the first letter of each word, lowercase the rest). Also generate a student email in the format <code>&lt;first_name&gt;&lt;initials_of_last_and_middle_names&gt;@innomind.edu.vn</code> in lowercase. Return a tuple <code>(ho_ten_chuan, email)</code>.',
+        'hw8-ex32-title': 'Saddle Points in Matrix',
+        'hw8-ex32-desc': 'Write function <code>tim_diem_yen_ngua(matrix)</code> taking matrix <code>matrix</code>. A saddle point is an element that is simultaneously the minimum in its row and the maximum in its column. Return a list of tuples <code>(hang, cot, gia_tri)</code> for all saddle points found. If none exist, return an empty list <code>[]</code>.',
+        'hw8-ex33-title': 'Robot Gold Collector Simulation',
+        'hw8-ex33-desc': 'Write function <code>thu_gom_vang(luoi, lenh_di_chuyen)</code> simulating a robot starting at cell <code>(0, 0)</code> on a grid with gold counts. The robot collects all gold at visited cells (the cell becomes 0 gold afterwards; the starting cell <code>(0, 0)</code> is also collected immediately). Each character in <code>lenh_di_chuyen</code> is a direction <code>\'U\', \'D\', \'L\', \'R\'</code>; if a move goes out of grid bounds, skip it and stay in place. Return a tuple <code>(tong_vang_thu_duoc, vi_tri_cuoi)</code>.',
 
         'prev-lesson': 'Previous: Lesson 7 - Matrix',
         'back-course': 'Course Overview'
